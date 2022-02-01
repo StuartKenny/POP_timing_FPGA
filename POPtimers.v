@@ -1,33 +1,30 @@
 module POPtimers 
 	#(parameter WIDTH=16,
 	Up=1'b1,
-	parameter [WIDTH-1:0] PumpPulse=1000,
-	PieOverTwo=1000,
-	FreePrecession=7500,
-	ProbePulse=375,
-	SampleDelay=0,
-	SampleLength=125,
-	LaserMWgap=125)(
-	reset, //input, 1 to reset
+	parameter [WIDTH-1:0] PumpPulse=1000, //400us
+	PieOverTwo=1000, //400us
+	FreePrecession=7500, //3ms
+	ProbePulse=375, //150us
+	SampleDelay=0, 
+	SampleLength=125, //50us
+	LaserMWgap=125 //50us
+	)(reset, //input, 1 to reset
+	clock_2_5M, //2.5MHz clock
 	pump, //output
 	probe, //output 
 	MW, //output
 	sample //output
 	);
 	
-	input reset;
+	input reset, clock_2_5M;
 	output reg pump, probe, MW, sample; //outputs also defined as registers to allow assignment
 
-	wire TenMeg_clk; //10MHz output from onboard oscillator
-	wire CLKOP; //2.5MHz divided output from PLL
-	wire SEDSTDBY; // PLL SED standby output for simulation
 	wire [WIDTH-1:0] count;
 	reg [WIDTH-1:0] gatedcount;
 	reg counterreset; //for reseting the counter once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
 
-	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse, Endofpumppulse, Startof1stMWpulse, Endof1stMWpulse, Startof2ndMWpulse, Endof2ndMWpulse, Startofprobepulse, Startopticalsample, Endofopticalsample, Endofprobepulse, Resetandrepeat; 
-	wire [WIDTH-1:0] Startofpumppulse = 16'd0;
+	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'b0;
 	wire [WIDTH-1:0] Endofpumppulse = PumpPulse;
 	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap;
 	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
@@ -39,15 +36,8 @@ module POPtimers
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse;
 	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+LaserMWgap;
 	
-	//internal oscillator set to (closest setting to) 10MHz
-	OSCH OSCinst0 (.STDBY(1'b0), .OSC(TenMeg_clk), .SEDSTDBY(SEDSTDBY));
-	defparam OSCinst0.NOM_FREQ = "9.85";
-	
-	//PLL divides input 10MHz by 4
-	Div4PLL PLL (.CLKI(TenMeg_clk), .CLKOP(CLKOP)); 
-	
-	count_n systemcounter (.clk(CLKOP), .direction(Up), .reset(counterreset), .count(count)); 
-	comparator pump1 (.a(gatedcount), .b(Startofpumppulse), .a_gteq_b(pumpstarted), .a_lt_b());
+	count_n systemcounter (.clk(clock_2_5M), .direction(Up), .reset(counterreset), .count(count)); 
+	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
 	comparator pump2 (.a(gatedcount), .b(Endofpumppulse), .a_gteq_b(pumpstopped), .a_lt_b());
 	comparator MW1 (.a(gatedcount), .b(Startof1stMWpulse), .a_gteq_b(pi1started), .a_lt_b());
 	comparator MW2 (.a(gatedcount), .b(Endof1stMWpulse), .a_gteq_b(pi1stopped), .a_lt_b());
@@ -66,11 +56,15 @@ module POPtimers
 		counterreset <= reset|loop;
 	end
 	
-	always@(negedge CLKOP) begin
-		gatedcount <= count; //comparators get updated on the negative clock edge
+	//counter updates on a positive clock edge
+	//comparators are updated on the negative clock edge for stability 
+	always@(negedge clock_2_5M) begin
+		gatedcount <= count; 
 	end
 	
-	always@(posedge CLKOP) begin //logical outputs get updated on positive clock edge
+	//always@(posedge clock_2_5M) begin //logical outputs get updated on positive clock edge
+	//logical outputs updated immediately - to be synchronised to positive clock edge at top-level
+	always@(*) begin 
 		pump <= pumpstarted & !pumpstopped;
 		MW <= (pi1started & !pi1stopped)|(pi2started & !pi2stopped);
 		probe <= probestarted & !probestopped;

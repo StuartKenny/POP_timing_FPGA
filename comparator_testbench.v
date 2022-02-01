@@ -30,7 +30,7 @@ module comparator_testbench
         #100;
         a = 10;
         b = 10;
-        #100;
+        #100 $finish;
     end
       
 endmodule

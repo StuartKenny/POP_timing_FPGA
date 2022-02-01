@@ -8,7 +8,7 @@ module count_n
 		);
 				
   input clk, direction, reset; //wires
-  output reg [WIDTH-1:0] count;
+  output reg [WIDTH-1:0] count = 0;
 
 	always@(posedge clk or posedge reset)	  
 	begin 
