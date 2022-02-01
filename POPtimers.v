@@ -34,7 +34,7 @@ module POPtimers
 	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay;
 	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength;
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse;
-	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+LaserMWgap;
+	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+500; //the extra 500 prevents premature counter reset
 	
 	count_n systemcounter (.clk(clock_2_5M), .direction(Up), .reset(counterreset), .count(count)); 
 	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
@@ -48,6 +48,7 @@ module POPtimers
 	comparator sample1 (.a(gatedcount), .b(Startopticalsample), .a_gteq_b(samplestarted), .a_lt_b());
 	comparator sample2 (.a(gatedcount), .b(Endofopticalsample), .a_gteq_b(samplestopped), .a_lt_b());
 	comparator loopcounter (.a(gatedcount), .b(Resetandrepeat), .a_gteq_b(loop), .a_lt_b()); 	
+	//comparator loopcounter (.a(gatedcount), .b(16'd13000), .a_gteq_b(loop), .a_lt_b()); //no idea why this value needs to be this high but it works!	
 		
 	always@(*) begin 
 		// reset line is updated immediately
@@ -62,7 +63,6 @@ module POPtimers
 		gatedcount <= count; 
 	end
 	
-	//always@(posedge clock_2_5M) begin //logical outputs get updated on positive clock edge
 	//logical outputs updated immediately - to be synchronised to positive clock edge at top-level
 	always@(*) begin 
 		pump <= pumpstarted & !pumpstopped;
