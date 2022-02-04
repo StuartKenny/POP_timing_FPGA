@@ -7,34 +7,41 @@ module POPtimers
 	ProbePulse=375, //150us
 	SampleDelay=0, 
 	SampleLength=125, //50us
-	LaserMWgap=125 //50us
-	)(reset, //input, 1 to reset
+	LaserMWgap=125, //50us
+	PostCycle=500 //200us - at least 500 to prevent premature counter reset
+	)(load_defaults, //input, 1 to reset
 	clock_2_5M, //2.5MHz clock
+	pieovertwo_plus, //sampled button input
+	freeprecess_plus, //sampled button input
+	pieovertwo_minus, //sampled button input
+	freeprecess_minus, //sampled button input
 	pump, //output
 	probe, //output 
 	MW, //output
 	sample //output
 	);
 	
-	input reset, clock_2_5M;
+	input load_defaults, clock_2_5M, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
 	output reg pump, probe, MW, sample; //outputs also defined as registers to allow assignment
-
-	wire [WIDTH-1:0] count;
+	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
 	reg [WIDTH-1:0] gatedcount;
-	reg counterreset; //for reseting the counter once it has reached the 'Resetandrepeat' value
+	reg counterreset; //for reseting the main counter once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
 
 	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'b0;
 	wire [WIDTH-1:0] Endofpumppulse = PumpPulse;
 	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap;
-	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
-	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;
-	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+PieOverTwo;
+	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
+	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;
+	//wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+PieOverTwo;
+	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo;
+	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession;
+	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo;
 	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap;
 	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay;
 	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength;
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse;
-	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+500; //the extra 500 prevents premature counter reset
+	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; 
 	
 	count_n systemcounter (.clk(clock_2_5M), .direction(Up), .reset(counterreset), .count(count)); 
 	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
@@ -48,13 +55,14 @@ module POPtimers
 	comparator sample1 (.a(gatedcount), .b(Startopticalsample), .a_gteq_b(samplestarted), .a_lt_b());
 	comparator sample2 (.a(gatedcount), .b(Endofopticalsample), .a_gteq_b(samplestopped), .a_lt_b());
 	comparator loopcounter (.a(gatedcount), .b(Resetandrepeat), .a_gteq_b(loop), .a_lt_b()); 	
-	//comparator loopcounter (.a(gatedcount), .b(16'd13000), .a_gteq_b(loop), .a_lt_b()); //no idea why this value needs to be this high but it works!	
-		
+	countupdownpreload piecounter (.clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd25), .count(AdjustablePieOverTwo));
+	countupdownpreload freepcounter (.clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd200), .count(AdjustableFreePrecession));
+		 	
 	always@(*) begin 
 		// reset line is updated immediately
-		// Counter should be forced to zero for as long as the reset input is high,
+		// Counter should be forced to zero for as long as the load_defaults input is high,
 		// or for one cycle when it reaches the 'resetandrepeat' value
-		counterreset <= reset|loop;
+		counterreset <= load_defaults|loop;
 	end
 	
 	//counter updates on a positive clock edge

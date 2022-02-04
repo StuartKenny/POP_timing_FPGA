@@ -1,0 +1,44 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+BANK 0 VCCIO 3.3 V;
+BANK 1 VCCIO 3.3 V;
+BANK 2 VCCIO 3.3 V;
+BANK 3 VCCIO 3.3 V;
+LOCATE COMP "LED_output" SITE "13" ;
+LOCATE COMP "mode_button" SITE "14" ;
+LOCATE COMP "pin3_sn" SITE "16" ;
+LOCATE COMP "load_default_button" SITE "17" ;
+LOCATE COMP "pin5" SITE "20" ; //grounded on Veroboard
+LOCATE COMP "tenmegclock" SITE "21" ;
+LOCATE COMP "topleft_button" SITE "23" ;
+LOCATE COMP "topright_button" SITE "25" ;
+LOCATE COMP "pin9_jtgnb" SITE "26" ; //grounded on Veroboard
+LOCATE COMP "bottomleft_button" SITE "27" ;
+LOCATE COMP "bottomright_button" SITE "28" ;
+LOCATE COMP "pin16" SITE "4" ;
+LOCATE COMP "pin17" SITE "5" ;
+LOCATE COMP "pin18_cs" SITE "8" ;
+LOCATE COMP "pump_output" SITE "9" ;
+LOCATE COMP "probe_output" SITE "10" ;
+LOCATE COMP "MW_output" SITE "11" ;
+LOCATE COMP "sample_output" SITE "12" ;
+//inputs
+IOBUF PORT "tenmegclock" PULLMODE=NONE IO_TYPE=LVCMOS33 ;
+IOBUF PORT "mode_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "load_default_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "topleft_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "topright_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "bottomleft_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "bottomright_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+//outputs
+IOBUF PORT "LED_output" IO_TYPE=LVCMOS33  ;
+IOBUF PORT "pin3_sn" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pin5" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pin9_jtgnb" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pin16" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pin17" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pin18_cs" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "pump_output" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "probe_output" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "MW_output" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "sample_output" IO_TYPE=LVCMOS33 ;

@@ -26,30 +26,26 @@ module slow_clock_pulse
  endmodule
 
 //cycles through 4 states, starting with state_0
-//state_x line is high when in that state
+//initial_state is high the first time in state_0, otherwise low
  module quad_state_machine
 	(	clk,
 		state, //2 bit vector
- 		state_0, //single wire decoded output
-		state_1,
-		state_2,
-		state_3
+		initial_state //high when first in state 0
 		);
 
 	input clk;
-	output reg state_0, state_1, state_2, state_3;
 	output reg [1:0] state = 2'b00;
-
-	always@(*)
-		begin
-			state_0 <= !state[1]&!state[0];
-			state_1 <= !state[1]&state[0];
-			state_2 <= state[1]&!state[0];
-			state_3 <= state[1]&state[0];
-		end
+	output reg initial_state = 1;
 
  	always@(posedge clk) //state changes on button press
  		begin
  			state <= state + 1'b1;
  		end
+		
+	always@(*) 
+		begin
+			if (state == 1) begin 
+				initial_state <= 1'b0;
+			end
+		end	
 endmodule

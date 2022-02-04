@@ -1,17 +1,16 @@
 module TinyFPGA_A2 (
 	//inout pin1, //LED indicator
-	output reg LED_output, //high for LED on	inout pin2, 
-	inout pin3_sn,
-	inout pin4_mosi,
-	inout pin5,
-	//inout pin6,
-	inout tenmegclock, //10MHz clock input
-	//inout pin7_done,
+	output reg LED_output, //high for LED on	
 	inout mode_button, //state select button - push to ground
-	inout pin8_pgmn,
+	inout pin3_sn,
+	inout load_default_button, //load defaults button - push to ground
+	inout pin5,
+	inout tenmegclock, //10MHz clock input
+	inout topleft_button, //load defaults button - push to ground
+	inout topright_button, //load defaults button - push to ground
 	inout pin9_jtgnb,
-	inout pin10_sda,
-	inout pin11_scl,
+	inout bottomleft_button, //load defaults button - push to ground
+	inout bottomright_button, //load defaults button - push to ground
 	//inout pin12_tdo,
 	//inout pin13_tdi,
 	//inout pin14_tck,
@@ -19,13 +18,9 @@ module TinyFPGA_A2 (
 	inout pin16,
 	inout pin17,
 	inout pin18_cs,
-	//inout pin19_sclk, //pump
 	output reg pump_output, //pump
-	//inout pin20_miso, //probe - check timing
 	output reg probe_output, //probe - check timing
-	//inout pin21, //MW
 	output reg MW_output, //MW
-	//inout pin22 //sample - check timing
 	output reg sample_output //sample - check timing
 );
 
@@ -35,23 +30,23 @@ module TinyFPGA_A2 (
 	wire slow_pulse; //2.5MHz clock divided by 2^21 - 3.4s period
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
 	wire debounce_pulse; //2.5MHz clock divided by 2^8 - 100us period
-	reg sampled_pushbutton; //the state select button as samped once per 100us
+	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
 	wire [1:0] SMstate; //2-bit state vector
-	//wire SMstate_0, SMstate_1, SMstate_2, SMstate_3; //high for active state
+	wire initial_state; //high when first powered up - to enable loading of defaults
 	wire pump, probe, MW, sample; //outputs from POPtimers module
 	
 	// tristate the unused pins
 	//assign pin1 = 1'bz;
-	assign pin2 = 1'bz;
+	//assign pin2 = 1'bz;
 	assign pin3_sn = 1'bz;
-	assign pin4_mosi = 1'bz;
+	//assign pin4_mosi = 1'bz;
 	assign pin5 = 1'bz;
 	assign pin6 = 1'bz; //reserved for 10MHz input
 	//assign pin7_done = 1'bz;
-	assign pin8_pgmn = 1'bz;
+	//assign pin8_pgmn = 1'bz;
 	assign pin9_jtgnb = 1'bz;
-	assign pin10_sda = 1'bz;
-	assign pin11_scl = 1'bz;
+	//assign pin10_sda = 1'bz;
+	//assign pin11_scl = 1'bz;
   	//assign pin12_tdo = 1'bz;
 	//assign pin13_tdi = 1'bz;
 	//assign pin14_tck = 1'bz;
@@ -65,24 +60,29 @@ module TinyFPGA_A2 (
 	//assign pin22 = 1'bz;
 
 	//internal oscillator set to (closest setting to) 2.5MHz
-	OSCH OSCinst0 (.STDBY(1'b0), .OSC(CLKOP), .SEDSTDBY(SEDSTDBY));
-	defparam OSCinst0.NOM_FREQ = "2.46";
+	//OSCH OSCinst0 (.STDBY(1'b0), .OSC(CLKOP), .SEDSTDBY(SEDSTDBY));
+	//defparam OSCinst0.NOM_FREQ = "2.46";
 	
 	//internal oscillator set to (closest setting to) 10MHz
-	//OSCH OSCinst0 (.STDBY(1'b0), .OSC(OscTenMegOut), .SEDSTDBY(SEDSTDBY));
-	//defparam OSCinst0.NOM_FREQ = "9.85";
+	OSCH OSCinst0 (.STDBY(1'b0), .OSC(OscTenMegOut), .SEDSTDBY(SEDSTDBY));
+	defparam OSCinst0.NOM_FREQ = "9.85";
 	
 	//PLL divides input 10MHz by 4
-	//Div4PLL PLL (.CLKI(OscTenMegOut), .CLKOP(CLKOP)); 
+	Div4PLL PLL (.CLKI(OscTenMegOut), .CLKOP(CLKOP)); 
 
-	POPtimers POPtimers (.reset(1'b0), .clock_2_5M(CLKOP), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	//POPtimers POPtimers (.reset(1'b0), .clock_2_5M(CLKOP), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	POPtimers POPtimers (.load_defaults(load_defaults|initial_state), .clock_2_5M(CLKOP), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	slow_clock_pulse slowclocks (.clk(CLKOP), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
-	quad_state_machine statemachine (.clk(sampled_pushbutton), .state(SMstate));
-	//quad_state_machine statemachine (.clk(sampled_pushbutton), .state(SMstate), .state_0(SMstate_0), .state_1(SMstate_1), .state_2(SMstate_2), .state_3(SMstate_3));
+	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate), .initial_state(initial_state));
 	
-	always@(posedge debounce_pulse)
+	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
-			sampled_pushbutton <= !mode_button; //polls the button once every 100us, inverting the logic
+			sampled_modebutton <= !mode_button; //mode button, inverting the logic
+			load_defaults <= !load_default_button; //load default button, inverting the logic
+			pieovertwo_plus <= !topleft_button; //TL button assigned to pieovertwo_plus, inverted logic
+			freeprecess_plus <= !topright_button; //TR button assigned to freeprecess_plus, inverted logic
+			pieovertwo_minus <= !bottomleft_button; //BL button assigned to pieovertwo_minus, inverted logic
+			freeprecess_minus <= !bottomright_button; //BR button assigned to freeprecess_minus, inverted logic
 		end
 	
 	//States

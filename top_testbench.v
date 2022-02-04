@@ -6,35 +6,43 @@ module top_testbench
 	#(parameter CLOCK_CYCLE = 400);
 
     // Inputs
-	reg tenmegclock, mode_button;
-
+	reg tenmegclock, mode_button, load_default_button;
+	reg topleft_button, topright_button, bottomleft_button, bottomright_button;
+	
     // Outputs
 	wire [1:0] SMstate; //2-bit state vector
+	wire initial_state; //high when first powered up - to enable loading of defaults
 	wire debounce_pulse; //2.5MHz clock divided by 2^8 - 100us period
 	wire slow_pulse; //2.5MHz clock divided by 2^21 - 3.4s period
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
 	wire pump, probe, MW, sample; //outputs from POPtimers module
-	//wire SMstate_0, SMstate_1, SMstate_2, SMstate_3; //high for active state
 	reg LED_output, pump_output, probe_output, MW_output, sample_output; //signals feeding output pins
 	
 	// internals
 	wire CLKOP; //2.5MHz clock
 	wire TenMeg_clk; //10MHz output from onboard oscillator
 	wire SEDSTDBY; // PLL SED standby output for simulation
-	reg sampled_pushbutton; //the button as samped once per 100us
+	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
 
-	//internal oscillator set to (closest setting to) 2.5MHz
-	OSCH OSCinst0 (.STDBY(1'b0), .OSC(CLKOP), .SEDSTDBY(SEDSTDBY));
-	defparam OSCinst0.NOM_FREQ = "2.46";
-
-	POPtimers POPtimers (.reset(1'b0), .clock_2_5M(CLKOP), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
-	slow_clock_pulse slowclocks (.clk(CLKOP), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
-	quad_state_machine statemachine (.clk(sampled_pushbutton), .state(SMstate));
-	//quad_state_machine statemachine (.clk(sampled_pushbutton), .state(SMstate), .state_0(SMstate_0), .state_1(SMstate_1), .state_2(SMstate_2), .state_3(SMstate_3));
+	//internal oscillator set to (closest setting to) 10MHz
+	OSCH OSCinst0 (.STDBY(1'b0), .OSC(OscTenMegOut), .SEDSTDBY(SEDSTDBY));
+	defparam OSCinst0.NOM_FREQ = "9.85";
 	
-	always@(posedge debounce_pulse)
+	//PLL divides input 10MHz by 4
+	Div4PLL PLL (.CLKI(OscTenMegOut), .CLKOP(CLKOP)); 
+
+	POPtimers POPtimers (.load_defaults(load_defaults|initial_state), .clock_2_5M(CLKOP), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	slow_clock_pulse slowclocks (.clk(CLKOP), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
+	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate), .initial_state(initial_state));
+	
+	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
-			sampled_pushbutton <= !mode_button; //polls the button once every 100us, inverting the logic
+			sampled_modebutton <= !mode_button; //mode button, inverting the logic
+			load_defaults <= !load_default_button; //load default button, inverting the logic
+			pieovertwo_plus <= !topleft_button; //TL button assigned to pieovertwo_plus, inverted logic
+			freeprecess_plus <= !topright_button; //TR button assigned to freeprecess_plus, inverted logic
+			pieovertwo_minus <= !bottomleft_button; //BL button assigned to pieovertwo_minus, inverted logic
+			freeprecess_minus <= !bottomright_button; //BR button assigned to freeprecess_minus, inverted logic
 		end
 	
 	//States
@@ -79,6 +87,11 @@ module top_testbench
 
 	initial begin
 		mode_button = 1'b1;
+		topleft_button = 1'b1;
+		topright_button = 1'b1;
+		bottomleft_button = 1'b1;
+		bottomright_button = 1'b1;
+		load_default_button = 1'b1;
 	end
 
 	initial begin
