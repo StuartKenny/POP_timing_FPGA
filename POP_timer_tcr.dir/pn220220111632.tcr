@@ -1,0 +1,19 @@
+#Start recording tcl command: 2/19/2022 11:50:31
+#Project Location: C:/Users/ShifT/GitHub/POP_timing_FPGA; Project name: POP_timer
+prj_project open "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.ldf"
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+prj_src exclude "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v"
+prj_src remove "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v"
+file copy -force -- "C:/Users/ShifT/GitHub/POP_timing_FPGA/DIV4PLL.v" "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source"
+prj_src add "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Synthesis -impl POP_timers_AX2 -task Lattice_Synthesis
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+#Stop recording: 2/20/2022 11:16:32

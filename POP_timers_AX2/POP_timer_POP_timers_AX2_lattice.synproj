@@ -1,0 +1,47 @@
+-a "MachXO2"
+-d LCMXO2-1200HC
+-t QFN32
+-s 4
+-frequency 100
+-optimization_goal Balanced
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr No
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style Auto
+-max_fanout 1000
+-fsm_encoding_style Auto
+
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+-use_io_insertion 1
+-resolve_mixed_drivers 0
+-use_io_reg auto
+
+
+-lpf 1
+-p "C:/Users/ShifT/GitHub/POP_timing_FPGA"
+-ver "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
+-top TinyFPGA_A2
+
+
+-p "C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2" "C:/Users/ShifT/GitHub/POP_timing_FPGA"
+
+-ngd "POP_timer_POP_timers_AX2.ngd"
+

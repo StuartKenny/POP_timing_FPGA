@@ -1,0 +1,692 @@
+
+map -a "MachXO2" -p LCMXO2-1200HC -t QFN32 -s 4 -oc Commercial   "POP_timer_POP_timers_AX2.ngd" -o "POP_timer_POP_timers_AX2_map.ncd" -pr "POP_timer_POP_timers_AX2.prf" -mp "POP_timer_POP_timers_AX2.mrp" -lpf "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/POP_timer_POP_timers_AX2.lpf" -lpf "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: POP_timer_POP_timers_AX2.ngd
+   Picdevice="LCMXO2-1200HC"
+
+   Pictype="QFN32"
+
+   Picspeed=4
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2-1200HCQFN32, Performance used: 4.
+
+Loading device for application baspr from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+1 CCU2 constant inputs absorbed.
+
+    <postMsg mid="51001030" type="Warning" dynamic="1" navigation="0" arg0="POPtimers/counterreset"  />
+
+
+
+Design Summary:
+   Number of registers:    164 out of  1346 (12%)
+      PFU registers:          164 out of  1280 (13%)
+      PIO registers:            0 out of    66 (0%)
+   Number of SLICEs:       343 out of   640 (54%)
+      SLICEs as Logic/ROM:    343 out of   640 (54%)
+      SLICEs as RAM:            0 out of   480 (0%)
+      SLICEs as Carry:        251 out of   640 (39%)
+   Number of LUT4s:        659 out of  1280 (51%)
+      Number used as logic LUTs:        157
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      502
+      Number used as shift registers:     0
+   Number of PIO sites used: 18 + 4(JTAG) out of 22 (100%)
+   Number of block RAMs:  0 out of 7 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 1 (100%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  38
+     Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver: slowclocks/count_141__i7 )
+     Net pieovertwo_minus: 32 loads, 32 rising, 0 falling (Driver: pieovertwo_minus_53 )
+     Net freeprecess_minus: 32 loads, 32 rising, 0 falling (Driver: freeprecess_minus_54 )
+     Net CLKOP: 34 loads, 26 rising, 8 falling (Driver: PLL/PLLInst_0 )
+     Net OscTenMegOut: 1 loads, 1 rising, 0 falling (Driver: OSCinst0 )
+     Net sampled_modebutton: 1 loads, 1 rising, 0 falling (Driver: sampled_modebutton_49 )
+     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_93_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_115: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_92_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_112: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_91_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_121: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_94_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_108: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__I_0_121_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_136: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i600_3_lut )
+     Net POPtimers/piecounter/count_15__N_151: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_104_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_148: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_103_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_145: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i602_3_lut )
+     Net POPtimers/piecounter/count_15__N_142: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_101_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_139: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i601_3_lut )
+     Net POPtimers/piecounter/count_15__N_133: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i599_3_lut )
+     Net POPtimers/piecounter/count_15__N_130: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i598_3_lut )
+     Net POPtimers/piecounter/count_15__N_127: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i597_3_lut )
+     Net POPtimers/piecounter/count_15__N_124: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_95_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_154: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_109_I_0_105_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_136: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i607_3_lut )
+     Net POPtimers/freepcounter/count_15__N_154: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_105_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_148: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i609_3_lut )
+     Net POPtimers/freepcounter/count_15__N_151: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_104_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_133: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_98_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_108: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__I_0_121_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_118: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i603_3_lut )
+     Net POPtimers/freepcounter/count_15__N_130: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i606_3_lut )
+     Net POPtimers/freepcounter/count_15__N_142: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_101_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_124: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i605_3_lut )
+     Net POPtimers/freepcounter/count_15__N_139: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_100_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_127: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_96_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_115: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_92_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_112: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_109_I_0_91_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_145: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i608_3_lut )
+     Net POPtimers/freepcounter/count_15__N_121: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i604_3_lut )
+   Number of Clock Enables:  3
+     Net POPtimers/freeprecess_minus_enable_4: 2 loads, 2 LSLICEs
+     Net POPtimers/freeprecess_minus_enable_5: 2 loads, 2 LSLICEs
+     Net POPtimers/freeprecess_minus_enable_6: 2 loads, 2 LSLICEs
+   Number of local set/reset loads for net POPtimers/counterreset merged into GSR:  16
+   Number of LSRs:  66
+     Net LED_output_N_6: 3 loads, 3 LSLICEs
+     Net n2547: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_166: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_163: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_115: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_160: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_112: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_190: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_121: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_157: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_108: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_202: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_136: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_199: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_193: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_187: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_184: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_181: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_178: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_175: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_151: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_196: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_148: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_145: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_142: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_139: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_133: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_130: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_127: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_172: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_124: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_169: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_154: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_184: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_136: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_154: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_148: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_151: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_181: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_133: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_202: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_199: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_108: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_157: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_118: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_130: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_178: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_196: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_166: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_172: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_193: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_169: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_142: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_124: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_160: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_175: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_139: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_163: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_127: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_115: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_112: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_187: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_190: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_145: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_121: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net load_defaults: 65 loads
+     Net freeprecess_plus: 32 loads
+     Net pieovertwo_plus: 32 loads
+     Net POPtimers/gatedcount_10: 9 loads
+     Net POPtimers/gatedcount_3: 9 loads
+     Net POPtimers/gatedcount_4: 9 loads
+     Net POPtimers/gatedcount_7: 9 loads
+     Net POPtimers/gatedcount_8: 9 loads
+     Net POPtimers/gatedcount_9: 9 loads
+     Net POPtimers/AdjustablePieOverTwo_12: 8 loads
+ 
+
+   Number of warnings:  1
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 43 MB
+
+Dumping design to file POP_timer_POP_timers_AX2_map.ncd.
+
+ncd2vdb "POP_timer_POP_timers_AX2_map.ncd" ".vdbs/POP_timer_POP_timers_AX2_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+
+mpartrce -p "POP_timer_POP_timers_AX2.p2t" -f "POP_timer_POP_timers_AX2.p3t" -tf "POP_timer_POP_timers_AX2.pt" "POP_timer_POP_timers_AX2_map.ncd" "POP_timer_POP_timers_AX2.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "POP_timer_POP_timers_AX2_map.ncd"
+Sun Feb 20 11:13:27 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 POP_timer_POP_timers_AX2_map.ncd POP_timer_POP_timers_AX2.dir/5_1.ncd POP_timer_POP_timers_AX2.prf
+Preference file: POP_timer_POP_timers_AX2.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file POP_timer_POP_timers_AX2_map.ncd.
+Design name: TinyFPGA_A2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     QFN32
+Performance: 4
+Loading device for application par from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   18+4(JTAG)/108     20% used
+                  18+4(JTAG)/22      100% bonded
+
+   SLICE            343/640          53% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+   PLL                1/1           100% used
+
+
+32 potential circuit loops found in timing analysis.
+    <postMsg mid="70061015" type="Warning" dynamic="2" navigation="0" arg0="CLKOP" arg1="PLL/PLLInst_0"  />
+Number of Signals: 898
+Number of Connections: 1738
+
+Pin Constraint Summary:
+   18 out of 18 pins locked (100% locked).
+
+The following 3 signals are selected to use the primary clock routing resources:
+    CLKOP (driver: PLL/PLLInst_0, clk load #: 34)
+    pieovertwo_minus (driver: SLICE_345, clk load #: 32)
+    freeprecess_minus (driver: SLICE_342, clk load #: 32)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    debounce_pulse (driver: slowclocks/SLICE_4, clk load #: 6, sr load #: 0, ce load #: 0)
+
+Signal POPtimers/counterreset is selected as Global Set/Reset.
+Starting Placer Phase 0.
+.........
+Finished Placer Phase 0.  REAL time: 5 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 140108.
+Finished Placer Phase 1.  REAL time: 13 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  139034
+Finished Placer Phase 2.  REAL time: 13 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 1 out of 1 (100%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "CLKOP" from CLKOP on comp "PLL/PLLInst_0" on PLL site "LPLL", clk load = 34
+  PRIMARY "pieovertwo_minus" from Q0 on comp "SLICE_345" on site "R2C13B", clk load = 32
+  PRIMARY "freeprecess_minus" from Q0 on comp "SLICE_342" on site "R7C2C", clk load = 32
+  SECONDARY "debounce_pulse" from Q0 on comp "slowclocks/SLICE_4" on site "R7C12A", clk load = 6, ce load = 0, sr load = 0
+
+  PRIMARY  : 3 out of 8 (37%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   18 + 4(JTAG) out of 108 (20.4%) PIO sites used.
+   18 + 4(JTAG) out of 22 (100.0%) bonded PIO sites used.
+   Number of PIO comps: 18; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+--------------+------------+-----------+
+| I/O Bank | Usage        | Bank Vccio | Bank Vref |
++----------+--------------+------------+-----------+
+| 0        | 5 / 9 ( 55%) | 3.3V       | -         |
+| 1        | 2 / 2 (100%) | 3.3V       | -         |
+| 2        | 9 / 9 (100%) | 3.3V       | -         |
+| 3        | 2 / 2 (100%) | 3.3V       | -         |
++----------+--------------+------------+-----------+
+
+Total placer CPU time: 12 secs 
+
+Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
+
+32 potential circuit loops found in timing analysis.
+0 connections routed; 1738 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=OscTenMegOut loads=1 clock_loads=1&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1&#xA;   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 15 secs 
+
+Start NBR router at 11:13:42 02/20/22
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+32 potential circuit loops found in timing analysis.
+Start NBR special constraint process at 11:13:43 02/20/22
+
+Start NBR section for initial routing at 11:13:43 02/20/22
+Level 4, iteration 1
+81(0.10%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 366.112ns/0.000ns; real time: 17 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 11:13:44 02/20/22
+Level 4, iteration 1
+43(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 17 secs 
+Level 4, iteration 2
+30(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.656ns/0.000ns; real time: 18 secs 
+Level 4, iteration 3
+20(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 18 secs 
+Level 4, iteration 4
+14(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 18 secs 
+Level 4, iteration 5
+15(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 18 secs 
+Level 4, iteration 6
+11(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 18 secs 
+Level 4, iteration 7
+5(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 9
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 19 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 20 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 20 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 20 secs 
+Level 4, iteration 16
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 20 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:13:47 02/20/22
+32 potential circuit loops found in timing analysis.
+32 potential circuit loops found in timing analysis.
+
+Start NBR section for re-routing at 11:13:48 02/20/22
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 365.739ns/0.000ns; real time: 21 secs 
+
+Start NBR section for post-routing at 11:13:48 02/20/22
+32 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 365.739ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=OscTenMegOut loads=1 clock_loads=1&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1&#xA;   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1"  />
+
+32 potential circuit loops found in timing analysis.
+32 potential circuit loops found in timing analysis.
+32 potential circuit loops found in timing analysis.
+Total CPU time 23 secs 
+Total REAL time: 24 secs 
+Completely routed.
+End of route.  1738 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 365.739
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.377
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 24 secs 
+Total REAL time to completion: 24 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "POP_timer_POP_timers_AX2.pt" -o "POP_timer_POP_timers_AX2.twr" "POP_timer_POP_timers_AX2.ncd" "POP_timer_POP_timers_AX2.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file pop_timer_pop_timers_ax2.ncd.
+Design name: TinyFPGA_A2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     QFN32
+Performance: 4
+Loading device for application trce from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Sun Feb 20 11:13:52 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o POP_timer_POP_timers_AX2.twr -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml POP_timer_POP_timers_AX2.ncd POP_timer_POP_timers_AX2.prf 
+Design file:     pop_timer_pop_timers_ax2.ncd
+Preference file: pop_timer_pop_timers_ax2.prf
+Device,speed:    LCMXO2-1200HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+32 potential circuit loops found in timing analysis.
+    <postMsg mid="70061015" type="Warning" dynamic="2" navigation="0" arg0="CLKOP" arg1="PLL/PLLInst_0"  />
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 25021 paths, 3 nets, and 1265 connections (72.78% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Sun Feb 20 11:13:53 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o POP_timer_POP_timers_AX2.twr -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml POP_timer_POP_timers_AX2.ncd POP_timer_POP_timers_AX2.prf 
+Design file:     pop_timer_pop_timers_ax2.ncd
+Preference file: pop_timer_pop_timers_ax2.prf
+Device,speed:    LCMXO2-1200HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+32 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 25021 paths, 3 nets, and 1260 connections (72.50% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 50 MB
+
+
+tmcheck -par "POP_timer_POP_timers_AX2.par" 
+
+bitgen -f "POP_timer_POP_timers_AX2.t2b" -w "POP_timer_POP_timers_AX2.ncd"  -jedec "POP_timer_POP_timers_AX2.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file POP_timer_POP_timers_AX2.ncd.
+Design name: TinyFPGA_A2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     QFN32
+Performance: 4
+Loading device for application Bitgen from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from POP_timer_POP_timers_AX2.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "POP_timer_POP_timers_AX2.jed".
+ 
+===========
+UFM Summary.
+===========
+UFM Size:        511 Pages (128*511 Bits).
+UFM Utilization: General Purpose Flash Memory.
+ 
+Available General Purpose Flash Memory:  511 Pages (Page 0 to Page 510).
+Initialized UFM Pages:                     0 Page.
+ 
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 255 MB

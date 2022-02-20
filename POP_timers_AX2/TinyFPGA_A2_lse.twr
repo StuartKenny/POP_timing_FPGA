@@ -1,0 +1,763 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Feb 20 11:12:51 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     TinyFPGA_A2
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -name clk4 [get_nets freeprecess_minus]
+            1750 items scored, 256 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.330ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/freepcounter/i357  (from freeprecess_minus +)
+   Destination:    FD1S3DX    CD             \POPtimers/freepcounter/count_i15_310_311_reset  (to freeprecess_minus +)
+
+   Delay:                  17.170ns  (36.9% logic, 63.1% route), 14 logic levels.
+
+ Constraint Details:
+
+     17.170ns data_path \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i15_310_311_reset violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.330ns
+
+ Path Details: \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i15_310_311_reset
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i357 (from freeprecess_minus)
+Route         4   e 1.398                                  \POPtimers/n1470
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i360_3_lut
+Route         4   e 1.340                                  \POPtimers/AdjustableFreePrecession[3]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_1
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2298
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2299
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_5
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[7]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/count_15__N_109_I_0_98_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_133
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i341
+Route         3   e 1.315                                  \POPtimers/n1454
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i344_3_lut
+Route         5   e 1.405                                  \POPtimers/AdjustableFreePrecession[7]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2300
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2301
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2302
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2303
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_13
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[15]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/count_15__N_109_I_0_106_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_157
+                  --------
+                   17.170  (36.9% logic, 63.1% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 7.330ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/freepcounter/i357  (from freeprecess_minus +)
+   Destination:    FD1S3DX    CD             \POPtimers/freepcounter/count_i15_310_311_reset  (to freeprecess_minus +)
+
+   Delay:                  17.170ns  (36.9% logic, 63.1% route), 14 logic levels.
+
+ Constraint Details:
+
+     17.170ns data_path \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i15_310_311_reset violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.330ns
+
+ Path Details: \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i15_310_311_reset
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i357 (from freeprecess_minus)
+Route         4   e 1.398                                  \POPtimers/n1470
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i360_3_lut
+Route         4   e 1.340                                  \POPtimers/AdjustableFreePrecession[3]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_1
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2298
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2299
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_5
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[6]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i607_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_136
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i345
+Route         3   e 1.315                                  \POPtimers/n1458
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i348_3_lut
+Route         5   e 1.405                                  \POPtimers/AdjustableFreePrecession[6]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2300
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2301
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2302
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2303
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_13
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[15]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/count_15__N_109_I_0_106_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_157
+                  --------
+                   17.170  (36.9% logic, 63.1% route), 14 logic levels.
+
+
+Error:  The following path violates requirements by 7.330ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/freepcounter/i357  (from freeprecess_minus +)
+   Destination:    FD1S3BX    PD             \POPtimers/freepcounter/count_i14_314_315_set  (to freeprecess_minus +)
+
+   Delay:                  17.170ns  (36.9% logic, 63.1% route), 14 logic levels.
+
+ Constraint Details:
+
+     17.170ns data_path \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i14_314_315_set violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.330ns
+
+ Path Details: \POPtimers/freepcounter/i357 to \POPtimers/freepcounter/count_i14_314_315_set
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i357 (from freeprecess_minus)
+Route         4   e 1.398                                  \POPtimers/n1470
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i360_3_lut
+Route         4   e 1.340                                  \POPtimers/AdjustableFreePrecession[3]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_1
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2298
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2299
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_5
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[7]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/count_15__N_109_I_0_98_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_133
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/i341
+Route         3   e 1.315                                  \POPtimers/n1454
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/i344_3_lut
+Route         5   e 1.405                                  \POPtimers/AdjustableFreePrecession[7]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_140_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2300
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2301
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2302
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_140_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2303
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_140_13
+Route         2   e 1.486                                  \POPtimers/freepcounter/count_15__N_111[14]
+LUT4        ---     0.493              C to Z              \POPtimers/freepcounter/count_15__N_109_I_0_91_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_112
+                  --------
+                   17.170  (36.9% logic, 63.1% route), 14 logic levels.
+
+Warning: 17.330 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -name clk3 [get_nets pieovertwo_minus]
+            2367 items scored, 222 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.510ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/piecounter/i301  (from pieovertwo_minus +)
+   Destination:    FD1S3DX    CD             \POPtimers/piecounter/count_i0_i15_370_371_reset  (to pieovertwo_minus +)
+
+   Delay:                  17.350ns  (38.3% logic, 61.7% route), 16 logic levels.
+
+ Constraint Details:
+
+     17.350ns data_path \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i15_370_371_reset violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.510ns
+
+ Path Details: \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i15_370_371_reset
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i301 (from pieovertwo_minus)
+Route         4   e 1.398                                  \POPtimers/n1414
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i304_3_lut
+Route         5   e 1.405                                  \POPtimers/AdjustablePieOverTwo[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_1
+Route         1   e 0.020                                  \POPtimers/piecounter/n2234
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n2235
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n2236
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_7
+Route         2   e 1.486                                  \POPtimers/piecounter/count_15__N_111[5]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i601_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_139
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i409
+Route         1   e 0.941                                  \POPtimers/piecounter/n1522
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i412_3_lut
+Route         8   e 1.540                                  \POPtimers/AdjustablePieOverTwo[5]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n2237
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n2238
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n2239
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n2240
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_15
+Route         1   e 0.020                                  \POPtimers/piecounter/n2241
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_17
+Route         2   e 1.486                                  \POPtimers/piecounter/count_15__N_111[15]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/count_15__N_109_I_0_106_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_157
+                  --------
+                   17.350  (38.3% logic, 61.7% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 7.440ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/piecounter/i301  (from pieovertwo_minus +)
+   Destination:    FD1S3BX    PD             \POPtimers/piecounter/count_i0_i15_370_371_set  (to pieovertwo_minus +)
+
+   Delay:                  17.280ns  (38.5% logic, 61.5% route), 16 logic levels.
+
+ Constraint Details:
+
+     17.280ns data_path \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i15_370_371_set violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.440ns
+
+ Path Details: \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i15_370_371_set
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i301 (from pieovertwo_minus)
+Route         4   e 1.388                                  \POPtimers/n1414
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i304_3_lut
+Route         5   e 1.395                                  \POPtimers/AdjustablePieOverTwo[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_1
+Route         1   e 0.010                                  \POPtimers/piecounter/n2234
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_3
+Route         1   e 0.010                                  \POPtimers/piecounter/n2235
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_5
+Route         1   e 0.010                                  \POPtimers/piecounter/n2236
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_7
+Route         2   e 1.476                                  \POPtimers/piecounter/count_15__N_111[5]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i601_3_lut
+Route         2   e 1.131                                  \POPtimers/piecounter/count_15__N_139
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i409
+Route         1   e 0.941                                  \POPtimers/piecounter/n1522
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i412_3_lut
+Route         8   e 1.540                                  \POPtimers/AdjustablePieOverTwo[5]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n2237
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n2238
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n2239
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n2240
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_15
+Route         1   e 0.020                                  \POPtimers/piecounter/n2241
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_17
+Route         2   e 1.486                                  \POPtimers/piecounter/count_15__N_111[15]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/count_15__I_0_121_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_108
+                  --------
+                   17.280  (38.5% logic, 61.5% route), 16 logic levels.
+
+
+Error:  The following path violates requirements by 7.333ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1D     CK             \POPtimers/piecounter/i301  (from pieovertwo_minus +)
+   Destination:    FD1S3DX    CD             \POPtimers/piecounter/count_i0_i13_378_379_reset  (to pieovertwo_minus +)
+
+   Delay:                  17.173ns  (37.8% logic, 62.2% route), 15 logic levels.
+
+ Constraint Details:
+
+     17.173ns data_path \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i13_378_379_reset violates
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 7.333ns
+
+ Path Details: \POPtimers/piecounter/i301 to \POPtimers/piecounter/count_i0_i13_378_379_reset
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i301 (from pieovertwo_minus)
+Route         4   e 1.398                                  \POPtimers/n1414
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i304_3_lut
+Route         5   e 1.405                                  \POPtimers/AdjustablePieOverTwo[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_1
+Route         1   e 0.020                                  \POPtimers/piecounter/n2234
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n2235
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n2236
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_7
+Route         2   e 1.486                                  \POPtimers/piecounter/count_15__N_111[5]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i601_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_139
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/i409
+Route         1   e 0.941                                  \POPtimers/piecounter/n1522
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/i412_3_lut
+Route         8   e 1.540                                  \POPtimers/AdjustablePieOverTwo[5]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/count_15__I_0_122_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n2237
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n2238
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n2239
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/count_15__I_0_122_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n2240
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/count_15__I_0_122_15
+Route         2   e 1.486                                  \POPtimers/piecounter/count_15__N_111[13]
+LUT4        ---     0.493              C to Z              \POPtimers/piecounter/count_15__N_109_I_0_108_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_163
+                  --------
+                   17.173  (37.8% logic, 62.2% route), 15 logic levels.
+
+Warning: 17.510 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -name clk2 [get_nets CLKOP]
+            845 items scored, 397 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.695ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i0  (from CLKOP +)
+   Destination:    FD1S3IX    D              MW_output_58  (to CLKOP +)
+
+   Delay:                   8.535ns  (46.3% logic, 53.7% route), 12 logic levels.
+
+ Constraint Details:
+
+      8.535ns data_path \POPtimers/gatedcount_i0 to MW_output_58 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.695ns
+
+ Path Details: \POPtimers/gatedcount_i0 to MW_output_58
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i0 (from CLKOP)
+Route         8   e 1.598                                  \POPtimers/gatedcount[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW4/sub_107_add_2_1
+Route         1   e 0.020                                  \POPtimers/MW4/n2282
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW4/n2283
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW4/n2284
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW4/n2285
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW4/n2286
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW4/n2287
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW4/n2288
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_107_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW4/n2289
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW4/sub_107_add_2_17
+Route         1   e 0.941                                  \POPtimers/n236
+LUT4        ---     0.493              B to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_38
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         1   e 0.941                                  MW
+                  --------
+                    8.535  (46.3% logic, 53.7% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 3.695ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i0  (from CLKOP +)
+   Destination:    FD1S3IX    D              MW_output_58  (to CLKOP +)
+
+   Delay:                   8.535ns  (46.3% logic, 53.7% route), 12 logic levels.
+
+ Constraint Details:
+
+      8.535ns data_path \POPtimers/gatedcount_i0 to MW_output_58 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.695ns
+
+ Path Details: \POPtimers/gatedcount_i0 to MW_output_58
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i0 (from CLKOP)
+Route         8   e 1.598                                  \POPtimers/gatedcount[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW3/sub_105_add_2_1
+Route         1   e 0.020                                  \POPtimers/MW3/n2305
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW3/n2306
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW3/n2307
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW3/n2308
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW3/n2309
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW3/n2310
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW3/n2311
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW3/n2312
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW3/sub_105_add_2_17
+Route         1   e 0.941                                  \POPtimers/pi2started
+LUT4        ---     0.493              A to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_38
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         1   e 0.941                                  MW
+                  --------
+                    8.535  (46.3% logic, 53.7% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 3.518ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i2  (from CLKOP +)
+   Destination:    FD1S3IX    D              MW_output_58  (to CLKOP +)
+
+   Delay:                   8.358ns  (45.4% logic, 54.6% route), 11 logic levels.
+
+ Constraint Details:
+
+      8.358ns data_path \POPtimers/gatedcount_i2 to MW_output_58 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.518ns
+
+ Path Details: \POPtimers/gatedcount_i2 to MW_output_58
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i2 (from CLKOP)
+Route         8   e 1.598                                  \POPtimers/gatedcount[2]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW3/sub_105_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW3/n2306
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW3/n2307
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW3/n2308
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW3/n2309
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW3/n2310
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW3/n2311
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_105_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW3/n2312
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW3/sub_105_add_2_17
+Route         1   e 0.941                                  \POPtimers/pi2started
+LUT4        ---     0.493              A to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_38
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         1   e 0.941                                  MW
+                  --------
+                    8.358  (45.4% logic, 54.6% route), 11 logic levels.
+
+Warning: 8.695 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -name clk1 [get_nets debounce_pulse]
+            64 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 5.436ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             load_defaults_50  (from debounce_pulse +)
+   Destination:    FD1S1D     CD             \POPtimers/freepcounter/i305  (to debounce_pulse +)
+
+   Delay:                   4.404ns  (21.3% logic, 78.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.404ns data_path load_defaults_50 to \POPtimers/freepcounter/i305 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 5.436ns
+
+ Path Details: load_defaults_50 to \POPtimers/freepcounter/i305
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              load_defaults_50 (from debounce_pulse)
+Route        65   e 2.326                                  load_defaults
+LUT4        ---     0.493              B to Z              \POPtimers/freepcounter/count_15__N_109_I_0_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_202
+                  --------
+                    4.404  (21.3% logic, 78.7% route), 2 logic levels.
+
+
+Passed:  The following path meets requirements by 5.436ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             load_defaults_50  (from debounce_pulse +)
+   Destination:    FD1S1D     CD             \POPtimers/freepcounter/i309  (to debounce_pulse +)
+
+   Delay:                   4.404ns  (21.3% logic, 78.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.404ns data_path load_defaults_50 to \POPtimers/freepcounter/i309 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 5.436ns
+
+ Path Details: load_defaults_50 to \POPtimers/freepcounter/i309
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              load_defaults_50 (from debounce_pulse)
+Route        65   e 2.326                                  load_defaults
+LUT4        ---     0.493              B to Z              \POPtimers/freepcounter/count_15__N_109_I_0_106_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/freepcounter/count_15__N_157
+                  --------
+                    4.404  (21.3% logic, 78.7% route), 2 logic levels.
+
+
+Passed:  The following path meets requirements by 5.436ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             load_defaults_50  (from debounce_pulse +)
+   Destination:    FD1S1D     CD             \POPtimers/piecounter/i369  (to debounce_pulse +)
+
+   Delay:                   4.404ns  (21.3% logic, 78.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.404ns data_path load_defaults_50 to \POPtimers/piecounter/i369 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 5.436ns
+
+ Path Details: load_defaults_50 to \POPtimers/piecounter/i369
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              load_defaults_50 (from debounce_pulse)
+Route        65   e 2.326                                  load_defaults
+LUT4        ---     0.493              B to Z              \POPtimers/piecounter/count_15__N_109_I_0_106_2_lut_3_lut_3_lut
+Route         2   e 1.141                                  \POPtimers/piecounter/count_15__N_157
+                  --------
+                    4.404  (21.3% logic, 78.7% route), 2 logic levels.
+
+Report: 4.564 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 10.000000 -name clk0 [get_nets sampled_modebutton]
+            3 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 6.364ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \statemachine/state_i0  (from sampled_modebutton +)
+   Destination:    FD1S3AX    D              \statemachine/state_i1  (to sampled_modebutton +)
+
+   Delay:                   3.476ns  (27.0% logic, 73.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.476ns data_path \statemachine/state_i0 to \statemachine/state_i1 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 6.364ns
+
+ Path Details: \statemachine/state_i0 to \statemachine/state_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \statemachine/state_i0 (from sampled_modebutton)
+Route         8   e 1.598                                  SMstate[0]
+LUT4        ---     0.493              A to Z              \statemachine/i208_2_lut
+Route         1   e 0.941                                  \statemachine/state_1__N_244[1]
+                  --------
+                    3.476  (27.0% logic, 73.0% route), 2 logic levels.
+
+
+Passed:  The following path meets requirements by 6.364ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \statemachine/state_i0  (from sampled_modebutton +)
+   Destination:    FD1S3AX    D              \statemachine/state_i0  (to sampled_modebutton +)
+
+   Delay:                   3.476ns  (27.0% logic, 73.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.476ns data_path \statemachine/state_i0 to \statemachine/state_i0 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 6.364ns
+
+ Path Details: \statemachine/state_i0 to \statemachine/state_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \statemachine/state_i0 (from sampled_modebutton)
+Route         8   e 1.598                                  SMstate[0]
+LUT4        ---     0.493              A to Z              i175_1_lut
+Route         1   e 0.941                                  state_1__N_244[0]
+                  --------
+                    3.476  (27.0% logic, 73.0% route), 2 logic levels.
+
+
+Passed:  The following path meets requirements by 6.403ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \statemachine/state_i1  (from sampled_modebutton +)
+   Destination:    FD1S3AX    D              \statemachine/state_i1  (to sampled_modebutton +)
+
+   Delay:                   3.437ns  (27.3% logic, 72.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.437ns data_path \statemachine/state_i1 to \statemachine/state_i1 meets
+     10.000ns delay constraint less
+      0.160ns L_S requirement (totaling 9.840ns) by 6.403ns
+
+ Path Details: \statemachine/state_i1 to \statemachine/state_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \statemachine/state_i1 (from sampled_modebutton)
+Route         7   e 1.559                                  SMstate[1]
+LUT4        ---     0.493              B to Z              \statemachine/i208_2_lut
+Route         1   e 0.941                                  \statemachine/state_1__N_244[1]
+                  --------
+                    3.437  (27.3% logic, 72.7% route), 2 logic levels.
+
+Report: 3.636 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk4 [get_nets freeprecess_minus]       |    10.000 ns|    17.330 ns|    14 *
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk3 [get_nets pieovertwo_minus]        |    10.000 ns|    17.510 ns|    16 *
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk2 [get_nets CLKOP]                   |    10.000 ns|    17.390 ns|    12 *
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk1 [get_nets debounce_pulse]          |    10.000 ns|     4.564 ns|     2  
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk0 [get_nets sampled_modebutton]      |    10.000 ns|     3.636 ns|     2  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\POPtimers/counterreset                 |      16|     256|     29.26%
+                                        |        |        |
+\POPtimers/loop                         |       1|     256|     29.26%
+                                        |        |        |
+\POPtimers/loopcounter/n2265            |       1|     240|     27.43%
+                                        |        |        |
+\POPtimers/AdjustablePieOverTwo[5]      |       8|     222|     25.37%
+                                        |        |        |
+\POPtimers/piecounter/count_15__N_111[5]|       2|     222|     25.37%
+                                        |        |        |
+\POPtimers/piecounter/count_15__N_139   |       2|     222|     25.37%
+                                        |        |        |
+\POPtimers/piecounter/n1522             |       1|     222|     25.37%
+                                        |        |        |
+\POPtimers/freepcounter/n2299           |       1|     216|     24.69%
+                                        |        |        |
+\POPtimers/loopcounter/n2264            |       1|     208|     23.77%
+                                        |        |        |
+\POPtimers/piecounter/n2236             |       1|     200|     22.86%
+                                        |        |        |
+\POPtimers/loopcounter/n2263            |       1|     176|     20.11%
+                                        |        |        |
+\POPtimers/AdjustableFreePrecession[6]  |       5|     148|     16.91%
+                                        |        |        |
+\POPtimers/AdjustableFreePrecession[7]  |       5|     148|     16.91%
+                                        |        |        |
+\POPtimers/n1454                        |       3|     148|     16.91%
+                                        |        |        |
+\POPtimers/n1458                        |       3|     148|     16.91%
+                                        |        |        |
+\POPtimers/loopcounter/n2262            |       1|     144|     16.46%
+                                        |        |        |
+\POPtimers/freepcounter/count_15__N_111[|        |        |
+6]                                      |       2|     128|     14.63%
+                                        |        |        |
+\POPtimers/freepcounter/count_15__N_111[|        |        |
+7]                                      |       2|     128|     14.63%
+                                        |        |        |
+\POPtimers/freepcounter/count_15__N_133 |       2|     128|     14.63%
+                                        |        |        |
+\POPtimers/freepcounter/count_15__N_136 |       2|     128|     14.63%
+                                        |        |        |
+\POPtimers/freepcounter/n2323           |       1|     128|     14.63%
+                                        |        |        |
+\POPtimers/piecounter/n2235             |       1|     120|     13.71%
+                                        |        |        |
+\POPtimers/loopcounter/n2261            |       1|     112|     12.80%
+                                        |        |        |
+\POPtimers/piecounter/n2331             |       1|     108|     12.34%
+                                        |        |        |
+\POPtimers/freepcounter/n2300           |       1|      96|     10.97%
+                                        |        |        |
+\POPtimers/freepcounter/n2324           |       1|      96|     10.97%
+                                        |        |        |
+\POPtimers/piecounter/n2237             |       1|      90|     10.29%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 875  Score: 4438888
+
+Constraints cover  5130 paths, 485 nets, and 981 connections (55.1% coverage)
+
+
+Peak memory: 63463424 bytes, TRCE: 6729728 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 

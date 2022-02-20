@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="PARTrace">
+        <Message>
+            <ID>70061015</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKOP</Dynamic>
+            <Dynamic>PLL/PLLInst_0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>51001030</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>POPtimers/counterreset</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v(1): </Dynamic>
+            <Dynamic>TinyFPGA_A2</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
+            <Dynamic>OSCH(NOM_FREQ=&quot;9.85&quot;)</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1793</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v(8): </Dynamic>
+            <Dynamic>DIV4PLL</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): </Dynamic>
+            <Dynamic>VLO</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1124</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): </Dynamic>
+            <Dynamic>EHXPLLJ_renamed_due_excessive_length_1</Dynamic>
+            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1730</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v(1): </Dynamic>
+            <Dynamic>POPtimers</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v(2): </Dynamic>
+            <Dynamic>count_n</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v(1): </Dynamic>
+            <Dynamic>comparator</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(2): </Dynamic>
+            <Dynamic>countupdownpreload</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(19): </Dynamic>
+            <Dynamic>preload</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(4): </Dynamic>
+            <Dynamic>slow_clock_pulse</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(30): </Dynamic>
+            <Dynamic>quad_state_machine</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>70061015</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKOP</Dynamic>
+            <Dynamic>PLL/PLLInst_0</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=OscTenMegOut loads=1 clock_loads=1
+   Signal=sampled_modebutton loads=1 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1
+   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=OscTenMegOut loads=1 clock_loads=1
+   Signal=sampled_modebutton loads=1 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1
+   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

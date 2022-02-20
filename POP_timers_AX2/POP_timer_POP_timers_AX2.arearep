@@ -1,0 +1,188 @@
+----------------------------------------------------------------------
+Report for cell TinyFPGA_A2.TECH
+Register bits:  164 of 1346 (12.184%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       251          100.0
+                            EHXPLLJ         1          100.0
+                            FD1P3BX         3          100.0
+                            FD1P3DX         3          100.0
+                             FD1S1D        32          100.0
+                            FD1S3AX        48          100.0
+                            FD1S3BX        29          100.0
+                            FD1S3DX        45          100.0
+                            FD1S3IX         2          100.0
+                            FD1S3JX         2          100.0
+                                GSR         1          100.0
+                                 IB         7          100.0
+                                INV         1          100.0
+                               LUT4       127          100.0
+                                 OB         8          100.0
+                                OBZ         3          100.0
+                               OSCH         1          100.0
+SUB MODULES
+                            DIV4PLL         1
+                          POPtimers         1
+                         comparator         1
+                      comparator_U0         1
+                      comparator_U1         1
+                      comparator_U2         1
+                      comparator_U3         1
+                      comparator_U5         1
+                      comparator_U6         1
+                      comparator_U7         1
+                      comparator_U8         1
+                            count_n         1
+                 countupdownpreload         1
+              countupdownpreload_U4         1
+                 quad_state_machine         1
+                   slow_clock_pulse         1
+                              TOTAL       580
+----------------------------------------------------------------------
+Report for cell quad_state_machine.v1
+Instance Path : statemachine
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         2            4.2
+                               LUT4         1            0.8
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell slow_clock_pulse.v1
+Instance Path : slowclocks
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        12            4.8
+                            FD1S3AX        23           47.9
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell POPtimers.v1
+Instance Path : POPtimers
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       239           95.2
+                            FD1P3BX         3          100.0
+                            FD1P3DX         3          100.0
+                             FD1S1D        32          100.0
+                            FD1S3AX        16           33.3
+                            FD1S3BX        29          100.0
+                            FD1S3DX        45          100.0
+                               LUT4       112           88.2
+SUB MODULES
+                         comparator         1
+                      comparator_U0         1
+                      comparator_U1         1
+                      comparator_U2         1
+                      comparator_U3         1
+                      comparator_U5         1
+                      comparator_U6         1
+                      comparator_U7         1
+                      comparator_U8         1
+                            count_n         1
+                 countupdownpreload         1
+              countupdownpreload_U4         1
+                              TOTAL       491
+----------------------------------------------------------------------
+Report for cell count_n.v1
+Instance Path : POPtimers.systemcounter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                            FD1S3DX        16           35.6
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell comparator.v1
+Instance Path : POPtimers.sample2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                               LUT4         1            0.8
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell comparator_U0.v1
+Instance Path : POPtimers.pump2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         3            2.4
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell comparator_U1.v1
+Instance Path : POPtimers.probe2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell comparator_U2.v1
+Instance Path : POPtimers.probe1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell countupdownpreload.v1
+Instance Path : POPtimers.piecounter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        18            7.2
+                             FD1S1D        16           50.0
+                            FD1S3BX        16           55.2
+                            FD1S3DX        16           35.6
+                               LUT4        48           37.8
+                              TOTAL       114
+----------------------------------------------------------------------
+Report for cell comparator_U3.v1
+Instance Path : POPtimers.loopcounter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell countupdownpreload_U4.v1
+Instance Path : POPtimers.freepcounter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            5.6
+                            FD1P3BX         3          100.0
+                            FD1P3DX         3          100.0
+                             FD1S1D        16           50.0
+                            FD1S3BX        13           44.8
+                            FD1S3DX        13           28.9
+                               LUT4        51           40.2
+                              TOTAL       113
+----------------------------------------------------------------------
+Report for cell comparator_U5.v1
+Instance Path : POPtimers.MW4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell comparator_U6.v1
+Instance Path : POPtimers.MW3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell comparator_U7.v1
+Instance Path : POPtimers.MW2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell comparator_U8.v1
+Instance Path : POPtimers.MW1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         6            4.7
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell DIV4PLL.v1
+Instance Path : PLL
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+                                INV         1          100.0
+                              TOTAL         2

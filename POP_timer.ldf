@@ -21,9 +21,6 @@
         <Source name="POP_timers_AX2/source/count_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
-        <Source name="POP_timers_AX2/source/Div4PLL.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="POP_timers_AX2/source/PLL_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
@@ -45,19 +42,10 @@
         <Source name="POP_timers_AX2/source/extensions_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
-        <Source name="extended_counter_testbench/extended_counter_testbench.spf" type="Simulation Project File" type_short="SPF">
+        <Source name="POP_timers_AX2/source/DIV4PLL.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="POP_timer.lpf" type="Logic Preference" type_short="LPF">
-            <Options/>
-        </Source>
-        <Source name="POPtimers_testbench/POPtimers_testbench.spf" type="Simulation Project File" type_short="SPF">
-            <Options/>
-        </Source>
-        <Source name="top_testbench/top_testbench.spf" type="Simulation Project File" type_short="SPF">
-            <Options/>
-        </Source>
-        <Source name="wrapper_testbench/wrapper_testbench.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
     </Implementation>

@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "C:/Users/ShifT/GitHub/POP_timing_FPGA"  
