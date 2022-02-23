@@ -1,8 +1,8 @@
 [ START MERGED ]
-clock_2_5M_N_30 CLKOP
+clk_2M5_N_30 clk_2M5
 POPtimers/freepcounter/freeprecess_minus_enable_1 POPtimers/freeprecess_minus_enable_6
-POPtimers/freepcounter/freeprecess_minus_enable_2 POPtimers/freeprecess_minus_enable_5
-POPtimers/freepcounter/freeprecess_minus_enable_3 POPtimers/freeprecess_minus_enable_4
+POPtimers/freepcounter/freeprecess_minus_enable_2 POPtimers/freeprecess_minus_enable_4
+POPtimers/freepcounter/freeprecess_minus_enable_3 POPtimers/freeprecess_minus_enable_5
 [ END MERGED ]
 [ START CLIPPED ]
 POPtimers/MW2/sub_103_add_2_17/S0
@@ -156,25 +156,25 @@ POPtimers/systemcounter/count_142_add_4_17/S1
 POPtimers/systemcounter/count_142_add_4_17/CO
 POPtimers/systemcounter/count_142_add_4_1/S0
 POPtimers/systemcounter/count_142_add_4_1/CI
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_797_add_1_17/S1
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_797_add_1_17/CO
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_797_add_1_1/S0
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_797_add_1_1/CI
-POPtimers/add_799_16/CO
-POPtimers/add_799_2/S0
-POPtimers/add_799_2/CI
-POPtimers/add_798_17/S1
-POPtimers/add_798_17/CO
-POPtimers/add_798_1/S0
-POPtimers/add_798_1/CI
-POPtimers/add_193_793_add_1_17/S1
-POPtimers/add_193_793_add_1_17/CO
-POPtimers/add_193_793_add_1_1/S0
-POPtimers/add_193_793_add_1_1/CI
-POPtimers/add_199_795_add_1_17/S1
-POPtimers/add_199_795_add_1_17/CO
-POPtimers/add_199_795_add_1_1/S0
-POPtimers/add_199_795_add_1_1/CI
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_803_add_1_17/S1
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_803_add_1_17/CO
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_803_add_1_1/S0
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_803_add_1_1/CI
+POPtimers/add_805_16/CO
+POPtimers/add_805_2/S0
+POPtimers/add_805_2/CI
+POPtimers/add_804_17/S1
+POPtimers/add_804_17/CO
+POPtimers/add_804_1/S0
+POPtimers/add_804_1/CI
+POPtimers/add_193_799_add_1_17/S1
+POPtimers/add_193_799_add_1_17/CO
+POPtimers/add_193_799_add_1_1/S0
+POPtimers/add_193_799_add_1_1/CI
+POPtimers/add_199_801_add_1_17/S1
+POPtimers/add_199_801_add_1_17/CO
+POPtimers/add_199_801_add_1_1/S0
+POPtimers/add_199_801_add_1_1/CI
 POPtimers/add_209_15/S1
 POPtimers/add_209_15/CO
 POPtimers/add_209_1/S0
@@ -187,8 +187,8 @@ POPtimers/add_195_1/S0
 POPtimers/add_195_1/CI
 POPtimers/add_210_15/S1
 POPtimers/add_210_15/CO
-POPtimers/add_797_17/S1
-POPtimers/add_797_17/CO
+POPtimers/add_803_17/S1
+POPtimers/add_803_17/CO
 POPtimers/Startof1stMWpulse_15__I_0_17/S1
 POPtimers/Startof1stMWpulse_15__I_0_17/CO
 POPtimers/Endofprobepulse_15__I_0_15/S1
@@ -197,36 +197,36 @@ POPtimers/Endofprobepulse_15__I_0_1/S0
 POPtimers/Endofprobepulse_15__I_0_1/CI
 POPtimers/add_214_1/S0
 POPtimers/add_214_1/CI
-POPtimers/add_797_1/S0
-POPtimers/add_797_1/CI
+POPtimers/add_803_1/S0
+POPtimers/add_803_1/CI
 POPtimers/Startof1stMWpulse_15__I_0_1/S0
 POPtimers/Startof1stMWpulse_15__I_0_1/CI
-POPtimers/add_783_13/CO
+POPtimers/add_789_13/CO
 POPtimers/add_212_1/S0
 POPtimers/add_212_1/CI
 POPtimers/add_213_1/S0
 POPtimers/add_213_1/CI
-POPtimers/add_213_15/CO
 POPtimers/add_203_17/S1
 POPtimers/add_203_17/CO
 POPtimers/add_214_15/S1
 POPtimers/add_214_15/CO
+POPtimers/add_213_15/CO
 POPtimers/add_203_1/S0
 POPtimers/add_203_1/CI
 POPtimers/add_195_17/S1
 POPtimers/add_195_17/CO
-POPtimers/add_783_1/S0
-POPtimers/add_783_1/CI
+POPtimers/add_789_1/S0
+POPtimers/add_789_1/CI
 slowclocks/count_141_add_4_1/S0
 slowclocks/count_141_add_4_1/CI
 slowclocks/count_141_add_4_23/CO
 [ END CLIPPED ]
 [ START OSC ]
-OscTenMegOut 9.85
+clocks/clk_debug 9.85
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Sun Feb 20 11:13:27 2022
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Wed Feb 23 21:04:09 2022
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "pin3_sn" SITE "16" ;
@@ -247,7 +247,7 @@ LOCATE COMP "topleft_button" SITE "23" ;
 LOCATE COMP "topright_button" SITE "25" ;
 LOCATE COMP "bottomleft_button" SITE "27" ;
 LOCATE COMP "bottomright_button" SITE "28" ;
-FREQUENCY NET "CLKOP" 2.500000 MHz ;
-FREQUENCY NET "OscTenMegOut" 9.850000 MHz ;
+FREQUENCY NET "clk_2M5" 2.500000 MHz ;
+FREQUENCY NET "clocks/clk_debug" 9.850000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

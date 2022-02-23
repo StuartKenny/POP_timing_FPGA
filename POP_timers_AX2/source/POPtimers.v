@@ -9,8 +9,8 @@ module POPtimers
 	SampleLength=125, //50us
 	LaserMWgap=125, //50us
 	PostCycle=500 //200us - at least 500 to prevent premature counter reset
-	)(load_defaults, //input, 1 to reset
-	clock_2_5M, //2.5MHz clock
+	)(clk_2M5, //2.5MHz clock
+	load_defaults, //input, 1 to reset
 	pieovertwo_plus, //sampled button input
 	freeprecess_plus, //sampled button input
 	pieovertwo_minus, //sampled button input
@@ -21,7 +21,7 @@ module POPtimers
 	sample //output
 	);
 	
-	input load_defaults, clock_2_5M, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
+	input load_defaults, clk_2M5, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
 	output reg pump, probe, MW, sample; //outputs also defined as registers to allow assignment
 	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
 	reg [WIDTH-1:0] gatedcount;
@@ -43,7 +43,7 @@ module POPtimers
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse;
 	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; 
 	
-	count_n systemcounter (.clk(clock_2_5M), .direction(Up), .reset(counterreset), .count(count)); 
+	count_n systemcounter (.clk(clk_2M5), .direction(Up), .reset(counterreset), .count(count)); 
 	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
 	comparator pump2 (.a(gatedcount), .b(Endofpumppulse), .a_gteq_b(pumpstopped), .a_lt_b());
 	comparator MW1 (.a(gatedcount), .b(Startof1stMWpulse), .a_gteq_b(pi1started), .a_lt_b());
@@ -67,7 +67,7 @@ module POPtimers
 	
 	//counter updates on a positive clock edge
 	//comparators are updated on the negative clock edge for stability 
-	always@(negedge clock_2_5M) begin
+	always@(negedge clk_2M5) begin
 		gatedcount <= count; 
 	end
 	

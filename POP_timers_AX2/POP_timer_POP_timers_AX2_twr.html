@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Sun Feb 20 11:13:52 2022
+Wed Feb 23 21:04:37 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -41,16 +41,17 @@ Report level:    verbose report, limited to 10 items per preference
 
 <A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "CLKOP" 2.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
-Report:   29.188MHz is the maximum frequency for this preference.
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "clk_2M5" 2.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+Report:   28.572MHz is the maximum frequency for this preference.
 
-<LI><A href='#par_twr_pref_0_1' Target='right'>FREQUENCY NET "OscTenMegOut" 9.850000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+<LI><A href='#par_twr_pref_0_1' Target='right'>FREQUENCY NET "clocks/clk_debug" 9.850000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
 
 32 potential circuit loops found in timing analysis.
-WARNING - trce: Bypassed output clock CLKOP frequency does not match input clock for PLL/PLLInst_0. If you desire to change the PLL frequency settings, please do so by regenerating your PLL module.
+WARNING - trce: Bypassed output clock CLKOP frequency does not match input clock for clocks/PLL/PLLInst_0. If you desire to change the PLL frequency settings, please do so by regenerating your PLL module.
 
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
+BLOCK JTAG PATHS
 --------------------------------------------------------------------------------
 
 
@@ -65,825 +66,885 @@ VCCIO Voltage:
 
 
 ================================================================================
-<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "CLKOP" 2.500000 MHz ;
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 365.739ns
+Passed: The following path meets requirements by 365.001ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.244ns  (36.4% logic, 63.6% route), 11 logic levels.
+   Delay:              20.258ns  (33.4% logic, 66.6% route), 11 logic levels.
 
  Constraint Details:
 
-     18.244ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     20.258ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.739ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.001ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF0_DE  ---     0.585    R10C12A.FCI to     R10C12A.F0 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F0 to      R9C12A.A0 POPtimers/n2011
-C0TOFCO_DE  ---     1.023      R9C12A.A0 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOF0_DE  ---     0.585     R9C12B.FCI to      R9C12B.F0 POPtimers/SLICE_29
-ROUTE         1     1.383      R9C12B.F0 to      R8C12B.A0 POPtimers/Startopticalsample_9
-C0TOFCO_DE  ---     1.023      R8C12B.A0 to     R8C12B.FCO POPtimers/SLICE_179
-ROUTE         1     0.000     R8C12B.FCO to     R8C12C.FCI POPtimers/probe1/n2295
-FCITOFCO_D  ---     0.162     R8C12C.FCI to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF1_DE  ---     0.643     R10C7B.FCI to      R10C7B.F1 POPtimers/SLICE_143
+ROUTE         1     1.934      R10C7B.F1 to       R8C7B.A1 POPtimers/n2089
+C1TOFCO_DE  ---     0.889       R8C7B.A1 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOF0_DE  ---     0.585      R8C7C.FCI to       R8C7C.F0 POPtimers/SLICE_127
+ROUTE         1     1.383       R8C7C.F0 to       R9C7C.A0 POPtimers/Startof2ndMWpulse_11
+C0TOFCO_DE  ---     1.023       R9C7C.A0 to      R9C7C.FCO POPtimers/MW3/SLICE_239
+ROUTE         1     0.000      R9C7C.FCO to      R9C7D.FCI POPtimers/MW3/n2316
+FCITOFCO_D  ---     0.162      R9C7D.FCI to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.244   (36.4% logic, 63.6% route), 11 logic levels.
+                   20.258   (33.4% logic, 66.6% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.815ns
+Passed: The following path meets requirements by 365.001ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.168ns  (36.2% logic, 63.8% route), 11 logic levels.
+   Delay:              20.258ns  (33.4% logic, 66.6% route), 11 logic levels.
 
  Constraint Details:
 
-     18.168ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     20.258ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.815ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.001ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF0_DE  ---     0.585    R10C12A.FCI to     R10C12A.F0 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F0 to      R9C12A.A0 POPtimers/n2011
-C0TOFCO_DE  ---     1.023      R9C12A.A0 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOFCO_D  ---     0.162     R9C12B.FCI to     R9C12B.FCO POPtimers/SLICE_29
-ROUTE         1     0.000     R9C12B.FCO to     R9C12C.FCI POPtimers/n2202
-FCITOFCO_D  ---     0.162     R9C12C.FCI to     R9C12C.FCO POPtimers/SLICE_26
-ROUTE         1     0.000     R9C12C.FCO to     R9C12D.FCI POPtimers/n2203
-FCITOF1_DE  ---     0.643     R9C12D.FCI to      R9C12D.F1 POPtimers/SLICE_79
-ROUTE         1     1.383      R9C12D.F1 to      R8C12D.A1 POPtimers/Startopticalsample_14
-C1TOFCO_DE  ---     0.889      R8C12D.A1 to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF1_DE  ---     0.643     R10C7B.FCI to      R10C7B.F1 POPtimers/SLICE_143
+ROUTE         1     1.934      R10C7B.F1 to       R8C7B.A1 POPtimers/n2089
+C1TOFCO_DE  ---     0.889       R8C7B.A1 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOFCO_D  ---     0.162      R8C7C.FCI to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF0_DE  ---     0.585      R8C7D.FCI to       R8C7D.F0 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F0 to       R9C7D.A0 POPtimers/Startof2ndMWpulse_13
+C0TOFCO_DE  ---     1.023       R9C7D.A0 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.168   (36.2% logic, 63.8% route), 11 logic levels.
+                   20.258   (33.4% logic, 66.6% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.815ns
+Passed: The following path meets requirements by 365.077ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.168ns  (36.2% logic, 63.8% route), 11 logic levels.
+   Delay:              20.182ns  (33.2% logic, 66.8% route), 11 logic levels.
 
  Constraint Details:
 
-     18.168ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     20.182ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.815ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.077ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF0_DE  ---     0.585    R10C12A.FCI to     R10C12A.F0 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F0 to      R9C12A.A0 POPtimers/n2011
-C0TOFCO_DE  ---     1.023      R9C12A.A0 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOFCO_D  ---     0.162     R9C12B.FCI to     R9C12B.FCO POPtimers/SLICE_29
-ROUTE         1     0.000     R9C12B.FCO to     R9C12C.FCI POPtimers/n2202
-FCITOF1_DE  ---     0.643     R9C12C.FCI to      R9C12C.F1 POPtimers/SLICE_26
-ROUTE         1     1.383      R9C12C.F1 to      R8C12C.A1 POPtimers/Startopticalsample_12
-C1TOFCO_DE  ---     0.889      R8C12C.A1 to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF1_DE  ---     0.643     R10C7B.FCI to      R10C7B.F1 POPtimers/SLICE_143
+ROUTE         1     1.934      R10C7B.F1 to       R8C7B.A1 POPtimers/n2089
+C1TOFCO_DE  ---     0.889       R8C7B.A1 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOF1_DE  ---     0.643      R8C7C.FCI to       R8C7C.F1 POPtimers/SLICE_127
+ROUTE         1     1.383       R8C7C.F1 to       R9C7C.A1 POPtimers/Startof2ndMWpulse_12
+C1TOFCO_DE  ---     0.889       R9C7C.A1 to      R9C7C.FCO POPtimers/MW3/SLICE_239
+ROUTE         1     0.000      R9C7C.FCO to      R9C7D.FCI POPtimers/MW3/n2316
+FCITOFCO_D  ---     0.162      R9C7D.FCI to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.168   (36.2% logic, 63.8% route), 11 logic levels.
+                   20.182   (33.2% logic, 66.8% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.815ns
+Passed: The following path meets requirements by 365.077ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.168ns  (36.2% logic, 63.8% route), 11 logic levels.
+   Delay:              20.182ns  (33.2% logic, 66.8% route), 11 logic levels.
 
  Constraint Details:
 
-     18.168ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     20.182ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.815ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.077ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF1_DE  ---     0.643    R10C12A.FCI to     R10C12A.F1 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F1 to      R9C12A.A1 POPtimers/n2012
-C1TOFCO_DE  ---     0.889      R9C12A.A1 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOF0_DE  ---     0.585     R9C12B.FCI to      R9C12B.F0 POPtimers/SLICE_29
-ROUTE         1     1.383      R9C12B.F0 to      R8C12B.A0 POPtimers/Startopticalsample_9
-C0TOFCO_DE  ---     1.023      R8C12B.A0 to     R8C12B.FCO POPtimers/SLICE_179
-ROUTE         1     0.000     R8C12B.FCO to     R8C12C.FCI POPtimers/probe1/n2295
-FCITOFCO_D  ---     0.162     R8C12C.FCI to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF1_DE  ---     0.643     R10C7B.FCI to      R10C7B.F1 POPtimers/SLICE_143
+ROUTE         1     1.934      R10C7B.F1 to       R8C7B.A1 POPtimers/n2089
+C1TOFCO_DE  ---     0.889       R8C7B.A1 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOFCO_D  ---     0.162      R8C7C.FCI to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF1_DE  ---     0.643      R8C7D.FCI to       R8C7D.F1 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F1 to       R9C7D.A1 POPtimers/Startof2ndMWpulse_14
+C1TOFCO_DE  ---     0.889       R9C7D.A1 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.168   (36.2% logic, 63.8% route), 11 logic levels.
+                   20.182   (33.2% logic, 66.8% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.815ns
+Passed: The following path meets requirements by 365.552ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.168ns  (36.2% logic, 63.8% route), 11 logic levels.
+   Delay:              19.707ns  (34.4% logic, 65.6% route), 11 logic levels.
 
  Constraint Details:
 
-     18.168ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.707ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.815ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.552ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF0_DE  ---     0.585    R10C12A.FCI to     R10C12A.F0 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F0 to      R9C12A.A0 POPtimers/n2011
-C0TOFCO_DE  ---     1.023      R9C12A.A0 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOF1_DE  ---     0.643     R9C12B.FCI to      R9C12B.F1 POPtimers/SLICE_29
-ROUTE         1     1.383      R9C12B.F1 to      R8C12B.A1 POPtimers/Startopticalsample_10
-C1TOFCO_DE  ---     0.889      R8C12B.A1 to     R8C12B.FCO POPtimers/SLICE_179
-ROUTE         1     0.000     R8C12B.FCO to     R8C12C.FCI POPtimers/probe1/n2295
-FCITOFCO_D  ---     0.162     R8C12C.FCI to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOFCO_D  ---     0.162     R10C7B.FCI to     R10C7B.FCO POPtimers/SLICE_143
+ROUTE         1     0.000     R10C7B.FCO to     R10C7C.FCI POPtimers/n2393
+FCITOF1_DE  ---     0.643     R10C7C.FCI to      R10C7C.F1 POPtimers/SLICE_144
+ROUTE         1     1.383      R10C7C.F1 to       R8C7C.A1 POPtimers/n2091
+C1TOFCO_DE  ---     0.889       R8C7C.A1 to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF0_DE  ---     0.585      R8C7D.FCI to       R8C7D.F0 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F0 to       R9C7D.A0 POPtimers/Startof2ndMWpulse_13
+C0TOFCO_DE  ---     1.023       R9C7D.A0 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.168   (36.2% logic, 63.8% route), 11 logic levels.
+                   19.707   (34.4% logic, 65.6% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.891ns
+Passed: The following path meets requirements by 365.560ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.092ns  (35.9% logic, 64.1% route), 11 logic levels.
+   Delay:              19.699ns  (34.8% logic, 65.2% route), 11 logic levels.
 
  Constraint Details:
 
-     18.092ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.699ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.891ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.560ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF1_DE  ---     0.643    R10C12A.FCI to     R10C12A.F1 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F1 to      R9C12A.A1 POPtimers/n2012
-C1TOFCO_DE  ---     0.889      R9C12A.A1 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOF1_DE  ---     0.643     R9C12B.FCI to      R9C12B.F1 POPtimers/SLICE_29
-ROUTE         1     1.383      R9C12B.F1 to      R8C12B.A1 POPtimers/Startopticalsample_10
-C1TOFCO_DE  ---     0.889      R8C12B.A1 to     R8C12B.FCO POPtimers/SLICE_179
-ROUTE         1     0.000     R8C12B.FCO to     R8C12C.FCI POPtimers/probe1/n2295
-FCITOFCO_D  ---     0.162     R8C12C.FCI to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF0_DE  ---     0.585     R10C7B.FCI to      R10C7B.F0 POPtimers/SLICE_143
+ROUTE         1     1.299      R10C7B.F0 to       R8C7B.A0 POPtimers/n2088
+C0TOFCO_DE  ---     1.023       R8C7B.A0 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOFCO_D  ---     0.162      R8C7C.FCI to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF0_DE  ---     0.585      R8C7D.FCI to       R8C7D.F0 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F0 to       R9C7D.A0 POPtimers/Startof2ndMWpulse_13
+C0TOFCO_DE  ---     1.023       R9C7D.A0 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.092   (35.9% logic, 64.1% route), 11 logic levels.
+                   19.699   (34.8% logic, 65.2% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.891ns
+Passed: The following path meets requirements by 365.560ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.092ns  (35.9% logic, 64.1% route), 11 logic levels.
+   Delay:              19.699ns  (34.8% logic, 65.2% route), 11 logic levels.
 
  Constraint Details:
 
-     18.092ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.699ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.891ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.560ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOFCO_D  ---     0.162    R10C12A.FCI to    R10C12A.FCO POPtimers/SLICE_116
-ROUTE         1     0.000    R10C12A.FCO to    R10C12B.FCI POPtimers/n2363
-FCITOFCO_D  ---     0.162    R10C12B.FCI to    R10C12B.FCO POPtimers/SLICE_117
-ROUTE         1     0.000    R10C12B.FCO to    R10C12C.FCI POPtimers/n2364
-FCITOF1_DE  ---     0.643    R10C12C.FCI to     R10C12C.F1 POPtimers/SLICE_118
-ROUTE         1     1.383     R10C12C.F1 to      R9C12C.A1 POPtimers/n2016
-C1TOFCO_DE  ---     0.889      R9C12C.A1 to     R9C12C.FCO POPtimers/SLICE_26
-ROUTE         1     0.000     R9C12C.FCO to     R9C12D.FCI POPtimers/n2203
-FCITOF1_DE  ---     0.643     R9C12D.FCI to      R9C12D.F1 POPtimers/SLICE_79
-ROUTE         1     1.383      R9C12D.F1 to      R8C12D.A1 POPtimers/Startopticalsample_14
-C1TOFCO_DE  ---     0.889      R8C12D.A1 to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOF0_DE  ---     0.585     R10C7B.FCI to      R10C7B.F0 POPtimers/SLICE_143
+ROUTE         1     1.299      R10C7B.F0 to       R8C7B.A0 POPtimers/n2088
+C0TOFCO_DE  ---     1.023       R8C7B.A0 to      R8C7B.FCO POPtimers/SLICE_126
+ROUTE         1     0.000      R8C7B.FCO to      R8C7C.FCI POPtimers/n2377
+FCITOF0_DE  ---     0.585      R8C7C.FCI to       R8C7C.F0 POPtimers/SLICE_127
+ROUTE         1     1.383       R8C7C.F0 to       R9C7C.A0 POPtimers/Startof2ndMWpulse_11
+C0TOFCO_DE  ---     1.023       R9C7C.A0 to      R9C7C.FCO POPtimers/MW3/SLICE_239
+ROUTE         1     0.000      R9C7C.FCO to      R9C7D.FCI POPtimers/MW3/n2316
+FCITOFCO_D  ---     0.162      R9C7D.FCI to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.092   (35.9% logic, 64.1% route), 11 logic levels.
+                   19.699   (34.8% logic, 65.2% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.891ns
+Passed: The following path meets requirements by 365.560ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.092ns  (35.9% logic, 64.1% route), 11 logic levels.
+   Delay:              19.699ns  (34.8% logic, 65.2% route), 11 logic levels.
 
  Constraint Details:
 
-     18.092ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.699ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.891ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.560ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOFCO_D  ---     0.162    R10C12A.FCI to    R10C12A.FCO POPtimers/SLICE_116
-ROUTE         1     0.000    R10C12A.FCO to    R10C12B.FCI POPtimers/n2363
-FCITOF1_DE  ---     0.643    R10C12B.FCI to     R10C12B.F1 POPtimers/SLICE_117
-ROUTE         1     1.383     R10C12B.F1 to      R9C12B.A1 POPtimers/n2014
-C1TOFCO_DE  ---     0.889      R9C12B.A1 to     R9C12B.FCO POPtimers/SLICE_29
-ROUTE         1     0.000     R9C12B.FCO to     R9C12C.FCI POPtimers/n2202
-FCITOF1_DE  ---     0.643     R9C12C.FCI to      R9C12C.F1 POPtimers/SLICE_26
-ROUTE         1     1.383      R9C12C.F1 to      R8C12C.A1 POPtimers/Startopticalsample_12
-C1TOFCO_DE  ---     0.889      R8C12C.A1 to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOFCO_D  ---     0.162     R10C7B.FCI to     R10C7B.FCO POPtimers/SLICE_143
+ROUTE         1     0.000     R10C7B.FCO to     R10C7C.FCI POPtimers/n2393
+FCITOF0_DE  ---     0.585     R10C7C.FCI to      R10C7C.F0 POPtimers/SLICE_144
+ROUTE         1     1.299      R10C7C.F0 to       R8C7C.A0 POPtimers/n2090
+C0TOFCO_DE  ---     1.023       R8C7C.A0 to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF0_DE  ---     0.585      R8C7D.FCI to       R8C7D.F0 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F0 to       R9C7D.A0 POPtimers/Startof2ndMWpulse_13
+C0TOFCO_DE  ---     1.023       R9C7D.A0 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.092   (35.9% logic, 64.1% route), 11 logic levels.
+                   19.699   (34.8% logic, 65.2% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.891ns
+Passed: The following path meets requirements by 365.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.092ns  (35.9% logic, 64.1% route), 11 logic levels.
+   Delay:              19.631ns  (34.1% logic, 65.9% route), 11 logic levels.
 
  Constraint Details:
 
-     18.092ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.631ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.891ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOF1_DE  ---     0.643    R10C12A.FCI to     R10C12A.F1 POPtimers/SLICE_116
-ROUTE         1     1.383     R10C12A.F1 to      R9C12A.A1 POPtimers/n2012
-C1TOFCO_DE  ---     0.889      R9C12A.A1 to     R9C12A.FCO POPtimers/SLICE_35
-ROUTE         1     0.000     R9C12A.FCO to     R9C12B.FCI POPtimers/n2201
-FCITOFCO_D  ---     0.162     R9C12B.FCI to     R9C12B.FCO POPtimers/SLICE_29
-ROUTE         1     0.000     R9C12B.FCO to     R9C12C.FCI POPtimers/n2202
-FCITOF1_DE  ---     0.643     R9C12C.FCI to      R9C12C.F1 POPtimers/SLICE_26
-ROUTE         1     1.383      R9C12C.F1 to      R8C12C.A1 POPtimers/Startopticalsample_12
-C1TOFCO_DE  ---     0.889      R8C12C.A1 to     R8C12C.FCO POPtimers/SLICE_180
-ROUTE         1     0.000     R8C12C.FCO to     R8C12D.FCI POPtimers/probe1/n2296
-FCITOFCO_D  ---     0.162     R8C12D.FCI to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOFCO_D  ---     0.162     R10C7B.FCI to     R10C7B.FCO POPtimers/SLICE_143
+ROUTE         1     0.000     R10C7B.FCO to     R10C7C.FCI POPtimers/n2393
+FCITOF1_DE  ---     0.643     R10C7C.FCI to      R10C7C.F1 POPtimers/SLICE_144
+ROUTE         1     1.383      R10C7C.F1 to       R8C7C.A1 POPtimers/n2091
+C1TOFCO_DE  ---     0.889       R8C7C.A1 to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF1_DE  ---     0.643      R8C7D.FCI to       R8C7D.F1 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F1 to       R9C7D.A1 POPtimers/Startof2ndMWpulse_14
+C1TOFCO_DE  ---     0.889       R9C7D.A1 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.092   (35.9% logic, 64.1% route), 11 logic levels.
+                   19.631   (34.1% logic, 65.9% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
 
-Passed: The following path meets requirements by 365.891ns
+Passed: The following path meets requirements by 365.636ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/i349  (from POPtimers/freepcounter/count_15__N_139 +)
-   Destination:    FF         Data in        sample_output_59  (to CLKOP +)
+   Source:         FF         Q              POPtimers/piecounter/i403  (from POPtimers/piecounter/count_15__N_130 +)
+   Destination:    FF         Data in        MW_output_58  (to clk_2M5 +)
 
-   Delay:              18.092ns  (35.9% logic, 64.1% route), 11 logic levels.
+   Delay:              19.623ns  (34.5% logic, 65.5% route), 11 logic levels.
 
  Constraint Details:
 
-     18.092ns physical path delay POPtimers/freepcounter/SLICE_293 to SLICE_349 meets
+     19.623ns physical path delay POPtimers/piecounter/SLICE_321 to SLICE_252 meets
     400.000ns delay constraint less
-     15.851ns skew and
-      0.166ns DIN_SET requirement (totaling 383.983ns) by 365.891ns
+     14.575ns skew and
+      0.166ns DIN_SET requirement (totaling 385.259ns) by 365.636ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_293 to SLICE_349:
+      Data path POPtimers/piecounter/SLICE_321 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R5C11C.CLK to      R5C11C.Q0 POPtimers/freepcounter/SLICE_293 (from POPtimers/freepcounter/count_15__N_139)
-ROUTE         4     2.677      R5C11C.Q0 to      R5C14A.A1 POPtimers/n1462
-CTOF_DEL    ---     0.495      R5C14A.A1 to      R5C14A.F1 POPtimers/SLICE_327
-ROUTE         4     4.165      R5C14A.F1 to     R10C11D.A0 POPtimers/AdjustableFreePrecession_5
-C0TOFCO_DE  ---     1.023     R10C11D.A0 to    R10C11D.FCO POPtimers/SLICE_115
-ROUTE         1     0.000    R10C11D.FCO to    R10C12A.FCI POPtimers/n2362
-FCITOFCO_D  ---     0.162    R10C12A.FCI to    R10C12A.FCO POPtimers/SLICE_116
-ROUTE         1     0.000    R10C12A.FCO to    R10C12B.FCI POPtimers/n2363
-FCITOF1_DE  ---     0.643    R10C12B.FCI to     R10C12B.F1 POPtimers/SLICE_117
-ROUTE         1     1.383     R10C12B.F1 to      R9C12B.A1 POPtimers/n2014
-C1TOFCO_DE  ---     0.889      R9C12B.A1 to     R9C12B.FCO POPtimers/SLICE_29
-ROUTE         1     0.000     R9C12B.FCO to     R9C12C.FCI POPtimers/n2202
-FCITOFCO_D  ---     0.162     R9C12C.FCI to     R9C12C.FCO POPtimers/SLICE_26
-ROUTE         1     0.000     R9C12C.FCO to     R9C12D.FCI POPtimers/n2203
-FCITOF1_DE  ---     0.643     R9C12D.FCI to      R9C12D.F1 POPtimers/SLICE_79
-ROUTE         1     1.383      R9C12D.F1 to      R8C12D.A1 POPtimers/Startopticalsample_14
-C1TOFCO_DE  ---     0.889      R8C12D.A1 to     R8C12D.FCO POPtimers/SLICE_181
-ROUTE         1     0.000     R8C12D.FCO to     R8C13A.FCI POPtimers/probe1/n2297
-FCITOF1_DE  ---     0.643     R8C13A.FCI to      R8C13A.F1 POPtimers/SLICE_182
-ROUTE         2     1.988      R8C13A.F1 to      R10C9B.D0 probestarted
-CTOF_DEL    ---     0.495      R10C9B.D0 to      R10C9B.F0 SLICE_349
-ROUTE         1     0.000      R10C9B.F0 to     R10C9B.DI0 sample_output_N_16 (to CLKOP)
+REG_DEL     ---     0.452     R5C11D.CLK to      R5C11D.Q0 POPtimers/piecounter/SLICE_321 (from POPtimers/piecounter/count_15__N_130)
+ROUTE         1     2.167      R5C11D.Q0 to       R7C2A.B1 POPtimers/piecounter/n1515
+CTOF_DEL    ---     0.495       R7C2A.B1 to       R7C2A.F1 SLICE_342
+ROUTE         8     6.231       R7C2A.F1 to      R10C7A.B1 POPtimers/AdjustablePieOverTwo_8
+C1TOFCO_DE  ---     0.889      R10C7A.B1 to     R10C7A.FCO POPtimers/SLICE_142
+ROUTE         1     0.000     R10C7A.FCO to     R10C7B.FCI POPtimers/n2392
+FCITOFCO_D  ---     0.162     R10C7B.FCI to     R10C7B.FCO POPtimers/SLICE_143
+ROUTE         1     0.000     R10C7B.FCO to     R10C7C.FCI POPtimers/n2393
+FCITOF0_DE  ---     0.585     R10C7C.FCI to      R10C7C.F0 POPtimers/SLICE_144
+ROUTE         1     1.299      R10C7C.F0 to       R8C7C.A0 POPtimers/n2090
+C0TOFCO_DE  ---     1.023       R8C7C.A0 to      R8C7C.FCO POPtimers/SLICE_127
+ROUTE         1     0.000      R8C7C.FCO to      R8C7D.FCI POPtimers/n2378
+FCITOF1_DE  ---     0.643      R8C7D.FCI to       R8C7D.F1 POPtimers/SLICE_128
+ROUTE         1     1.383       R8C7D.F1 to       R9C7D.A1 POPtimers/Startof2ndMWpulse_14
+C1TOFCO_DE  ---     0.889       R9C7D.A1 to      R9C7D.FCO POPtimers/MW3/SLICE_240
+ROUTE         1     0.000      R9C7D.FCO to      R9C8A.FCI POPtimers/MW3/n2317
+FCITOF1_DE  ---     0.643      R9C8A.FCI to       R9C8A.F1 POPtimers/MW3/SLICE_241
+ROUTE         1     1.336       R9C8A.F1 to      R9C11B.B1 POPtimers/pi2started
+CTOF_DEL    ---     0.495      R9C11B.B1 to      R9C11B.F1 SLICE_252
+ROUTE         1     0.436      R9C11B.F1 to      R9C11B.C0 POPtimers/MW_N_38
+CTOF_DEL    ---     0.495      R9C11B.C0 to      R9C11B.F0 SLICE_252
+ROUTE         1     0.000      R9C11B.F0 to     R9C11B.DI0 MW (to clk_2M5)
                   --------
-                   18.092   (35.9% logic, 64.1% route), 11 logic levels.
+                   19.623   (34.5% logic, 65.5% route), 11 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCinst0 to POPtimers/freepcounter/SLICE_293:
+      Source Clock Path clocks/OSCinst0 to POPtimers/piecounter/SLICE_321:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R7C12A.CLK CLKOP
-REG_DEL     ---     0.452     R7C12A.CLK to      R7C12A.Q0 slowclocks/SLICE_4
-ROUTE         7     2.845      R7C12A.Q0 to      R7C2C.CLK debounce_pulse
-REG_DEL     ---     0.452      R7C2C.CLK to       R7C2C.Q0 SLICE_342
-ROUTE        43     3.295       R7C2C.Q0 to     R4C12A.CLK freeprecess_minus
-REG_DEL     ---     0.452     R4C12A.CLK to      R4C12A.Q1 POPtimers/freepcounter/SLICE_217
-ROUTE         4     2.408      R4C12A.Q1 to      R5C14A.D0 POPtimers/n1472
-CTOF_DEL    ---     0.495      R5C14A.D0 to      R5C14A.F0 POPtimers/SLICE_327
-ROUTE         4     1.313      R5C14A.F0 to      R5C16A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R5C16A.A1 to     R5C16A.FCO POPtimers/freepcounter/SLICE_210
-ROUTE         1     0.000     R5C16A.FCO to     R5C16B.FCI POPtimers/freepcounter/n2298
-FCITOF1_DE  ---     0.643     R5C16B.FCI to      R5C16B.F1 POPtimers/freepcounter/SLICE_211
-ROUTE         2     1.079      R5C16B.F1 to      R5C12C.D0 POPtimers/freepcounter/count_15_N_111_5
-CTOF_DEL    ---     0.495      R5C12C.D0 to      R5C12C.F0 POPtimers/freepcounter/SLICE_383
-ROUTE         2     1.033      R5C12C.F0 to     R5C11C.CLK POPtimers/freepcounter/count_15__N_139
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R7C14A.CLK clk_2M5
+REG_DEL     ---     0.452     R7C14A.CLK to      R7C14A.Q0 slowclocks/SLICE_4
+ROUTE         7     2.438      R7C14A.Q0 to     R2C13A.CLK debounce_pulse
+REG_DEL     ---     0.452     R2C13A.CLK to      R2C13A.Q0 SLICE_345
+ROUTE        32     2.905      R2C13A.Q0 to      R3C9A.CLK pieovertwo_minus
+REG_DEL     ---     0.452      R3C9A.CLK to       R3C9A.Q0 POPtimers/piecounter/SLICE_359
+ROUTE         4     1.207       R3C9A.Q0 to      R4C10A.C1 POPtimers/n1421
+CTOF_DEL    ---     0.495      R4C10A.C1 to      R4C10A.F1 POPtimers/piecounter/SLICE_336
+ROUTE         5     1.435      R4C10A.F1 to       R4C6A.A1 POPtimers/AdjustablePieOverTwo_0
+C1TOFCO_DE  ---     0.889       R4C6A.A1 to      R4C6A.FCO POPtimers/SLICE_191
+ROUTE         1     0.000      R4C6A.FCO to      R4C6B.FCI POPtimers/piecounter/n2239
+FCITOFCO_D  ---     0.162      R4C6B.FCI to      R4C6B.FCO POPtimers/SLICE_190
+ROUTE         1     0.000      R4C6B.FCO to      R4C6C.FCI POPtimers/piecounter/n2240
+FCITOFCO_D  ---     0.162      R4C6C.FCI to      R4C6C.FCO POPtimers/SLICE_189
+ROUTE         1     0.000      R4C6C.FCO to      R4C6D.FCI POPtimers/piecounter/n2241
+FCITOFCO_D  ---     0.162      R4C6D.FCI to      R4C6D.FCO POPtimers/SLICE_188
+ROUTE         1     0.000      R4C6D.FCO to      R4C7A.FCI POPtimers/piecounter/n2242
+FCITOF1_DE  ---     0.643      R4C7A.FCI to       R4C7A.F1 POPtimers/SLICE_187
+ROUTE         2     1.200       R4C7A.F1 to      R4C11A.C1 POPtimers/piecounter/count_15_N_111_8
+CTOF_DEL    ---     0.495      R4C11A.C1 to      R4C11A.F1 POPtimers/piecounter/SLICE_364
+ROUTE         2     1.026      R4C11A.F1 to     R5C11D.CLK POPtimers/piecounter/count_15__N_130
                   --------
-                   18.595   (26.7% logic, 73.3% route), 8 logic levels.
+                   17.319   (31.5% logic, 68.5% route), 11 logic levels.
 
-      Destination Clock Path OSCinst0 to SLICE_349:
+      Destination Clock Path clocks/OSCinst0 to SLICE_252:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI OscTenMegOut
-CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP PLL/PLLInst_0
-ROUTE        34     1.652     LPLL.CLKOP to     R10C9B.CLK CLKOP
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI clocks/clk_debug
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        34     1.652     LPLL.CLKOP to     R9C11B.CLK clk_2M5
                   --------
                     2.744   (39.8% logic, 60.2% route), 1 logic levels.
 
-Report:   29.188MHz is the maximum frequency for this preference.
+Report:   28.572MHz is the maximum frequency for this preference.
 
 
 ================================================================================
-<A name="par_twr_pref_0_1"></A>Preference: FREQUENCY NET "OscTenMegOut" 9.850000 MHz ;
+<A name="par_twr_pref_0_1"></A>Preference: FREQUENCY NET "clocks/clk_debug" 9.850000 MHz ;
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -893,10 +954,10 @@ Report:   29.188MHz is the maximum frequency for this preference.
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "CLKOP" 2.500000 MHz ;    |    2.500 MHz|   29.188 MHz|  11  
+FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |    2.500 MHz|   28.572 MHz|  11  
                                         |             |             |
-FREQUENCY NET "OscTenMegOut" 9.850000   |             |             |
-MHz ;                                   |            -|            -|   0  
+FREQUENCY NET "clocks/clk_debug"        |             |             |
+9.850000 MHz ;                          |            -|            -|   0  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -921,216 +982,216 @@ Clock Domain: freeprecess_minus   Source: SLICE_342.Q0   Loads: 43
 Clock Domain: debounce_pulse   Source: slowclocks/SLICE_4.Q0   Loads: 7
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/piecounter/SLICE_361.F1   Loads: 2
+Clock Domain: clocks/clk_debug   Source: clocks/OSCinst0.OSC   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/piecounter/SLICE_368.F1   Loads: 2
+Clock Domain: clocks/PLL/CLKFB_t   Source: clocks/PLL/PLLInst_0.CLKINTFB   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_370.F0   Loads: 2
+Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP   Loads: 34
+   Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
+
+   Data transfers from:
+   Clock Domain: sampled_modebutton   Source: SLICE_350.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 2
+
+   Clock Domain: pieovertwo_minus   Source: SLICE_345.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 32
+
+   Clock Domain: freeprecess_minus   Source: SLICE_342.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 32
+
+   Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/SLICE_358.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/SLICE_366.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_373.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_359.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/SLICE_371.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_360.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_363.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_364.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_361.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_367.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_369.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/piecounter/SLICE_365.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/SLICE_368.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_370.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_372.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/freepcounter/SLICE_353.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/SLICE_388.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_352.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_386.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_382.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_384.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_378.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_375.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_376.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_385.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_374.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_381.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_379.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_383.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_377.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/SLICE_358.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_363.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/SLICE_366.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/piecounter/SLICE_358.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_373.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_364.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_359.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/SLICE_371.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_365.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_360.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_366.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_367.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_363.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_372.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_364.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_359.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_361.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/SLICE_360.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_367.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/piecounter/SLICE_371.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_369.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_369.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/piecounter/SLICE_365.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_373.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/SLICE_368.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/SLICE_388.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_370.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/freepcounter/SLICE_354.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_372.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_353.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/freepcounter/SLICE_353.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_378.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/SLICE_388.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_352.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_386.F1   Loads: 2
    No transfer within this clock domain is found
 
 Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_383.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_382.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_374.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_384.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_384.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_378.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_376.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_375.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_382.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_376.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_377.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_385.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_379.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_374.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_375.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_381.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_385.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_379.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_381.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_383.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_386.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_377.F1   Loads: 2
    No transfer within this clock domain is found
-
-Clock Domain: PLL/CLKFB_t   Source: PLL/PLLInst_0.CLKINTFB   Loads: 1
-   No transfer within this clock domain is found
-
-Clock Domain: OscTenMegOut   Source: OSCinst0.OSC   Loads: 1
-   No transfer within this clock domain is found
-
-Clock Domain: CLKOP   Source: PLL/PLLInst_0.CLKOP   Loads: 34
-   Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;
-
-   Data transfers from:
-   Clock Domain: sampled_modebutton   Source: SLICE_350.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 2
-
-   Clock Domain: pieovertwo_minus   Source: SLICE_345.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 32
-
-   Clock Domain: freeprecess_minus   Source: SLICE_342.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 32
-
-   Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/piecounter/SLICE_361.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/piecounter/SLICE_368.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_370.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_363.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/piecounter/SLICE_358.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_364.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_365.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_366.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_367.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_372.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_359.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/SLICE_360.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/piecounter/SLICE_371.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_369.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_373.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/SLICE_388.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/freepcounter/SLICE_354.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_353.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_378.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_383.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_374.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_384.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_376.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_382.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_377.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_379.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_375.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_385.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_381.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_386.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
 
 
 <A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
@@ -1139,11 +1200,11 @@ Clock Domain: CLKOP   Source: PLL/PLLInst_0.CLKOP   Loads: 34
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 25021 paths, 3 nets, and 1265 connections (72.78% coverage)
+Constraints cover 25105 paths, 3 nets, and 1266 connections (72.84% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Sun Feb 20 11:13:53 2022
+Wed Feb 23 21:04:38 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1162,13 +1223,14 @@ Report level:    verbose report, limited to 10 items per preference
 
 <A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "CLKOP" 2.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "clk_2M5" 2.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
 
-<LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "OscTenMegOut" 9.850000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+<LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "clocks/clk_debug" 9.850000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
 
 32 potential circuit loops found in timing analysis.
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
+BLOCK JTAG PATHS
 --------------------------------------------------------------------------------
 
 
@@ -1183,7 +1245,7 @@ VCCIO Voltage:
 
 
 ================================================================================
-<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "CLKOP" 2.500000 MHz ;
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -1192,8 +1254,8 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_141__i0  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i0  (to CLKOP +)
+   Source:         FF         Q              slowclocks/count_141__i0  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i0  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
@@ -1209,26 +1271,26 @@ Passed: The following path meets requirements by 0.377ns
       Data path slowclocks/SLICE_10 to slowclocks/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11A.CLK to      R7C11A.Q1 slowclocks/SLICE_10 (from CLKOP)
-ROUTE         1     0.130      R7C11A.Q1 to      R7C11A.A1 slowclocks/n23
-CTOF_DEL    ---     0.101      R7C11A.A1 to      R7C11A.F1 slowclocks/SLICE_10
-ROUTE         1     0.000      R7C11A.F1 to     R7C11A.DI1 slowclocks/n120 (to CLKOP)
+REG_DEL     ---     0.133     R7C13A.CLK to      R7C13A.Q1 slowclocks/SLICE_10 (from clk_2M5)
+ROUTE         1     0.130      R7C13A.Q1 to      R7C13A.A1 slowclocks/n23
+CTOF_DEL    ---     0.101      R7C13A.A1 to      R7C13A.F1 slowclocks/SLICE_10
+ROUTE         1     0.000      R7C13A.F1 to     R7C13A.DI1 slowclocks/n120 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_10:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11A.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13A.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_10:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11A.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13A.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1237,233 +1299,8 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_141__i11  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i11  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_2 to slowclocks/SLICE_2 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_2 to slowclocks/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12C.CLK to      R7C12C.Q0 slowclocks/SLICE_2 (from CLKOP)
-ROUTE         1     0.130      R7C12C.Q0 to      R7C12C.A0 slowclocks/n12
-CTOF_DEL    ---     0.101      R7C12C.A0 to      R7C12C.F0 slowclocks/SLICE_2
-ROUTE         1     0.000      R7C12C.F0 to     R7C12C.DI0 slowclocks/n109 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12C.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12C.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i5  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i5  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_5 to slowclocks/SLICE_5 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_5 to slowclocks/SLICE_5:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11D.CLK to      R7C11D.Q0 slowclocks/SLICE_5 (from CLKOP)
-ROUTE         1     0.130      R7C11D.Q0 to      R7C11D.A0 slowclocks/n18
-CTOF_DEL    ---     0.101      R7C11D.A0 to      R7C11D.F0 slowclocks/SLICE_5
-ROUTE         1     0.000      R7C11D.F0 to     R7C11D.DI0 slowclocks/n115 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_5:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11D.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_5:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11D.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i1  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i1  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_7 to slowclocks/SLICE_7 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_7 to slowclocks/SLICE_7:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11B.CLK to      R7C11B.Q0 slowclocks/SLICE_7 (from CLKOP)
-ROUTE         1     0.130      R7C11B.Q0 to      R7C11B.A0 slowclocks/n22
-CTOF_DEL    ---     0.101      R7C11B.A0 to      R7C11B.F0 slowclocks/SLICE_7
-ROUTE         1     0.000      R7C11B.F0 to     R7C11B.DI0 slowclocks/n119 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_7:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11B.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_7:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11B.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i20  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i20  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_9 to slowclocks/SLICE_9 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_9 to slowclocks/SLICE_9:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13C.CLK to      R7C13C.Q1 slowclocks/SLICE_9 (from CLKOP)
-ROUTE         1     0.130      R7C13C.Q1 to      R7C13C.A1 slowclocks/n3
-CTOF_DEL    ---     0.101      R7C13C.A1 to      R7C13C.F1 slowclocks/SLICE_9
-ROUTE         1     0.000      R7C13C.F1 to     R7C13C.DI1 slowclocks/n100 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_9:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13C.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_9:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13C.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i15  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i15  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_0 to slowclocks/SLICE_0 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_0 to slowclocks/SLICE_0:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13A.CLK to      R7C13A.Q0 slowclocks/SLICE_0 (from CLKOP)
-ROUTE         1     0.130      R7C13A.Q0 to      R7C13A.A0 slowclocks/n8
-CTOF_DEL    ---     0.101      R7C13A.A0 to      R7C13A.F0 slowclocks/SLICE_0
-ROUTE         1     0.000      R7C13A.F0 to     R7C13A.DI0 slowclocks/n105 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_0:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13A.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_0:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13A.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i9  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i9  (to CLKOP +)
+   Source:         FF         Q              slowclocks/count_141__i9  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i9  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
@@ -1479,26 +1316,26 @@ Passed: The following path meets requirements by 0.377ns
       Data path slowclocks/SLICE_3 to slowclocks/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12B.CLK to      R7C12B.Q0 slowclocks/SLICE_3 (from CLKOP)
-ROUTE         1     0.130      R7C12B.Q0 to      R7C12B.A0 slowclocks/n14
-CTOF_DEL    ---     0.101      R7C12B.A0 to      R7C12B.F0 slowclocks/SLICE_3
-ROUTE         1     0.000      R7C12B.F0 to     R7C12B.DI0 slowclocks/n111 (to CLKOP)
+REG_DEL     ---     0.133     R7C14B.CLK to      R7C14B.Q0 slowclocks/SLICE_3 (from clk_2M5)
+ROUTE         1     0.130      R7C14B.Q0 to      R7C14B.A0 slowclocks/n14
+CTOF_DEL    ---     0.101      R7C14B.A0 to      R7C14B.F0 slowclocks/SLICE_3
+ROUTE         1     0.000      R7C14B.F0 to     R7C14B.DI0 slowclocks/n111 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_3:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12B.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_3:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12B.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1507,8 +1344,8 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_141__i3  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i3  (to CLKOP +)
+   Source:         FF         Q              slowclocks/count_141__i3  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i3  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
@@ -1524,26 +1361,26 @@ Passed: The following path meets requirements by 0.377ns
       Data path slowclocks/SLICE_6 to slowclocks/SLICE_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11C.CLK to      R7C11C.Q0 slowclocks/SLICE_6 (from CLKOP)
-ROUTE         1     0.130      R7C11C.Q0 to      R7C11C.A0 slowclocks/n20
-CTOF_DEL    ---     0.101      R7C11C.A0 to      R7C11C.F0 slowclocks/SLICE_6
-ROUTE         1     0.000      R7C11C.F0 to     R7C11C.DI0 slowclocks/n117 (to CLKOP)
+REG_DEL     ---     0.133     R7C13C.CLK to      R7C13C.Q0 slowclocks/SLICE_6 (from clk_2M5)
+ROUTE         1     0.130      R7C13C.Q0 to      R7C13C.A0 slowclocks/n20
+CTOF_DEL    ---     0.101      R7C13C.A0 to      R7C13C.F0 slowclocks/SLICE_6
+ROUTE         1     0.000      R7C13C.F0 to     R7C13C.DI0 slowclocks/n117 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_6:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11C.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_6:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C11C.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1552,53 +1389,8 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_141__i13  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i13  (to CLKOP +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_1 to slowclocks/SLICE_1 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_1 to slowclocks/SLICE_1:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12D.CLK to      R7C12D.Q0 slowclocks/SLICE_1 (from CLKOP)
-ROUTE         1     0.130      R7C12D.Q0 to      R7C12D.A0 slowclocks/n10
-CTOF_DEL    ---     0.101      R7C12D.A0 to      R7C12D.F0 slowclocks/SLICE_1
-ROUTE         1     0.000      R7C12D.F0 to     R7C12D.DI0 slowclocks/n107 (to CLKOP)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_1:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12D.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_1:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C12D.CLK CLKOP
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_141__i21  (from CLKOP +)
-   Destination:    FF         Data in        slowclocks/count_141__i21  (to CLKOP +)
+   Source:         FF         Q              slowclocks/count_141__i21  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i21  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
@@ -1614,32 +1406,302 @@ Passed: The following path meets requirements by 0.377ns
       Data path slowclocks/SLICE_8 to slowclocks/SLICE_8:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13D.CLK to      R7C13D.Q0 slowclocks/SLICE_8 (from CLKOP)
-ROUTE         1     0.130      R7C13D.Q0 to      R7C13D.A0 slowclocks/n2
-CTOF_DEL    ---     0.101      R7C13D.A0 to      R7C13D.F0 slowclocks/SLICE_8
-ROUTE         1     0.000      R7C13D.F0 to     R7C13D.DI0 slowclocks/n99 (to CLKOP)
+REG_DEL     ---     0.133     R7C15D.CLK to      R7C15D.Q0 slowclocks/SLICE_8 (from clk_2M5)
+ROUTE         1     0.130      R7C15D.Q0 to      R7C15D.A0 slowclocks/n2
+CTOF_DEL    ---     0.101      R7C15D.A0 to      R7C15D.F0 slowclocks/SLICE_8
+ROUTE         1     0.000      R7C15D.F0 to     R7C15D.DI0 slowclocks/n99 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path PLL/PLLInst_0 to slowclocks/SLICE_8:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_8:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13D.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15D.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path PLL/PLLInst_0 to slowclocks/SLICE_8:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_8:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        34     0.595     LPLL.CLKOP to     R7C13D.CLK CLKOP
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15D.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i13  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i13  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_1 to slowclocks/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_1 to slowclocks/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C14D.CLK to      R7C14D.Q0 slowclocks/SLICE_1 (from clk_2M5)
+ROUTE         1     0.130      R7C14D.Q0 to      R7C14D.A0 slowclocks/n10
+CTOF_DEL    ---     0.101      R7C14D.A0 to      R7C14D.F0 slowclocks/SLICE_1
+ROUTE         1     0.000      R7C14D.F0 to     R7C14D.DI0 slowclocks/n107 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14D.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14D.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i11  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i11  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_2 to slowclocks/SLICE_2 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_2 to slowclocks/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C14C.CLK to      R7C14C.Q0 slowclocks/SLICE_2 (from clk_2M5)
+ROUTE         1     0.130      R7C14C.Q0 to      R7C14C.A0 slowclocks/n12
+CTOF_DEL    ---     0.101      R7C14C.A0 to      R7C14C.F0 slowclocks/SLICE_2
+ROUTE         1     0.000      R7C14C.F0 to     R7C14C.DI0 slowclocks/n109 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14C.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C14C.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i5  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i5  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_5 to slowclocks/SLICE_5 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_5 to slowclocks/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C13D.CLK to      R7C13D.Q0 slowclocks/SLICE_5 (from clk_2M5)
+ROUTE         1     0.130      R7C13D.Q0 to      R7C13D.A0 slowclocks/n18
+CTOF_DEL    ---     0.101      R7C13D.A0 to      R7C13D.F0 slowclocks/SLICE_5
+ROUTE         1     0.000      R7C13D.F0 to     R7C13D.DI0 slowclocks/n115 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13D.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13D.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i1  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i1  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_7 to slowclocks/SLICE_7 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_7 to slowclocks/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C13B.CLK to      R7C13B.Q0 slowclocks/SLICE_7 (from clk_2M5)
+ROUTE         1     0.130      R7C13B.Q0 to      R7C13B.A0 slowclocks/n22
+CTOF_DEL    ---     0.101      R7C13B.A0 to      R7C13B.F0 slowclocks/SLICE_7
+ROUTE         1     0.000      R7C13B.F0 to     R7C13B.DI0 slowclocks/n119 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13B.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C13B.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i20  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i20  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_9 to slowclocks/SLICE_9 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_9 to slowclocks/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C15C.CLK to      R7C15C.Q1 slowclocks/SLICE_9 (from clk_2M5)
+ROUTE         1     0.130      R7C15C.Q1 to      R7C15C.A1 slowclocks/n3
+CTOF_DEL    ---     0.101      R7C15C.A1 to      R7C15C.F1 slowclocks/SLICE_9
+ROUTE         1     0.000      R7C15C.F1 to     R7C15C.DI1 slowclocks/n100 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15C.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15C.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_141__i15  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_141__i15  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_0 to slowclocks/SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_0 to slowclocks/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C15A.CLK to      R7C15A.Q0 slowclocks/SLICE_0 (from clk_2M5)
+ROUTE         1     0.130      R7C15A.Q0 to      R7C15A.A0 slowclocks/n8
+CTOF_DEL    ---     0.101      R7C15A.A0 to      R7C15A.F0 slowclocks/SLICE_0
+ROUTE         1     0.000      R7C15A.F0 to     R7C15A.DI0 slowclocks/n105 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15A.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        34     0.595     LPLL.CLKOP to     R7C15A.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
 
 ================================================================================
-<A name="par_twr_pref_1_1"></A>Preference: FREQUENCY NET "OscTenMegOut" 9.850000 MHz ;
+<A name="par_twr_pref_1_1"></A>Preference: FREQUENCY NET "clocks/clk_debug" 9.850000 MHz ;
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -1649,10 +1711,10 @@ ROUTE        34     0.595     LPLL.CLKOP to     R7C13D.CLK CLKOP
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "CLKOP" 2.500000 MHz ;    |     0.000 ns|     0.377 ns|   2  
+FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |     0.000 ns|     0.377 ns|   2  
                                         |             |             |
-FREQUENCY NET "OscTenMegOut" 9.850000   |             |             |
-MHz ;                                   |            -|            -|   0  
+FREQUENCY NET "clocks/clk_debug"        |             |             |
+9.850000 MHz ;                          |            -|            -|   0  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1677,216 +1739,216 @@ Clock Domain: freeprecess_minus   Source: SLICE_342.Q0   Loads: 43
 Clock Domain: debounce_pulse   Source: slowclocks/SLICE_4.Q0   Loads: 7
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/piecounter/SLICE_361.F1   Loads: 2
+Clock Domain: clocks/clk_debug   Source: clocks/OSCinst0.OSC   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/piecounter/SLICE_368.F1   Loads: 2
+Clock Domain: clocks/PLL/CLKFB_t   Source: clocks/PLL/PLLInst_0.CLKINTFB   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_370.F0   Loads: 2
+Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP   Loads: 34
+   Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
+
+   Data transfers from:
+   Clock Domain: sampled_modebutton   Source: SLICE_350.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 2
+
+   Clock Domain: pieovertwo_minus   Source: SLICE_345.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 32
+
+   Clock Domain: freeprecess_minus   Source: SLICE_342.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 32
+
+   Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/SLICE_358.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/SLICE_366.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_373.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_359.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/SLICE_371.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_360.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_363.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_364.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_361.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_367.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_369.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/piecounter/SLICE_365.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/SLICE_368.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_370.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_372.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/freepcounter/SLICE_353.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/SLICE_388.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_352.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_386.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_382.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_384.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_378.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_375.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_376.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_385.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_374.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_381.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_379.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_383.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+   Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_377.F1
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 1
+
+Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/SLICE_358.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_363.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/SLICE_366.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/piecounter/SLICE_358.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_373.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_364.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_359.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/SLICE_371.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_365.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_360.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_366.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_367.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_363.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_372.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_364.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_359.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_361.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/SLICE_360.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_367.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/piecounter/SLICE_371.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_369.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_369.F0   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/piecounter/SLICE_365.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_373.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/SLICE_368.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/SLICE_388.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_370.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/freepcounter/SLICE_354.F1   Loads: 2
+Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_372.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_353.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/freepcounter/SLICE_353.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_378.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/SLICE_388.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_352.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_386.F1   Loads: 2
    No transfer within this clock domain is found
 
 Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_383.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_382.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_374.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_384.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_384.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_378.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_376.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_375.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_382.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_376.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_377.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_385.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_379.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_374.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_375.F0   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_381.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_385.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_379.F1   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_381.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_383.F0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_386.F1   Loads: 2
+Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_377.F1   Loads: 2
    No transfer within this clock domain is found
-
-Clock Domain: PLL/CLKFB_t   Source: PLL/PLLInst_0.CLKINTFB   Loads: 1
-   No transfer within this clock domain is found
-
-Clock Domain: OscTenMegOut   Source: OSCinst0.OSC   Loads: 1
-   No transfer within this clock domain is found
-
-Clock Domain: CLKOP   Source: PLL/PLLInst_0.CLKOP   Loads: 34
-   Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;
-
-   Data transfers from:
-   Clock Domain: sampled_modebutton   Source: SLICE_350.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 2
-
-   Clock Domain: pieovertwo_minus   Source: SLICE_345.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 32
-
-   Clock Domain: freeprecess_minus   Source: SLICE_342.Q0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 32
-
-   Clock Domain: POPtimers/piecounter/count_15__N_154   Source: POPtimers/piecounter/SLICE_361.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_151   Source: POPtimers/piecounter/SLICE_368.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_148   Source: POPtimers/SLICE_370.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_145   Source: POPtimers/piecounter/SLICE_363.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_142   Source: POPtimers/piecounter/SLICE_358.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_139   Source: POPtimers/piecounter/SLICE_364.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_136   Source: POPtimers/piecounter/SLICE_362.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_133   Source: POPtimers/piecounter/SLICE_365.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_130   Source: POPtimers/piecounter/SLICE_366.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_127   Source: POPtimers/piecounter/SLICE_367.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_124   Source: POPtimers/SLICE_372.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_121   Source: POPtimers/piecounter/SLICE_359.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_118   Source: POPtimers/SLICE_360.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_115   Source: POPtimers/piecounter/SLICE_371.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_112   Source: POPtimers/piecounter/SLICE_369.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/piecounter/count_15__N_108   Source: POPtimers/SLICE_373.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_154   Source: POPtimers/SLICE_388.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_151   Source: POPtimers/freepcounter/SLICE_354.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_148   Source: POPtimers/freepcounter/SLICE_353.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_145   Source: POPtimers/freepcounter/SLICE_378.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_142   Source: POPtimers/freepcounter/SLICE_380.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_139   Source: POPtimers/freepcounter/SLICE_383.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_136   Source: POPtimers/freepcounter/SLICE_374.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_133   Source: POPtimers/freepcounter/SLICE_384.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_130   Source: POPtimers/freepcounter/SLICE_376.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_127   Source: POPtimers/freepcounter/SLICE_382.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_124   Source: POPtimers/freepcounter/SLICE_377.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_121   Source: POPtimers/freepcounter/SLICE_379.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_118   Source: POPtimers/freepcounter/SLICE_375.F0
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_115   Source: POPtimers/freepcounter/SLICE_385.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_112   Source: POPtimers/freepcounter/SLICE_381.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
-
-   Clock Domain: POPtimers/freepcounter/count_15__N_108   Source: POPtimers/freepcounter/SLICE_386.F1
-      Covered under: FREQUENCY NET "CLKOP" 2.500000 MHz ;   Transfers: 1
 
 
 <A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
@@ -1895,7 +1957,7 @@ Clock Domain: CLKOP   Source: PLL/PLLInst_0.CLKOP   Loads: 34
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 25021 paths, 3 nets, and 1260 connections (72.50% coverage)
+Constraints cover 25105 paths, 3 nets, and 1260 connections (72.50% coverage)
 
 
 

@@ -5,7 +5,7 @@ module POPtimers_testbench
 
     // Inputs
 	reg load_defaults;
-	reg clock_2_5M;
+	reg clk_2M5;
 	reg pieovertwo_plus;
 	reg freeprecess_plus;
 	reg pieovertwo_minus;
@@ -19,8 +19,8 @@ module POPtimers_testbench
 
 	//Instantiate the UUT
     POPtimers POPtimers (
+		.clk_2M5(clk_2M5), //2.5MHz clock
 		.load_defaults(load_defaults), // 1 to reset
-		.clock_2_5M(clock_2_5M), //2.5MHz clock
 		.pieovertwo_plus(pieovertwo_plus), //sampled button input
 		.freeprecess_plus(freeprecess_plus), //sampled button input
 		.pieovertwo_minus(pieovertwo_minus), //sampled button input
@@ -33,7 +33,7 @@ module POPtimers_testbench
 
 	initial begin
 		load_defaults = 1'b0;
-		clock_2_5M = 1'b0;
+		clk_2M5 = 1'b0;
 		pieovertwo_plus = 1'b0;
 		freeprecess_plus = 1'b0;
 		pieovertwo_minus = 1'b0;
@@ -42,7 +42,7 @@ module POPtimers_testbench
 
 	// 2.5MHz clock generation
 	always
-		#(CLOCK_CYCLE/2.0) clock_2_5M = ~clock_2_5M;
+		#(CLOCK_CYCLE/2.0) clk_2M5 = ~clk_2M5;
 
 	initial begin
 		#(10*CLOCK_CYCLE);

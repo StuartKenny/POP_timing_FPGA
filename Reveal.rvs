@@ -1,0 +1,127 @@
+<Project ModBy="Inserter" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/Reveal.rvl" Date="2022-02-23">
+    <Core Name="TinyFPGA_A2_LA0">
+        <Setting>
+            <Capture SamplesPerTrig="1" NumTrigsCap=""/>
+            <Event EventCnt="" CntEnableRun=""/>
+            <TrigSetting PreTrgSamples="" AND_ALL="" PostTrgSamples="" TURadix="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Name="POPtimers/clk_2M5"/>
+                <Sig Name="sampled_modebutton"/>
+                <Bus Name="SMstate" Radix="0">
+                    <Sig Name="SMstate:0"/>
+                    <Sig Name="SMstate:1"/>
+                </Bus>
+                <Sig Name="load_defaults"/>
+                <Bus Name="POPtimers/systemcounter/count" Radix="0">
+                    <Sig Name="POPtimers/systemcounter/count:0"/>
+                    <Sig Name="POPtimers/systemcounter/count:1"/>
+                    <Sig Name="POPtimers/systemcounter/count:2"/>
+                    <Sig Name="POPtimers/systemcounter/count:3"/>
+                    <Sig Name="POPtimers/systemcounter/count:4"/>
+                    <Sig Name="POPtimers/systemcounter/count:5"/>
+                    <Sig Name="POPtimers/systemcounter/count:6"/>
+                    <Sig Name="POPtimers/systemcounter/count:7"/>
+                    <Sig Name="POPtimers/systemcounter/count:8"/>
+                    <Sig Name="POPtimers/systemcounter/count:9"/>
+                    <Sig Name="POPtimers/systemcounter/count:10"/>
+                    <Sig Name="POPtimers/systemcounter/count:11"/>
+                    <Sig Name="POPtimers/systemcounter/count:12"/>
+                    <Sig Name="POPtimers/systemcounter/count:13"/>
+                    <Sig Name="POPtimers/systemcounter/count:14"/>
+                    <Sig Name="POPtimers/systemcounter/count:15"/>
+                </Bus>
+                <Sig Name="LED_output"/>
+                <Sig Name="pump_output"/>
+                <Sig Name="probe_output"/>
+                <Sig Name="MW_output"/>
+                <Sig Name="sample_output"/>
+                <Sig Name="pieovertwo_plus"/>
+                <Sig Name="pieovertwo_minus"/>
+                <Bus Name="POPtimers/piecounter/count" Radix="0">
+                    <Sig Name="POPtimers/piecounter/count:0"/>
+                    <Sig Name="POPtimers/piecounter/count:1"/>
+                    <Sig Name="POPtimers/piecounter/count:2"/>
+                    <Sig Name="POPtimers/piecounter/count:3"/>
+                    <Sig Name="POPtimers/piecounter/count:4"/>
+                    <Sig Name="POPtimers/piecounter/count:5"/>
+                    <Sig Name="POPtimers/piecounter/count:6"/>
+                    <Sig Name="POPtimers/piecounter/count:7"/>
+                    <Sig Name="POPtimers/piecounter/count:8"/>
+                    <Sig Name="POPtimers/piecounter/count:9"/>
+                    <Sig Name="POPtimers/piecounter/count:10"/>
+                    <Sig Name="POPtimers/piecounter/count:11"/>
+                    <Sig Name="POPtimers/piecounter/count:12"/>
+                    <Sig Name="POPtimers/piecounter/count:13"/>
+                    <Sig Name="POPtimers/piecounter/count:14"/>
+                    <Sig Name="POPtimers/piecounter/count:15"/>
+                </Bus>
+                <Sig Name="freeprecess_plus"/>
+                <Sig Name="freeprecess_minus"/>
+                <Bus Name="POPtimers/freepcounter/count" Radix="0">
+                    <Sig Name="POPtimers/freepcounter/count:0"/>
+                    <Sig Name="POPtimers/freepcounter/count:1"/>
+                    <Sig Name="POPtimers/freepcounter/count:2"/>
+                    <Sig Name="POPtimers/freepcounter/count:3"/>
+                    <Sig Name="POPtimers/freepcounter/count:4"/>
+                    <Sig Name="POPtimers/freepcounter/count:5"/>
+                    <Sig Name="POPtimers/freepcounter/count:6"/>
+                    <Sig Name="POPtimers/freepcounter/count:7"/>
+                    <Sig Name="POPtimers/freepcounter/count:8"/>
+                    <Sig Name="POPtimers/freepcounter/count:9"/>
+                    <Sig Name="POPtimers/freepcounter/count:10"/>
+                    <Sig Name="POPtimers/freepcounter/count:11"/>
+                    <Sig Name="POPtimers/freepcounter/count:12"/>
+                    <Sig Name="POPtimers/freepcounter/count:13"/>
+                    <Sig Name="POPtimers/freepcounter/count:14"/>
+                    <Sig Name="POPtimers/freepcounter/count:15"/>
+                </Bus>
+                <Bus Name="POPtimers/MW2/b" Radix="0">
+                    <Sig Name="POPtimers/MW2/b:0"/>
+                    <Sig Name="POPtimers/MW2/b:1"/>
+                    <Sig Name="POPtimers/MW2/b:2"/>
+                    <Sig Name="POPtimers/MW2/b:3"/>
+                    <Sig Name="POPtimers/MW2/b:4"/>
+                    <Sig Name="POPtimers/MW2/b:5"/>
+                    <Sig Name="POPtimers/MW2/b:6"/>
+                    <Sig Name="POPtimers/MW2/b:7"/>
+                    <Sig Name="POPtimers/MW2/b:8"/>
+                    <Sig Name="POPtimers/MW2/b:9"/>
+                    <Sig Name="POPtimers/MW2/b:10"/>
+                    <Sig Name="POPtimers/MW2/b:11"/>
+                    <Sig Name="POPtimers/MW2/b:12"/>
+                    <Sig Name="POPtimers/MW2/b:13"/>
+                    <Sig Name="POPtimers/MW2/b:14"/>
+                    <Sig Name="POPtimers/MW2/b:15"/>
+                </Bus>
+                <Bus Name="POPtimers/loopcounter/b" Radix="0">
+                    <Sig Name="POPtimers/loopcounter/b:0"/>
+                    <Sig Name="POPtimers/loopcounter/b:1"/>
+                    <Sig Name="POPtimers/loopcounter/b:2"/>
+                    <Sig Name="POPtimers/loopcounter/b:3"/>
+                    <Sig Name="POPtimers/loopcounter/b:4"/>
+                    <Sig Name="POPtimers/loopcounter/b:5"/>
+                    <Sig Name="POPtimers/loopcounter/b:6"/>
+                    <Sig Name="POPtimers/loopcounter/b:7"/>
+                    <Sig Name="POPtimers/loopcounter/b:8"/>
+                    <Sig Name="POPtimers/loopcounter/b:9"/>
+                    <Sig Name="POPtimers/loopcounter/b:10"/>
+                    <Sig Name="POPtimers/loopcounter/b:11"/>
+                    <Sig Name="POPtimers/loopcounter/b:12"/>
+                    <Sig Name="POPtimers/loopcounter/b:13"/>
+                    <Sig Name="POPtimers/loopcounter/b:14"/>
+                    <Sig Name="POPtimers/loopcounter/b:15"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Operator="6" Name="TU1" ID="1" Value="1" Radix="0"/>
+                <TU Operator="6" Name="TU2" ID="2" Value="1" Radix="0"/>
+                <TU Operator="6" Name="TU3" ID="3" Value="1" Radix="0"/>
+                <TU Operator="6" Name="TU4" ID="4" Value="1" Radix="0"/>
+                <TU Operator="6" Name="TU5" ID="5" Value="1" Radix="0"/>
+                <TE Enable="1" Expression="TU1|TU2|TU3|TU4|TU5" Name="TE1" ID="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>
