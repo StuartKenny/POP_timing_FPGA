@@ -27,8 +27,8 @@ module TinyFPGA_A2 (
 	output reg sample_output //pin 22
 );
 
-	wire clk_2M5; //2.5MHz clock
-	wire clk_debug; //debug clock - either 2.5MHz, 10MHz, or 38MHz depending on clocks.v file
+	wire OscTenMegOut; //10MHz output from onboard oscillator
+	wire CLKOP; //2.5MHz clock
 	wire SEDSTDBY; // PLL SED standby output for simulation
 	wire slow_pulse; //2.5MHz clock divided by 2^21 - 3.4s period
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
@@ -64,12 +64,22 @@ module TinyFPGA_A2 (
 	assign debug_1 = 1'b1;
 	assign debug_2 = 1'b1;	
 
-	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
-	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(1'b0), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
-	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
-	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
-	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+	//internal oscillator set to (closest setting to) 2.5MHz
+	//OSCH OSCinst0 (.STDBY(1'b0), .OSC(CLKOP), .SEDSTDBY(SEDSTDBY));
+	//defparam OSCinst0.NOM_FREQ = "2.46";
+	
+	//internal oscillator set to (closest setting to) 10MHz
+	OSCH OSCinst0 (.STDBY(1'b0), .OSC(OscTenMegOut), .SEDSTDBY(SEDSTDBY));
+	defparam OSCinst0.NOM_FREQ = "9.85";
+	
+	//PLL divides input 10MHz by 4
+	DIV4PLL PLL (.CLKI(OscTenMegOut), .CLKOP(CLKOP), .LOCK()); 
 
+	//POPtimers POPtimers (.reset(1'b0), .clock_2_5M(CLKOP), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	POPtimers POPtimers (.load_defaults(load_defaults), .clock_2_5M(CLKOP), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	slow_clock_pulse slowclocks (.clk(CLKOP), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
+	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+	
 	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
 			sampled_modebutton <= !mode_button; //mode button, inverting the logic
@@ -88,7 +98,7 @@ module TinyFPGA_A2 (
 
 	//Signals from POPtimers module are updated on the negative clock edge
 	//The following combinatorial logic is synchronised to a positive clock edge
-	always@(posedge clk_2M5) 
+	always@(posedge CLKOP) 
 	begin
 		if (SMstate == 0) begin //0. Laser frequency setup
 			LED_output <= slow_pulse;

@@ -11,6 +11,7 @@ module wrapper_testbench
     // Outputs
     wire [1:0] state;
 	wire debounce_pulse, fast_pulse, slow_pulse;
+	wire initial_state;
 
     // Instantiate the Units Under Test (UUT)
 	slow_clock_pulse slowclocksUT (
@@ -22,7 +23,8 @@ module wrapper_testbench
 		
 	quad_state_machine state_machineUT (	
 		.clk(fast_pulse),
-		.state(state) //2 bit vector
+		.state(state), //2 bit vector
+		.initial_state(initial_state)
 		);
 
 	initial begin
