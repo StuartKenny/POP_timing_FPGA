@@ -2,7 +2,7 @@
 ; Global primary clocks
 GLOBAL_PRIMARY_USED = 3;
 ; Global primary clock #0
-GLOBAL_PRIMARY_0_SIGNALNAME = CLKOP;
+GLOBAL_PRIMARY_0_SIGNALNAME = clk_2M5;
 GLOBAL_PRIMARY_0_DRIVERTYPE = PLL;
 GLOBAL_PRIMARY_0_LOADNUM = 34;
 ; Global primary clock #1

@@ -13,7 +13,7 @@ IO_used = 18;
 EBR_avail = 7;
 EBR_used = 0;
 ; Begin PLL Section
-Instance_Name = PLL/PLLInst_0;
+Instance_Name = clocks/PLL/PLLInst_0;
 Type = EHXPLLJ;
 CLKOP_Post_Divider_A_Input = DIVA;
 CLKOS_Post_Divider_B_Input = DIVB;
@@ -30,7 +30,7 @@ VCO_Bypass_D_Input = VCO_PHASE;
 FB_MODE = INT_OP;
 CLKI_Divider = 1;
 CLKFB_Divider = 1;
-CLKOP_Divider = 4;
+CLKOP_Divider = 15;
 CLKOS_Divider = 1;
 CLKOS2_Divider = 1;
 CLKOS3_Divider = 1;

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="PARTrace">
-        <Message>
-            <ID>70061015</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>CLKOP</Dynamic>
-            <Dynamic>PLL/PLLInst_0</Dynamic>
-        </Message>
-    </Task>
     <Task name="Map">
         <Message>
             <ID>51001030</ID>
@@ -35,17 +27,25 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13): </Dynamic>
+            <Dynamic>clocks</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
             <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
-            <Dynamic>OSCH(NOM_FREQ=&quot;9.85&quot;)</Dynamic>
+            <Dynamic>OSCH(NOM_FREQ=&quot;38.00&quot;)</Dynamic>
             <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
             <Navigation>1793</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v(8): </Dynamic>
-            <Dynamic>DIV4PLL</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v</Navigation>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/debugpll.v(8): </Dynamic>
+            <Dynamic>DebugPLL</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/debugpll.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -127,36 +127,28 @@
     </Task>
     <Task name="PAR">
         <Message>
-            <ID>70061015</ID>
+            <ID>66011008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>CLKOP</Dynamic>
-            <Dynamic>PLL/PLLInst_0</Dynamic>
+            <Dynamic>
+   Signal=sampled_modebutton loads=1 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_124 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_121 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads   ....   counter/count_15__N_124 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
+   Signal=clocks/clk_debug loads=1 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=OscTenMegOut loads=1 clock_loads=1
    Signal=sampled_modebutton loads=1 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_124 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_121 loads=2 clock_loads=1
    Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1
-   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads   ....   counter/count_15__N_124 loads=2 clock_loads=1
    Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1</Dynamic>
-        </Message>
-        <Message>
-            <ID>66011008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>
-   Signal=OscTenMegOut loads=1 clock_loads=1
-   Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_112 loads=2 clock_loads=1
-   Signal=POPtimers/p   ....   2 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_121 loads=2 clock_loads=1</Dynamic>
+   Signal=clocks/clk_debug loads=1 clock_loads=1</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

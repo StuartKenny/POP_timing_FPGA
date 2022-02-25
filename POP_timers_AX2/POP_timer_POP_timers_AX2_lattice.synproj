@@ -37,7 +37,8 @@
 "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
 "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
 "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
-"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v"
+"C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
 -top TinyFPGA_A2
 
 

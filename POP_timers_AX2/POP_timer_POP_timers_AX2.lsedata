@@ -1,12 +1,12 @@
 <top name = "TinyFPGA_A2"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "sampled_modebutton"  type = "net" />
-    <clockitem name = "freeprecess_minus"  type = "net" />
-    <clockitem name = "OscTenMegOut"  type = "net" />
-    <clockitem name = "pieovertwo_minus"  type = "net" />
+    <clockitem name = "clk_2M5"  type = "net" />
     <clockitem name = "debounce_pulse"  type = "net" />
-    <clockitem name = "CLKOP"  type = "net" />
+    <clockitem name = "freeprecess_minus"  type = "net" />
+    <clockitem name = "pieovertwo_minus"  type = "net" />
+    <clockitem name = "sampled_modebutton"  type = "net" />
+    <clockitem name = "clocks/clk_debug"  type = "net" />
 </clocks>
 
 <!--
@@ -49,99 +49,8 @@
     </pins>
 
     <!--
-        Instances in netlist: 249
+        Instances in netlist: 251
     -->
-
-    <instance  name = "POPtimers/Startopticalsample_15__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[15]"  direction = "in"  />
-        <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
-        <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
-        <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[15]"  direction = "in"  />
-        <pitem  name = "a[14]"  direction = "in"  />
-        <pitem  name = "a[13]"  direction = "in"  />
-        <pitem  name = "a[12]"  direction = "in"  />
-        <pitem  name = "a[11]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o[15]"  direction = "out"  />
-        <pitem  name = "o[14]"  direction = "out"  />
-        <pitem  name = "o[13]"  direction = "out"  />
-        <pitem  name = "o[12]"  direction = "out"  />
-        <pitem  name = "o[11]"  direction = "out"  />
-        <pitem  name = "o[10]"  direction = "out"  />
-        <pitem  name = "o[9]"  direction = "out"  />
-        <pitem  name = "o[8]"  direction = "out"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/Startopticalsample[15]"  />
-        <nitem  name = "POPtimers/Startopticalsample[14]"  />
-        <nitem  name = "POPtimers/Startopticalsample[13]"  />
-        <nitem  name = "POPtimers/Startopticalsample[12]"  />
-        <nitem  name = "POPtimers/Startopticalsample[11]"  />
-        <nitem  name = "POPtimers/Startopticalsample[10]"  />
-        <nitem  name = "POPtimers/Startopticalsample[9]"  />
-        <nitem  name = "POPtimers/Startopticalsample[8]"  />
-        <nitem  name = "POPtimers/Startopticalsample[7]"  />
-        <nitem  name = "POPtimers/Startopticalsample[6]"  />
-        <nitem  name = "POPtimers/Startopticalsample[5]"  />
-        <nitem  name = "POPtimers/Startopticalsample[4]"  />
-        <nitem  name = "POPtimers/Startopticalsample[3]"  />
-        <nitem  name = "POPtimers/Startopticalsample[2]"  />
-        <nitem  name = "POPtimers/Startopticalsample[1]"  />
-        <nitem  name = "POPtimers/Startopticalsample[0]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[15]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[14]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[13]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[12]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[11]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[10]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[9]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[8]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[7]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[6]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[5]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[4]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[3]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[2]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[1]"  />
-        <nitem  name = "POPtimers/Endofopticalsample[0]"  />
-        </nets>
-    </instance>
 
     <instance  name = "POPtimers/Startofprobepulse_15__I_0_28"  library = "work"  arch = ""  type = "comb">
         <pins>
@@ -233,215 +142,6 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/Startof1stMWpulse_15__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[15]"  direction = "in"  />
-        <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
-        <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
-        <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[15]"  direction = "in"  />
-        <pitem  name = "a[14]"  direction = "in"  />
-        <pitem  name = "a[13]"  direction = "in"  />
-        <pitem  name = "a[12]"  direction = "in"  />
-        <pitem  name = "a[11]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o[15]"  direction = "out"  />
-        <pitem  name = "o[14]"  direction = "out"  />
-        <pitem  name = "o[13]"  direction = "out"  />
-        <pitem  name = "o[12]"  direction = "out"  />
-        <pitem  name = "o[11]"  direction = "out"  />
-        <pitem  name = "o[10]"  direction = "out"  />
-        <pitem  name = "o[9]"  direction = "out"  />
-        <pitem  name = "o[8]"  direction = "out"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[15]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[14]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[13]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[12]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[11]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[10]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[9]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[8]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[7]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[6]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[5]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[4]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[3]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[2]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[1]"  />
-        <nitem  name = "POPtimers/AdjustablePieOverTwo[0]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[15]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[14]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[13]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[12]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[11]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[10]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[9]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[8]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[7]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[6]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[5]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[4]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[3]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[2]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[1]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[0]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[15]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[14]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[13]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[12]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[11]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[10]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[9]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[8]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[7]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[6]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[5]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[4]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[3]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[2]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[1]"  />
-        <nitem  name = "POPtimers/Endof1stMWpulse[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "i6"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "n3"  />
-        <nitem  name = "n2"  />
-        <nitem  name = "pin3_sn"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/add_3"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[15]"  direction = "in"  />
-        <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
-        <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
-        <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
-        <pitem  name = "a[11]"  direction = "in"  />
-        <pitem  name = "a[12]"  direction = "in"  />
-        <pitem  name = "a[13]"  direction = "in"  />
-        <pitem  name = "a[14]"  direction = "in"  />
-        <pitem  name = "a[15]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "o[15]"  direction = "out"  />
-        <pitem  name = "o[14]"  direction = "out"  />
-        <pitem  name = "o[13]"  direction = "out"  />
-        <pitem  name = "o[12]"  direction = "out"  />
-        <pitem  name = "o[11]"  direction = "out"  />
-        <pitem  name = "o[10]"  direction = "out"  />
-        <pitem  name = "o[9]"  direction = "out"  />
-        <pitem  name = "o[8]"  direction = "out"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[15]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[14]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[13]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[12]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[11]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[10]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[9]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[8]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[7]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[6]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[5]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[4]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[3]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[2]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[1]"  />
-        <nitem  name = "POPtimers/Startof1stMWpulse[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "i9"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "n3"  />
-        <nitem  name = "n2"  />
-        <nitem  name = "pin5"  />
-        </nets>
-    </instance>
-
     <instance  name = "POPtimers/Endof2ndMWpulse_15__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
@@ -530,6 +230,109 @@
         <nitem  name = "POPtimers/Startofprobepulse[2]"  />
         <nitem  name = "POPtimers/Startofprobepulse[1]"  />
         <nitem  name = "POPtimers/Startofprobepulse[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "POPtimers/add_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "POPtimers/gnd"  />
+        <nitem  name = "POPtimers/pwr"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[15]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[14]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[13]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[12]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[11]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[10]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[9]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[8]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[7]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[6]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[5]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[4]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[3]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[2]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[1]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "i6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n3"  />
+        <nitem  name = "n2"  />
+        <nitem  name = "pin3_sn"  />
+        </nets>
+    </instance>
+
+    <instance  name = "i9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n3"  />
+        <nitem  name = "n2"  />
+        <nitem  name = "pin5"  />
         </nets>
     </instance>
 
@@ -745,63 +548,123 @@
         </nets>
     </instance>
 
-    <instance  name = "PLL/scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/Startof1stMWpulse_15__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "Z"  direction = "out"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "PLL/scuba_vlo"  />
+        <nitem  name = "POPtimers/gnd"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[15]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[14]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[13]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[12]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[11]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[10]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[9]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[8]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[7]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[6]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[5]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[4]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[3]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[2]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[1]"  />
+        <nitem  name = "POPtimers/AdjustablePieOverTwo[0]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[15]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[14]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[13]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[12]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[11]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[10]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[9]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[8]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[7]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[6]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[5]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[4]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[3]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[2]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[1]"  />
+        <nitem  name = "POPtimers/Startof1stMWpulse[0]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[15]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[14]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[13]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[12]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[11]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[10]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[9]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[8]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[7]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[6]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[5]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[4]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[3]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[2]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[1]"  />
+        <nitem  name = "POPtimers/Endof1stMWpulse[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "PLL/PLLInst_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "clocks/OSCinst0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "CLKI"  direction = "in"  />
-        <pitem  name = "CLKOP"  direction = "out"  />
-        <pitem  name = "LOCK"  direction = "out"  />
-        <pitem  name = "CLKFB"  direction = "in"  />
-        <pitem  name = "CLKINTFB"  direction = "out"  />
-        <pitem  name = "PHASESEL1"  direction = "in"  />
-        <pitem  name = "PHASESEL0"  direction = "in"  />
-        <pitem  name = "PHASEDIR"  direction = "in"  />
-        <pitem  name = "PHASESTEP"  direction = "in"  />
-        <pitem  name = "LOADREG"  direction = "in"  />
         <pitem  name = "STDBY"  direction = "in"  />
-        <pitem  name = "PLLWAKESYNC"  direction = "in"  />
-        <pitem  name = "RST"  direction = "in"  />
-        <pitem  name = "RESETM"  direction = "in"  />
-        <pitem  name = "RESETC"  direction = "in"  />
-        <pitem  name = "RESETD"  direction = "in"  />
-        <pitem  name = "ENCLKOP"  direction = "in"  />
-        <pitem  name = "ENCLKOS"  direction = "in"  />
-        <pitem  name = "ENCLKOS2"  direction = "in"  />
-        <pitem  name = "ENCLKOS3"  direction = "in"  />
-        <pitem  name = "PLLCLK"  direction = "in"  />
-        <pitem  name = "PLLRST"  direction = "in"  />
-        <pitem  name = "PLLSTB"  direction = "in"  />
-        <pitem  name = "PLLWE"  direction = "in"  />
-        <pitem  name = "PLLADDR4"  direction = "in"  />
-        <pitem  name = "PLLADDR3"  direction = "in"  />
-        <pitem  name = "PLLADDR2"  direction = "in"  />
-        <pitem  name = "PLLADDR1"  direction = "in"  />
-        <pitem  name = "PLLADDR0"  direction = "in"  />
-        <pitem  name = "PLLDATI7"  direction = "in"  />
-        <pitem  name = "PLLDATI6"  direction = "in"  />
-        <pitem  name = "PLLDATI5"  direction = "in"  />
-        <pitem  name = "PLLDATI4"  direction = "in"  />
-        <pitem  name = "PLLDATI3"  direction = "in"  />
-        <pitem  name = "PLLDATI2"  direction = "in"  />
-        <pitem  name = "PLLDATI1"  direction = "in"  />
-        <pitem  name = "PLLDATI0"  direction = "in"  />
+        <pitem  name = "OSC"  direction = "out"  />
+        <pitem  name = "SEDSTDBY"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "OscTenMegOut"  />
-        <nitem  name = "CLKOP"  />
-        <nitem  name = "PLL/LOCK"  />
-        <nitem  name = "PLL/CLKFB_t"  />
-        <nitem  name = "PLL/scuba_vlo"  />
+        <nitem  name = "clocks/gnd"  />
+        <nitem  name = "clocks/clk_debug"  />
+        <nitem  name = "clocks/SEDSTDBY"  />
         </nets>
     </instance>
 
@@ -830,18 +693,6 @@
         <nitem  name = "tenmegclock"  />
         <nitem  name = "pump"  />
         <nitem  name = "debug_0"  />
-        </nets>
-    </instance>
-
-    <instance  name = "OSCinst0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "STDBY"  direction = "in"  />
-        <pitem  name = "OSC"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "n2"  />
-        <nitem  name = "OscTenMegOut"  />
         </nets>
     </instance>
 
@@ -1013,7 +864,7 @@
 
         <nets>
         <nitem  name = "LED_output_N_1"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output"  />
         </nets>
@@ -1451,7 +1302,7 @@
 
         <nets>
         <nitem  name = "pump_output_N_7"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "pump_output"  />
         </nets>
@@ -1468,7 +1319,7 @@
 
         <nets>
         <nitem  name = "probe_output_N_11"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "probe_output"  />
         </nets>
@@ -1485,7 +1336,7 @@
 
         <nets>
         <nitem  name = "MW_output_N_13"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "MW_output"  />
         </nets>
@@ -1502,9 +1353,117 @@
 
         <nets>
         <nitem  name = "sample_output_N_15"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "sample_output"  />
+        </nets>
+    </instance>
+
+    <instance  name = "POPtimers/Startopticalsample_15__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "POPtimers/gnd"  />
+        <nitem  name = "POPtimers/pwr"  />
+        <nitem  name = "POPtimers/Startopticalsample[15]"  />
+        <nitem  name = "POPtimers/Startopticalsample[14]"  />
+        <nitem  name = "POPtimers/Startopticalsample[13]"  />
+        <nitem  name = "POPtimers/Startopticalsample[12]"  />
+        <nitem  name = "POPtimers/Startopticalsample[11]"  />
+        <nitem  name = "POPtimers/Startopticalsample[10]"  />
+        <nitem  name = "POPtimers/Startopticalsample[9]"  />
+        <nitem  name = "POPtimers/Startopticalsample[8]"  />
+        <nitem  name = "POPtimers/Startopticalsample[7]"  />
+        <nitem  name = "POPtimers/Startopticalsample[6]"  />
+        <nitem  name = "POPtimers/Startopticalsample[5]"  />
+        <nitem  name = "POPtimers/Startopticalsample[4]"  />
+        <nitem  name = "POPtimers/Startopticalsample[3]"  />
+        <nitem  name = "POPtimers/Startopticalsample[2]"  />
+        <nitem  name = "POPtimers/Startopticalsample[1]"  />
+        <nitem  name = "POPtimers/Startopticalsample[0]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[15]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[14]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[13]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[12]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[11]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[10]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[9]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[8]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[7]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[6]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[5]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[4]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[3]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[2]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[1]"  />
+        <nitem  name = "POPtimers/Endofopticalsample[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sampled_modebutton_49"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mode_button_N_18"  />
+        <nitem  name = "debounce_pulse"  />
+        <nitem  name = "n2"  />
+        <nitem  name = "sampled_modebutton"  />
         </nets>
     </instance>
 
@@ -1599,23 +1558,6 @@
         </nets>
     </instance>
 
-    <instance  name = "sampled_modebutton_49"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "mode_button_N_18"  />
-        <nitem  name = "debounce_pulse"  />
-        <nitem  name = "n2"  />
-        <nitem  name = "sampled_modebutton"  />
-        </nets>
-    </instance>
-
     <instance  name = "POPtimers/Endofprobepulse_15__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
@@ -1707,6 +1649,16 @@
         </nets>
     </instance>
 
+    <instance  name = "clocks/PLL/scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clocks/PLL/scuba_vlo"  />
+        </nets>
+    </instance>
+
     <instance  name = "POPtimers/load_defaults_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
@@ -1721,15 +1673,15 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/clock_2_5M_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/clk_2M5_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "CLKOP"  />
-        <nitem  name = "POPtimers/clock_2_5M_N_30"  />
+        <nitem  name = "clk_2M5"  />
+        <nitem  name = "POPtimers/clk_2M5_N_30"  />
         </nets>
     </instance>
 
@@ -1980,7 +1932,7 @@
         <nitem  name = "POPtimers/gatedcount[2]"  />
         <nitem  name = "POPtimers/gatedcount[1]"  />
         <nitem  name = "POPtimers/gatedcount[0]"  />
-        <nitem  name = "POPtimers/clock_2_5M_N_30"  />
+        <nitem  name = "POPtimers/clk_2M5_N_30"  />
         </nets>
     </instance>
 
@@ -2209,7 +2161,7 @@
 
         <nets>
         <nitem  name = "slowclocks/gnd"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "fast_pulse"  />
         <nitem  name = "slow_pulse"  />
@@ -2661,7 +2613,7 @@
 
         <nets>
         <nitem  name = "POPtimers/systemcounter/gnd"  />
-        <nitem  name = "CLKOP"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/counterreset"  />
         <nitem  name = "POPtimers/count[15]"  />
         <nitem  name = "POPtimers/count[14]"  />
@@ -6309,13 +6261,65 @@
         </nets>
     </instance>
 
+    <instance  name = "clocks/PLL/PLLInst_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "CLKI"  direction = "in"  />
+        <pitem  name = "CLKOP"  direction = "out"  />
+        <pitem  name = "LOCK"  direction = "out"  />
+        <pitem  name = "CLKFB"  direction = "in"  />
+        <pitem  name = "CLKINTFB"  direction = "out"  />
+        <pitem  name = "PHASESEL1"  direction = "in"  />
+        <pitem  name = "PHASESEL0"  direction = "in"  />
+        <pitem  name = "PHASEDIR"  direction = "in"  />
+        <pitem  name = "PHASESTEP"  direction = "in"  />
+        <pitem  name = "LOADREG"  direction = "in"  />
+        <pitem  name = "STDBY"  direction = "in"  />
+        <pitem  name = "PLLWAKESYNC"  direction = "in"  />
+        <pitem  name = "RST"  direction = "in"  />
+        <pitem  name = "RESETM"  direction = "in"  />
+        <pitem  name = "RESETC"  direction = "in"  />
+        <pitem  name = "RESETD"  direction = "in"  />
+        <pitem  name = "ENCLKOP"  direction = "in"  />
+        <pitem  name = "ENCLKOS"  direction = "in"  />
+        <pitem  name = "ENCLKOS2"  direction = "in"  />
+        <pitem  name = "ENCLKOS3"  direction = "in"  />
+        <pitem  name = "PLLCLK"  direction = "in"  />
+        <pitem  name = "PLLRST"  direction = "in"  />
+        <pitem  name = "PLLSTB"  direction = "in"  />
+        <pitem  name = "PLLWE"  direction = "in"  />
+        <pitem  name = "PLLADDR4"  direction = "in"  />
+        <pitem  name = "PLLADDR3"  direction = "in"  />
+        <pitem  name = "PLLADDR2"  direction = "in"  />
+        <pitem  name = "PLLADDR1"  direction = "in"  />
+        <pitem  name = "PLLADDR0"  direction = "in"  />
+        <pitem  name = "PLLDATI7"  direction = "in"  />
+        <pitem  name = "PLLDATI6"  direction = "in"  />
+        <pitem  name = "PLLDATI5"  direction = "in"  />
+        <pitem  name = "PLLDATI4"  direction = "in"  />
+        <pitem  name = "PLLDATI3"  direction = "in"  />
+        <pitem  name = "PLLDATI2"  direction = "in"  />
+        <pitem  name = "PLLDATI1"  direction = "in"  />
+        <pitem  name = "PLLDATI0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clocks/clk_debug"  />
+        <nitem  name = "clk_2M5"  />
+        <nitem  name = "clocks/PLL/LOCK"  />
+        <nitem  name = "clocks/PLL/CLKFB_t"  />
+        <nitem  name = "clocks/PLL/scuba_vlo"  />
+        </nets>
+    </instance>
+
     <instance  name = "MW1"  />
     <instance  name = "MW2"  />
     <instance  name = "MW3"  />
     <instance  name = "MW4"  />
+    <instance  name = "OSCinst0"  />
     <instance  name = "PLL"  />
     <instance  name = "PLLInst_0"  />
     <instance  name = "POPtimers"  />
+    <instance  name = "clocks"  />
     <instance  name = "freepcounter"  />
     <instance  name = "loopcounter"  />
     <instance  name = "piecounter"  />
@@ -6353,12 +6357,13 @@
     </regs>
 
     <!--
-        Views in design "TinyFPGA_A2": 7
+        Views in design "TinyFPGA_A2": 8
     -->
 
     <views>
-        <view  name = "DIV4PLL"  />
+        <view  name = "DebugPLL"  />
         <view  name = "POPtimers"  />
+        <view  name = "clocks"  />
         <view  name = "comparator"  />
         <view  name = "count_n"  />
         <view  name = "countupdownpreload"  />

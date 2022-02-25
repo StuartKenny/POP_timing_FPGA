@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          QFN32
 Package Status:                     Final          Version 1.44
 
-Sun Feb 20 11:13:40 2022
+Fri Feb 25 12:27:10 2022
 
 Pinout by Port Name:
 +---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
@@ -198,7 +198,7 @@ LOCATE  COMP  "topleft_button"  SITE  "23";
 LOCATE  COMP  "topright_button"  SITE  "25";
 
 #PLL
-LOCATE  COMP  "PLL/PLLInst_0"  SITE  "LPLL" ;
+LOCATE  COMP  "clocks/PLL/PLLInst_0"  SITE  "LPLL" ;
 
 
 
@@ -209,5 +209,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 20 11:13:40 2022
+Fri Feb 25 12:27:11 2022
 

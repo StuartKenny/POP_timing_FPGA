@@ -22,20 +22,20 @@ I/O cells:      18
                                 OBZ         3          100.0
                                OSCH         1          100.0
 SUB MODULES
-                            DIV4PLL         1
+                           DebugPLL         1
                           POPtimers         1
+                             clocks         1
                          comparator         1
                       comparator_U0         1
                       comparator_U1         1
                       comparator_U2         1
-                      comparator_U3         1
+                      comparator_U4         1
                       comparator_U5         1
                       comparator_U6         1
                       comparator_U7         1
-                      comparator_U8         1
                             count_n         1
                  countupdownpreload         1
-              countupdownpreload_U4         1
+              countupdownpreload_U3         1
                  quad_state_machine         1
                    slow_clock_pulse         1
                               TOTAL       580
@@ -73,15 +73,14 @@ SUB MODULES
                       comparator_U0         1
                       comparator_U1         1
                       comparator_U2         1
-                      comparator_U3         1
+                      comparator_U4         1
                       comparator_U5         1
                       comparator_U6         1
                       comparator_U7         1
-                      comparator_U8         1
                             count_n         1
                  countupdownpreload         1
-              countupdownpreload_U4         1
-                              TOTAL       491
+              countupdownpreload_U3         1
+                              TOTAL       490
 ----------------------------------------------------------------------
 Report for cell count_n.v1
 Instance Path : POPtimers.systemcounter
@@ -100,20 +99,13 @@ Instance Path : POPtimers.sample2
                               TOTAL        10
 ----------------------------------------------------------------------
 Report for cell comparator_U0.v1
-Instance Path : POPtimers.pump2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         3            2.4
-                              TOTAL         3
-----------------------------------------------------------------------
-Report for cell comparator_U1.v1
 Instance Path : POPtimers.probe2
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            3.6
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell comparator_U2.v1
+Report for cell comparator_U1.v1
 Instance Path : POPtimers.probe1
                                   Cell usage:
                                cell     count   Res Usage(%)
@@ -131,14 +123,14 @@ Instance Path : POPtimers.piecounter
                                LUT4        48           37.8
                               TOTAL       114
 ----------------------------------------------------------------------
-Report for cell comparator_U3.v1
+Report for cell comparator_U2.v1
 Instance Path : POPtimers.loopcounter
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            3.6
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell countupdownpreload_U4.v1
+Report for cell countupdownpreload_U3.v1
 Instance Path : POPtimers.freepcounter
                                   Cell usage:
                                cell     count   Res Usage(%)
@@ -151,36 +143,47 @@ Instance Path : POPtimers.freepcounter
                                LUT4        51           40.2
                               TOTAL       113
 ----------------------------------------------------------------------
-Report for cell comparator_U5.v1
+Report for cell comparator_U4.v1
 Instance Path : POPtimers.MW4
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            3.6
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell comparator_U6.v1
+Report for cell comparator_U5.v1
 Instance Path : POPtimers.MW3
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            3.6
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell comparator_U7.v1
+Report for cell comparator_U6.v1
 Instance Path : POPtimers.MW2
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            3.6
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell comparator_U8.v1
+Report for cell comparator_U7.v1
 Instance Path : POPtimers.MW1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         6            4.7
-                              TOTAL         6
+                               LUT4         9            7.1
+                              TOTAL         9
 ----------------------------------------------------------------------
-Report for cell DIV4PLL.v1
-Instance Path : PLL
+Report for cell clocks.v1
+Instance Path : clocks
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+                                INV         1          100.0
+                               OSCH         1          100.0
+SUB MODULES
+                           DebugPLL         1
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell DebugPLL.v1
+Instance Path : clocks.PLL
                                   Cell usage:
                                cell     count   Res Usage(%)
                             EHXPLLJ         1          100.0
