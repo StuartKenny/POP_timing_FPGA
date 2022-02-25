@@ -1,0 +1,45 @@
+<!DOCTYPE ispTLA>
+<ispTLA>
+ <CreationDate>Fri 25. Feb 16:19:51 2022</CreationDate>
+ <XCFFileName/>
+ <CableSetting>
+  <IsTRSTConnected val="false"/>
+  <TRSTSetting val="0"/>
+  <IsBSCANConnected val="false"/>
+  <BSCANSetting val="0"/>
+  <CableType val="USB2"/>
+  <PortAddress val="0"/>
+  <PortSetting val="0"/>
+  <TCKDelay val="1"/>
+ </CableSetting>
+ <DeviceCount>1</DeviceCount>
+ <Device>
+  <DeviceIndex>0</DeviceIndex>
+  <DeviceName>1. LCMXO2-1200HC</DeviceName>
+  <DeviceID>0x012BA043</DeviceID>
+  <HasIspTRACY>true</HasIspTRACY>
+  <HasJTAG2WB>false</HasJTAG2WB>
+  <SERDES/>
+  <IRBypassLen>8</IRBypassLen>
+  <RVLFileName>POP_timer_Reveal.rvl</RVLFileName>
+  <RVSFileName>POP_timer_Reveal.rvs</RVSFileName>
+  <LACoreCount>1</LACoreCount>
+  <WinUI CoreIndex="0">
+   <TraceSigTreeData>
+    <TraceSignal IsHidden="false" Name="topleft_button" NodeType="0" PortIndex="0"/>
+    <TraceSignal IsHidden="false" Name="pieovertwo_plus" NodeType="0" PortIndex="1"/>
+    <TraceSignal IsHidden="false" Name="bottomleft_button" NodeType="0" PortIndex="2"/>
+    <TraceSignal IsHidden="false" Name="pieovertwo_minus" NodeType="0" PortIndex="3"/>
+    <TraceSignal IsHidden="false" Name="topright_button" NodeType="0" PortIndex="4"/>
+    <TraceSignal IsHidden="false" Name="freeprecess_plus" NodeType="0" PortIndex="5"/>
+    <TraceSignal IsHidden="false" Name="bottomright_button" NodeType="0" PortIndex="6"/>
+    <TraceSignal IsHidden="false" Name="freeprecess_minus" NodeType="0" PortIndex="7"/>
+   </TraceSigTreeData>
+   <TriggerUI UserSelect="0" PreSelectType="0" PreSelect="1" UserSelectPos="0"/>
+   <CoreRun Run="true"/>
+   <CoreWndUIData>
+    <ClockFrequency Unit="ns" Frequency="-1.0"/>
+   </CoreWndUIData>
+  </WinUI>
+ </Device>
+</ispTLA>

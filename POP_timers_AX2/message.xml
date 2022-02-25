@@ -6,8 +6,170 @@
             <Severity>Warning</Severity>
             <Dynamic>POPtimers/counterreset</Dynamic>
         </Message>
+        <Message>
+            <ID>51001051</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg14161416/pmi_ram_dpXbnonesadr141614161164462a_0_0_0</Dynamic>
+        </Message>
     </Task>
     <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>2120344</ID>
+            <Severity>Info</Severity>
+            <Dynamic>2</Dynamic>
+        </Message>
+        <Message>
+            <ID>2120346</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,8-1,19) (VERI-1018) compiling module 'TinyFPGA_A2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-123,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v(13,1-45,11) (VERI-9000) elaborating module 'clocks_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-82,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(4,1-26,11) (VERI-9000) elaborating module 'slow_clock_pulse_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(30,2-43,10) (VERI-9000) elaborating module 'quad_state_machine_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v(8,1-94,10) (VERI-9000) elaborating module 'DebugPLL_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v(2,1-25,11) (VERI-9000) elaborating module 'count_n_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_3'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_4'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_5'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_6'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_7'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_8'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_9'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_10'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_11'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-31,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-31,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
         <Message>
             <ID>35002000</ID>
             <Severity>Info</Severity>
@@ -17,112 +179,55 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v(1): </Dynamic>
-            <Dynamic>TinyFPGA_A2</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13): </Dynamic>
-            <Dynamic>clocks</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v</Navigation>
-            <Navigation>13</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
-            <Dynamic>OSCH(NOM_FREQ=&quot;38.00&quot;)</Dynamic>
-            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1793</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/debugpll.v(8): </Dynamic>
-            <Dynamic>DebugPLL</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/debugpll.v</Navigation>
-            <Navigation>8</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): </Dynamic>
-            <Dynamic>VLO</Dynamic>
-            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1124</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): </Dynamic>
-            <Dynamic>EHXPLLJ_renamed_due_excessive_length_1</Dynamic>
-            <Navigation>C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1730</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v(1): </Dynamic>
-            <Dynamic>POPtimers</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v(2): </Dynamic>
-            <Dynamic>count_n</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v</Navigation>
-            <Navigation>2</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v(1): </Dynamic>
-            <Dynamic>comparator</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(2): </Dynamic>
-            <Dynamic>countupdownpreload</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>2</Navigation>
-        </Message>
-        <Message>
-            <ID>35901221</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(19): </Dynamic>
-            <Dynamic>preload</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>19</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(4): </Dynamic>
-            <Dynamic>slow_clock_pulse</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(30): </Dynamic>
-            <Dynamic>quad_state_machine</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
-            <Navigation>30</Navigation>
-        </Message>
-        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>TinyFPGA_A2_reveal_coretop_instance/jupdate[0]</Dynamic>
+            <Navigation>TinyFPGA_A2_reveal_coretop_instance/jupdate[0]</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/tdoa</Dynamic>
+            <Navigation>xo2chub/tdoa</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/cdn</Dynamic>
+            <Navigation>xo2chub/cdn</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/ip_enable[15]</Dynamic>
+            <Navigation>xo2chub/ip_enable[15]</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/genblk7.un1_jtagf_u</Dynamic>
+            <Navigation>xo2chub/genblk7.un1_jtagf_u</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/genblk7.un1_jtagf_u_1</Dynamic>
+            <Navigation>xo2chub/genblk7.un1_jtagf_u_1</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
@@ -131,24 +236,24 @@
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_124 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_121 loads=2 clock_loads=1
    Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads   ....   counter/count_15__N_124 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
-   Signal=clocks/clk_debug loads=1 clock_loads=1</Dynamic>
+   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_124 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_121 loads=2 clock_loads=1
    Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_115 loads=2 clock_loads   ....   counter/count_15__N_124 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_145 loads=2 clock_loads=1
-   Signal=clocks/clk_debug loads=1 clock_loads=1</Dynamic>
+   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
+   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

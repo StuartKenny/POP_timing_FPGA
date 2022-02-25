@@ -6,22 +6,22 @@
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1645792045"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1645805725"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1645792018">
-            <Task name="Map" build_result="2" update_result="0" update_time="1645792018"/>
+        <Milestone name="Map" build_result="2" build_time="1645805694">
+            <Task name="Map" build_result="2" update_result="0" update_time="1645805694"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1645792041">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1645792041"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1645792042"/>
+        <Milestone name="PAR" build_result="2" build_time="1645805719">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1645805719"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1645805720"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1645792017">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1645792017"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1645792045"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1645805693">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1645805693"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1645805690"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="2" update_result="0" update_time="1645792009"/>
@@ -30,13 +30,13 @@
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/POP_timer_POP_timers_AX2_map.vdb" last_build_time="1645792018" last_build_size="160627"/>
-        <Report name="POP_timer_POP_timers_AX2.bgn" last_build_time="1645792045" last_build_size="4408"/>
-        <Report name="POP_timer_POP_timers_AX2.jed" last_build_time="1645792045" last_build_size="350547"/>
-        <Report name="POP_timer_POP_timers_AX2.lsedata" last_build_time="1645792015" last_build_size="296788"/>
-        <Report name="POP_timer_POP_timers_AX2.ncd" last_build_time="1645792040" last_build_size="572164"/>
-        <Report name="POP_timer_POP_timers_AX2.ngd" last_build_time="1645792017" last_build_size="432338"/>
-        <Report name="POP_timer_POP_timers_AX2.twr" last_build_time="1645792042" last_build_size="103811"/>
-        <Report name="POP_timer_POP_timers_AX2_map.ncd" last_build_time="1645792018" last_build_size="419152"/>
+        <Report name=".vdbs/POP_timer_POP_timers_AX2_map.vdb" last_build_time="1645805694" last_build_size="410164"/>
+        <Report name="POP_timer_POP_timers_AX2.bgn" last_build_time="1645805725" last_build_size="4676"/>
+        <Report name="POP_timer_POP_timers_AX2.jed" last_build_time="1645805725" last_build_size="350548"/>
+        <Report name="POP_timer_POP_timers_AX2.lsedata" last_build_time="1645805690" last_build_size="1831718"/>
+        <Report name="POP_timer_POP_timers_AX2.ncd" last_build_time="1645805719" last_build_size="1320303"/>
+        <Report name="POP_timer_POP_timers_AX2.ngd" last_build_time="1645805693" last_build_size="1023972"/>
+        <Report name="POP_timer_POP_timers_AX2.twr" last_build_time="1645805720" last_build_size="157375"/>
+        <Report name="POP_timer_POP_timers_AX2_map.ncd" last_build_time="1645805694" last_build_size="924187"/>
     </Strategy>
 </BuildStatus>

@@ -1,0 +1,42 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = LCMXO2-1200HC-4SG32C
+family = MachXO2
+device = LCMXO2-1200HC
+speed = 4
+package = QFN32
+operation = Commercial
+
+#design options
+[Design]
+title = POP_timer
+path = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2
+core_generate = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2
+search_path = C:/Users/ShifT/GitHub/POP_timing_FPGA
+top = TinyFPGA_A2
+lpf = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.lpf
+synthesis = lse
+
+#strategy options
+VHDL2008 = false
+
+#HDLs options
+[HDLs]
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v = Verilog
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_trig_gen.v=Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_gen.v=Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_rvl.v=Verilog,work

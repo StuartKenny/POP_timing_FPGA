@@ -1,0 +1,28 @@
+<Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-02-25">
+ <Core Name="TinyFPGA_A2_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="256" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Sig Name="topleft_button"/>
+    <Sig Name="pieovertwo_plus"/>
+    <Sig Name="bottomleft_button"/>
+    <Sig Name="pieovertwo_minus"/>
+    <Sig Name="topright_button"/>
+    <Sig Name="freeprecess_plus"/>
+    <Sig Name="bottomright_button"/>
+    <Sig Name="freeprecess_minus"/>
+   </Trace>
+   <Trigger>
+    <TU Operator="6" Name="TU1" ID="1" Value="1" Radix="0"/>
+    <TU Operator="6" Name="TU2" ID="2" Value="1" Radix="0"/>
+    <TU Operator="6" Name="TU3" ID="3" Value="1" Radix="0"/>
+    <TU Operator="6" Name="TU4" ID="4" Value="1" Radix="0"/>
+    <TE Enable="1" Expression="tu1|tu2|tu3|tu4" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
+</Project>

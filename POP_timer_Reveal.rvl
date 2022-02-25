@@ -1,0 +1,33 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2022-02-25">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="POP_timer"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="414384934" Name="TinyFPGA_A2_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="clk_debug" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="256"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_TinyFPGA_A2_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="topleft_button"/>
+                <Sig Type="SIG" Name="pieovertwo_plus"/>
+                <Sig Type="SIG" Name="bottomleft_button"/>
+                <Sig Type="SIG" Name="pieovertwo_minus"/>
+                <Sig Type="SIG" Name="topright_button"/>
+                <Sig Type="SIG" Name="freeprecess_plus"/>
+                <Sig Type="SIG" Name="bottomright_button"/>
+                <Sig Type="SIG" Name="freeprecess_minus"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="freeprecess_plus,"/>
+                <TU Serialbits="0" Type="0" ID="2" Sig="freeprecess_minus,"/>
+                <TU Serialbits="0" Type="0" ID="3" Sig="pieovertwo_plus,"/>
+                <TU Serialbits="0" Type="0" ID="4" Sig="pieovertwo_minus,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>
