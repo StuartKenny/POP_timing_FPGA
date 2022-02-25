@@ -1,15 +1,15 @@
 [ START MERGED ]
-TinyFPGA_A2_reveal_coretop_instance/jce2[0] jtaghub16_jce2
-TinyFPGA_A2_reveal_coretop_instance/ip_enable[0] jtaghub16_ip_enable0
-TinyFPGA_A2_reveal_coretop_instance/jshift[0] jtaghub16_jshift
+clk_2M5_N_30 clk_2M5
+POPtimers/freepcounter/n666_enable_1 POPtimers/n666_enable_3
+POPtimers/freepcounter/n666_enable_5 POPtimers/n666_enable_2
+POPtimers/freepcounter/n666_enable_6 POPtimers/n666_enable_4
+jtdi[0]_keep jtaghub16_jtdi
 jtaghub16_er2_tdo0 TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]
 TinyFPGA_A2_reveal_coretop_instance/jtck[0] jtaghub16_jtck
+TinyFPGA_A2_reveal_coretop_instance/jshift[0] jtaghub16_jshift
 TinyFPGA_A2_reveal_coretop_instance/jrstn[0] jtaghub16_jrstn
-clk_2M5_N_30 clk_2M5
-POPtimers/freepcounter/n632_enable_4 POPtimers/n632_enable_3
-POPtimers/freepcounter/n632_enable_5 POPtimers/n632_enable_1
-POPtimers/freepcounter/n632_enable_6 POPtimers/n632_enable_2
-jtdi[0]_keep jtaghub16_jtdi
+TinyFPGA_A2_reveal_coretop_instance/jce2[0] jtaghub16_jce2
+TinyFPGA_A2_reveal_coretop_instance/ip_enable[0] jtaghub16_ip_enable0
 TinyFPGA_A2_reveal_coretop_instance/jtck_N_424 jtaghub16_jtck
 TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jrstn_N_422 jtaghub16_jrstn
 xo2chub/cdn.CN jtaghub16_jtck
@@ -17,8 +17,8 @@ xo2chub/jrstn_i jtaghub16_jrstn
 [ END MERGED ]
 [ START CLIPPED ]
 xo2chub/GND
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg8825688256/scuba_vlo
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg8825688256/scuba_vhi
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg2053220532/scuba_vlo
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg2053220532/scuba_vhi
 TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg14161416/scuba_vlo
 xo2chub/VCC
 xo2chub/bit_count_cry_0_COUT[3]
@@ -70,35 +70,19 @@ xo2chub/tcka
 xo2chub/cdn
 xo2chub/bit_count_cry_0_S0[0]
 xo2chub/N_1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_876_add_4_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_876_add_4_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_876_add_4_7/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_876_add_4_7/CO
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_76_add_2_9/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_76_add_2_9/CO
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_74_add_2_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_74_add_2_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_74_add_2_9/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_74_add_2_9/CO
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_wr_addr_cntr_879_add_4_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_wr_addr_cntr_879_add_4_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_wr_addr_cntr_879_add_4_9/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_wr_addr_cntr_879_add_4_9/CO
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_rd_addr_cntr_878_add_4_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_rd_addr_cntr_878_add_4_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_76_add_2_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sub_76_add_2_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_rd_addr_cntr_878_add_4_9/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/tm_rd_addr_cntr_878_add_4_9/CO
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_881_add_4_1/S0
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_881_add_4_1/CI
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_881_add_4_17/S1
-TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_881_add_4_17/CO
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_879_add_4_1/S0
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_879_add_4_1/CI
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_879_add_4_7/S1
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/bit_cnt_879_add_4_7/CO
 TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg14161416/scuba_vhi
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_884_add_4_1/S0
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_884_add_4_1/CI
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_884_add_4_17/S1
+TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/te_precnt_884_add_4_17/CO
 TinyFPGA_A2_reveal_coretop_instance/jupdate[0]
-slowclocks/count_874_add_4_1/S0
-slowclocks/count_874_add_4_1/CI
-slowclocks/count_874_add_4_23/CO
+slowclocks/count_877_add_4_1/S0
+slowclocks/count_877_add_4_1/CI
+slowclocks/count_877_add_4_23/CO
 POPtimers/MW2/sub_620_add_2_1/S1
 POPtimers/MW2/sub_620_add_2_1/S0
 POPtimers/MW2/sub_620_add_2_1/CI
@@ -156,19 +140,12 @@ POPtimers/MW4/sub_624_add_2_15/S1
 POPtimers/MW4/sub_624_add_2_15/S0
 POPtimers/MW4/sub_624_add_2_17/S0
 POPtimers/MW4/sub_624_add_2_17/CO
-POPtimers/freepcounter/add_860_1/S0
-POPtimers/freepcounter/add_860_1/CI
-POPtimers/freepcounter/add_860_13/CO
+POPtimers/freepcounter/add_863_1/S0
+POPtimers/freepcounter/add_863_1/CI
+POPtimers/freepcounter/add_863_13/CO
 POPtimers/freepcounter/add_478_1/S0
 POPtimers/freepcounter/add_478_1/CI
 POPtimers/freepcounter/add_478_13/CO
-POPtimers/loopcounter/sub_634_add_2_1/S1
-POPtimers/loopcounter/sub_634_add_2_1/S0
-POPtimers/loopcounter/sub_634_add_2_1/CI
-POPtimers/loopcounter/sub_634_add_2_3/S1
-POPtimers/loopcounter/sub_634_add_2_3/S0
-POPtimers/loopcounter/sub_634_add_2_5/S1
-POPtimers/loopcounter/sub_634_add_2_5/S0
 POPtimers/loopcounter/sub_634_add_2_7/S1
 POPtimers/loopcounter/sub_634_add_2_7/S0
 POPtimers/loopcounter/sub_634_add_2_9/S1
@@ -181,12 +158,19 @@ POPtimers/loopcounter/sub_634_add_2_15/S1
 POPtimers/loopcounter/sub_634_add_2_15/S0
 POPtimers/loopcounter/sub_634_add_2_17/S0
 POPtimers/loopcounter/sub_634_add_2_17/CO
-POPtimers/piecounter/sub_4_add_2_17/S1
-POPtimers/piecounter/sub_4_add_2_17/CO
+POPtimers/loopcounter/sub_634_add_2_1/S1
+POPtimers/loopcounter/sub_634_add_2_1/S0
+POPtimers/loopcounter/sub_634_add_2_1/CI
+POPtimers/loopcounter/sub_634_add_2_3/S1
+POPtimers/loopcounter/sub_634_add_2_3/S0
+POPtimers/loopcounter/sub_634_add_2_5/S1
+POPtimers/loopcounter/sub_634_add_2_5/S0
 POPtimers/piecounter/count_15__I_0_122_17/S1
 POPtimers/piecounter/count_15__I_0_122_17/CO
 POPtimers/piecounter/sub_4_add_2_1/S0
 POPtimers/piecounter/sub_4_add_2_1/CI
+POPtimers/piecounter/sub_4_add_2_17/S1
+POPtimers/piecounter/sub_4_add_2_17/CO
 POPtimers/piecounter/count_15__I_0_122_1/S0
 POPtimers/piecounter/count_15__I_0_122_1/CI
 POPtimers/probe1/sub_626_add_2_1/S1
@@ -246,83 +230,83 @@ POPtimers/sample2/sub_632_add_2_15/S1
 POPtimers/sample2/sub_632_add_2_15/S0
 POPtimers/sample2/sub_632_add_2_17/S0
 POPtimers/sample2/sub_632_add_2_17/CO
-POPtimers/systemcounter/count_875_add_4_1/S0
-POPtimers/systemcounter/count_875_add_4_1/CI
-POPtimers/systemcounter/count_875_add_4_17/S1
-POPtimers/systemcounter/count_875_add_4_17/CO
-POPtimers/add_1441_15/S1
-POPtimers/add_1441_15/CO
-POPtimers/add_1440_1/S0
-POPtimers/add_1440_1/CI
-POPtimers/add_1440_17/S1
-POPtimers/add_1440_17/CO
-POPtimers/add_1434_6514_add_1_1/S0
-POPtimers/add_1434_6514_add_1_1/CI
-POPtimers/add_1434_6514_add_1_17/S1
-POPtimers/add_1434_6514_add_1_17/CO
-POPtimers/add_6518_1/S0
-POPtimers/add_6518_1/CI
-POPtimers/add_6518_17/S1
-POPtimers/add_6518_17/CO
-POPtimers/add_1438_6516_add_1_1/S0
-POPtimers/add_1438_6516_add_1_1/CI
-POPtimers/Startof1stMWpulse_15__I_0_1/S0
-POPtimers/Startof1stMWpulse_15__I_0_1/CI
-POPtimers/add_1438_6516_add_1_17/S1
-POPtimers/add_1438_6516_add_1_17/CO
-POPtimers/add_6519_1/S0
-POPtimers/add_6519_1/CI
-POPtimers/add_6519_17/S1
-POPtimers/add_6519_17/CO
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_6518_add_1_1/S0
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_6518_add_1_1/CI
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_6518_add_1_17/S1
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_6518_add_1_17/CO
-POPtimers/add_6520_2/S0
-POPtimers/add_6520_2/CI
-POPtimers/add_1431_1/S0
-POPtimers/add_1431_1/CI
-POPtimers/add_6520_16/CO
+POPtimers/systemcounter/count_878_add_4_1/S0
+POPtimers/systemcounter/count_878_add_4_1/CI
+POPtimers/systemcounter/count_878_add_4_17/S1
+POPtimers/systemcounter/count_878_add_4_17/CO
+POPtimers/add_1574_15/S1
+POPtimers/add_1574_15/CO
+POPtimers/add_1576_1/S0
+POPtimers/add_1576_1/CI
 POPtimers/Startof1stMWpulse_15__I_0_17/S1
 POPtimers/Startof1stMWpulse_15__I_0_17/CO
-POPtimers/add_1431_15/S1
-POPtimers/add_1431_15/CO
-POPtimers/add_1429_1/S0
-POPtimers/add_1429_1/CI
-POPtimers/add_1429_17/S1
-POPtimers/add_1429_17/CO
-POPtimers/add_1435_1/S0
-POPtimers/add_1435_1/CI
-POPtimers/add_1435_15/S1
-POPtimers/add_1435_15/CO
-POPtimers/add_6497_1/S0
-POPtimers/add_6497_1/CI
-POPtimers/add_1452_1/S0
-POPtimers/add_1452_1/CI
+POPtimers/add_1576_15/S1
+POPtimers/add_1576_15/CO
+POPtimers/add_1575_1/S0
+POPtimers/add_1575_1/CI
+POPtimers/add_1575_17/S1
+POPtimers/add_1575_17/CO
+POPtimers/add_1569_6892_add_1_1/S0
+POPtimers/add_1569_6892_add_1_1/CI
+POPtimers/add_1569_6892_add_1_17/S1
+POPtimers/add_1569_6892_add_1_17/CO
+POPtimers/add_6895_1/S0
+POPtimers/add_6895_1/CI
+POPtimers/add_6895_17/S1
+POPtimers/add_6895_17/CO
 POPtimers/Endofprobepulse_15__I_0_1/S0
 POPtimers/Endofprobepulse_15__I_0_1/CI
-POPtimers/add_6497_13/CO
+POPtimers/add_1573_6894_add_1_1/S0
+POPtimers/add_1573_6894_add_1_1/CI
+POPtimers/add_1573_6894_add_1_17/S1
+POPtimers/add_1573_6894_add_1_17/CO
+POPtimers/add_1588_1/S0
+POPtimers/add_1588_1/CI
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_1/S0
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_1/CI
+POPtimers/Startof1stMWpulse_15__I_0_1/S0
+POPtimers/Startof1stMWpulse_15__I_0_1/CI
+POPtimers/add_1588_15/CO
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_17/S1
+POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_17/CO
+POPtimers/add_6896_1/S0
+POPtimers/add_6896_1/CI
 POPtimers/Endofprobepulse_15__I_0_15/S1
 POPtimers/Endofprobepulse_15__I_0_15/CO
-POPtimers/add_1439_1/S0
-POPtimers/add_1439_1/CI
-POPtimers/add_1439_15/S1
-POPtimers/add_1439_15/CO
-POPtimers/add_1441_1/S0
-POPtimers/add_1441_1/CI
-POPtimers/add_1452_15/CO
+POPtimers/add_6896_17/S1
+POPtimers/add_6896_17/CO
+POPtimers/add_6897_2/S0
+POPtimers/add_6897_2/CI
+POPtimers/add_1566_1/S0
+POPtimers/add_1566_1/CI
+POPtimers/add_6897_16/CO
+POPtimers/add_1564_1/S0
+POPtimers/add_1564_1/CI
+POPtimers/add_1566_15/S1
+POPtimers/add_1566_15/CO
+POPtimers/add_1564_17/S1
+POPtimers/add_1564_17/CO
+POPtimers/add_1570_1/S0
+POPtimers/add_1570_1/CI
+POPtimers/add_1570_15/S1
+POPtimers/add_1570_15/CO
+POPtimers/add_6875_1/S0
+POPtimers/add_6875_1/CI
+POPtimers/add_6875_13/CO
+POPtimers/add_1574_1/S0
+POPtimers/add_1574_1/CI
 [ END CLIPPED ]
 [ START OSC ]
 clk_debug_keep_keep_2 38.00
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Fri Feb 25 16:14:54 2022
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Fri Feb 25 16:39:25 2022
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "debug_1" SITE "5" ;
 LOCATE COMP "debug_0" SITE "4" ;
 LOCATE COMP "pin9_jtgnb" SITE "26" ;
-LOCATE COMP "debug_1" SITE "5" ;
 LOCATE COMP "pin5" SITE "20" ;
 LOCATE COMP "pin3_sn" SITE "16" ;
 LOCATE COMP "LED_output" SITE "13" ;

@@ -16,7 +16,7 @@
         <Message>
             <ID>2120344</ID>
             <Severity>Info</Severity>
-            <Dynamic>2</Dynamic>
+            <Dynamic>3</Dynamic>
         </Message>
         <Message>
             <ID>2120346</ID>
@@ -236,10 +236,10 @@
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
    Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
    Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
    Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
         </Message>
@@ -248,10 +248,10 @@
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
    Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
+   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
    Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
    Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
         </Message>

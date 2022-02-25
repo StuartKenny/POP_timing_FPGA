@@ -30,10 +30,26 @@
     <TraceSignal IsHidden="false" Name="pieovertwo_plus" NodeType="0" PortIndex="1"/>
     <TraceSignal IsHidden="false" Name="bottomleft_button" NodeType="0" PortIndex="2"/>
     <TraceSignal IsHidden="false" Name="pieovertwo_minus" NodeType="0" PortIndex="3"/>
-    <TraceSignal IsHidden="false" Name="topright_button" NodeType="0" PortIndex="4"/>
-    <TraceSignal IsHidden="false" Name="freeprecess_plus" NodeType="0" PortIndex="5"/>
-    <TraceSignal IsHidden="false" Name="bottomright_button" NodeType="0" PortIndex="6"/>
-    <TraceSignal IsHidden="false" Name="freeprecess_minus" NodeType="0" PortIndex="7"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count" NodeType="1" PortIndex="4">
+     <BusRadix Radix="2"/>
+     <IsExpanded Expand="false"/>
+    </TraceSignal>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:0" NodeType="2" PortIndex="4"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:1" NodeType="2" PortIndex="5"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:2" NodeType="2" PortIndex="6"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:3" NodeType="2" PortIndex="7"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:4" NodeType="2" PortIndex="8"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:5" NodeType="2" PortIndex="9"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:6" NodeType="2" PortIndex="10"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:7" NodeType="2" PortIndex="11"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:8" NodeType="2" PortIndex="12"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:9" NodeType="2" PortIndex="13"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:10" NodeType="2" PortIndex="14"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:11" NodeType="2" PortIndex="15"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:12" NodeType="2" PortIndex="16"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:13" NodeType="2" PortIndex="17"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:14" NodeType="2" PortIndex="18"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:15" NodeType="2" PortIndex="19"/>
    </TraceSigTreeData>
    <TriggerUI UserSelect="0" PreSelectType="0" PreSelect="1" UserSelectPos="0"/>
    <CoreRun Run="true"/>

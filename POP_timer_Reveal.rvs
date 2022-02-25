@@ -1,7 +1,7 @@
 <Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-02-25">
  <Core Name="TinyFPGA_A2_LA0">
   <Setting>
-   <Capture SamplesPerTrig="256" NumTrigsCap="1"/>
+   <Capture SamplesPerTrig="32" NumTrigsCap="1"/>
    <Event EventCnt="0" CntEnableRun="0"/>
    <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
   </Setting>
@@ -11,10 +11,24 @@
     <Sig Name="pieovertwo_plus"/>
     <Sig Name="bottomleft_button"/>
     <Sig Name="pieovertwo_minus"/>
-    <Sig Name="topright_button"/>
-    <Sig Name="freeprecess_plus"/>
-    <Sig Name="bottomright_button"/>
-    <Sig Name="freeprecess_minus"/>
+    <Bus Name="POPtimers/piecounter/count" Radix="0">
+     <Sig Name="POPtimers/piecounter/count:0"/>
+     <Sig Name="POPtimers/piecounter/count:1"/>
+     <Sig Name="POPtimers/piecounter/count:2"/>
+     <Sig Name="POPtimers/piecounter/count:3"/>
+     <Sig Name="POPtimers/piecounter/count:4"/>
+     <Sig Name="POPtimers/piecounter/count:5"/>
+     <Sig Name="POPtimers/piecounter/count:6"/>
+     <Sig Name="POPtimers/piecounter/count:7"/>
+     <Sig Name="POPtimers/piecounter/count:8"/>
+     <Sig Name="POPtimers/piecounter/count:9"/>
+     <Sig Name="POPtimers/piecounter/count:10"/>
+     <Sig Name="POPtimers/piecounter/count:11"/>
+     <Sig Name="POPtimers/piecounter/count:12"/>
+     <Sig Name="POPtimers/piecounter/count:13"/>
+     <Sig Name="POPtimers/piecounter/count:14"/>
+     <Sig Name="POPtimers/piecounter/count:15"/>
+    </Bus>
    </Trace>
    <Trigger>
     <TU Operator="6" Name="TU1" ID="1" Value="1" Radix="0"/>

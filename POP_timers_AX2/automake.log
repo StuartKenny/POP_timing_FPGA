@@ -32,7 +32,7 @@ C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(31): IN
 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(31): INFO: elaborating module 'countupdownpreload_uniq_2' (VERI-9000)
 Copyright (c) 2001-2013 Lattice Semiconductor Corporation. All rights reserved.
 Check Reveal Inserter settings...
-    <postMsg mid="2120344" type="Info"    dynamic="1" navigation="0" arg0="2"  />
+    <postMsg mid="2120344" type="Info"    dynamic="1" navigation="0" arg0="3"  />
     <postMsg mid="2120346" type="Info"    dynamic="1" navigation="0" arg0="0"  />
 Design Rule Check PASSED.
 Finished checking Reveal Inserter settings.
@@ -86,7 +86,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Feb 25 16:14:49 2022
+Fri Feb 25 16:39:19 2022
 
 
 Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml 
@@ -195,7 +195,6 @@ Top-level module name = TinyFPGA_A2.
 
 ######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
 Duplicate register/latch removal. \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i10 is a one-to-one match with \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i13.
-Duplicate register/latch removal. \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i11 is a one-to-one match with \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i12.
 Duplicate register/latch removal. \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i15 is a one-to-one match with \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/rd_dout_tm_i0_i10.
 Applying 38.000000 MHz constraint to all clocks
 
@@ -210,7 +209,7 @@ Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/or5g00/data/o
 Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/data/neoprims.ngl'...
 Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/data/neomacro.ngl'...
 Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr141614161164462a.ngo'...
-Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr88256882561188b9d5.ngo'...
+Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr205322053211882ef7.ngo'...
 Logic has been added to the IP to support JTAG capability.
 Loading NGO design 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data/xo2chub.ngl'...
 
@@ -226,35 +225,35 @@ Running DRC...
     <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="6"  />
 
 Design Results:
-   1516 blocks expanded
+   1555 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file POP_timer_POP_timers_AX2.ngd.
 
 ################### Begin Area Report (TinyFPGA_A2)######################
-Number of register bits => 491 of 1346 (36 % )
-CCU2D => 284
+Number of register bits => 505 of 1346 (37 % )
+CCU2D => 264
 EHXPLLJ => 1
 FD1P3AX => 18
 FD1P3BX => 37
-FD1P3DX => 224
+FD1P3DX => 229
 FD1S1D => 32
 FD1S3AX => 48
 FD1S3BX => 29
-FD1S3DX => 99
+FD1S3DX => 108
 FD1S3IX => 2
 FD1S3JX => 2
 GSR => 1
 IB => 7
 INV => 2
 L6MUX21 => 2
-LUT4 => 587
+LUT4 => 628
 OB => 8
 OBZ => 3
 OSCH => 1
-PFUMX => 33
+PFUMX => 36
 pmi_ram_dpXbnonesadr141614161164462a => 1
-pmi_ram_dpXbnonesadr88256882561188b9d5 => 1
+pmi_ram_dpXbnonesadr205322053211882ef7 => 1
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -265,70 +264,70 @@ jtagconn16 => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 39
-  Net : clocks/clk_debug, loads : 173
-  Net : freeprecess_minus, loads : 45
+  Net : clocks/clk_debug, loads : 164
+  Net : freeprecess_minus, loads : 44
   Net : clocks/PLL/clk_2M5, loads : 45
   Net : pieovertwo_minus, loads : 34
   Net : slowclocks/debounce_pulse, loads : 7
   Net : POPtimers/piecounter/count_15__N_125, loads : 2
   Net : POPtimers/freepcounter/count_15__N_247, loads : 2
   Net : POPtimers/piecounter/count_15__N_164, loads : 2
-  Net : POPtimers/freepcounter/count_15__N_293, loads : 2
-  Net : POPtimers/piecounter/count_15__N_158, loads : 2
   Net : POPtimers/freepcounter/count_15__N_251, loads : 2
-  Net : POPtimers/piecounter/count_15__N_152, loads : 2
+  Net : POPtimers/piecounter/count_15__N_158, loads : 2
   Net : POPtimers/freepcounter/count_15__N_254, loads : 2
-  Net : POPtimers/piecounter/count_15__N_146, loads : 2
+  Net : POPtimers/piecounter/count_15__N_152, loads : 2
   Net : POPtimers/freepcounter/count_15__N_257, loads : 2
-  Net : POPtimers/piecounter/count_15__N_140, loads : 2
+  Net : POPtimers/piecounter/count_15__N_146, loads : 2
   Net : POPtimers/freepcounter/count_15__N_260, loads : 2
-  Net : POPtimers/piecounter/count_15__N_134, loads : 2
+  Net : POPtimers/piecounter/count_15__N_140, loads : 2
   Net : POPtimers/freepcounter/count_15__N_263, loads : 2
-  Net : POPtimers/piecounter/count_15__N_128, loads : 2
+  Net : POPtimers/piecounter/count_15__N_134, loads : 2
   Net : POPtimers/freepcounter/count_15__N_266, loads : 2
-  Net : POPtimers/piecounter/count_15__N_122, loads : 2
+  Net : POPtimers/piecounter/count_15__N_128, loads : 2
   Net : POPtimers/freepcounter/count_15__N_269, loads : 2
-  Net : POPtimers/piecounter/count_15__N_161, loads : 2
+  Net : POPtimers/piecounter/count_15__N_122, loads : 2
   Net : POPtimers/freepcounter/count_15__N_272, loads : 2
-  Net : POPtimers/piecounter/count_15__N_149, loads : 2
+  Net : POPtimers/piecounter/count_15__N_161, loads : 2
   Net : POPtimers/freepcounter/count_15__N_275, loads : 2
-  Net : POPtimers/piecounter/count_15__N_137, loads : 2
+  Net : POPtimers/piecounter/count_15__N_149, loads : 2
   Net : POPtimers/freepcounter/count_15__N_278, loads : 2
-  Net : sampled_modebutton, loads : 2
+  Net : POPtimers/piecounter/count_15__N_137, loads : 2
   Net : POPtimers/freepcounter/count_15__N_281, loads : 2
-  Net : POPtimers/piecounter/count_15__N_155, loads : 2
+  Net : sampled_modebutton, loads : 2
   Net : POPtimers/freepcounter/count_15__N_284, loads : 2
-  Net : POPtimers/piecounter/count_15__N_131, loads : 2
+  Net : POPtimers/piecounter/count_15__N_155, loads : 2
   Net : POPtimers/freepcounter/count_15__N_287, loads : 2
-  Net : POPtimers/piecounter/count_15__N_143, loads : 2
+  Net : POPtimers/piecounter/count_15__N_131, loads : 2
   Net : POPtimers/freepcounter/count_15__N_290, loads : 2
+  Net : POPtimers/piecounter/count_15__N_143, loads : 2
+  Net : POPtimers/freepcounter/count_15__N_293, loads : 2
   Net : POPtimers/piecounter/count_15__N_118, loads : 2
   Net : TinyFPGA_A2_reveal_coretop_instance/jtck[0], loads : 1
 Clock Enable Nets
 Number of Clock Enables: 62
 Top 10 highest fanout Clock Enables:
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67, loads : 21
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sample_en_d, loads : 17
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_96, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_34, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_117, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_86, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_81, loads : 15
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_28, loads : 12
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_39, loads : 10
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/trace_dout_int_7__N_1205, loads : 9
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_86, loads : 22
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_53, loads : 21
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sample_en_d, loads : 16
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_143, loads : 16
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_120, loads : 16
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67, loads : 15
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_30, loads : 12
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_70, loads : 10
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/trace_dout_int_19__N_1224, loads : 6
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_125, loads : 6
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : TinyFPGA_A2_reveal_coretop_instance/jtck_N_424, loads : 159
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jrstn_N_422, loads : 154
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tcnt_0/n9978, loads : 153
+  Net : TinyFPGA_A2_reveal_coretop_instance/jtck_N_424, loads : 182
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jrstn_N_422, loads : 177
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tcnt_0/n10432, loads : 144
   Net : load_defaults, loads : 65
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/addr[0], loads : 46
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/addr[0], loads : 45
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n10439, loads : 44
   Net : TinyFPGA_A2_reveal_coretop_instance/ip_enable[0], loads : 43
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jshift_d1, loads : 37
-  Net : freeprecess_plus, loads : 34
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n10428, loads : 39
+  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/addr[1], loads : 38
   Net : pieovertwo_plus, loads : 34
-  Net : n10279, loads : 33
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -341,24 +340,24 @@ create_clock -period 26.315789 -name    |             |             |
 clk6 [get_nets sampled_modebutton]      |   38.001 MHz|  275.028 MHz|     2  
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
-clk5 [get_nets pieovertwo_minus]        |   38.001 MHz|   16.198 MHz|    39 *
+clk5 [get_nets pieovertwo_minus]        |   38.001 MHz|   18.444 MHz|    35 *
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
-clk4 [get_nets freeprecess_minus]       |   38.001 MHz|   26.826 MHz|    24 *
+clk4 [get_nets                          |             |             |
+\TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
+k[0]]                                   |   38.001 MHz|   58.534 MHz|    12  
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
-clk3 [get_nets clk_debug]               |   38.001 MHz|   96.348 MHz|     6  
+clk3 [get_nets clk_debug]               |   38.001 MHz|   86.580 MHz|     6  
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
 clk2 [get_nets clk_2M5]                 |   38.001 MHz|   57.504 MHz|    12  
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
-clk1 [get_nets debounce_pulse]          |   38.001 MHz|  219.106 MHz|     2  
+clk1 [get_nets debounce_pulse]          |   38.001 MHz|  107.701 MHz|    10  
                                         |             |             |
 create_clock -period 26.315789 -name    |             |             |
-clk0 [get_nets                          |             |             |
-\TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
-k[0]]                                   |   38.001 MHz|   55.642 MHz|    12  
+clk0 [get_nets freeprecess_minus]       |   38.001 MHz|   29.890 MHz|    22 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -366,10 +365,10 @@ k[0]]                                   |   38.001 MHz|   55.642 MHz|    12
 2 constraints not met.
 
 
-Peak Memory Usage: 83.516  MB
+Peak Memory Usage: 82.570  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 3.094  secs
+Elapsed CPU time for LSE flow : 4.000  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-1200HC -t QFN32 -s 4 -oc Commercial   "POP_timer_POP_timers_AX2.ngd" -o "POP_timer_POP_timers_AX2_map.ncd" -pr "POP_timer_POP_timers_AX2.prf" -mp "POP_timer_POP_timers_AX2.mrp" -lpf "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/POP_timer_POP_timers_AX2.lpf" -lpf "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.lpf"  -c 0           
@@ -410,20 +409,20 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:    542 out of  1346 (40%)
-      PFU registers:          542 out of  1280 (42%)
+   Number of registers:    556 out of  1346 (41%)
+      PFU registers:          556 out of  1280 (43%)
       PIO registers:            0 out of    66 (0%)
    Number of SLICEs:       635 out of   640 (99%)
       SLICEs as Logic/ROM:    635 out of   640 (99%)
       SLICEs as RAM:            0 out of   480 (0%)
-      SLICEs as Carry:        301 out of   640 (47%)
-   Number of LUT4s:        1223 out of  1280 (96%)
-      Number used as logic LUTs:        621
+      SLICEs as Carry:        281 out of   640 (44%)
+   Number of LUT4s:        1224 out of  1280 (96%)
+      Number used as logic LUTs:        662
       Number used as distributed RAM:     0
-      Number used as ripple logic:      602
+      Number used as ripple logic:      562
       Number used as shift registers:     0
    Number of PIO sites used: 18 + 4(JTAG) out of 22 (100%)
-   Number of block RAMs:  2 out of 7 (29%)
+   Number of block RAMs:  3 out of 7 (43%)
    Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
    JTAG used :       Yes
@@ -446,143 +445,145 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  39
-     Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver: slowclocks/count_874__i7 )
+     Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver: slowclocks/count_877__i7 )
      Net pieovertwo_minus: 32 loads, 32 rising, 0 falling (Driver: pieovertwo_minus_53 )
      Net freeprecess_minus: 32 loads, 32 rising, 0 falling (Driver: freeprecess_minus_54 )
      Net clk_2M5: 34 loads, 26 rising, 8 falling (Driver: clocks/PLL/PLLInst_0 )
      Net sampled_modebutton: 1 loads, 1 rising, 0 falling (Driver: sampled_modebutton_49 )
-     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__I_0_121_2_lut_3_lut_3_lut )
-     Net POPtimers/piecounter/count_15__N_134: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_95_2_lut_3_lut_3_lut )
      Net POPtimers/piecounter/count_15__N_164: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_105_2_lut_3_lut_3_lut )
-     Net POPtimers/piecounter/count_15__N_137: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4869_3_lut )
-     Net POPtimers/piecounter/count_15__N_140: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4870_3_lut )
      Net POPtimers/piecounter/count_15__N_128: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_93_2_lut_3_lut_3_lut )
-     Net POPtimers/piecounter/count_15__N_143: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4871_3_lut )
-     Net POPtimers/piecounter/count_15__N_146: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4872_3_lut )
-     Net POPtimers/piecounter/count_15__N_122: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_91_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_134: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_95_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__I_0_121_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_137: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4938_3_lut )
+     Net POPtimers/piecounter/count_15__N_140: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4939_3_lut )
+     Net POPtimers/piecounter/count_15__N_143: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4940_3_lut )
      Net POPtimers/piecounter/count_15__N_125: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_92_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_146: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4941_3_lut )
+     Net POPtimers/piecounter/count_15__N_122: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_91_2_lut_3_lut_3_lut )
+     Net POPtimers/piecounter/count_15__N_149: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4942_3_lut )
      Net POPtimers/piecounter/count_15__N_161: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_104_2_lut_3_lut_3_lut )
-     Net POPtimers/piecounter/count_15__N_149: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4873_3_lut )
      Net POPtimers/piecounter/count_15__N_152: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_101_2_lut_3_lut_3_lut )
-     Net POPtimers/piecounter/count_15__N_155: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4874_3_lut )
+     Net POPtimers/piecounter/count_15__N_155: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/i4943_3_lut )
      Net POPtimers/piecounter/count_15__N_158: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_103_2_lut_3_lut_3_lut )
      Net POPtimers/piecounter/count_15__N_131: 1 loads, 1 rising, 0 falling (Driver: POPtimers/piecounter/count_15__N_119_I_0_94_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_272: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_98_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_269: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4878_3_lut )
-     Net POPtimers/freepcounter/count_15__N_266: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_96_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_263: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4877_3_lut )
-     Net POPtimers/freepcounter/count_15__N_247: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__I_0_121_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_260: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4876_3_lut )
      Net POPtimers/freepcounter/count_15__N_293: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_105_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_257: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4875_3_lut )
+     Net POPtimers/freepcounter/count_15__N_272: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_98_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_269: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4947_3_lut )
+     Net POPtimers/freepcounter/count_15__N_266: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_96_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_263: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4946_3_lut )
+     Net POPtimers/freepcounter/count_15__N_260: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4945_3_lut )
+     Net POPtimers/freepcounter/count_15__N_247: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__I_0_121_2_lut_3_lut_3_lut )
+     Net POPtimers/freepcounter/count_15__N_257: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4944_3_lut )
      Net POPtimers/freepcounter/count_15__N_254: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_92_2_lut_3_lut_3_lut )
      Net POPtimers/freepcounter/count_15__N_251: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_91_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_275: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4879_3_lut )
+     Net POPtimers/freepcounter/count_15__N_275: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4948_3_lut )
      Net POPtimers/freepcounter/count_15__N_278: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_100_2_lut_3_lut_3_lut )
      Net POPtimers/freepcounter/count_15__N_281: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_101_2_lut_3_lut_3_lut )
-     Net POPtimers/freepcounter/count_15__N_284: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4880_3_lut )
-     Net POPtimers/freepcounter/count_15__N_287: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4881_3_lut )
+     Net POPtimers/freepcounter/count_15__N_284: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4949_3_lut )
+     Net POPtimers/freepcounter/count_15__N_287: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/i4950_3_lut )
      Net POPtimers/freepcounter/count_15__N_290: 1 loads, 1 rising, 0 falling (Driver: POPtimers/freepcounter/count_15__N_248_I_0_104_2_lut_3_lut_3_lut )
-     Net clk_debug_keep_keep_2: 111 loads, 111 rising, 0 falling (Driver: clocks/OSCinst0 )
-     Net jtaghub16_jtck: 126 loads, 0 rising, 126 falling (Driver: xo2chub/genblk7.jtagf_u )
+     Net clk_debug_keep_keep_2: 108 loads, 108 rising, 0 falling (Driver: clocks/OSCinst0 )
+     Net jtaghub16_jtck: 138 loads, 0 rising, 138 falling (Driver: xo2chub/genblk7.jtagf_u )
    Number of Clock Enables:  62
-     Net POPtimers/n632_enable_1: 2 loads, 2 LSLICEs
-     Net POPtimers/n632_enable_3: 2 loads, 2 LSLICEs
-     Net POPtimers/n632_enable_2: 2 loads, 2 LSLICEs
-     Net jtaghub16_ip_enable0: 13 loads, 13 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_424_enable_28: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_424_enable_99: 3 loads, 3 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_424_enable_118: 1 loads, 1 LSLICEs
+     Net POPtimers/n666_enable_2: 2 loads, 2 LSLICEs
+     Net POPtimers/n666_enable_4: 2 loads, 2 LSLICEs
+     Net POPtimers/n666_enable_3: 2 loads, 2 LSLICEs
      Net jtaghub16_jupdate: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_790: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_99: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_103: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_790_adj_1469: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_93: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_98: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_790_adj_1470: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_92: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_102: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_790_adj_1471: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_97: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_101: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_1: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/clk[0]_N_keep_enable_78: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/clk[0]_N_keep_enable_100: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_102: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_117: 8 loads, 8 LSLICEs
+     Net jtaghub16_ip_enable0: 13 loads, 13 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_424_enable_17: 9 loads, 9 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/op_code_2__N_818: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_3/clk[0]_N_keep_enable_75: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_3/clk[0]_N_keep_enable_78: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/op_code_2__N_818_adj_1467: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_2/clk[0]_N_keep_enable_81: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_2/clk[0]_N_keep_enable_85: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_818: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_1/clk[0]_N_keep_enable_77: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_1/clk[0]_N_keep_enable_80: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/op_code_2__N_818_adj_1476: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_0/clk[0]_N_keep_enable_76: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_0/clk[0]_N_keep_enable_84: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_4: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/clk[0]_N_keep_enable_65: 8 loads, 8 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_128: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_424_enable_143: 8 loads, 8 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/num_then_wen: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/cnt_contig_reg_wen: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/next_then_reg_wen: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_88: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_90: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/reg0_read_N_1100: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_94: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/next_then_reg_wen: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/clk[0]_N_keep_enable_82: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_42: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/sample_en_d: 4 loads, 4 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_72: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_74: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/reg0_read_N_1128: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tcnt_0/clk[0]_N_keep_enable_86: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_1: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_2: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_28: 7 loads, 7 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_10: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sample_en_d: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_35: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/trace_dout_int_7__N_1205: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_42: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_49: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_86: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_63: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_79: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_26: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_25: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_95: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_91: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_96: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_104: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_81: 14 loads, 14 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_39: 6 loads, 6 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_34: 9 loads, 9 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_96: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_40: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_42: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_43: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_45: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_46: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67: 11 loads, 11 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_119: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_3: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_5: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_70: 6 loads, 6 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_79: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtck_N_424_enable_105: 10 loads, 10 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_30: 6 loads, 6 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_34: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/trace_dout_int_19__N_1224: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_83: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_38: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_50: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/clk[0]_N_keep_enable_66: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_19: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_18: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67: 14 loads, 14 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_86: 12 loads, 12 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_120: 9 loads, 9 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_125: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_26: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_28: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_29: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_31: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_32: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_53: 11 loads, 11 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_145: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_144: 1 loads, 1 LSLICEs
      Net xo2chub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
      Net xo2chub/er1_shift_reg8: 10 loads, 10 LSLICEs
    Number of local set/reset loads for net POPtimers/counterreset merged into GSR:  16
    Number of LSRs:  68
      Net LED_output_N_6: 3 loads, 3 LSLICEs
-     Net POPtimers/piecounter/count_15__N_167: 2 loads, 2 LSLICEs
-     Net POPtimers/piecounter/count_15__N_170: 2 loads, 2 LSLICEs
-     Net POPtimers/piecounter/count_15__N_182: 2 loads, 2 LSLICEs
-     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 LSLICEs
-     Net POPtimers/piecounter/count_15__N_134: 1 loads, 1 LSLICEs
-     Net POPtimers/piecounter/count_15__N_185: 2 loads, 2 LSLICEs
+     Net n10463: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_164: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_212: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_128: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_182: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_134: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_185: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_167: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_118: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_170: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_137: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_188: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_140: 1 loads, 1 LSLICEs
-     Net POPtimers/piecounter/count_15__N_128: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_191: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_143: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_194: 2 loads, 2 LSLICEs
+     Net POPtimers/piecounter/count_15__N_125: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_146: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_197: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_122: 1 loads, 1 LSLICEs
-     Net POPtimers/piecounter/count_15__N_125: 1 loads, 1 LSLICEs
+     Net POPtimers/piecounter/count_15__N_149: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_161: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_209: 2 loads, 2 LSLICEs
-     Net POPtimers/piecounter/count_15__N_149: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_200: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_152: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_203: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_155: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_206: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_158: 1 loads, 1 LSLICEs
-     Net POPtimers/piecounter/count_15__N_194: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_131: 1 loads, 1 LSLICEs
      Net POPtimers/piecounter/count_15__N_179: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_176: 2 loads, 2 LSLICEs
      Net POPtimers/piecounter/count_15__N_173: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_293: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_320: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_272: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_317: 2 loads, 2 LSLICEs
@@ -591,18 +592,16 @@ Design Summary:
      Net POPtimers/freepcounter/count_15__N_266: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_311: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_263: 1 loads, 1 LSLICEs
-     Net POPtimers/freepcounter/count_15__N_247: 1 loads, 1 LSLICEs
-     Net POPtimers/freepcounter/count_15__N_296: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_308: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_260: 1 loads, 1 LSLICEs
-     Net POPtimers/freepcounter/count_15__N_293: 1 loads, 1 LSLICEs
-     Net POPtimers/freepcounter/count_15__N_341: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_247: 1 loads, 1 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_296: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_305: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_257: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_302: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_254: 1 loads, 1 LSLICEs
-     Net POPtimers/freepcounter/count_15__N_251: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_299: 2 loads, 2 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_251: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_275: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_323: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_278: 1 loads, 1 LSLICEs
@@ -615,21 +614,21 @@ Design Summary:
      Net POPtimers/freepcounter/count_15__N_335: 2 loads, 2 LSLICEs
      Net POPtimers/freepcounter/count_15__N_290: 1 loads, 1 LSLICEs
      Net POPtimers/freepcounter/count_15__N_338: 2 loads, 2 LSLICEs
-     Net n9996: 1 loads, 1 LSLICEs
-     Net jtaghub16_jrstn: 123 loads, 123 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n9978: 101 loads, 99 LSLICEs
+     Net POPtimers/freepcounter/count_15__N_341: 2 loads, 2 LSLICEs
+     Net jtaghub16_jrstn: 134 loads, 134 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n10432: 97 loads, 95 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net jtaghub16_jrstn: 126 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n9978: 102 loads
+     Net jtaghub16_jrstn: 137 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n10432: 98 loads
      Net load_defaults: 65 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/addr[0]: 47 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/jshift_d1: 39 loads
-     Net jtaghub16_jshift: 35 loads
-     Net freeprecess_plus: 34 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/addr[0]: 46 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n10439: 45 loads
+     Net jtaghub16_jshift: 39 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/addr[1]: 39 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n10428: 39 loads
      Net pieovertwo_plus: 34 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/n9970: 32 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/addr[1]: 32 loads
+     Net freeprecess_plus: 33 loads
  
 
    Number of warnings:  2
@@ -654,7 +653,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "POP_timer_POP_timers_AX2_map.ncd"
-Fri Feb 25 16:14:55 2022
+Fri Feb 25 16:39:26 2022
 
 PAR: Place And Route Diamond (64-bit) 3.12.1.454.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 POP_timer_POP_timers_AX2_map.ncd POP_timer_POP_timers_AX2.dir/5_1.ncd POP_timer_POP_timers_AX2.prf
@@ -686,49 +685,50 @@ Device utilization summary:
    GSR                1/1           100% used
    OSC                1/1           100% used
    JTAG               1/1           100% used
-   EBR                2/7            28% used
+   EBR                3/7            42% used
    PLL                1/1           100% used
 
 
 INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
 32 potential circuit loops found in timing analysis.
-Number of Signals: 1839
-Number of Connections: 4654
+Number of Signals: 1855
+Number of Connections: 4762
 
 Pin Constraint Summary:
    18 out of 18 pins locked (100% locked).
 
 The following 5 signals are selected to use the primary clock routing resources:
     clk_2M5 (driver: clocks/PLL/PLLInst_0, clk load #: 34)
-    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 126)
-    clk_debug_keep_keep_2 (driver: clocks/OSCinst0, clk load #: 111)
-    pieovertwo_minus (driver: SLICE_603, clk load #: 32)
-    freeprecess_minus (driver: SLICE_599, clk load #: 32)
+    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 138)
+    clk_debug_keep_keep_2 (driver: clocks/OSCinst0, clk load #: 108)
+    pieovertwo_minus (driver: SLICE_598, clk load #: 32)
+    freeprecess_minus (driver: SLICE_594, clk load #: 32)
 
 
-The following 7 signals are selected to use the secondary clock routing resources:
-    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 123, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n9978 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_769, clk load #: 0, sr load #: 101, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_81 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_766, clk load #: 0, sr load #: 0, ce load #: 14)
-    jtaghub16_ip_enable0 (driver: SLICE_62, clk load #: 0, sr load #: 0, ce load #: 13)
+The following 8 signals are selected to use the secondary clock routing resources:
+    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 134, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n10432 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_688, clk load #: 0, sr load #: 99, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_404, clk load #: 0, sr load #: 0, ce load #: 14)
+    jtaghub16_ip_enable0 (driver: SLICE_46, clk load #: 0, sr load #: 0, ce load #: 13)
     debounce_pulse (driver: slowclocks/SLICE_246, clk load #: 6, sr load #: 0, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_411, clk load #: 0, sr load #: 0, ce load #: 11)
-    xo2chub/er1_shift_reg8 (driver: SLICE_791, clk load #: 0, sr load #: 0, ce load #: 10)
+    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_86 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_782, clk load #: 0, sr load #: 0, ce load #: 12)
+    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_53 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_767, clk load #: 0, sr load #: 0, ce load #: 11)
+    TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtck_N_424_enable_105 (driver: TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_697, clk load #: 0, sr load #: 0, ce load #: 10)
 
 Signal POPtimers/counterreset is selected as Global Set/Reset.
 Starting Placer Phase 0.
-..........
-Finished Placer Phase 0.  REAL time: 4 secs 
+.........
+Finished Placer Phase 0.  REAL time: 6 secs 
 
 Starting Placer Phase 1.
-...................
-Placer score = 291522.
-Finished Placer Phase 1.  REAL time: 12 secs 
+....................
+Placer score = 298028.
+Finished Placer Phase 1.  REAL time: 15 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  289976
-Finished Placer Phase 2.  REAL time: 12 secs 
+Placer score =  296702
+Finished Placer Phase 2.  REAL time: 16 secs 
 
 
 ------------------ Clock Report ------------------
@@ -741,20 +741,21 @@ Global Clock Resources:
 
 Global Clocks:
   PRIMARY "clk_2M5" from CLKOP on comp "clocks/PLL/PLLInst_0" on PLL site "LPLL", clk load = 34
-  PRIMARY "jtaghub16_jtck" from JTCK on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 126
-  PRIMARY "clk_debug_keep_keep_2" from OSC on comp "clocks/OSCinst0" on site "OSC", clk load = 111
-  PRIMARY "pieovertwo_minus" from Q0 on comp "SLICE_603" on site "R2C13B", clk load = 32
-  PRIMARY "freeprecess_minus" from Q0 on comp "SLICE_599" on site "R7C2A", clk load = 32
-  SECONDARY "jtaghub16_jrstn" from JRSTN on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 0, ce load = 0, sr load = 123
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n9978" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_769" on site "R7C14C", clk load = 0, ce load = 0, sr load = 101
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_81" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_766" on site "R7C14D", clk load = 0, ce load = 14, sr load = 0
-  SECONDARY "jtaghub16_ip_enable0" from Q0 on comp "SLICE_62" on site "R7C11D", clk load = 0, ce load = 13, sr load = 0
-  SECONDARY "debounce_pulse" from Q0 on comp "slowclocks/SLICE_246" on site "R2C11A", clk load = 6, ce load = 0, sr load = 0
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_411" on site "R7C14A", clk load = 0, ce load = 11, sr load = 0
-  SECONDARY "xo2chub/er1_shift_reg8" from F0 on comp "SLICE_791" on site "R7C14B", clk load = 0, ce load = 10, sr load = 0
+  PRIMARY "jtaghub16_jtck" from JTCK on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 138
+  PRIMARY "clk_debug_keep_keep_2" from OSC on comp "clocks/OSCinst0" on site "OSC", clk load = 108
+  PRIMARY "pieovertwo_minus" from Q0 on comp "SLICE_598" on site "R2C13C", clk load = 32
+  PRIMARY "freeprecess_minus" from Q0 on comp "SLICE_594" on site "R7C2C", clk load = 32
+  SECONDARY "jtaghub16_jrstn" from JRSTN on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 0, ce load = 0, sr load = 134
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/n10432" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_688" on site "R7C15C", clk load = 0, ce load = 0, sr load = 99
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_67" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_404" on site "R7C14C", clk load = 0, ce load = 14, sr load = 0
+  SECONDARY "jtaghub16_ip_enable0" from Q0 on comp "SLICE_46" on site "R7C12D", clk load = 0, ce load = 13, sr load = 0
+  SECONDARY "debounce_pulse" from Q0 on comp "slowclocks/SLICE_246" on site "R2C10A", clk load = 6, ce load = 0, sr load = 0
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_86" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_782" on site "R7C14D", clk load = 0, ce load = 12, sr load = 0
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_424_enable_53" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/SLICE_767" on site "R7C14B", clk load = 0, ce load = 11, sr load = 0
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtck_N_424_enable_105" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/SLICE_697" on site "R7C14A", clk load = 0, ce load = 10, sr load = 0
 
   PRIMARY  : 5 out of 8 (62%)
-  SECONDARY: 7 out of 8 (87%)
+  SECONDARY: 8 out of 8 (100%)
 
 Edge Clocks:
   No edge clock selected.
@@ -778,19 +779,19 @@ I/O Bank Usage Summary:
 | 3        | 2 / 2 (100%) | 3.3V       | -         |
 +----------+--------------+------------+-----------+
 
-Total placer CPU time: 12 secs 
+Total placer CPU time: 15 secs 
 
 Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
 
 32 potential circuit loops found in timing analysis.
-0 connections routed; 4654 unrouted.
+0 connections routed; 4762 unrouted.
 Starting router resource preassignment
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1"  />
 
-Completed router resource preassignment. Real time: 15 secs 
+Completed router resource preassignment. Real time: 19 secs 
 
-Start NBR router at 16:15:10 02/25/22
+Start NBR router at 16:39:45 02/25/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -806,55 +807,67 @@ Note: NBR uses a different method to calculate timing slacks. The
 *****************************************************************
 
 32 potential circuit loops found in timing analysis.
-Start NBR special constraint process at 16:15:10 02/25/22
+Start NBR special constraint process at 16:39:46 02/25/22
 
-Start NBR section for initial routing at 16:15:11 02/25/22
+Start NBR section for initial routing at 16:39:47 02/25/22
 Level 4, iteration 1
-153(0.18%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 17 secs 
+161(0.19%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.119ns/0.000ns; real time: 22 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:15:12 02/25/22
+Start NBR section for normal routing at 16:39:48 02/25/22
 Level 4, iteration 1
-78(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 17 secs 
+73(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 23 secs 
 Level 4, iteration 2
-38(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 18 secs 
+41(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 23 secs 
 Level 4, iteration 3
-18(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 18 secs 
+25(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 24 secs 
 Level 4, iteration 4
-7(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 18 secs 
+21(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 24 secs 
 Level 4, iteration 5
-6(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 19 secs 
+20(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 25 secs 
 Level 4, iteration 6
-4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 19 secs 
+15(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.767ns/0.000ns; real time: 25 secs 
 Level 4, iteration 7
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 19 secs 
+9(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 25 secs 
 Level 4, iteration 8
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 19 secs 
+6(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 25 secs 
 Level 4, iteration 9
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 25 secs 
+Level 4, iteration 10
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 25 secs 
+Level 4, iteration 11
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 26 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 26 secs 
+Level 4, iteration 13
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 19 secs 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 26 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 16:15:14 02/25/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:39:52 02/25/22
 32 potential circuit loops found in timing analysis.
 32 potential circuit loops found in timing analysis.
 
-Start NBR section for re-routing at 16:15:15 02/25/22
+Start NBR section for re-routing at 16:39:54 02/25/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 16.417ns/0.000ns; real time: 20 secs 
+Estimated worst slack/total negative slack<setup>: 9.702ns/0.000ns; real time: 28 secs 
 
-Start NBR section for post-routing at 16:15:15 02/25/22
+Start NBR section for post-routing at 16:39:54 02/25/22
 32 potential circuit loops found in timing analysis.
 
 End NBR router with 0 unrouted connection
@@ -863,22 +876,22 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 16.417ns
+  Estimated worst slack<setup> : 9.702ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_137 loads=2 clock_loads   ....   4 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sampled_modebutton loads=1 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1&#xA;   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1&#xA;   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1"  />
 
 32 potential circuit loops found in timing analysis.
 32 potential circuit loops found in timing analysis.
 32 potential circuit loops found in timing analysis.
-Total CPU time 23 secs 
-Total REAL time: 23 secs 
+Total CPU time 30 secs 
+Total REAL time: 32 secs 
 Completely routed.
-End of route.  4654 routed (100.00%); 0 unrouted.
+End of route.  4762 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -889,14 +902,14 @@ Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 16.417
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 9.702
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.298
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.235
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 23 secs 
-Total REAL time to completion: 24 secs 
+Total CPU  time to completion: 31 secs 
+Total REAL time to completion: 33 secs 
 
 par done!
 
@@ -933,7 +946,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Fri Feb 25 16:15:19 2022
+Fri Feb 25 16:39:59 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -973,11 +986,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 22265 paths, 3 nets, and 4175 connections (89.71% coverage)
+Constraints cover 22714 paths, 3 nets, and 4283 connections (89.94% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Fri Feb 25 16:15:20 2022
+Fri Feb 25 16:40:00 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1017,7 +1030,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 22154 paths, 3 nets, and 4157 connections (89.32% coverage)
+Constraints cover 22606 paths, 3 nets, and 4270 connections (89.67% coverage)
 
 
 
@@ -1123,5 +1136,5 @@ Available General Purpose Flash Memory:  511 Pages (Page 0 to Page 510).
 Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 3 secs 
-Total REAL Time: 5 secs 
-Peak Memory Usage: 257 MB
+Total REAL Time: 3 secs 
+Peak Memory Usage: 258 MB
