@@ -55,8 +55,8 @@ module POPtimers
 	comparator sample1 (.a(gatedcount), .b(Startopticalsample), .a_gteq_b(samplestarted), .a_lt_b());
 	comparator sample2 (.a(gatedcount), .b(Endofopticalsample), .a_gteq_b(samplestopped), .a_lt_b());
 	comparator loopcounter (.a(gatedcount), .b(Resetandrepeat), .a_gteq_b(loop), .a_lt_b()); 	
-	countupdownpreload piecounter (.clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd25), .count(AdjustablePieOverTwo));
-	countupdownpreload freepcounter (.clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd200), .count(AdjustableFreePrecession));
+	countupdownpreload piecounter (.clk_2M5(clk_2M5), .clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd25), .count(AdjustablePieOverTwo));
+	countupdownpreload freepcounter (.clk_2M5(clk_2M5), .clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd200), .count(AdjustableFreePrecession));
 		 	
 	always@(*) begin 
 		// reset line is updated immediately

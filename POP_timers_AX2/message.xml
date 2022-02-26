@@ -159,16 +159,58 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-31,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_1'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_1'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
             <Navigation>2</Navigation>
         </Message>
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-31,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_2'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_2'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
             <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module 'single_period_pulse_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module 'single_period_pulse_uniq_2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_2'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_3'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_4'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
         </Message>
         <Message>
             <ID>35002000</ID>
@@ -177,6 +219,22 @@
         <Message>
             <ID>35001781</ID>
             <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1553): </Dynamic>
+            <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1553</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1553): </Dynamic>
+            <Dynamic>\POPtimers/freepcounter/count_i2</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1553</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
@@ -235,25 +293,13 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=sampled_modebutton loads=1 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_164 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_128 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_134 loads=2 clock_loads=1
-   Signal=POPtimers/piecounter/count_15__N_118 loads=2 clock_loads   ....   4 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_287 loads=2 clock_loads=1
-   Signal=POPtimers/freepcounter/count_15__N_290 loads=2 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

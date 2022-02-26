@@ -2,351 +2,805 @@ Logfile for Reveal Analyzer
 Version: Diamond 3.12.1.454
 Platform: Windows8 64bit
 Filename: C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
-First created: Fri 25. Feb 16:42:10 2022
-[16:42:22] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
-[16:42:22] Connecting cableserver to run Reveal debugger....
-[16:42:22] @Connect
-[16:42:22] @SetSharableApplications,2,Reveal,Mico
-[16:42:24] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
-[16:42:24] @LockCable
-[16:42:24] @GetServerStatus
-[16:42:24] @Read
-[16:42:24] @SetTargetDevice,0
-[16:42:24] Connecting core0....
-[16:42:24] @ShiftIR,8,0,ER1
-[16:42:24] @ShiftDR,21,0,data (select core0)
-[16:42:24] @ShiftIR,8,0,ER2
-[16:42:24] Configuring core0....
-[16:42:24] @JumpState,RUN_TEST_IDLE
-[16:42:24] @JumpState,RUN_TEST_IDLE
-[16:42:24] @JumpState,RUN_TEST_IDLE
-[16:42:24] @ShiftIR,8,0,NOP
-[16:42:24] @JumpState,RUN_TEST_IDLE
-[16:42:24] @ShiftIR,8,0,ER2
-[16:42:24] @Set Odd Parity readback
-[16:42:24] @Set Odd Parity
-[16:42:24] @Set LA Start/Stop readback
-[16:42:24] @Set LA Start/Stop 
-[16:42:24] #Reveal IP Version = 1_6_042617
-[16:42:24] @Get Pattern
-[16:42:24] #pattern readout = a5a5
-[16:42:24] pattern readout passed!
-[16:42:24] @Get Tracy Signature
-[16:42:24] @Get Tracy Signature
-[16:42:24] #signature from core0 = 414386639
-[16:42:24] signature from core0 passed!
-[16:42:24] @Set Opcode Value
-[16:42:24] @Set Mask Value
-[16:42:24] @Set Opcode Value
-[16:42:24] @Set Mask Value
-[16:42:24] @Set Opcode Value
-[16:42:24] @Set Mask Value
-[16:42:24] @Set Opcode Value
-[16:42:24] @Set Mask Value
-[16:42:24] @Set Then Num
-[16:42:24] @Set NEXT THEN
-[16:42:24] @Set Cnt Cntg
-[16:42:24] @Set Event Count
-[16:42:24] @Get BurstWrite CRC
-[16:42:24] @Set Truth Tbl Addr Cnter Init
-[16:42:24] @Set Truth Table Prog
-[16:42:24] Configuring in burst mode....
-[16:42:24] @Get BurstWrite CRC
-[16:42:24] @Enable TE Trig
-[16:42:24] @Enable Trig Output OR All readback
-[16:42:24] @Enable Trig Output OR All
-[16:42:24] @Set Pre-Trig Sample
-[16:42:24] @Set Post-Trig Sample
-[16:42:24] finished configuration of core0
-[16:42:24] Starting all active cores....
-[16:42:24] @ShiftIR,8,0,ER1
-[16:42:24] @ShiftDR,21,0,data (select active cores)
-[16:42:24] @ShiftIR,8,0,ER2
-[16:42:24] @Set LA Start cores
-[16:42:24] @UnlockCable
-[16:42:24] Running all active cores....
-[16:42:24] @LockCable
-[16:42:24] Polling trigger memory of core0....
-[16:42:24] @ShiftIR,8,0,ER1
-[16:42:24] @ShiftDR,21,0,data (select core0)
-[16:42:24] @ShiftIR,8,0,ER2
-[16:42:24] @Get Force Trigger bit
-[16:42:24] #TM_CTL_0=3
-[16:42:24] @Get Trig Detected Cnt
-[16:42:24] #numDetectedTriggers = 0
-[16:42:24] @Get Mem Block Full Cnt
-[16:42:24] #memFullCnt = 0
-[16:42:24] detected 0 triggers of core0
-[16:42:24] captured 0 memory blocks of core0
-[16:42:24] @UnlockCable
-[16:42:25] Running all active cores....
-[16:42:25] @LockCable
-[16:42:25] Polling trigger memory of core0....
-[16:42:25] @ShiftIR,8,0,ER1
-[16:42:25] @ShiftDR,21,0,data (select core0)
-[16:42:25] @ShiftIR,8,0,ER2
-[16:42:25] @Get Force Trigger bit
-[16:42:25] #TM_CTL_0=3
-[16:42:25] @Get Trig Detected Cnt
-[16:42:25] #numDetectedTriggers = 0
-[16:42:26] @Get Mem Block Full Cnt
-[16:42:26] #memFullCnt = 0
-[16:42:26] detected 0 triggers of core0
-[16:42:26] captured 0 memory blocks of core0
-[16:42:26] @UnlockCable
-[16:42:27] Running all active cores....
-[16:42:27] @LockCable
-[16:42:27] Polling trigger memory of core0....
-[16:42:27] @ShiftIR,8,0,ER1
-[16:42:27] @ShiftDR,21,0,data (select core0)
-[16:42:27] @ShiftIR,8,0,ER2
-[16:42:27] @Get Force Trigger bit
-[16:42:27] #TM_CTL_0=3
-[16:42:27] @Get Trig Detected Cnt
-[16:42:27] #numDetectedTriggers = 0
-[16:42:27] @Get Mem Block Full Cnt
-[16:42:27] #memFullCnt = 0
-[16:42:27] detected 0 triggers of core0
-[16:42:27] captured 0 memory blocks of core0
-[16:42:27] @UnlockCable
-[16:42:28] Running all active cores....
-[16:42:28] @LockCable
-[16:42:28] Polling trigger memory of core0....
-[16:42:28] @ShiftIR,8,0,ER1
-[16:42:28] @ShiftDR,21,0,data (select core0)
-[16:42:28] @ShiftIR,8,0,ER2
-[16:42:28] @Get Force Trigger bit
-[16:42:28] #TM_CTL_0=3
-[16:42:28] @Get Trig Detected Cnt
-[16:42:28] #numDetectedTriggers = 0
-[16:42:28] @Get Mem Block Full Cnt
-[16:42:28] #memFullCnt = 0
-[16:42:28] detected 0 triggers of core0
-[16:42:28] captured 0 memory blocks of core0
-[16:42:28] @UnlockCable
-[16:42:29] Running all active cores....
-[16:42:29] @LockCable
-[16:42:29] Polling trigger memory of core0....
-[16:42:29] @ShiftIR,8,0,ER1
-[16:42:29] @ShiftDR,21,0,data (select core0)
-[16:42:29] @ShiftIR,8,0,ER2
-[16:42:29] @Get Force Trigger bit
-[16:42:29] #TM_CTL_0=3
-[16:42:29] @Get Trig Detected Cnt
-[16:42:29] #numDetectedTriggers = 0
-[16:42:29] @Get Mem Block Full Cnt
-[16:42:29] #memFullCnt = 0
-[16:42:29] detected 0 triggers of core0
-[16:42:29] captured 0 memory blocks of core0
-[16:42:29] @UnlockCable
-[16:42:30] Running all active cores....
-[16:42:30] @LockCable
-[16:42:30] Polling trigger memory of core0....
-[16:42:30] @ShiftIR,8,0,ER1
-[16:42:30] @ShiftDR,21,0,data (select core0)
-[16:42:30] @ShiftIR,8,0,ER2
-[16:42:30] @Get Force Trigger bit
-[16:42:30] #TM_CTL_0=3
-[16:42:30] @Get Trig Detected Cnt
-[16:42:30] #numDetectedTriggers = 0
-[16:42:30] @Get Mem Block Full Cnt
-[16:42:30] #memFullCnt = 0
-[16:42:30] detected 0 triggers of core0
-[16:42:30] captured 0 memory blocks of core0
-[16:42:30] @UnlockCable
-[16:42:31] Running all active cores....
-[16:42:31] @LockCable
-[16:42:31] Polling trigger memory of core0....
-[16:42:31] @ShiftIR,8,0,ER1
-[16:42:31] @ShiftDR,21,0,data (select core0)
-[16:42:31] @ShiftIR,8,0,ER2
-[16:42:31] @Get Force Trigger bit
-[16:42:31] #TM_CTL_0=3
-[16:42:31] @Get Trig Detected Cnt
-[16:42:31] #numDetectedTriggers = 0
-[16:42:31] @Get Mem Block Full Cnt
-[16:42:31] #memFullCnt = 0
-[16:42:31] detected 0 triggers of core0
-[16:42:31] captured 0 memory blocks of core0
-[16:42:31] @UnlockCable
-[16:42:32] Running all active cores....
-[16:42:32] @LockCable
-[16:42:32] Polling trigger memory of core0....
-[16:42:32] @ShiftIR,8,0,ER1
-[16:42:32] @ShiftDR,21,0,data (select core0)
-[16:42:32] @ShiftIR,8,0,ER2
-[16:42:32] @Get Force Trigger bit
-[16:42:32] #TM_CTL_0=3
-[16:42:32] @Get Trig Detected Cnt
-[16:42:32] #numDetectedTriggers = 0
-[16:42:32] @Get Mem Block Full Cnt
-[16:42:32] #memFullCnt = 0
-[16:42:32] detected 0 triggers of core0
-[16:42:32] captured 0 memory blocks of core0
-[16:42:32] @UnlockCable
-[16:42:33] Running all active cores....
-[16:42:33] @LockCable
-[16:42:33] Polling trigger memory of core0....
-[16:42:33] @ShiftIR,8,0,ER1
-[16:42:33] @ShiftDR,21,0,data (select core0)
-[16:42:33] @ShiftIR,8,0,ER2
-[16:42:33] @Get Force Trigger bit
-[16:42:33] #TM_CTL_0=3
-[16:42:33] @Get Trig Detected Cnt
-[16:42:33] #numDetectedTriggers = 0
-[16:42:33] @Get Mem Block Full Cnt
-[16:42:33] #memFullCnt = 0
-[16:42:33] detected 0 triggers of core0
-[16:42:33] captured 0 memory blocks of core0
-[16:42:33] @UnlockCable
-[16:42:34] Running all active cores....
-[16:42:34] @LockCable
-[16:42:34] Polling trigger memory of core0....
-[16:42:34] @ShiftIR,8,0,ER1
-[16:42:34] @ShiftDR,21,0,data (select core0)
-[16:42:34] @ShiftIR,8,0,ER2
-[16:42:34] @Get Force Trigger bit
-[16:42:34] #TM_CTL_0=3
-[16:42:34] @Get Trig Detected Cnt
-[16:42:34] #numDetectedTriggers = 0
-[16:42:34] @Get Mem Block Full Cnt
-[16:42:34] #memFullCnt = 0
-[16:42:34] detected 0 triggers of core0
-[16:42:34] captured 0 memory blocks of core0
-[16:42:34] @UnlockCable
-[16:42:35] Running all active cores....
-[16:42:35] @LockCable
-[16:42:35] Polling trigger memory of core0....
-[16:42:35] @ShiftIR,8,0,ER1
-[16:42:35] @ShiftDR,21,0,data (select core0)
-[16:42:35] @ShiftIR,8,0,ER2
-[16:42:35] @Get Force Trigger bit
-[16:42:35] #TM_CTL_0=3
-[16:42:35] @Get Trig Detected Cnt
-[16:42:35] #numDetectedTriggers = 0
-[16:42:35] @Get Mem Block Full Cnt
-[16:42:35] #memFullCnt = 0
-[16:42:35] detected 0 triggers of core0
-[16:42:35] captured 0 memory blocks of core0
-[16:42:35] @UnlockCable
-[16:42:36] Running all active cores....
-[16:42:36] @LockCable
-[16:42:36] Polling trigger memory of core0....
-[16:42:36] @ShiftIR,8,0,ER1
-[16:42:36] @ShiftDR,21,0,data (select core0)
-[16:42:36] @ShiftIR,8,0,ER2
-[16:42:36] @Get Force Trigger bit
-[16:42:36] #TM_CTL_0=3
-[16:42:36] @Get Trig Detected Cnt
-[16:42:36] #numDetectedTriggers = 0
-[16:42:36] @Get Mem Block Full Cnt
-[16:42:36] #memFullCnt = 0
-[16:42:36] detected 0 triggers of core0
-[16:42:36] captured 0 memory blocks of core0
-[16:42:36] @UnlockCable
-[16:42:37] Running all active cores....
-[16:42:37] @LockCable
-[16:42:37] Polling trigger memory of core0....
-[16:42:37] @ShiftIR,8,0,ER1
-[16:42:37] @ShiftDR,21,0,data (select core0)
-[16:42:37] @ShiftIR,8,0,ER2
-[16:42:37] @Get Force Trigger bit
-[16:42:37] #TM_CTL_0=3
-[16:42:37] @Get Trig Detected Cnt
-[16:42:37] #numDetectedTriggers = 0
-[16:42:37] @Get Mem Block Full Cnt
-[16:42:37] #memFullCnt = 0
-[16:42:37] detected 0 triggers of core0
-[16:42:37] captured 0 memory blocks of core0
-[16:42:37] @UnlockCable
-[16:42:38] Running all active cores....
-[16:42:38] @LockCable
-[16:42:38] Polling trigger memory of core0....
-[16:42:38] @ShiftIR,8,0,ER1
-[16:42:38] @ShiftDR,21,0,data (select core0)
-[16:42:38] @ShiftIR,8,0,ER2
-[16:42:38] @Get Force Trigger bit
-[16:42:38] #TM_CTL_0=3
-[16:42:38] @Get Trig Detected Cnt
-[16:42:38] #numDetectedTriggers = 0
-[16:42:38] @Get Mem Block Full Cnt
-[16:42:38] #memFullCnt = 0
-[16:42:38] detected 0 triggers of core0
-[16:42:38] captured 0 memory blocks of core0
-[16:42:38] @UnlockCable
-[16:42:39] Running all active cores....
-[16:42:39] @LockCable
-[16:42:39] Polling trigger memory of core0....
-[16:42:39] @ShiftIR,8,0,ER1
-[16:42:39] @ShiftDR,21,0,data (select core0)
-[16:42:39] @ShiftIR,8,0,ER2
-[16:42:39] @Get Force Trigger bit
-[16:42:39] #TM_CTL_0=3
-[16:42:39] @Get Trig Detected Cnt
-[16:42:39] #numDetectedTriggers = 0
-[16:42:39] @Get Mem Block Full Cnt
-[16:42:39] #memFullCnt = 0
-[16:42:39] detected 0 triggers of core0
-[16:42:39] captured 0 memory blocks of core0
-[16:42:39] @UnlockCable
-[16:42:40] Running all active cores....
-[16:42:40] @LockCable
-[16:42:40] Polling trigger memory of core0....
-[16:42:40] @ShiftIR,8,0,ER1
-[16:42:40] @ShiftDR,21,0,data (select core0)
-[16:42:40] @ShiftIR,8,0,ER2
-[16:42:40] @Get Force Trigger bit
-[16:42:40] #TM_CTL_0=3
-[16:42:40] @Get Trig Detected Cnt
-[16:42:40] #numDetectedTriggers = 0
-[16:42:40] @Get Mem Block Full Cnt
-[16:42:40] #memFullCnt = 0
-[16:42:40] detected 0 triggers of core0
-[16:42:40] captured 0 memory blocks of core0
-[16:42:40] @UnlockCable
-[16:42:41] Running all active cores....
-[16:42:41] @LockCable
-[16:42:41] Polling trigger memory of core0....
-[16:42:41] @ShiftIR,8,0,ER1
-[16:42:41] @ShiftDR,21,0,data (select core0)
-[16:42:41] @ShiftIR,8,0,ER2
-[16:42:41] @Get Force Trigger bit
-[16:42:41] #TM_CTL_0=5
-[16:42:41] @Get Trig Detected Cnt
-[16:42:41] #numDetectedTriggers = 1
-[16:42:41] @Get Mem Block Full Cnt
-[16:42:41] #memFullCnt = 1
-[16:42:41] Downloading trigger memory of core0....
-[16:42:41] @Is LA Armed
-[16:42:41] @Set LA Start/Stop readback
-[16:42:41] @Set LA Start/Stop 
-[16:42:41] @Set LA Start/Stop readback
-[16:42:41] @Set LA Start/Stop 
-[16:42:41] @Get Trig Detected Cnt
-[16:42:41] #numDetectedTriggers = 1
-[16:42:41] @Get Mem Block Full Cnt
-[16:42:41] #memFullCnt = 1
-[16:42:41] @Get Last Addr Written
-[16:42:41] #lastAddrWritten = 11
-[16:42:41] @Get Multiple Trig Enbl
-[16:42:41] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
-[16:42:41] @Get BurstRead CRC
-[16:42:41] @Set Trace Mem Cnter Init
-[16:42:41] Uploading in burst mode....
-[16:42:41] @ShiftDR,640,1,data (burst read)
-[16:42:41] @GetTDO,data,640
-[16:42:41] @Get BurstRead CRC
-[16:42:41] @Get BurstRead CRC
-[16:42:41] @Get Pre-Trig Sample Num
-[16:42:41] @Get Post-Trig Sample Num
-[16:42:41] @Get Pre-Trig Samples Captured
-[16:42:41] @Get Trig Ptr
-[16:42:41] #trigPtr = 19
-[16:42:41] #dataSize=3, numRead=32, trace_out=32
-[16:42:41] #trig0={blockPosition:0,triggerPosition:2}
-[16:42:41] finished download trigger memory of core0
-[16:42:41] @UnlockCable
-[16:42:41] @ReleaseCablePort
-[16:42:41] @Disconnect
-[16:42:41] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
-Last closed: Fri 25. Feb 16:52:03 2022
+First created: Sat 26. Feb 21:21:36 2022
+[21:21:44] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
+[21:21:44] Connecting cableserver to run Reveal debugger....
+[21:21:51] @Connect
+[21:21:51] @SetSharableApplications,2,Reveal,Mico
+[21:21:53] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[21:21:53] @LockCable
+[21:21:53] @GetServerStatus
+[21:21:53] @Read
+[21:21:53] @SetTargetDevice,0
+[21:21:53] Connecting core0....
+[21:21:53] @ShiftIR,8,0,ER1
+[21:21:53] @ShiftDR,21,0,data (select core0)
+[21:21:53] @ShiftIR,8,0,ER2
+[21:21:53] Configuring core0....
+[21:21:53] @JumpState,RUN_TEST_IDLE
+[21:21:53] @JumpState,RUN_TEST_IDLE
+[21:21:53] @JumpState,RUN_TEST_IDLE
+[21:21:53] @ShiftIR,8,0,NOP
+[21:21:53] @JumpState,RUN_TEST_IDLE
+[21:21:53] @ShiftIR,8,0,ER2
+[21:21:53] @Set Odd Parity readback
+[21:21:53] @Set Odd Parity
+[21:21:53] @Set LA Start/Stop readback
+[21:21:53] @Set LA Start/Stop 
+[21:21:53] #Reveal IP Version = 1_6_042617
+[21:21:53] @Get Pattern
+[21:21:53] #pattern readout = a5a5
+[21:21:53] pattern readout passed!
+[21:21:53] @Get Tracy Signature
+[21:21:53] @Get Tracy Signature
+[21:21:53] #signature from core0 = 414386639
+[21:21:53] signature from core0 passed!
+[21:21:53] @Set Opcode Value
+[21:21:53] @Set Mask Value
+[21:21:53] @Set Opcode Value
+[21:21:53] @Set Mask Value
+[21:21:53] @Set Opcode Value
+[21:21:53] @Set Mask Value
+[21:21:53] @Set Opcode Value
+[21:21:53] @Set Mask Value
+[21:21:53] @Set Then Num
+[21:21:53] @Set NEXT THEN
+[21:21:53] @Set Cnt Cntg
+[21:21:53] @Set Event Count
+[21:21:53] @Get BurstWrite CRC
+[21:21:53] @Set Truth Tbl Addr Cnter Init
+[21:21:53] @Set Truth Table Prog
+[21:21:53] Configuring in burst mode....
+[21:21:53] @Get BurstWrite CRC
+[21:21:53] @Enable TE Trig
+[21:21:53] @Enable Trig Output OR All readback
+[21:21:53] @Enable Trig Output OR All
+[21:21:53] @Set Pre-Trig Sample
+[21:21:53] @Set Post-Trig Sample
+[21:21:53] finished configuration of core0
+[21:21:53] Starting all active cores....
+[21:21:53] @ShiftIR,8,0,ER1
+[21:21:53] @ShiftDR,21,0,data (select active cores)
+[21:21:53] @ShiftIR,8,0,ER2
+[21:21:53] @Set LA Start cores
+[21:21:53] @UnlockCable
+[21:21:53] Running all active cores....
+[21:21:53] @LockCable
+[21:21:53] Polling trigger memory of core0....
+[21:21:53] @ShiftIR,8,0,ER1
+[21:21:53] @ShiftDR,21,0,data (select core0)
+[21:21:53] @ShiftIR,8,0,ER2
+[21:21:53] @Get Force Trigger bit
+[21:21:53] #TM_CTL_0=3
+[21:21:53] @Get Trig Detected Cnt
+[21:21:53] #numDetectedTriggers = 0
+[21:21:53] @Get Mem Block Full Cnt
+[21:21:53] #memFullCnt = 0
+[21:21:53] detected 0 triggers of core0
+[21:21:53] captured 0 memory blocks of core0
+[21:21:53] @UnlockCable
+[21:21:54] Running all active cores....
+[21:21:54] @LockCable
+[21:21:54] Polling trigger memory of core0....
+[21:21:54] @ShiftIR,8,0,ER1
+[21:21:54] @ShiftDR,21,0,data (select core0)
+[21:21:54] @ShiftIR,8,0,ER2
+[21:21:54] @Get Force Trigger bit
+[21:21:54] #TM_CTL_0=3
+[21:21:54] @Get Trig Detected Cnt
+[21:21:54] #numDetectedTriggers = 0
+[21:21:54] @Get Mem Block Full Cnt
+[21:21:54] #memFullCnt = 0
+[21:21:54] detected 0 triggers of core0
+[21:21:54] captured 0 memory blocks of core0
+[21:21:54] @UnlockCable
+[21:21:55] Running all active cores....
+[21:21:55] @LockCable
+[21:21:55] Polling trigger memory of core0....
+[21:21:55] @ShiftIR,8,0,ER1
+[21:21:55] @ShiftDR,21,0,data (select core0)
+[21:21:55] @ShiftIR,8,0,ER2
+[21:21:55] @Get Force Trigger bit
+[21:21:55] #TM_CTL_0=3
+[21:21:55] @Get Trig Detected Cnt
+[21:21:55] #numDetectedTriggers = 0
+[21:21:55] @Get Mem Block Full Cnt
+[21:21:55] #memFullCnt = 0
+[21:21:55] detected 0 triggers of core0
+[21:21:55] captured 0 memory blocks of core0
+[21:21:55] @UnlockCable
+[21:21:56] Running all active cores....
+[21:21:56] @LockCable
+[21:21:56] Polling trigger memory of core0....
+[21:21:56] @ShiftIR,8,0,ER1
+[21:21:56] @ShiftDR,21,0,data (select core0)
+[21:21:56] @ShiftIR,8,0,ER2
+[21:21:56] @Get Force Trigger bit
+[21:21:56] #TM_CTL_0=3
+[21:21:56] @Get Trig Detected Cnt
+[21:21:56] #numDetectedTriggers = 0
+[21:21:56] @Get Mem Block Full Cnt
+[21:21:56] #memFullCnt = 0
+[21:21:56] detected 0 triggers of core0
+[21:21:56] captured 0 memory blocks of core0
+[21:21:56] @UnlockCable
+[21:21:57] Running all active cores....
+[21:21:57] @LockCable
+[21:21:57] Polling trigger memory of core0....
+[21:21:57] @ShiftIR,8,0,ER1
+[21:21:57] @ShiftDR,21,0,data (select core0)
+[21:21:57] @ShiftIR,8,0,ER2
+[21:21:57] @Get Force Trigger bit
+[21:21:57] #TM_CTL_0=3
+[21:21:57] @Get Trig Detected Cnt
+[21:21:57] #numDetectedTriggers = 0
+[21:21:57] @Get Mem Block Full Cnt
+[21:21:57] #memFullCnt = 0
+[21:21:57] detected 0 triggers of core0
+[21:21:57] captured 0 memory blocks of core0
+[21:21:57] @UnlockCable
+[21:21:58] Running all active cores....
+[21:21:58] @LockCable
+[21:21:58] Polling trigger memory of core0....
+[21:21:58] @ShiftIR,8,0,ER1
+[21:21:58] @ShiftDR,21,0,data (select core0)
+[21:21:58] @ShiftIR,8,0,ER2
+[21:21:58] @Get Force Trigger bit
+[21:21:58] #TM_CTL_0=3
+[21:21:58] @Get Trig Detected Cnt
+[21:21:58] #numDetectedTriggers = 0
+[21:21:58] @Get Mem Block Full Cnt
+[21:21:58] #memFullCnt = 0
+[21:21:58] detected 0 triggers of core0
+[21:21:58] captured 0 memory blocks of core0
+[21:21:58] @UnlockCable
+[21:21:59] Running all active cores....
+[21:21:59] @LockCable
+[21:21:59] Polling trigger memory of core0....
+[21:21:59] @ShiftIR,8,0,ER1
+[21:21:59] @ShiftDR,21,0,data (select core0)
+[21:21:59] @ShiftIR,8,0,ER2
+[21:21:59] @Get Force Trigger bit
+[21:21:59] #TM_CTL_0=5
+[21:21:59] @Get Trig Detected Cnt
+[21:21:59] #numDetectedTriggers = 1
+[21:21:59] @Get Mem Block Full Cnt
+[21:21:59] #memFullCnt = 1
+[21:21:59] Downloading trigger memory of core0....
+[21:21:59] @Is LA Armed
+[21:21:59] @Set LA Start/Stop readback
+[21:21:59] @Set LA Start/Stop 
+[21:21:59] @Set LA Start/Stop readback
+[21:21:59] @Set LA Start/Stop 
+[21:21:59] @Get Trig Detected Cnt
+[21:21:59] #numDetectedTriggers = 1
+[21:21:59] @Get Mem Block Full Cnt
+[21:21:59] #memFullCnt = 1
+[21:21:59] @Get Last Addr Written
+[21:21:59] #lastAddrWritten = 20
+[21:21:59] @Get Multiple Trig Enbl
+[21:21:59] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
+[21:21:59] @Get BurstRead CRC
+[21:21:59] @Set Trace Mem Cnter Init
+[21:21:59] Uploading in burst mode....
+[21:21:59] @ShiftDR,640,1,data (burst read)
+[21:21:59] @GetTDO,data,640
+[21:21:59] @Get BurstRead CRC
+[21:21:59] @Get BurstRead CRC
+[21:21:59] @Get Pre-Trig Sample Num
+[21:21:59] @Get Post-Trig Sample Num
+[21:21:59] @Get Pre-Trig Samples Captured
+[21:21:59] @Get Trig Ptr
+[21:21:59] #trigPtr = 28
+[21:21:59] #dataSize=3, numRead=32, trace_out=32
+[21:21:59] #trig0={blockPosition:0,triggerPosition:2}
+[21:21:59] finished download trigger memory of core0
+[21:21:59] @UnlockCable
+[21:21:59] @ReleaseCablePort
+[21:21:59] @Disconnect
+[21:21:59] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
+[21:22:20] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
+[21:22:20] Connecting cableserver to run Reveal debugger....
+[21:22:20] @Connect
+[21:22:20] @SetSharableApplications,2,Reveal,Mico
+[21:22:22] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[21:22:22] @LockCable
+[21:22:22] @GetServerStatus
+[21:22:22] @Read
+[21:22:22] @SetTargetDevice,0
+[21:22:22] Connecting core0....
+[21:22:22] @ShiftIR,8,0,ER1
+[21:22:22] @ShiftDR,21,0,data (select core0)
+[21:22:22] @ShiftIR,8,0,ER2
+[21:22:22] Configuring core0....
+[21:22:22] @JumpState,RUN_TEST_IDLE
+[21:22:22] @JumpState,RUN_TEST_IDLE
+[21:22:22] @JumpState,RUN_TEST_IDLE
+[21:22:22] @ShiftIR,8,0,NOP
+[21:22:22] @JumpState,RUN_TEST_IDLE
+[21:22:22] @ShiftIR,8,0,ER2
+[21:22:22] @Set Odd Parity readback
+[21:22:22] @Set Odd Parity
+[21:22:22] @Set LA Start/Stop readback
+[21:22:22] @Set LA Start/Stop 
+[21:22:22] #Reveal IP Version = 1_6_042617
+[21:22:22] @Get Pattern
+[21:22:22] #pattern readout = a5a5
+[21:22:22] pattern readout passed!
+[21:22:22] @Get Tracy Signature
+[21:22:22] @Get Tracy Signature
+[21:22:22] #signature from core0 = 414386639
+[21:22:22] signature from core0 passed!
+[21:22:22] @Set Opcode Value
+[21:22:22] @Set Mask Value
+[21:22:22] @Set Opcode Value
+[21:22:22] @Set Mask Value
+[21:22:22] @Set Opcode Value
+[21:22:22] @Set Mask Value
+[21:22:22] @Set Opcode Value
+[21:22:22] @Set Mask Value
+[21:22:22] @Set Then Num
+[21:22:22] @Set NEXT THEN
+[21:22:22] @Set Cnt Cntg
+[21:22:22] @Set Event Count
+[21:22:22] @Get BurstWrite CRC
+[21:22:22] @Set Truth Tbl Addr Cnter Init
+[21:22:22] @Set Truth Table Prog
+[21:22:22] Configuring in burst mode....
+[21:22:22] @Get BurstWrite CRC
+[21:22:22] @Enable TE Trig
+[21:22:22] @Enable Trig Output OR All readback
+[21:22:22] @Enable Trig Output OR All
+[21:22:22] @Set Pre-Trig Sample
+[21:22:22] @Set Post-Trig Sample
+[21:22:22] finished configuration of core0
+[21:22:22] Starting all active cores....
+[21:22:22] @ShiftIR,8,0,ER1
+[21:22:22] @ShiftDR,21,0,data (select active cores)
+[21:22:22] @ShiftIR,8,0,ER2
+[21:22:22] @Set LA Start cores
+[21:22:22] @UnlockCable
+[21:22:22] Running all active cores....
+[21:22:22] @LockCable
+[21:22:22] Polling trigger memory of core0....
+[21:22:22] @ShiftIR,8,0,ER1
+[21:22:22] @ShiftDR,21,0,data (select core0)
+[21:22:22] @ShiftIR,8,0,ER2
+[21:22:22] @Get Force Trigger bit
+[21:22:22] #TM_CTL_0=3
+[21:22:22] @Get Trig Detected Cnt
+[21:22:22] #numDetectedTriggers = 0
+[21:22:22] @Get Mem Block Full Cnt
+[21:22:22] #memFullCnt = 0
+[21:22:22] detected 0 triggers of core0
+[21:22:22] captured 0 memory blocks of core0
+[21:22:22] @UnlockCable
+[21:22:23] Running all active cores....
+[21:22:23] @LockCable
+[21:22:23] Polling trigger memory of core0....
+[21:22:23] @ShiftIR,8,0,ER1
+[21:22:23] @ShiftDR,21,0,data (select core0)
+[21:22:23] @ShiftIR,8,0,ER2
+[21:22:23] @Get Force Trigger bit
+[21:22:23] #TM_CTL_0=3
+[21:22:23] @Get Trig Detected Cnt
+[21:22:23] #numDetectedTriggers = 0
+[21:22:23] @Get Mem Block Full Cnt
+[21:22:23] #memFullCnt = 0
+[21:22:23] detected 0 triggers of core0
+[21:22:23] captured 0 memory blocks of core0
+[21:22:23] @UnlockCable
+[21:22:24] Running all active cores....
+[21:22:24] @LockCable
+[21:22:24] Polling trigger memory of core0....
+[21:22:24] @ShiftIR,8,0,ER1
+[21:22:24] @ShiftDR,21,0,data (select core0)
+[21:22:24] @ShiftIR,8,0,ER2
+[21:22:24] @Get Force Trigger bit
+[21:22:24] #TM_CTL_0=3
+[21:22:24] @Get Trig Detected Cnt
+[21:22:24] #numDetectedTriggers = 0
+[21:22:24] @Get Mem Block Full Cnt
+[21:22:24] #memFullCnt = 0
+[21:22:24] detected 0 triggers of core0
+[21:22:24] captured 0 memory blocks of core0
+[21:22:24] @UnlockCable
+[21:22:25] Running all active cores....
+[21:22:25] @LockCable
+[21:22:25] Polling trigger memory of core0....
+[21:22:25] @ShiftIR,8,0,ER1
+[21:22:25] @ShiftDR,21,0,data (select core0)
+[21:22:25] @ShiftIR,8,0,ER2
+[21:22:25] @Get Force Trigger bit
+[21:22:25] #TM_CTL_0=3
+[21:22:25] @Get Trig Detected Cnt
+[21:22:25] #numDetectedTriggers = 0
+[21:22:25] @Get Mem Block Full Cnt
+[21:22:25] #memFullCnt = 0
+[21:22:25] detected 0 triggers of core0
+[21:22:25] captured 0 memory blocks of core0
+[21:22:25] @UnlockCable
+[21:22:26] Running all active cores....
+[21:22:26] @LockCable
+[21:22:26] Polling trigger memory of core0....
+[21:22:26] @ShiftIR,8,0,ER1
+[21:22:26] @ShiftDR,21,0,data (select core0)
+[21:22:26] @ShiftIR,8,0,ER2
+[21:22:26] @Get Force Trigger bit
+[21:22:26] #TM_CTL_0=3
+[21:22:26] @Get Trig Detected Cnt
+[21:22:26] #numDetectedTriggers = 0
+[21:22:26] @Get Mem Block Full Cnt
+[21:22:26] #memFullCnt = 0
+[21:22:26] detected 0 triggers of core0
+[21:22:26] captured 0 memory blocks of core0
+[21:22:26] @UnlockCable
+[21:22:27] Running all active cores....
+[21:22:27] @LockCable
+[21:22:27] Polling trigger memory of core0....
+[21:22:27] @ShiftIR,8,0,ER1
+[21:22:27] @ShiftDR,21,0,data (select core0)
+[21:22:27] @ShiftIR,8,0,ER2
+[21:22:27] @Get Force Trigger bit
+[21:22:27] #TM_CTL_0=3
+[21:22:27] @Get Trig Detected Cnt
+[21:22:27] #numDetectedTriggers = 0
+[21:22:27] @Get Mem Block Full Cnt
+[21:22:27] #memFullCnt = 0
+[21:22:27] detected 0 triggers of core0
+[21:22:27] captured 0 memory blocks of core0
+[21:22:27] @UnlockCable
+[21:22:28] Running all active cores....
+[21:22:29] @LockCable
+[21:22:29] Polling trigger memory of core0....
+[21:22:29] @ShiftIR,8,0,ER1
+[21:22:29] @ShiftDR,21,0,data (select core0)
+[21:22:29] @ShiftIR,8,0,ER2
+[21:22:29] @Get Force Trigger bit
+[21:22:29] #TM_CTL_0=3
+[21:22:29] @Get Trig Detected Cnt
+[21:22:29] #numDetectedTriggers = 0
+[21:22:29] @Get Mem Block Full Cnt
+[21:22:29] #memFullCnt = 0
+[21:22:29] detected 0 triggers of core0
+[21:22:29] captured 0 memory blocks of core0
+[21:22:29] @UnlockCable
+[21:22:30] Running all active cores....
+[21:22:30] @LockCable
+[21:22:30] Polling trigger memory of core0....
+[21:22:30] @ShiftIR,8,0,ER1
+[21:22:30] @ShiftDR,21,0,data (select core0)
+[21:22:30] @ShiftIR,8,0,ER2
+[21:22:30] @Get Force Trigger bit
+[21:22:30] #TM_CTL_0=3
+[21:22:30] @Get Trig Detected Cnt
+[21:22:30] #numDetectedTriggers = 0
+[21:22:30] @Get Mem Block Full Cnt
+[21:22:30] #memFullCnt = 0
+[21:22:30] detected 0 triggers of core0
+[21:22:30] captured 0 memory blocks of core0
+[21:22:30] @UnlockCable
+[21:22:31] Running all active cores....
+[21:22:31] @LockCable
+[21:22:31] Polling trigger memory of core0....
+[21:22:31] @ShiftIR,8,0,ER1
+[21:22:31] @ShiftDR,21,0,data (select core0)
+[21:22:31] @ShiftIR,8,0,ER2
+[21:22:31] @Get Force Trigger bit
+[21:22:31] #TM_CTL_0=5
+[21:22:31] @Get Trig Detected Cnt
+[21:22:31] #numDetectedTriggers = 1
+[21:22:31] @Get Mem Block Full Cnt
+[21:22:31] #memFullCnt = 1
+[21:22:31] Downloading trigger memory of core0....
+[21:22:31] @Is LA Armed
+[21:22:31] @Set LA Start/Stop readback
+[21:22:31] @Set LA Start/Stop 
+[21:22:31] @Set LA Start/Stop readback
+[21:22:31] @Set LA Start/Stop 
+[21:22:31] @Get Trig Detected Cnt
+[21:22:31] #numDetectedTriggers = 1
+[21:22:31] @Get Mem Block Full Cnt
+[21:22:31] #memFullCnt = 1
+[21:22:31] @Get Last Addr Written
+[21:22:31] #lastAddrWritten = 29
+[21:22:31] @Get Multiple Trig Enbl
+[21:22:31] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
+[21:22:31] @Get BurstRead CRC
+[21:22:31] @Set Trace Mem Cnter Init
+[21:22:31] Uploading in burst mode....
+[21:22:31] @ShiftDR,640,1,data (burst read)
+[21:22:31] @GetTDO,data,640
+[21:22:31] @Get BurstRead CRC
+[21:22:31] @Get BurstRead CRC
+[21:22:31] @Get Pre-Trig Sample Num
+[21:22:31] @Get Post-Trig Sample Num
+[21:22:31] @Get Pre-Trig Samples Captured
+[21:22:31] @Get Trig Ptr
+[21:22:31] #trigPtr = 5
+[21:22:31] #dataSize=3, numRead=32, trace_out=32
+[21:22:31] #trig0={blockPosition:0,triggerPosition:2}
+[21:22:31] finished download trigger memory of core0
+[21:22:31] @UnlockCable
+[21:22:31] @ReleaseCablePort
+[21:22:31] @Disconnect
+[21:22:31] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
+[21:22:34] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
+[21:22:34] Connecting cableserver to run Reveal debugger....
+[21:22:34] @Connect
+[21:22:34] @SetSharableApplications,2,Reveal,Mico
+[21:22:36] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[21:22:36] @LockCable
+[21:22:36] @GetServerStatus
+[21:22:36] @Read
+[21:22:36] @SetTargetDevice,0
+[21:22:36] Connecting core0....
+[21:22:36] @ShiftIR,8,0,ER1
+[21:22:36] @ShiftDR,21,0,data (select core0)
+[21:22:36] @ShiftIR,8,0,ER2
+[21:22:36] Configuring core0....
+[21:22:36] @JumpState,RUN_TEST_IDLE
+[21:22:36] @JumpState,RUN_TEST_IDLE
+[21:22:36] @JumpState,RUN_TEST_IDLE
+[21:22:36] @ShiftIR,8,0,NOP
+[21:22:36] @JumpState,RUN_TEST_IDLE
+[21:22:36] @ShiftIR,8,0,ER2
+[21:22:36] @Set Odd Parity readback
+[21:22:36] @Set Odd Parity
+[21:22:36] @Set LA Start/Stop readback
+[21:22:36] @Set LA Start/Stop 
+[21:22:36] #Reveal IP Version = 1_6_042617
+[21:22:36] @Get Pattern
+[21:22:36] #pattern readout = a5a5
+[21:22:36] pattern readout passed!
+[21:22:36] @Get Tracy Signature
+[21:22:36] @Get Tracy Signature
+[21:22:36] #signature from core0 = 414386639
+[21:22:36] signature from core0 passed!
+[21:22:36] @Set Opcode Value
+[21:22:36] @Set Mask Value
+[21:22:36] @Set Opcode Value
+[21:22:36] @Set Mask Value
+[21:22:36] @Set Opcode Value
+[21:22:36] @Set Mask Value
+[21:22:36] @Set Opcode Value
+[21:22:36] @Set Mask Value
+[21:22:36] @Set Then Num
+[21:22:36] @Set NEXT THEN
+[21:22:36] @Set Cnt Cntg
+[21:22:36] @Set Event Count
+[21:22:36] @Get BurstWrite CRC
+[21:22:36] @Set Truth Tbl Addr Cnter Init
+[21:22:36] @Set Truth Table Prog
+[21:22:36] Configuring in burst mode....
+[21:22:36] @Get BurstWrite CRC
+[21:22:36] @Enable TE Trig
+[21:22:36] @Enable Trig Output OR All readback
+[21:22:36] @Enable Trig Output OR All
+[21:22:36] @Set Pre-Trig Sample
+[21:22:36] @Set Post-Trig Sample
+[21:22:36] finished configuration of core0
+[21:22:36] Starting all active cores....
+[21:22:36] @ShiftIR,8,0,ER1
+[21:22:36] @ShiftDR,21,0,data (select active cores)
+[21:22:36] @ShiftIR,8,0,ER2
+[21:22:36] @Set LA Start cores
+[21:22:36] @UnlockCable
+[21:22:36] Running all active cores....
+[21:22:36] @LockCable
+[21:22:36] Polling trigger memory of core0....
+[21:22:36] @ShiftIR,8,0,ER1
+[21:22:36] @ShiftDR,21,0,data (select core0)
+[21:22:36] @ShiftIR,8,0,ER2
+[21:22:36] @Get Force Trigger bit
+[21:22:36] #TM_CTL_0=3
+[21:22:36] @Get Trig Detected Cnt
+[21:22:36] #numDetectedTriggers = 0
+[21:22:36] @Get Mem Block Full Cnt
+[21:22:36] #memFullCnt = 0
+[21:22:36] detected 0 triggers of core0
+[21:22:36] captured 0 memory blocks of core0
+[21:22:36] @UnlockCable
+[21:22:37] Running all active cores....
+[21:22:37] @LockCable
+[21:22:37] Polling trigger memory of core0....
+[21:22:37] @ShiftIR,8,0,ER1
+[21:22:37] @ShiftDR,21,0,data (select core0)
+[21:22:37] @ShiftIR,8,0,ER2
+[21:22:38] @Get Force Trigger bit
+[21:22:38] #TM_CTL_0=5
+[21:22:38] @Get Trig Detected Cnt
+[21:22:38] #numDetectedTriggers = 1
+[21:22:38] @Get Mem Block Full Cnt
+[21:22:38] #memFullCnt = 1
+[21:22:38] Downloading trigger memory of core0....
+[21:22:38] @Is LA Armed
+[21:22:38] @Set LA Start/Stop readback
+[21:22:38] @Set LA Start/Stop 
+[21:22:38] @Set LA Start/Stop readback
+[21:22:38] @Set LA Start/Stop 
+[21:22:38] @Get Trig Detected Cnt
+[21:22:38] #numDetectedTriggers = 1
+[21:22:38] @Get Mem Block Full Cnt
+[21:22:38] #memFullCnt = 1
+[21:22:38] @Get Last Addr Written
+[21:22:38] #lastAddrWritten = 19
+[21:22:38] @Get Multiple Trig Enbl
+[21:22:38] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
+[21:22:38] @Get BurstRead CRC
+[21:22:38] @Set Trace Mem Cnter Init
+[21:22:38] Uploading in burst mode....
+[21:22:38] @ShiftDR,640,1,data (burst read)
+[21:22:38] @GetTDO,data,640
+[21:22:38] @Get BurstRead CRC
+[21:22:38] @Get BurstRead CRC
+[21:22:38] @Get Pre-Trig Sample Num
+[21:22:38] @Get Post-Trig Sample Num
+[21:22:38] @Get Pre-Trig Samples Captured
+[21:22:38] @Get Trig Ptr
+[21:22:38] #trigPtr = 27
+[21:22:38] #dataSize=3, numRead=32, trace_out=32
+[21:22:38] #trig0={blockPosition:0,triggerPosition:2}
+[21:22:38] finished download trigger memory of core0
+[21:22:38] @UnlockCable
+[21:22:38] @ReleaseCablePort
+[21:22:38] @Disconnect
+[21:22:38] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
+[21:22:40] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
+[21:22:40] Connecting cableserver to run Reveal debugger....
+[21:22:40] @Connect
+[21:22:40] @SetSharableApplications,2,Reveal,Mico
+[21:22:42] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[21:22:42] @LockCable
+[21:22:42] @GetServerStatus
+[21:22:42] @Read
+[21:22:42] @SetTargetDevice,0
+[21:22:42] Connecting core0....
+[21:22:42] @ShiftIR,8,0,ER1
+[21:22:42] @ShiftDR,21,0,data (select core0)
+[21:22:42] @ShiftIR,8,0,ER2
+[21:22:42] Configuring core0....
+[21:22:42] @JumpState,RUN_TEST_IDLE
+[21:22:42] @JumpState,RUN_TEST_IDLE
+[21:22:42] @JumpState,RUN_TEST_IDLE
+[21:22:42] @ShiftIR,8,0,NOP
+[21:22:42] @JumpState,RUN_TEST_IDLE
+[21:22:42] @ShiftIR,8,0,ER2
+[21:22:42] @Set Odd Parity readback
+[21:22:42] @Set Odd Parity
+[21:22:42] @Set LA Start/Stop readback
+[21:22:42] @Set LA Start/Stop 
+[21:22:42] #Reveal IP Version = 1_6_042617
+[21:22:42] @Get Pattern
+[21:22:42] #pattern readout = a5a5
+[21:22:42] pattern readout passed!
+[21:22:42] @Get Tracy Signature
+[21:22:42] @Get Tracy Signature
+[21:22:42] #signature from core0 = 414386639
+[21:22:42] signature from core0 passed!
+[21:22:42] @Set Opcode Value
+[21:22:42] @Set Mask Value
+[21:22:42] @Set Opcode Value
+[21:22:42] @Set Mask Value
+[21:22:42] @Set Opcode Value
+[21:22:42] @Set Mask Value
+[21:22:42] @Set Opcode Value
+[21:22:42] @Set Mask Value
+[21:22:42] @Set Then Num
+[21:22:42] @Set NEXT THEN
+[21:22:42] @Set Cnt Cntg
+[21:22:42] @Set Event Count
+[21:22:42] @Get BurstWrite CRC
+[21:22:42] @Set Truth Tbl Addr Cnter Init
+[21:22:42] @Set Truth Table Prog
+[21:22:42] Configuring in burst mode....
+[21:22:42] @Get BurstWrite CRC
+[21:22:42] @Enable TE Trig
+[21:22:42] @Enable Trig Output OR All readback
+[21:22:42] @Enable Trig Output OR All
+[21:22:42] @Set Pre-Trig Sample
+[21:22:42] @Set Post-Trig Sample
+[21:22:42] finished configuration of core0
+[21:22:42] Starting all active cores....
+[21:22:42] @ShiftIR,8,0,ER1
+[21:22:42] @ShiftDR,21,0,data (select active cores)
+[21:22:42] @ShiftIR,8,0,ER2
+[21:22:42] @Set LA Start cores
+[21:22:42] @UnlockCable
+[21:22:42] Running all active cores....
+[21:22:42] @LockCable
+[21:22:42] Polling trigger memory of core0....
+[21:22:42] @ShiftIR,8,0,ER1
+[21:22:42] @ShiftDR,21,0,data (select core0)
+[21:22:42] @ShiftIR,8,0,ER2
+[21:22:42] @Get Force Trigger bit
+[21:22:42] #TM_CTL_0=3
+[21:22:42] @Get Trig Detected Cnt
+[21:22:42] #numDetectedTriggers = 0
+[21:22:42] @Get Mem Block Full Cnt
+[21:22:42] #memFullCnt = 0
+[21:22:42] detected 0 triggers of core0
+[21:22:42] captured 0 memory blocks of core0
+[21:22:42] @UnlockCable
+[21:22:43] Running all active cores....
+[21:22:43] @LockCable
+[21:22:43] Polling trigger memory of core0....
+[21:22:43] @ShiftIR,8,0,ER1
+[21:22:43] @ShiftDR,21,0,data (select core0)
+[21:22:43] @ShiftIR,8,0,ER2
+[21:22:43] @Get Force Trigger bit
+[21:22:43] #TM_CTL_0=3
+[21:22:43] @Get Trig Detected Cnt
+[21:22:43] #numDetectedTriggers = 0
+[21:22:43] @Get Mem Block Full Cnt
+[21:22:43] #memFullCnt = 0
+[21:22:43] detected 0 triggers of core0
+[21:22:43] captured 0 memory blocks of core0
+[21:22:43] @UnlockCable
+[21:22:44] Running all active cores....
+[21:22:44] @LockCable
+[21:22:44] Polling trigger memory of core0....
+[21:22:44] @ShiftIR,8,0,ER1
+[21:22:44] @ShiftDR,21,0,data (select core0)
+[21:22:44] @ShiftIR,8,0,ER2
+[21:22:44] @Get Force Trigger bit
+[21:22:44] #TM_CTL_0=5
+[21:22:44] @Get Trig Detected Cnt
+[21:22:44] #numDetectedTriggers = 1
+[21:22:44] @Get Mem Block Full Cnt
+[21:22:44] #memFullCnt = 1
+[21:22:44] Downloading trigger memory of core0....
+[21:22:44] @Is LA Armed
+[21:22:44] @Set LA Start/Stop readback
+[21:22:44] @Set LA Start/Stop 
+[21:22:44] @Set LA Start/Stop readback
+[21:22:44] @Set LA Start/Stop 
+[21:22:44] @Get Trig Detected Cnt
+[21:22:44] #numDetectedTriggers = 1
+[21:22:44] @Get Mem Block Full Cnt
+[21:22:44] #memFullCnt = 1
+[21:22:44] @Get Last Addr Written
+[21:22:44] #lastAddrWritten = 30
+[21:22:44] @Get Multiple Trig Enbl
+[21:22:44] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
+[21:22:44] @Get BurstRead CRC
+[21:22:44] @Set Trace Mem Cnter Init
+[21:22:44] Uploading in burst mode....
+[21:22:44] @ShiftDR,640,1,data (burst read)
+[21:22:44] @GetTDO,data,640
+[21:22:44] @Get BurstRead CRC
+[21:22:44] @Get BurstRead CRC
+[21:22:44] @Get Pre-Trig Sample Num
+[21:22:44] @Get Post-Trig Sample Num
+[21:22:44] @Get Pre-Trig Samples Captured
+[21:22:44] @Get Trig Ptr
+[21:22:44] #trigPtr = 6
+[21:22:44] #dataSize=3, numRead=32, trace_out=32
+[21:22:44] #trig0={blockPosition:0,triggerPosition:2}
+[21:22:44] finished download trigger memory of core0
+[21:22:44] @UnlockCable
+[21:22:44] @ReleaseCablePort
+[21:22:44] @Disconnect
+[21:22:44] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
+[21:22:50] runProject on device [1. LCMXO2-1200HC] using C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_analyser.rva [POP_timer_Reveal.rvl]
+[21:22:50] Connecting cableserver to run Reveal debugger....
+[21:22:50] @Connect
+[21:22:50] @SetSharableApplications,2,Reveal,Mico
+[21:22:52] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[21:22:52] @LockCable
+[21:22:52] @GetServerStatus
+[21:22:52] @Read
+[21:22:52] @SetTargetDevice,0
+[21:22:52] Connecting core0....
+[21:22:52] @ShiftIR,8,0,ER1
+[21:22:52] @ShiftDR,21,0,data (select core0)
+[21:22:52] @ShiftIR,8,0,ER2
+[21:22:52] Configuring core0....
+[21:22:52] @JumpState,RUN_TEST_IDLE
+[21:22:52] @JumpState,RUN_TEST_IDLE
+[21:22:52] @JumpState,RUN_TEST_IDLE
+[21:22:52] @ShiftIR,8,0,NOP
+[21:22:52] @JumpState,RUN_TEST_IDLE
+[21:22:52] @ShiftIR,8,0,ER2
+[21:22:52] @Set Odd Parity readback
+[21:22:52] @Set Odd Parity
+[21:22:52] @Set LA Start/Stop readback
+[21:22:52] @Set LA Start/Stop 
+[21:22:52] #Reveal IP Version = 1_6_042617
+[21:22:52] @Get Pattern
+[21:22:52] #pattern readout = a5a5
+[21:22:52] pattern readout passed!
+[21:22:52] @Get Tracy Signature
+[21:22:52] @Get Tracy Signature
+[21:22:52] #signature from core0 = 414386639
+[21:22:52] signature from core0 passed!
+[21:22:52] @Set Opcode Value
+[21:22:52] @Set Mask Value
+[21:22:52] @Set Opcode Value
+[21:22:52] @Set Mask Value
+[21:22:52] @Set Opcode Value
+[21:22:52] @Set Mask Value
+[21:22:52] @Set Opcode Value
+[21:22:52] @Set Mask Value
+[21:22:52] @Set Then Num
+[21:22:52] @Set NEXT THEN
+[21:22:52] @Set Cnt Cntg
+[21:22:52] @Set Event Count
+[21:22:52] @Get BurstWrite CRC
+[21:22:52] @Set Truth Tbl Addr Cnter Init
+[21:22:52] @Set Truth Table Prog
+[21:22:52] Configuring in burst mode....
+[21:22:52] @Get BurstWrite CRC
+[21:22:52] @Enable TE Trig
+[21:22:52] @Enable Trig Output OR All readback
+[21:22:52] @Enable Trig Output OR All
+[21:22:52] @Set Pre-Trig Sample
+[21:22:52] @Set Post-Trig Sample
+[21:22:52] finished configuration of core0
+[21:22:52] Starting all active cores....
+[21:22:52] @ShiftIR,8,0,ER1
+[21:22:52] @ShiftDR,21,0,data (select active cores)
+[21:22:52] @ShiftIR,8,0,ER2
+[21:22:52] @Set LA Start cores
+[21:22:52] @UnlockCable
+[21:22:52] Running all active cores....
+[21:22:52] @LockCable
+[21:22:52] Polling trigger memory of core0....
+[21:22:52] @ShiftIR,8,0,ER1
+[21:22:52] @ShiftDR,21,0,data (select core0)
+[21:22:52] @ShiftIR,8,0,ER2
+[21:22:52] @Get Force Trigger bit
+[21:22:52] #TM_CTL_0=3
+[21:22:52] @Get Trig Detected Cnt
+[21:22:52] #numDetectedTriggers = 0
+[21:22:52] @Get Mem Block Full Cnt
+[21:22:52] #memFullCnt = 0
+[21:22:52] detected 0 triggers of core0
+[21:22:52] captured 0 memory blocks of core0
+[21:22:52] @UnlockCable
+[21:22:53] Running all active cores....
+[21:22:53] @LockCable
+[21:22:53] Polling trigger memory of core0....
+[21:22:53] @ShiftIR,8,0,ER1
+[21:22:53] @ShiftDR,21,0,data (select core0)
+[21:22:53] @ShiftIR,8,0,ER2
+[21:22:53] @Get Force Trigger bit
+[21:22:53] #TM_CTL_0=5
+[21:22:53] @Get Trig Detected Cnt
+[21:22:53] #numDetectedTriggers = 1
+[21:22:53] @Get Mem Block Full Cnt
+[21:22:53] #memFullCnt = 1
+[21:22:53] Downloading trigger memory of core0....
+[21:22:53] @Is LA Armed
+[21:22:53] @Set LA Start/Stop readback
+[21:22:53] @Set LA Start/Stop 
+[21:22:53] @Set LA Start/Stop readback
+[21:22:53] @Set LA Start/Stop 
+[21:22:53] @Get Trig Detected Cnt
+[21:22:53] #numDetectedTriggers = 1
+[21:22:53] @Get Mem Block Full Cnt
+[21:22:53] #memFullCnt = 1
+[21:22:53] @Get Last Addr Written
+[21:22:53] #lastAddrWritten = 11
+[21:22:53] @Get Multiple Trig Enbl
+[21:22:53] #traceWidth=20, userSelectedTriggers=1, numTrigEnable=1
+[21:22:53] @Get BurstRead CRC
+[21:22:53] @Set Trace Mem Cnter Init
+[21:22:53] Uploading in burst mode....
+[21:22:53] @ShiftDR,640,1,data (burst read)
+[21:22:53] @GetTDO,data,640
+[21:22:53] @Get BurstRead CRC
+[21:22:53] @Get BurstRead CRC
+[21:22:53] @Get Pre-Trig Sample Num
+[21:22:53] @Get Post-Trig Sample Num
+[21:22:53] @Get Pre-Trig Samples Captured
+[21:22:53] @Get Trig Ptr
+[21:22:53] #trigPtr = 19
+[21:22:53] #dataSize=3, numRead=32, trace_out=32
+[21:22:53] #trig0={blockPosition:0,triggerPosition:2}
+[21:22:53] finished download trigger memory of core0
+[21:22:53] @UnlockCable
+[21:22:53] @ReleaseCablePort
+[21:22:53] @Disconnect
+[21:22:53] All messages logged in file C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_debug.log
+Last closed: Sat 26. Feb 21:23:55 2022

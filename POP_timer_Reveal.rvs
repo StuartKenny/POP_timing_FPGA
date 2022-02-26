@@ -1,4 +1,4 @@
-<Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-02-25">
+<Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-02-26">
  <Core Name="TinyFPGA_A2_LA0">
   <Setting>
    <Capture SamplesPerTrig="32" NumTrigsCap="1"/>

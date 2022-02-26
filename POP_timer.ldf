@@ -51,6 +51,9 @@
         <Source name="POP_timers_AX2/source/clocks.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="extensions_testbench/extensions_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
         <Source name="POP_timer.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
