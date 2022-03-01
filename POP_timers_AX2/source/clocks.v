@@ -28,15 +28,15 @@ module clocks
 	//10MHz OSCILLATOR WITH PLL
 	//10MHz internal oscillator feeding debug clock
 	//PLL used to divide by 4 to produce 2.46MHz
-	//OSCH OSCinst0 (.STDBY(1'b0), .OSC(clk_debug), .SEDSTDBY(SEDSTDBY));
-	//defparam OSCinst0.NOM_FREQ = "9.85";
-	//DIV4PLL PLL (.CLKI(clk_debug), .CLKOP(clk_2M5), .LOCK()); 
+	OSCH OSCinst0 (.STDBY(1'b0), .OSC(clk_debug), .SEDSTDBY(SEDSTDBY));
+	defparam OSCinst0.NOM_FREQ = "9.85";
+	DIV4PLL PLL (.CLKI(clk_debug), .CLKOP(clk_2M5), .LOCK()); 
 	
 	//FAST DEBUG CLOCK - internal oscillator set to 38MHz
 	//PLL used to divide by 15 to produce 2.53MHz
-	OSCH OSCinst0 (.STDBY(1'b0), .OSC(clk_debug), .SEDSTDBY(SEDSTDBY));
-	defparam OSCinst0.NOM_FREQ = "38.00";
-	DebugPLL PLL (.CLKI(clk_debug), .CLKOP(clk_2M5), .LOCK()); 
+	//OSCH OSCinst0 (.STDBY(1'b0), .OSC(clk_debug), .SEDSTDBY(SEDSTDBY));
+	//defparam OSCinst0.NOM_FREQ = "38.00";
+	//DebugPLL PLL (.CLKI(clk_debug), .CLKOP(clk_2M5), .LOCK()); 
 
 	//EXTERNAL 10MHZ REFERENCE used
 	//DIV4PLL PLL (.CLKI(clk_10M_ref), .CLKOP(clk_2M5), .LOCK()); 

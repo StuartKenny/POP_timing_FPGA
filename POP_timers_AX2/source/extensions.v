@@ -12,7 +12,7 @@ module countupdownpreload
 
 	input clk_2M5, clk_up, clk_dn, reset; //wires
 	input [WIDTH-1:0] preload, increment;
-	output reg [WIDTH-1:0] count; //count is initialised with preload value
+	output reg [WIDTH-1:0] count /* synthesis syn_keep = 1 */ ; // prevents synthesis optimising this register
 	
 	wire trigger; //single 400ns pulse to feed increment/decrement/reset block
 

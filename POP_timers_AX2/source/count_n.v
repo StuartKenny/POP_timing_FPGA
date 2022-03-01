@@ -8,7 +8,7 @@ module count_n
 		);
 				
   input clk, direction, reset; //wires
-  output reg [WIDTH-1:0] count = 0;
+  output reg [WIDTH-1:0] count /* synthesis syn_keep = 1 */ ; // prevents synthesis optimising this register 
 
 	always@(posedge clk or posedge reset)	  
 	begin 

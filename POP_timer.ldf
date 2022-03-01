@@ -42,10 +42,10 @@
         <Source name="POP_timers_AX2/source/extensions_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
-        <Source name="POP_timers_AX2/source/DIV4PLL.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+        <Source name="POP_timers_AX2/source/DIV4PLL.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="POP_timers_AX2/source/DebugPLL.v" type="Verilog" type_short="Verilog">
+        <Source name="POP_timers_AX2/source/DebugPLL.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/clocks.v" type="Verilog" type_short="Verilog">
@@ -64,6 +64,12 @@
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/POP_timers_AX2.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="toplevel_simulation/toplevel_simulation.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="toplevel_testbench/toplevel_testbench.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
     </Implementation>

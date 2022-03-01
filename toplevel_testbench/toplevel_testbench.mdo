@@ -1,0 +1,39 @@
+if {![file exists "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_testbench/toplevel_testbench.mpf"]} { 
+	project new "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_testbench" toplevel_testbench
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v"
+	vlib  work
+	vdel -lib work -all 
+	vlib work
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v"
+} else {
+	project open "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_testbench/toplevel_testbench"
+	project compileoutofdate
+}
+vsim -L work -L pmi_work -L ovi_machxo2  top_testbench
+view wave
+add wave /*
+run 1000ns

@@ -1,16 +1,12 @@
-<Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-02-26">
+<Project ModBy="Analyzer" Name="C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2022-03-01">
  <Core Name="TinyFPGA_A2_LA0">
   <Setting>
-   <Capture SamplesPerTrig="32" NumTrigsCap="1"/>
+   <Capture SamplesPerTrig="16" NumTrigsCap="1"/>
    <Event EventCnt="0" CntEnableRun="0"/>
    <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
   </Setting>
   <Dataset Name="Base">
    <Trace>
-    <Sig Name="topleft_button"/>
-    <Sig Name="pieovertwo_plus"/>
-    <Sig Name="bottomleft_button"/>
-    <Sig Name="pieovertwo_minus"/>
     <Bus Name="POPtimers/piecounter/count" Radix="0">
      <Sig Name="POPtimers/piecounter/count:0"/>
      <Sig Name="POPtimers/piecounter/count:1"/>
@@ -29,13 +25,28 @@
      <Sig Name="POPtimers/piecounter/count:14"/>
      <Sig Name="POPtimers/piecounter/count:15"/>
     </Bus>
+    <Bus Name="POPtimers/freepcounter/count" Radix="0">
+     <Sig Name="POPtimers/freepcounter/count:0"/>
+     <Sig Name="POPtimers/freepcounter/count:1"/>
+     <Sig Name="POPtimers/freepcounter/count:2"/>
+     <Sig Name="POPtimers/freepcounter/count:3"/>
+     <Sig Name="POPtimers/freepcounter/count:4"/>
+     <Sig Name="POPtimers/freepcounter/count:5"/>
+     <Sig Name="POPtimers/freepcounter/count:6"/>
+     <Sig Name="POPtimers/freepcounter/count:7"/>
+     <Sig Name="POPtimers/freepcounter/count:8"/>
+     <Sig Name="POPtimers/freepcounter/count:9"/>
+     <Sig Name="POPtimers/freepcounter/count:10"/>
+     <Sig Name="POPtimers/freepcounter/count:11"/>
+     <Sig Name="POPtimers/freepcounter/count:12"/>
+     <Sig Name="POPtimers/freepcounter/count:13"/>
+     <Sig Name="POPtimers/freepcounter/count:14"/>
+     <Sig Name="POPtimers/freepcounter/count:15"/>
+    </Bus>
    </Trace>
    <Trigger>
     <TU Operator="6" Name="TU1" ID="1" Value="1" Radix="0"/>
-    <TU Operator="6" Name="TU2" ID="2" Value="1" Radix="0"/>
-    <TU Operator="6" Name="TU3" ID="3" Value="1" Radix="0"/>
-    <TU Operator="6" Name="TU4" ID="4" Value="1" Radix="0"/>
-    <TE Enable="1" Expression="tu1|tu2|tu3|tu4" Name="TE1" ID="1"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
    </Trigger>
   </Dataset>
  </Core>

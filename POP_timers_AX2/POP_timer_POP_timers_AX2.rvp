@@ -31,7 +31,7 @@ C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v = Verilog
 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v = Verilog
 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v = Verilog
 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v = Verilog
-C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v = Verilog
+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v = Verilog
 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v = Verilog
 [HDL_Defines]
 SBP_SYNTHESIS=

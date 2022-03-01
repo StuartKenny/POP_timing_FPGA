@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="PARTrace">
+        <Message>
+            <ID>70061015</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKOP</Dynamic>
+            <Dynamic>clocks/PLL/PLLInst_0</Dynamic>
+        </Message>
+    </Task>
     <Task name="Map">
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.lpf(28): Semantic error in &quot;IOBUF PORT &quot;tenmegclock&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timer.lpf</Navigation>
+            <Navigation>28</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
+        </Message>
         <Message>
             <ID>51001030</ID>
             <Severity>Warning</Severity>
             <Dynamic>POPtimers/counterreset</Dynamic>
         </Message>
         <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>tenmegclock</Dynamic>
+        </Message>
+        <Message>
             <ID>51001051</ID>
             <Severity>Warning</Severity>
-            <Dynamic>TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg14161416/pmi_ram_dpXbnonesadr141614161164462a_0_0_0</Dynamic>
+            <Dynamic>TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg112112/pmi_ram_dpXbnonesadr11211211401afe_0_0_0</Dynamic>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -33,7 +60,7 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-123,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-124,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -47,7 +74,7 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-82,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-112,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -68,8 +95,8 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v(8,1-94,10) (VERI-9000) elaborating module 'DebugPLL_uniq_1'</Dynamic>
-            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DebugPLL.v</Navigation>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v(8,1-94,10) (VERI-9000) elaborating module 'DIV4PLL_uniq_1'</Dynamic>
+            <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -221,24 +248,52 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35935013</ID>
+            <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1553): </Dynamic>
-            <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
-            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1553</Navigation>
+            <Dynamic>tenmegclock</Dynamic>
         </Message>
         <Message>
-            <ID>35935014</ID>
+            <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1553): </Dynamic>
-            <Dynamic>\POPtimers/freepcounter/count_i2</Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1632): </Dynamic>
+            <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
             <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1553</Navigation>
+            <Navigation>1632</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1670): </Dynamic>
+            <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
+            <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1670</Navigation>
+        </Message>
+        <Message>
+            <ID>35001752</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/tt_wr_bit_cntr[0]_168</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
+            <Navigation>tenmegclock</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>
@@ -285,20 +340,32 @@
         <Message>
             <ID>1163101</ID>
             <Severity>Warning</Severity>
-            <Dynamic>6</Dynamic>
+            <Dynamic>8</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
         <Message>
+            <ID>70061015</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKOP</Dynamic>
+            <Dynamic>clocks/PLL/PLLInst_0</Dynamic>
+        </Message>
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
+   Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
+   Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
         </Message>
     </Task>

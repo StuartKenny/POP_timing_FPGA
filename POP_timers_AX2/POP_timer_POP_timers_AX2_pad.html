@@ -14,7 +14,7 @@ Performance Grade:      4
 PACKAGE:          QFN32
 Package Status:                     Final          Version 1.44
 
-Sat Feb 26 21:05:21 2022
+Tue Mar 01 12:39:30 2022
 
 Pinout by Port Name:
 +---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
@@ -35,7 +35,6 @@ Pinout by Port Name:
 | probe_output        | 10/2     | LVCMOS33_OUT | PB6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | pump_output         | 9/2      | LVCMOS33_OUT | PB6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | sample_output       | 12/2     | LVCMOS33_OUT | PB9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| tenmegclock         | 21/1     | LVCMOS33_IN  | PR5C  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
 | topleft_button      | 23/0     | LVCMOS33_IN  | PT17D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 | topright_button     | 25/0     | LVCMOS33_IN  | PT15D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 +---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
@@ -74,7 +73,7 @@ Vccio by Bank:
 | 16/2     | pin3_sn               | LOCATED    | LVCMOS33_OUT | PB20C | SN            |           |           |
 | 17/2     | load_default_button   | LOCATED    | LVCMOS33_IN  | PB20D | SI/SISPI      |           |           |
 | 20/1     | pin5                  | LOCATED    | LVCMOS33_OUT | PR5D  | PCLKC1_0/DQ0  |           |           |
-| 21/1     | tenmegclock           | LOCATED    | LVCMOS33_IN  | PR5C  | PCLKT1_0/DQ0  |           |           |
+| 21/1     |     unused, PULL:DOWN |            |              | PR5C  | PCLKT1_0/DQ0  |           |           |
 | 23/0     | topleft_button        | LOCATED    | LVCMOS33_IN  | PT17D | DONE          |           |           |
 | 25/0     | topright_button       | LOCATED    | LVCMOS33_IN  | PT15D | PROGRAMN      |           |           |
 | 26/0     | pin9_jtgnb            | LOCATED    | LVCMOS33_OUT | PT15C | JTAGENB       |           |           |
@@ -202,7 +201,6 @@ LOCATE  COMP  "pin9_jtgnb"  SITE  "26";
 LOCATE  COMP  "probe_output"  SITE  "10";
 LOCATE  COMP  "pump_output"  SITE  "9";
 LOCATE  COMP  "sample_output"  SITE  "12";
-LOCATE  COMP  "tenmegclock"  SITE  "21";
 LOCATE  COMP  "topleft_button"  SITE  "23";
 LOCATE  COMP  "topright_button"  SITE  "25";
 
@@ -218,7 +216,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Feb 26 21:05:21 2022
+Tue Mar 01 12:39:30 2022
 
 
 

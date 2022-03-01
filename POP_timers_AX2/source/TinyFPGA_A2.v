@@ -60,9 +60,10 @@ module TinyFPGA_A2 (
 	//assign pin20_miso = 1'bz;
 	//assign pin21 = 1'bz;
 	//assign pin22 = 1'bz;
-	assign debug_0 = tenmegclock&pump; //to prevent synthesiser optimising (removing) pin6 buffer
-	assign debug_1 = 1'b1;
-	assign debug_2 = 1'b1;	
+	//assign debug_0 = tenmegclock&pump; //to prevent synthesiser optimising (removing) pin6 buffer
+	assign debug_0 = clk_debug;
+	assign debug_1 = pump;
+	assign debug_2 = MW;	
 
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
 	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(1'b0), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 

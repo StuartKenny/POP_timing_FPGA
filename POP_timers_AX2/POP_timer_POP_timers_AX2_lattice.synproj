@@ -2,7 +2,7 @@
 -d LCMXO2-1200HC
 -t QFN32
 -s 4
--frequency 38
+-frequency 10
 -optimization_goal Balanced
 -bram_utilization 100
 -ramstyle Auto
@@ -14,7 +14,7 @@
 -force_gsr No
 -resource_sharing 1
 -propagate_constants 1
--remove_duplicate_regs 1
+-remove_duplicate_regs 0
 -mux_style Auto
 -max_fanout 1000
 -fsm_encoding_style Auto
