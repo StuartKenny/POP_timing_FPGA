@@ -26,18 +26,35 @@ module slow_clock_pulse
  endmodule
 
 //cycles through 4 states, starting with state_0
+ //module quad_state_machine
+	//(	clk,
+		//state //2 bit vector
+		//);
+
+	//input clk;
+	//output reg [1:0] state = 2'b00;
+
+ 	//always@(posedge clk) //state changes on button press
+ 		//begin
+ 			//state <= state + 1'b1;
+ 		//end
+		
+//endmodule
+
+//cycles through 5 states, starting with state_0
 //initial_state is high the first time in state_0, otherwise low
- module quad_state_machine
+ module five_state_machine
 	(	clk,
-		state //2 bit vector
+		state //3 bit vector
 		);
 
 	input clk;
-	output reg [1:0] state = 2'b00;
+	output reg [2:0] state = 3'b00;
 
  	always@(posedge clk) //state changes on button press
  		begin
- 			state <= state + 1'b1;
+			if (state >= 4) state <=0;
+			else state <= state + 1'b1;
  		end
 		
 endmodule

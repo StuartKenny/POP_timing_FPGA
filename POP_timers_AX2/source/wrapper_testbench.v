@@ -9,7 +9,8 @@ module wrapper_testbench
 	reg clock_2_5M; //2.5MHz clock
 
     // Outputs
-    wire [1:0] state;
+    wire [1:0] quad_state;
+    wire [2:0] five_state;
 	wire debounce_pulse, fast_pulse, slow_pulse;
 
     // Instantiate the Units Under Test (UUT)
@@ -20,11 +21,16 @@ module wrapper_testbench
 		. slow_pulse(slow_pulse)
 		);
 		
-	quad_state_machine state_machineUT (	
+	quad_state_machine four_state_machineUT (	
 		.clk(fast_pulse),
-		.state(state) //2 bit vector
+		.state(quad_state) //2 bit vector
 		);
 
+	five_state_machine five_state_machineUT (	
+		.clk(fast_pulse),
+		.state(five_state) //3 bit vector
+		);
+		
 	initial begin
 		clock_2_5M = 1'b1;
 	end
@@ -34,6 +40,6 @@ module wrapper_testbench
 		#(CLOCK_CYCLE/2.0) clock_2_5M = ~clock_2_5M;
 
 	initial begin		
-		#(5000000*CLOCK_CYCLE) $finish;
+		#(10000000*CLOCK_CYCLE) $finish;
 	end
 endmodule

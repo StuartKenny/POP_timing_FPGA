@@ -10,379 +10,413 @@ z2
 cModel Technology
 Z0 dC:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_testbench
 vclocks
-Z1 !s110 1646133093
+Z1 !s110 1646314490
 !i10b 1
-!s100 @>YH4KXAOM[aGl:L7TC;62
+!s100 Z]m`6fBn6__FlkN[9nB4m3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-In8KLLYWI=8SH5PeDBO`L[3
+Io1Cb0bL1l8h_@1nI050zE3
 R0
-w1646129924
+w1646135987
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
-!i122 5
+!i122 20
 L0 13 33
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OT;L;2020.3;71
 r1
 !s85 0
 31
-Z5 !s108 1646133093.000000
+Z5 !s108 1646314490.000000
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
 !s101 -O0
 !i113 1
 Z6 o-work work -O0
-Z7 !s92 +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source -work work -O0
-Z8 tCvgOpt 0
+Z7 tCvgOpt 0
 vcomparator
-Z9 !s110 1646133092
+R1
 !i10b 1
 !s100 O6l<434<j5RzBBYLDKXTE0
 R2
-I[E]WHdHBSCY4XSQQXek@k3
+Ijh_C[F1VFIT8NGL_<XPDH3
 R0
-Z10 w1645131696
+Z8 w1645131696
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
-!i122 2
+!i122 16
 L0 1 21
 R3
 R4
 r1
 !s85 0
 31
-Z11 !s108 1646133092.000000
+R5
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcomparator_testbench
-R1
+Z9 !s110 1646314491
 !i10b 1
 !s100 hh3fT9_=IBP3Ce1ZIPCOc0
 R2
-IR]6NQ56K9<bQ]5kM:EB1Q0
+ILX0PL@>l6VOJnKeE4c18E3
 R0
-R10
+R8
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v
-!i122 7
+!i122 22
 L0 3 34
 R3
 R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1646314491.000000
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcount_n
-R9
+R1
 !i10b 1
-!s100 i4j=:azA=DC8_7cNCJ:??3
+!s100 0>D^1T`ah=2R3BP1;1@kL0
 R2
-I6;VUHQ9T<aGW1FD9IW9Uh2
+IK^8IQG2>3>Y_6Ug9mDNhL1
 R0
-Z12 w1646132359
+w1646133607
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
-!i122 3
+!i122 17
 L0 2 24
 R3
 R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcounter_testbench
-!s110 1646133094
+R9
 !i10b 1
 !s100 W<U>NaR6Rb_1<A7570[T<1
 R2
-I;UB:[oJ_0o?IVj]9@`giF3
+IPaCJG_F5eUKi51An^Fl:Y2
 R0
-R10
+R8
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v
-!i122 12
+!i122 27
 L0 3 37
 R3
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcountupdownpreload
-R9
+R1
 !i10b 1
 !s100 KH[RL828=8`a0?HCdNac72
 R2
-I;C@Fz[Q9]=68lK2=XXjh[1
+IKJMGobMLkKlAeYWgOChSP3
 R0
-R12
-Z13 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
-Z14 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
-!i122 1
+Z11 w1646132359
+Z12 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+Z13 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+!i122 15
 L0 2 36
 R3
 R4
 r1
 !s85 0
 31
-R11
-Z15 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
-Z16 !s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
+R5
+Z14 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vd_flip_flop
-R9
+R1
 !i10b 1
 !s100 ?QI8X4mZL<C[6NLGFGT>30
 R2
-IoZR<RM>inS_?8_Z0H3Oih2
+I=R>XfmKH:o@Tce[3H45?b0
 R0
+R11
 R12
 R13
-R14
-!i122 1
+!i122 15
 L0 60 13
 R3
 R4
 r1
 !s85 0
 31
-R11
+R5
+R14
 R15
-R16
 !s101 -O0
 !i113 1
 R6
 R7
-R8
-vextended_counter_testbench
+vDIV4PLL
 R1
+!i10b 1
+!s100 @LfGV^emeSGd[`7AD@7j33
+R2
+IiW^7YKYzOA7Sm1G`:2Pc60
+R0
+w1645305759
+8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v
+FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v
+!i122 19
+L0 8 87
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@d@i@v4@p@l@l
+vextended_counter_testbench
+R9
 !i10b 1
 !s100 QVZ_53BC5O1<8oo=HQWk90
 R2
-IzDfG9nX41KEX<3OGi8>EM3
+ILMUEB;kDiM3R60``b>SD>3
 R0
 w1645909183
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v
-!i122 11
+!i122 26
 L0 3 58
 R3
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
+vfive_state_machine
+R1
+!i10b 1
+!s100 ?fmVb=X_>2@Q@0KTPU9f?1
+R2
+IiQDbWhFTKW:g14kIXaDjW3
+R0
+Z16 w1646313897
+Z17 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+Z18 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+!i122 14
+L0 46 15
+R3
+R4
+r1
+!s85 0
+31
+R5
+Z19 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
+Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
+!s101 -O0
+!i113 1
+R6
+R7
 vPOPtimers
 R1
 !i10b 1
-!s100 _8oDa2CK5WJ=A17MbB7;i1
+!s100 bAC5P;>obA680]4eUScnk0
 R2
-IIIM^7S]f1;Q5hz6zEcFF93
+IUoP[0WH[3zkhDTIg?bdNU0
 R0
-w1646064843
+w1646136566
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
-!i122 4
+!i122 18
 L0 1 112
 R3
 R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 n@p@o@ptimers
 vPOPtimers_testbench
-R1
+R9
 !i10b 1
 !s100 _>Hdh>BzbC[RIRX5hlhB11
 R2
-IeDYSY2dgWJUXb^QcMAVkX2
+I<k1KHD@R3@BK[fKzzW2L=1
 R0
 w1645561553
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v
-!i122 9
+!i122 24
 L0 3 67
 R3
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 n@p@o@ptimers_testbench
 vquad_state_machine
-R9
+R1
 !i10b 1
-!s100 >nWkScX<?JkDKIo>>PBKJ1
+!s100 _8G6`_GnXBaFdg`1U8<c:2
 R2
-I^Q:4L7KNVnz3>^zW?OM@k3
+IhS2<mJz0`ZJ?cLAO0L1130
 R0
-Z17 w1645306226
-Z18 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
-Z19 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
-!i122 0
-L0 30 14
+R16
+R17
+R18
+!i122 14
+L0 29 14
 R3
 R4
 r1
 !s85 0
 31
-R11
-Z20 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
-Z21 !s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
+R5
+R19
+R20
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vsingle_period_pulse
-R9
+R1
 !i10b 1
 !s100 gjn`@J>?igWfXN9:]R^^f3
 R2
-IJ@3Ofm0gib6hUDQ4L2:<J2
+I@^5QiXZLGPD4n>4>19;gn3
 R0
+R11
 R12
 R13
-R14
-!i122 1
+!i122 15
 L0 40 18
 R3
 R4
 r1
 !s85 0
 31
-R11
+R5
+R14
 R15
-R16
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vslow_clock_pulse
-R9
+R1
 !i10b 1
 !s100 ;IdzalUA1j@OKQMG>Z5LR1
 R2
-IjomRiZG`Ai0NV4BX<[<[K1
+I04]eDXCnngabc8EhO]Bkd1
 R0
+R16
 R17
 R18
-R19
-!i122 0
+!i122 14
 L0 4 23
 R3
 R4
 r1
 !s85 0
 31
-R11
+R5
+R19
 R20
-R21
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vtop_testbench
-R1
+!s110 1646315637
 !i10b 1
-!s100 PORCIQFM_e:e2Rl5m1b_01
+!s100 DBz<LS`>XLThFi3f7Q=Z40
 R2
-IRZLRH>a9GXD4Qd`nK^mGa1
+I@R>BH_8PbGl<DWLnfNYV`2
 R0
-w1645631988
+w1646315502
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v
-!i122 6
-L0 5 105
+!i122 28
+L0 5 119
 R3
 R4
 r1
 !s85 0
 31
-R5
+!s108 1646315637.000000
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vwrapper_testbench
-R1
+R9
 !i10b 1
-!s100 796BXn2b8Q^;e2bi8[UGz2
+!s100 8dlQ2FHHEN?SP2[6nXz622
 R2
-IRIa>8B<jVfXFnMhfCzXVE0
+IQ2=5MZ]hEY5h?]Gm3=dC30
 R0
-w1645461145
+w1646313706
 8C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v
 FC:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v
-!i122 10
-L0 5 35
+!i122 25
+L0 5 41
 R3
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8

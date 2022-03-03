@@ -1,15 +1,15 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue Mar 01 12:39:56 2022 *
+NOTE DATE CREATED: Thu Mar 03 14:08:35 2022 *
 NOTE DESIGN NAME: TinyFPGA_A2 *
 NOTE DEVICE NAME: LCMXO2-1200HC-4QFN32 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS pin9_jtgnb : 26 : out *
 NOTE PINS debug_0 : 4 : out *
+NOTE PINS debug_1 : 5 : out *
+NOTE PINS pin9_jtgnb : 26 : out *
 NOTE PINS pin5 : 20 : out *
 NOTE PINS pin3_sn : 16 : out *
 NOTE PINS LED_output : 13 : out *
-NOTE PINS debug_1 : 5 : out *
 NOTE PINS debug_2 : 8 : out *
 NOTE PINS pump_output : 9 : out *
 NOTE PINS probe_output : 10 : out *

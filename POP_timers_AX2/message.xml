@@ -60,7 +60,7 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-124,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-134,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -88,9 +88,9 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(30,2-43,10) (VERI-9000) elaborating module 'quad_state_machine_uniq_1'</Dynamic>
+            <Dynamic>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(46,2-60,10) (VERI-9000) elaborating module 'five_state_machine_uniq_1'</Dynamic>
             <Navigation>C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v</Navigation>
-            <Navigation>30</Navigation>
+            <Navigation>46</Navigation>
         </Message>
         <Message>
             <ID>2049992</ID>
@@ -260,18 +260,18 @@
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1632): </Dynamic>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1660): </Dynamic>
             <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
             <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1632</Navigation>
+            <Navigation>1660</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1670): </Dynamic>
+            <Dynamic>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1698): </Dynamic>
             <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
             <Navigation>c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1670</Navigation>
+            <Navigation>1698</Navigation>
         </Message>
         <Message>
             <ID>35001752</ID>
@@ -359,14 +359,14 @@
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=debounce_pulse loads=7 clock_loads=6
-   Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
    Signal=debounce_pulse loads=7 clock_loads=6
-   Signal=sampled_modebutton loads=1 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

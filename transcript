@@ -1,130 +1,9 @@
 # Reading pref.tcl
-# do {C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation/toplevel_simulation.mdo}
-# Loading project toplevel_simulation
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:01 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v 
-# -- Compiling module slow_clock_pulse
-# -- Compiling module quad_state_machine
-# 
-# Top level modules:
-# 	slow_clock_pulse
-# 	quad_state_machine
-# End time: 11:14:01 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:01 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v 
-# -- Compiling module countupdownpreload
-# -- Compiling module single_period_pulse
-# -- Compiling module d_flip_flop
-# 
-# Top level modules:
-# 	countupdownpreload
-# End time: 11:14:01 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:01 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v 
-# -- Compiling module comparator
-# 
-# Top level modules:
-# 	comparator
-# End time: 11:14:01 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:01 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v 
-# -- Compiling module count_n
-# 
-# Top level modules:
-# 	count_n
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v 
-# -- Compiling module POPtimers
-# ** Warning: (vlog-2083) C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(33): Carriage return (0x0D) is not followed by a newline (0x0A).
-# 
-# Top level modules:
-# 	POPtimers
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v 
-# -- Compiling module clocks
-# 
-# Top level modules:
-# 	clocks
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v 
-# -- Compiling module top_testbench
-# 
-# Top level modules:
-# 	top_testbench
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v 
-# -- Compiling module comparator_testbench
-# 
-# Top level modules:
-# 	comparator_testbench
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v 
-# -- Compiling module counter_testbench
-# 
-# Top level modules:
-# 	counter_testbench
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v 
-# -- Compiling module POPtimers_testbench
-# 
-# Top level modules:
-# 	POPtimers_testbench
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v 
-# -- Compiling module wrapper_testbench
-# 
-# Top level modules:
-# 	wrapper_testbench
-# End time: 11:14:02 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:02 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v 
-# -- Compiling module extended_counter_testbench
-# 
-# Top level modules:
-# 	extended_counter_testbench
-# End time: 11:14:03 on Mar 01,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:14:03 on Mar 01,2022
-# vlog -reportprogress 300 "+incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v 
-# -- Compiling module counter_testbench
-# 
-# Top level modules:
-# 	counter_testbench
-# End time: 11:14:03 on Mar 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# do {C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_testbench/toplevel_testbench.mdo}
+# Loading project toplevel_testbench
+# Compile of top_testbench.v was successful.
 # vsim -L work -L pmi_work -L ovi_machxo2 top_testbench 
-# Start time: 11:14:03 on Mar 01,2022
+# Start time: 13:53:58 on Mar 03,2022
 # //  ModelSim - Lattice FPGA Edition 2020.3 Oct 14 2020
 # //
 # //  Copyright 1991-2020 Mentor Graphics Corporation
@@ -141,6 +20,9 @@
 # Loading work.top_testbench
 # Loading work.clocks
 # Loading ovi_machxo2.OSCH
+# Loading work.DIV4PLL
+# Loading ovi_machxo2.VLO
+# Loading ovi_machxo2.EHXPLLJ
 # Loading work.POPtimers
 # Loading work.count_n
 # Loading work.comparator
@@ -149,17 +31,12 @@
 # Loading work.d_flip_flop
 # Loading work.slow_clock_pulse
 # Loading work.quad_state_machine
+# Loading work.five_state_machine
 # .main_pane.wave.interior.cs.body.pw.wf
-add wave -position insertpoint  \
-sim:/top_testbench/POPtimers/systemcounter/count
-add wave -position insertpoint  \
-sim:/top_testbench/POPtimers/loop
-add wave -position insertpoint  \
-sim:/top_testbench/POPtimers/counterreset
 run -all
-# ** Note: $finish    : C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v(106)
-#    Time: 33560 us  Iteration: 0  Instance: /top_testbench
+# ** Note: $finish    : C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v(120)
+#    Time: 34040 us  Iteration: 0  Instance: /top_testbench
 # 1
-# Break in Module top_testbench at C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v line 106
-# End time: 11:20:41 on Mar 01,2022, Elapsed time: 0:06:38
-# Errors: 0, Warnings: 16
+# Break in Module top_testbench at C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v line 120
+# End time: 13:55:52 on Mar 03,2022, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2

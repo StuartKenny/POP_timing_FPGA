@@ -12,7 +12,7 @@ WARNING - synthesis: input pad net 'clk_10M_ref' has no legal load.
 WARNING - synthesis: DRC complete with 2 warnings.
 
 Design Results:
-      8 blocks expanded
+      9 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file POP_timer_POP_timers_AX2.ngd.

@@ -34,7 +34,8 @@ module TinyFPGA_A2 (
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
 	wire debounce_pulse; //2.5MHz clock divided by 2^8 - 100us period
 	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
-	wire [1:0] SMstate; //2-bit state vector
+	//wire [1:0] SMstate; //2-bit state vector
+	wire [2:0] SMstate; //3-bit state vector
 	wire pump, probe, MW, sample; //outputs from POPtimers module
 	
 	// tristate the unused pins
@@ -69,7 +70,8 @@ module TinyFPGA_A2 (
 	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(1'b0), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
-	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+	//quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+	five_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
 
 	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
@@ -86,6 +88,7 @@ module TinyFPGA_A2 (
 	//1. POP cycle. signals controlled by POPtimers module. LED on
 	//2. Dark. sample output high. Fast LED flash
 	//3. Pump beam calibration. pump output high. LED off
+	//4. DR. probe, sample, and MW outputs high. LED four quick flashes then pause
 
 	//Signals from POPtimers module are updated on the negative clock edge
 	//The following combinatorial logic is synchronised to a positive clock edge
@@ -112,12 +115,19 @@ module TinyFPGA_A2 (
 			MW_output <= 1'b0;
 			sample_output <= 1'b1;
 			end
-		else begin //SMstate == 3. Pump beam calibration
+		else if (SMstate == 3) begin //3. Pump beam calibration
 			LED_output <= 1'b0;
 			pump_output <= 1'b1;
 			probe_output <= 1'b0;
 			MW_output <= 1'b0;
 			sample_output <= 1'b0;
+			end
+		else begin //SMstate == 4. Double resonance
+			LED_output <= slow_pulse&fast_pulse;
+			pump_output <= 1'b0;
+			probe_output <= 1'b1;
+			MW_output <= 1'b1;
+			sample_output <= 1'b1;
 			end
 	end
 

@@ -10,7 +10,8 @@ module top_testbench
 	reg topleft_button, topright_button, bottomleft_button, bottomright_button;
 	
     // Outputs
-	wire [1:0] SMstate; //2-bit state vector
+	wire [1:0] quad_SMstate; //2-bit state vector
+	wire [2:0] five_SMstate; //3-bit state vector
 	wire debounce_pulse; //2.5MHz clock divided by 2^8 - 100us period
 	wire slow_pulse; //2.5MHz clock divided by 2^21 - 3.4s period
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
@@ -27,7 +28,8 @@ module top_testbench
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
 	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .slow_pulse(slow_pulse));
-	quad_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+	quad_state_machine quad_statemachine (.clk(sampled_modebutton), .state(quad_SMstate));
+	five_state_machine five_statemachine (.clk(sampled_modebutton), .state(five_SMstate));
 	
 	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
@@ -44,38 +46,46 @@ module top_testbench
 	//1. POP cycle. signals controlled by POPtimers module. LED on
 	//2. Dark. sample output high. Fast LED flash
 	//3. Pump beam calibration. pump output high. LED off
+	//4. DR. probe, sample, and MW outputs high. LED flashes quickly then pauses
 
 	//Signals from POPtimers module are updated on the negative clock edge
 	//The following combinatorial logic is synchronised to a positive clock edge
 	always@(posedge clk_2M5) 
 	begin
-		if (SMstate == 0) begin //0. Laser frequency setup
+		if (five_SMstate == 0) begin //0. Laser frequency setup
 			LED_output <= slow_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b1;
 			MW_output <= 1'b0;
 			sample_output <= 1'b1;
 			end
-		else if (SMstate == 1) begin //1. POP cycle
+		else if (five_SMstate == 1) begin //1. POP cycle
 			LED_output <= 1'b1;
 			pump_output <= pump;
 			probe_output <= probe;
 			MW_output <= MW;
 			sample_output <= sample;
 			end
-		else if (SMstate == 2) begin //2. Dark
+		else if (five_SMstate == 2) begin //2. Dark
 			LED_output <= fast_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b0;
 			MW_output <= 1'b0;
 			sample_output <= 1'b1;
 			end
-		else begin //SMstate == 3. Pump beam calibration
+		else if (five_SMstate == 3) begin //3. Pump beam calibration
 			LED_output <= 1'b0;
 			pump_output <= 1'b1;
 			probe_output <= 1'b0;
 			MW_output <= 1'b0;
 			sample_output <= 1'b0;
+			end
+		else begin //five_SMstate == 4. Double resonance
+			LED_output <= slow_pulse&fast_pulse;
+			pump_output <= 1'b0;
+			probe_output <= 1'b1;
+			MW_output <= 1'b1;
+			sample_output <= 1'b1;
 			end
 	end
 
@@ -100,6 +110,10 @@ module top_testbench
 		#(300*CLOCK_CYCLE) bottomright_button = 1'b0;
 		#(300*CLOCK_CYCLE) bottomright_button = 1'b1;
 		#(50000*CLOCK_CYCLE) mode_button = 1'b0;
+		#(300*CLOCK_CYCLE) mode_button = 1'b1;
+		#(300*CLOCK_CYCLE) mode_button = 1'b0;
+		#(300*CLOCK_CYCLE) mode_button = 1'b1;
+		#(300*CLOCK_CYCLE) mode_button = 1'b0;
 		#(300*CLOCK_CYCLE) mode_button = 1'b1;
 		#(300*CLOCK_CYCLE) mode_button = 1'b0;
 		#(300*CLOCK_CYCLE) mode_button = 1'b1;

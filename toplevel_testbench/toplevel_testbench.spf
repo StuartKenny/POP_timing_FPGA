@@ -4,6 +4,7 @@
     <Source worklib="work" path="POP_timers_AX2/source/compare_n.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/count_n.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/POPtimers.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="POP_timers_AX2/source/DIV4PLL.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/clocks.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/top_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/comparator_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>

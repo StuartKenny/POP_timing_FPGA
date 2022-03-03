@@ -1,12 +1,13 @@
-if {![file exists "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation/toplevel_simulation.mpf"]} { 
-	project new "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation" toplevel_simulation
+if {![file exists "C:/Users/ShifT/GitHub/POP_timing_FPGA/wrapper_testbench/wrapper_testbench.mpf"]} { 
+	project new "C:/Users/ShifT/GitHub/POP_timing_FPGA/wrapper_testbench" wrapper_testbench
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
-	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
 	project addfile "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
@@ -21,8 +22,9 @@ if {![file exists "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation/top
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
-	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
@@ -30,10 +32,10 @@ if {![file exists "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation/top
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v"
 	vlog  +incdir+C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source  -work work  "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v"
 } else {
-	project open "C:/Users/ShifT/GitHub/POP_timing_FPGA/toplevel_simulation/toplevel_simulation"
+	project open "C:/Users/ShifT/GitHub/POP_timing_FPGA/wrapper_testbench/wrapper_testbench"
 	project compileoutofdate
 }
-vsim -L work -L pmi_work -L ovi_machxo2  top_testbench
+vsim -L work -L pmi_work -L ovi_machxo2  wrapper_testbench
 view wave
 add wave /*
 run 1000ns
