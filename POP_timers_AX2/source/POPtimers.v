@@ -23,11 +23,9 @@ module POPtimers
 	
 	input load_defaults, clk_2M5, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
 	output pump, probe, MW, sample;
-	//output reg pump, probe, MW, sample; //outputs also defined as registers to allow assignment
 	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
 	reg [WIDTH-1:0] gatedcount;
 	wire counterreset; //for reseting the main counter once it has reached the 'Resetandrepeat' value
-	//reg counterreset; //for reseting the main counter once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
 
 	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'b0;
@@ -45,24 +43,6 @@ module POPtimers
 	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
 	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;
 	//wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+PieOverTwo;
-	//POP events with counter values for comparator
-	//wire [WIDTH-1:0] Startofpumppulse, Endofpumppulse;
-	//reg [WIDTH-1:0] Endof1stMWpulse, Startof2ndMWpulse, Endof2ndMWpulse;
-	//reg [WIDTH-1:0] Startofprobepulse, Endofprobepulse;
-	//reg [WIDTH-1:0] Startopticalsample, Endofopticalsample; 
-	//reg [WIDTH-1:0] Resetandrepeat; 
-
-	//Update the comparison values every 400ns in case PieOverTwo or FreePrecession values have changed
-	//always@(posedge clk_2M5) begin
-		//Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo;
-		//Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession;
-		//Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo;
-		//Startofprobepulse = Endof2ndMWpulse+LaserMWgap;
-		//Startopticalsample = Startofprobepulse+SampleDelay;
-		//Endofopticalsample = Startopticalsample+SampleLength;
-		//Endofprobepulse = Startofprobepulse+ProbePulse;
-		//Resetandrepeat = Endofprobepulse+PostCycle; 
-	//end		
 
 	count_n systemcounter (.clk(clk_2M5), .direction(Up), .reset(counterreset), .count(count)); 
 	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
@@ -80,13 +60,6 @@ module POPtimers
 	countupdownpreload piecounter (.clk_2M5(clk_2M5), .clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd10), .count(AdjustablePieOverTwo));
 	countupdownpreload freepcounter (.clk_2M5(clk_2M5), .clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd100), .count(AdjustableFreePrecession));
 		 	
-	//always@(*) begin 
-		// reset line is updated immediately
-		// Counter should be forced to zero for as long as the load_defaults input is high,
-		// or for one cycle when it reaches the 'resetandrepeat' value
-		//counterreset <= load_defaults|loop;
-	//end
-	
 	assign counterreset = load_defaults|loop;
 	
 	//counter updates on a positive clock edge
@@ -94,15 +67,7 @@ module POPtimers
 	always@(negedge clk_2M5) begin
 		gatedcount <= count; 
 	end
-	
-	//logical outputs updated immediately - to be synchronised to positive clock edge at top-level
-	//always@(*) begin 
-	//	pump <= pumpstarted & !pumpstopped;
-	//	MW <= (pi1started & !pi1stopped)|(pi2started & !pi2stopped);
-	//	probe <= probestarted & !probestopped;
-	//	sample <= samplestarted & !samplestopped;
-	//end
-	
+		
 	//logical outputs to be synchronised to positive clock edge at top-level	
 	assign pump = pumpstarted & !pumpstopped;
 	assign MW = (pi1started & !pi1stopped)|(pi2started & !pi2stopped);

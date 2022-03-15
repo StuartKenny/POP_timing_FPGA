@@ -26,7 +26,7 @@ module wrapper_testbench
 		.state(quad_state) //2 bit vector
 		);
 
-	five_state_machine five_state_machineUT (	
+	n_state_machine five_state_machineUT (	
 		.clk(fast_pulse),
 		.state(five_state) //3 bit vector
 		);

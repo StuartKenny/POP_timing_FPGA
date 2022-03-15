@@ -24,7 +24,7 @@ WARNING - synthesis: logical net 'xo2chub/genblk7.un1_jtagf_u_1' has no load.
 WARNING - synthesis: DRC complete with 8 warnings.
 
 Design Results:
-   1348 blocks expanded
+   1360 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file POP_timer_POP_timers_AX2.ngd.
