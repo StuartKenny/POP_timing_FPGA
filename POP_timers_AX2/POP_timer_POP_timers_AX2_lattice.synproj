@@ -30,19 +30,19 @@
 
 
 -lpf 1
--ver "C:/Program Files/Lattice/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v"
--ver "C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/ertl.v"
--ver "C:/Program Files/Lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v"
--ver "C:/Program Files/Lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v"
--ver "C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v"
--key "C:/Program Files/Lattice/diamond/3.12/module/reveal/document/reveal_test.dat"
--ver "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_trig_gen.v"
--ver "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_gen.v"
--ver "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_rvl.v"
+-p "C:/Users/sek529/Github/POP_timing_FPGA"
+-ver "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
+"C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
 -top TinyFPGA_A2
 
 
--p "C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2" "C:/Users/ShifT/GitHub/POP_timing_FPGA" "C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/POP_timer_Reveal"
+-p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2" "C:/Users/sek529/Github/POP_timing_FPGA"
 
 -ngd "POP_timer_POP_timers_AX2.ngd"
 

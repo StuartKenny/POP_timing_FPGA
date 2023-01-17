@@ -3,338 +3,213 @@ Report for cell TinyFPGA_A2
    Instance path: TinyFPGA_A2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     530.00        100.0
-                                  LUT4	     513.00        100.0
+                                  SLIC	     259.00        100.0
+                                  LUT4	      46.00        100.0
                                  IOBUF	         17        100.0
-                                PFUREG	        499        100.0
-                                RIPPLE	        265        100.0
-                                   EBR	          3        100.0
+                                PFUREG	        102        100.0
+                                RIPPLE	        235        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                               xo2chub	          1         5.3
-               slow_clock_pulse_uniq_1	          1         2.3
-                        reveal_coretop	          1        48.6
-             five_state_machine_uniq_1	          1         0.4
-                         clocks_uniq_1	          1         0.0
-                      POPtimers_uniq_1	          1        40.9
+                      slow_clock_pulse	          1         4.6
+                       n_state_machine	          1         0.5
+                                clocks	          1         0.0
+                             POPtimers	          1        90.2
 ---------------------------------------------------
-Report for cell reveal_coretop
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	     257.42        48.6
-                                  LUT4	     453.33        88.4
-                                PFUREG	        346        69.3
-                                RIPPLE	         13         4.9
-                                   EBR	          3        100.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                       tinyfpga_a2_la0	          1        48.4
----------------------------------------------------
-Report for cell tinyfpga_a2_la0
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	     256.58        48.4
-                                  LUT4	     451.33        88.0
-                                PFUREG	        346        69.3
-                                RIPPLE	         13         4.9
-                                   EBR	          3        100.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                  tinyfpga_a2_la0_trig	          1         9.6
-rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=415686353,LSCC_FAMILY="XO2")	          1        14.9
-rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=1)	          1        23.9
----------------------------------------------------
-Report for cell tinyfpga_a2_la0_trig
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      51.00         9.6
-                                  LUT4	      95.67        18.6
-                                PFUREG	         65        13.0
-                                RIPPLE	          9         3.4
-                                   EBR	          1        33.3
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                 rvl_tu(NUM_TU_BITS=1)	          1         1.1
-rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")	          1         6.0
-    rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)	          1         1.7
-         rvl_decode(NUM_TU=1,NUM_TE=1)	          1         0.5
----------------------------------------------------
-Report for cell rvl_tu(NUM_TU_BITS=1)
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tu_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	       5.75         1.1
-                                  LUT4	       9.00         1.8
-                                PFUREG	          8         1.6
----------------------------------------------------
-Report for cell rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      31.92         6.0
-                                  LUT4	      52.67        10.3
-                                PFUREG	         45         9.0
-                                RIPPLE	          9         3.4
-                                   EBR	          1        33.3
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-    pmi_ram_dpXbnonesadr11211211401afe	          1         0.0
----------------------------------------------------
-Report for cell pmi_ram_dpXbnonesadr11211211401afe
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/pmi_ram_dpXO2binarynonespeedasyncdisablereg112112
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          1        33.3
----------------------------------------------------
-Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tcnt_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	       9.25         1.7
-                                  LUT4	      21.67         4.2
-                                PFUREG	         12         2.4
----------------------------------------------------
-Report for cell rvl_decode(NUM_TU=1,NUM_TE=1)
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/decode_u
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	       2.42         0.5
-                                  LUT4	       9.00         1.8
----------------------------------------------------
-Report for cell rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=415686353,LSCC_FAMILY="XO2")
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      78.83        14.9
-                                  LUT4	     113.33        22.1
-                                PFUREG	        132        26.5
-                                   EBR	          2        66.7
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-pmi_ram_dpXbnonesadr324163241611884d26	          1         0.0
----------------------------------------------------
-Report for cell pmi_ram_dpXbnonesadr324163241611884d26
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        66.7
----------------------------------------------------
-Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=1)
-   Instance path: TinyFPGA_A2/TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	     126.75        23.9
-                                  LUT4	     242.33        47.2
-                                PFUREG	        149        29.9
-                                RIPPLE	          4         1.5
----------------------------------------------------
-Report for cell POPtimers_uniq_1
+Report for cell POPtimers
    Instance path: TinyFPGA_A2/POPtimers
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     216.83        40.9
-                                  LUT4	      21.00         4.1
-                                PFUREG	         65        13.0
-                                RIPPLE	        223        84.2
+                                  SLIC	     233.67        90.2
+                                  LUT4	      21.00        45.7
+                                PFUREG	         65        63.7
+                                RIPPLE	        223        94.9
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-             countupdownpreload_uniq_2	          1         3.2
-             countupdownpreload_uniq_1	          1         3.5
-                        count_n_uniq_1	          1         1.7
-                     comparator_uniq_2	          1         0.3
-                     comparator_uniq_5	          1         0.8
-                     comparator_uniq_7	          1         1.6
-                     comparator_uniq_8	          1         1.7
-                     comparator_uniq_6	          1         1.7
-                     comparator_uniq_4	          1         0.6
-                     comparator_uniq_3	          1         0.4
-                    comparator_uniq_10	          1         1.7
-                    comparator_uniq_11	          1         0.6
+                 countupdownpreload_U8	          1         6.5
+                    countupdownpreload	          1         7.1
+                               count_n	          1         3.5
+                            comparator	          1         3.5
+                         comparator_U5	          1         3.5
+                         comparator_U7	          1         2.0
+                         comparator_U9	          1         3.5
+                         comparator_U6	          1         3.5
+                        comparator_U11	          1         3.5
+                         comparator_U4	          1         0.5
+                        comparator_U12	          1         1.1
+                        comparator_U10	          1         3.5
 ---------------------------------------------------
-Report for cell count_n_uniq_1
+Report for cell count_n
    Instance path: TinyFPGA_A2/POPtimers/systemcounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       9.00         1.7
-                                PFUREG	         16         3.2
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                PFUREG	         16        15.7
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_10
+Report for cell comparator
    Instance path: TinyFPGA_A2/POPtimers/sample2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       9.00         1.7
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_2
+Report for cell comparator_U4
    Instance path: TinyFPGA_A2/POPtimers/pump2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       1.50         0.3
-                                  LUT4	       3.00         0.6
+                                  SLIC	       1.17         0.5
+                                  LUT4	       3.00         6.5
 ---------------------------------------------------
-Report for cell comparator_uniq_8
+Report for cell comparator_U5
    Instance path: TinyFPGA_A2/POPtimers/probe2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       9.00         1.7
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_7
+Report for cell comparator_U6
    Instance path: TinyFPGA_A2/POPtimers/probe1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       8.50         1.6
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell countupdownpreload_uniq_1
+Report for cell countupdownpreload
    Instance path: TinyFPGA_A2/POPtimers/piecounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      18.42         3.5
-                                  LUT4	       2.00         0.4
-                                PFUREG	         17         3.4
-                                RIPPLE	         17         6.4
+                                  SLIC	      18.33         7.1
+                                  LUT4	       2.00         4.3
+                                PFUREG	         17        16.7
+                                RIPPLE	         17         7.2
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-            single_period_pulse_uniq_1	          1         0.2
+                   single_period_pulse	          1         0.4
 ---------------------------------------------------
-Report for cell single_period_pulse_uniq_1
+Report for cell single_period_pulse
    Instance path: TinyFPGA_A2/POPtimers/piecounter/clean_trigger
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       1.08         0.2
-                                  LUT4	       1.00         0.2
-                                PFUREG	          2         0.4
+                                  SLIC	       1.00         0.4
+                                  LUT4	       1.00         2.2
+                                PFUREG	          2         2.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                    d_flip_flop_uniq_2	          1         0.1
-                    d_flip_flop_uniq_1	          1         0.1
+                        d_flip_flop_U0	          1         0.1
+                           d_flip_flop	          1         0.1
 ---------------------------------------------------
-Report for cell d_flip_flop_uniq_2
+Report for cell d_flip_flop
    Instance path: TinyFPGA_A2/POPtimers/piecounter/clean_trigger/stage1_ff
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       0.50         0.1
-                                PFUREG	          1         0.2
+                                  SLIC	       0.33         0.1
+                                PFUREG	          1         1.0
 ---------------------------------------------------
-Report for cell d_flip_flop_uniq_1
+Report for cell d_flip_flop_U0
    Instance path: TinyFPGA_A2/POPtimers/piecounter/clean_trigger/stage0_ff
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   SLIC	       0.33         0.1
-                                PFUREG	          1         0.2
+                                PFUREG	          1         1.0
 ---------------------------------------------------
-Report for cell comparator_uniq_11
+Report for cell comparator_U7
    Instance path: TinyFPGA_A2/POPtimers/loopcounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       3.17         0.6
-                                RIPPLE	          9         3.4
+                                  SLIC	       5.17         2.0
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell countupdownpreload_uniq_2
+Report for cell countupdownpreload_U8
    Instance path: TinyFPGA_A2/POPtimers/freepcounter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      16.75         3.2
-                                  LUT4	       2.00         0.4
-                                PFUREG	         16         3.2
-                                RIPPLE	         15         5.7
+                                  SLIC	      16.83         6.5
+                                  LUT4	       2.00         4.3
+                                PFUREG	         16        15.7
+                                RIPPLE	         15         6.4
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-            single_period_pulse_uniq_2	          1         0.2
+                single_period_pulse_U3	          1         0.5
 ---------------------------------------------------
-Report for cell single_period_pulse_uniq_2
+Report for cell single_period_pulse_U3
    Instance path: TinyFPGA_A2/POPtimers/freepcounter/clean_trigger
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       1.25         0.2
-                                  LUT4	       1.00         0.2
-                                PFUREG	          2         0.4
+                                  SLIC	       1.33         0.5
+                                  LUT4	       1.00         2.2
+                                PFUREG	          2         2.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                    d_flip_flop_uniq_4	          1         0.1
-                    d_flip_flop_uniq_3	          1         0.1
+                        d_flip_flop_U2	          1         0.2
+                        d_flip_flop_U1	          1         0.2
 ---------------------------------------------------
-Report for cell d_flip_flop_uniq_4
+Report for cell d_flip_flop_U1
    Instance path: TinyFPGA_A2/POPtimers/freepcounter/clean_trigger/stage1_ff
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       0.50         0.1
-                                PFUREG	          1         0.2
+                                  SLIC	       0.50         0.2
+                                PFUREG	          1         1.0
 ---------------------------------------------------
-Report for cell d_flip_flop_uniq_3
+Report for cell d_flip_flop_U2
    Instance path: TinyFPGA_A2/POPtimers/freepcounter/clean_trigger/stage0_ff
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       0.50         0.1
-                                PFUREG	          1         0.2
+                                  SLIC	       0.50         0.2
+                                PFUREG	          1         1.0
 ---------------------------------------------------
-Report for cell comparator_uniq_6
+Report for cell comparator_U9
    Instance path: TinyFPGA_A2/POPtimers/MW4
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       9.00         1.7
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_5
+Report for cell comparator_U10
    Instance path: TinyFPGA_A2/POPtimers/MW3
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       4.50         0.8
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_4
+Report for cell comparator_U11
    Instance path: TinyFPGA_A2/POPtimers/MW2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       3.17         0.6
-                                RIPPLE	          9         3.4
+                                  SLIC	       9.00         3.5
+                                RIPPLE	          9         3.8
 ---------------------------------------------------
-Report for cell comparator_uniq_3
+Report for cell comparator_U12
    Instance path: TinyFPGA_A2/POPtimers/MW1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       2.17         0.4
-                                  LUT4	       7.00         1.4
+                                  SLIC	       2.83         1.1
+                                  LUT4	       6.00        13.0
 ---------------------------------------------------
-Report for cell clocks_uniq_1
+Report for cell n_state_machine
+   Instance path: TinyFPGA_A2/statemachine
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.42         0.5
+                                  LUT4	       2.00         4.3
+                                PFUREG	          3         2.9
+---------------------------------------------------
+Report for cell slow_clock_pulse
+   Instance path: TinyFPGA_A2/slowclocks
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      12.00         4.6
+                                PFUREG	         23        22.5
+                                RIPPLE	         12         5.1
+---------------------------------------------------
+Report for cell clocks
    Instance path: TinyFPGA_A2/clocks
                      Cell usage:
                                   cell	      count    Res Usage(%)
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                        DIV4PLL_uniq_1	          1         0.0
+                               DIV4PLL	          1         0.0
 ---------------------------------------------------
-Report for cell DIV4PLL_uniq_1
+Report for cell DIV4PLL
    Instance path: TinyFPGA_A2/clocks/PLL
                      Cell usage:
                                   cell	      count    Res Usage(%)
----------------------------------------------------
-Report for cell slow_clock_pulse_uniq_1
-   Instance path: TinyFPGA_A2/slowclocks
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      12.00         2.3
-                                PFUREG	         23         4.6
-                                RIPPLE	         12         4.5
----------------------------------------------------
-Report for cell five_state_machine_uniq_1
-   Instance path: TinyFPGA_A2/statemachine
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	       2.00         0.4
-                                  LUT4	       4.00         0.8
-                                PFUREG	          3         0.6
----------------------------------------------------
-Report for cell xo2chub
-   Instance path: TinyFPGA_A2/xo2chub
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      27.92         5.3
-                                  LUT4	      12.00         2.3
-                                PFUREG	         51        10.2
-                                RIPPLE	         17         6.4

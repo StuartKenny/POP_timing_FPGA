@@ -14,10 +14,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Mar 15 13:44:26 2022
+Tue Jan 17 11:04:48 2023
 
 
-Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/ShifT/GitHub/POP_timing_FPGA/promote.xml 
+Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml 
 
 Synthesis options:
 The -a option is MachXO2.
@@ -70,25 +70,18 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2 (searchpath added)
--p C:/Users/ShifT/GitHub/POP_timing_FPGA (searchpath added)
--p C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/POP_timer_Reveal (searchpath added)
-Key file = C:/Program Files/Lattice/diamond/3.12/module/reveal/document/reveal_test.dat
-File C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/ertl.v is encrypted
-
-File C:/Program Files/Lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v is encrypted
-
-File C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v is encrypted
-
-Verilog design file = C:/Program Files/Lattice/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v
-Verilog design file = C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/ertl.v
-Verilog design file = C:/Program Files/Lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v
-Verilog design file = C:/Program Files/Lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v
-Verilog design file = C:/Program Files/Lattice/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v
-Verilog design file = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_trig_gen.v
-Verilog design file = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_gen.v
-Verilog design file = C:/Users/ShifT/GitHub/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_rvl.v
+-p C:/Users/sek529/Github/POP_timing_FPGA (searchpath added)
+-p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2 (searchpath added)
+-p C:/Users/sek529/Github/POP_timing_FPGA (searchpath added)
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v
+Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
 NGD file = POP_timer_POP_timers_AX2.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -96,21 +89,38 @@ Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Technology check ok...
 
-Analyzing Verilog file C:/Program Files/Lattice/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file c:/program files/lattice/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
-Analyzing Verilog file c:/program files/lattice/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v. VERI-1482
-Analyzing Verilog file c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_trig_gen.v. VERI-1482
-Analyzing Verilog file c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_la0_gen.v. VERI-1482
-Analyzing Verilog file c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v. VERI-1482
-Analyzing Verilog file .__ydixd0.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v. VERI-1482
+Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): TinyFPGA_A2
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading device for application map from file 'xo2c1200.nph' in environment: C:/Program Files/Lattice/diamond/3.12/ispfpga.
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v(1): compiling module TinyFPGA_A2. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13): compiling module clocks. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH(NOM_FREQ="9.85"). VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v(8): compiling module DIV4PLL. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): compiling module VLO. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): compiling module EHXPLLJ_renamed_due_excessive_length_1. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v(1): compiling module POPtimers. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v(2): compiling module count_n. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v(1): compiling module comparator. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(2): compiling module countupdownpreload. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(40): compiling module single_period_pulse. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(60): compiling module d_flip_flop. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(4): compiling module slow_clock_pulse. VERI-1018
+INFO - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(31): compiling module n_state_machine. VERI-1018
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c1200.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = TinyFPGA_A2.
 ######## Converting I/O port pin3_sn to output.
@@ -121,102 +131,66 @@ WARNING - synthesis: I/O Port tenmegclock 's net has no driver and is unused.
 
 
 WARNING - synthesis: I/O Port tenmegclock 's net has no driver and is unused.
-WARNING - synthesis: c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1689): Register \POPtimers/piecounter/count_i0 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1727): Register \POPtimers/freepcounter/count_i0 is stuck at Zero. VDB-5013
-######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
-WARNING - synthesis: mRegister \TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/tt_wr_bit_cntr[0]_168 is stuck at Zero
+WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): Register \POPtimers/piecounter/count_i0 is stuck at Zero. VDB-5013
 Applying 10.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
-TinyFPGA_A2_prim.v file will not be written because encrypted design file is being used
-
 Results of NGD DRC are available in TinyFPGA_A2_drc.log.
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/data/neoprims.ngl'...
-Loading NGL library 'C:/Program Files/Lattice/diamond/3.12/ispfpga/data/neomacro.ngl'...
-Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr11211211401afe.ngo'...
-Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr324163241611884d26.ngo'...
-Logic has been added to the IP to support JTAG capability.
-Loading NGO design 'C:/Program Files/Lattice/diamond/3.12/ispfpga/xo2c00/data/xo2chub.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 WARNING - synthesis: logical net 'tenmegclock' has no load.
 WARNING - synthesis: input pad net 'tenmegclock' has no legal load.
-WARNING - synthesis: logical net 'TinyFPGA_A2_reveal_coretop_instance/jupdate[0]' has no load.
-WARNING - synthesis: logical net 'xo2chub/tdoa' has no load.
-WARNING - synthesis: logical net 'xo2chub/cdn' has no load.
-WARNING - synthesis: logical net 'xo2chub/ip_enable[15]' has no load.
-WARNING - synthesis: logical net 'xo2chub/genblk7.un1_jtagf_u' has no load.
-WARNING - synthesis: logical net 'xo2chub/genblk7.un1_jtagf_u_1' has no load.
-WARNING - synthesis: DRC complete with 8 warnings.
+WARNING - synthesis: DRC complete with 2 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file POP_timer_POP_timers_AX2.ngd.
 
 ################### Begin Area Report (TinyFPGA_A2)######################
-Number of register bits => 448 of 1346 (33 % )
-CCU2D => 248
+Number of register bits => 102 of 1346 (7 % )
+CCU2D => 235
 EHXPLLJ => 1
-FD1P3AX => 18
-FD1P3BX => 34
-FD1P3DX => 228
 FD1S3AX => 49
-FD1S3DX => 82
+FD1S3DX => 16
 FD1S3IX => 20
 FD1S3JX => 17
 GSR => 1
 IB => 6
-INV => 2
-L6MUX21 => 1
-LUT4 => 509
+INV => 1
+LUT4 => 45
 OB => 8
 OBZ => 3
 OSCH => 1
-PFUMX => 35
-pmi_ram_dpXbnonesadr11211211401afe => 1
-pmi_ram_dpXbnonesadr324163241611884d26 => 1
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
 TSALL => 1
-jtagconn16 => 1
 ################### End BlackBox Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 7
-  Net : clocks/clk_debug, loads : 150
+Number of Clocks: 6
   Net : clocks/PLL/clk_2M5, loads : 49
   Net : POPtimers/piecounter/clean_trigger/trigger, loads : 15
   Net : POPtimers/freepcounter/clean_trigger/trigger, loads : 14
   Net : slowclocks/debounce_pulse, loads : 7
   Net : sampled_modebutton, loads : 3
-  Net : TinyFPGA_A2_reveal_coretop_instance/jtck[0], loads : 1
+  Net : clocks/debug_0_c, loads : 2
 Clock Enable Nets
-Number of Clock Enables: 46
-Top 10 highest fanout Clock Enables:
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_265_enable_164, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_265_enable_99, loads : 34
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_53, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jtck_N_265_enable_33, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_265_enable_53, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/sample_en_d, loads : 14
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_65, loads : 8
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/trace_dout_int_31__N_1067, loads : 6
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_265_enable_38, loads : 6
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/tm_u/clk[0]_N_keep_enable_68, loads : 4
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : TinyFPGA_A2_reveal_coretop_instance/jtck_N_265, loads : 202
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/te_0/jrstn_N_263, loads : 197
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/trig_u/tcnt_0/n10063, loads : 128
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n10060, loads : 59
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n10064, loads : 49
-  Net : TinyFPGA_A2_reveal_coretop_instance/ip_enable[0], loads : 46
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/n11, loads : 41
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/addr[0], loads : 36
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/jtck_N_265_enable_164, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/tinyfpga_a2_la0_inst_0/jtag_int_u/addr[1], loads : 34
+  Net : load_defaults, loads : 32
+  Net : pieovertwo_plus, loads : 17
+  Net : freeprecess_plus, loads : 16
+  Net : POPtimers/counterreset, loads : 16
+  Net : pieovertwo_minus, loads : 15
+  Net : clocks/PLL/clk_2M5_N_53, loads : 14
+  Net : freeprecess_minus, loads : 13
+  Net : statemachine/SMstate_2, loads : 10
+  Net : statemachine/SMstate_1, loads : 10
+  Net : statemachine/SMstate_0, loads : 10
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -226,26 +200,18 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk6 [get_nets sampled_modebutton]      |   10.000 MHz|  245.761 MHz|     2  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk5 [get_nets                          |             |             |
-\POPtimers/freepcounter/trigger]        |   10.000 MHz|  146.520 MHz|     9  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
 clk4 [get_nets                          |             |             |
-\POPtimers/piecounter/trigger]          |   10.000 MHz|  144.134 MHz|    10  
+\POPtimers/freepcounter/trigger]        |   10.000 MHz|  147.167 MHz|     9  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk3 [get_nets                          |             |             |
-\TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
-k[0]]                                   |   10.000 MHz|   56.670 MHz|    12  
+clk3 [get_nets sampled_modebutton]      |   10.000 MHz|  247.280 MHz|     2  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk2 [get_nets clk_debug]               |   10.000 MHz|   85.375 MHz|     6  
+clk2 [get_nets                          |             |             |
+\POPtimers/piecounter/trigger]          |   10.000 MHz|  144.949 MHz|    10  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk1 [get_nets clk_2M5]                 |   10.000 MHz|   49.300 MHz|     7  
+clk1 [get_nets clk_2M5]                 |   10.000 MHz|   44.158 MHz|     7  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
 clk0 [get_nets debounce_pulse]          |            -|            -|     0  
@@ -256,10 +222,10 @@ clk0 [get_nets debounce_pulse]          |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 73.133  MB
+Peak Memory Usage: 60.859  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.859  secs
+Elapsed CPU time for LSE flow : 0.984  secs
 --------------------------------------------------------------
 
 
