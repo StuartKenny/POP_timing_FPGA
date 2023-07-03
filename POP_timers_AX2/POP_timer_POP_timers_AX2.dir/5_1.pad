@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          QFN32
 Package Status:                     Final          Version 1.44
 
-Tue Jan 17 11:04:59 2023
+Mon Jul 03 16:06:53 2023
 
 Pinout by Port Name:
 +---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
@@ -16,9 +16,9 @@ Pinout by Port Name:
 | MW_output           | 11/2     | LVCMOS33_OUT | PB9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | bottomleft_button   | 27/0     | LVCMOS33_IN  | PT12D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 | bottomright_button  | 28/0     | LVCMOS33_IN  | PT12C |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| debug_0             | 4/3      | LVCMOS33_OUT | PL9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| debug_1             | 5/3      | LVCMOS33_OUT | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| debug_2             | 8/2      | LVCMOS33_OUT | PB4C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
+| debug_16            | 4/3      | LVCMOS33_OUT | PL9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
+| debug_17            | 5/3      | LVCMOS33_OUT | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
+| debug_18            | 8/2      | LVCMOS33_OUT | PB4C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | load_default_button | 17/2     | LVCMOS33_IN  | PB20D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 | mode_button         | 14/2     | LVCMOS33_IN  | PB11B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 | pin3_sn             | 16/2     | LVCMOS33_OUT | PB20C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
@@ -27,6 +27,7 @@ Pinout by Port Name:
 | probe_output        | 10/2     | LVCMOS33_OUT | PB6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | pump_output         | 9/2      | LVCMOS33_OUT | PB6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
 | sample_output       | 12/2     | LVCMOS33_OUT | PB9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
+| tenmegclock         | 21/1     | LVCMOS33_IN  | PR5C  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
 | topleft_button      | 23/0     | LVCMOS33_IN  | PT17D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 | topright_button     | 25/0     | LVCMOS33_IN  | PT15D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
 +---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
@@ -52,9 +53,9 @@ Pinout by Pin Number:
 | Pin/Bank | Pin Info              | Preference | Buffer Type  | Site  | Dual Function | PG Enable | BC Enable |
 +----------+-----------------------+------------+--------------+-------+---------------+-----------+-----------+
 | 1/0      | Reserved: sysCONFIG   |            |              | PT10C | TDO           |           |           |
-| 4/3      | debug_0               | LOCATED    | LVCMOS33_OUT | PL9A  | PCLKT3_0      |           |           |
-| 5/3      | debug_1               | LOCATED    | LVCMOS33_OUT | PL9B  | PCLKC3_0      |           |           |
-| 8/2      | debug_2               | LOCATED    | LVCMOS33_OUT | PB4C  | CSSPIN        |           |           |
+| 4/3      | debug_16              | LOCATED    | LVCMOS33_OUT | PL9A  | PCLKT3_0      |           |           |
+| 5/3      | debug_17              | LOCATED    | LVCMOS33_OUT | PL9B  | PCLKC3_0      |           |           |
+| 8/2      | debug_18              | LOCATED    | LVCMOS33_OUT | PB4C  | CSSPIN        |           |           |
 | 9/2      | pump_output           | LOCATED    | LVCMOS33_OUT | PB6C  | MCLK/CCLK     |           |           |
 | 10/2     | probe_output          | LOCATED    | LVCMOS33_OUT | PB6D  | SO/SPISO      |           |           |
 | 11/2     | MW_output             | LOCATED    | LVCMOS33_OUT | PB9A  | PCLKT2_0      |           |           |
@@ -64,7 +65,7 @@ Pinout by Pin Number:
 | 16/2     | pin3_sn               | LOCATED    | LVCMOS33_OUT | PB20C | SN            |           |           |
 | 17/2     | load_default_button   | LOCATED    | LVCMOS33_IN  | PB20D | SI/SISPI      |           |           |
 | 20/1     | pin5                  | LOCATED    | LVCMOS33_OUT | PR5D  | PCLKC1_0/DQ0  |           |           |
-| 21/1     |     unused, PULL:DOWN |            |              | PR5C  | PCLKT1_0/DQ0  |           |           |
+| 21/1     | tenmegclock           | LOCATED    | LVCMOS33_IN  | PR5C  | PCLKT1_0/DQ0  |           |           |
 | 23/0     | topleft_button        | LOCATED    | LVCMOS33_IN  | PT17D | DONE          |           |           |
 | 25/0     | topright_button       | LOCATED    | LVCMOS33_IN  | PT15D | PROGRAMN      |           |           |
 | 26/0     | pin9_jtgnb            | LOCATED    | LVCMOS33_OUT | PT15C | JTAGENB       |           |           |
@@ -181,9 +182,9 @@ LOCATE  COMP  "LED_output"  SITE  "13";
 LOCATE  COMP  "MW_output"  SITE  "11";
 LOCATE  COMP  "bottomleft_button"  SITE  "27";
 LOCATE  COMP  "bottomright_button"  SITE  "28";
-LOCATE  COMP  "debug_0"  SITE  "4";
-LOCATE  COMP  "debug_1"  SITE  "5";
-LOCATE  COMP  "debug_2"  SITE  "8";
+LOCATE  COMP  "debug_16"  SITE  "4";
+LOCATE  COMP  "debug_17"  SITE  "5";
+LOCATE  COMP  "debug_18"  SITE  "8";
 LOCATE  COMP  "load_default_button"  SITE  "17";
 LOCATE  COMP  "mode_button"  SITE  "14";
 LOCATE  COMP  "pin3_sn"  SITE  "16";
@@ -192,6 +193,7 @@ LOCATE  COMP  "pin9_jtgnb"  SITE  "26";
 LOCATE  COMP  "probe_output"  SITE  "10";
 LOCATE  COMP  "pump_output"  SITE  "9";
 LOCATE  COMP  "sample_output"  SITE  "12";
+LOCATE  COMP  "tenmegclock"  SITE  "21";
 LOCATE  COMP  "topleft_button"  SITE  "23";
 LOCATE  COMP  "topright_button"  SITE  "25";
 
@@ -207,5 +209,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 17 11:05:00 2023
+Mon Jul 03 16:06:53 2023
 

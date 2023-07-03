@@ -1,13 +1,14 @@
 module POPtimers 
 	#(parameter WIDTH=16,
 	Up=1'b1,
-	parameter [WIDTH-1:0] PumpPulse=1000, //400us
-	PieOverTwo=1000, //400us
-	FreePrecession=7500, //3ms
-	ProbePulse=375, //150us
-	SampleDelay=0, 
-	SampleLength=125, //50us
-	LaserMWgap=125, //50us
+	parameter [WIDTH-1:0] PumpPulse=2000, //800탎
+	PieOverTwo=795, //318탎
+	//FreePrecession=6900, //2.76ms
+	FreePrecession=10000, //4ms
+	ProbePulse=2500, //1ms
+	SampleDelay=2000, //800탎
+	SampleLength=50, //20탎
+	LaserMWgap=10, //4탎
 	PostCycle=40000 //prevent reduction of 16-bit counter
 	)(clk_2M5, //2.5MHz clock
 	load_defaults, //input, 1 to reset

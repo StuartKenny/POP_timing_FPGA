@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 17 11:05:06 2023
+Mon Jul 03 16:07:03 2023
 
 
 Command: bitgen -g RamCfg:Reset -path C:/Users/sek529/Github/POP_timing_FPGA -w -jedec -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml POP_timer_POP_timers_AX2.ncd POP_timer_POP_timers_AX2.prf 
@@ -83,4 +83,4 @@ Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 2 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 256 MB
+Peak Memory Usage: 255 MB

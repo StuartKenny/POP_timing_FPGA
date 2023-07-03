@@ -1,248 +1,238 @@
 [ START MERGED ]
-clk_2M5_N_53 clk_2M5
+clk_2M5_N_53 debug_16_c
 [ END MERGED ]
 [ START CLIPPED ]
 VCC_net
-slowclocks/count_256_add_4_23/CO
-slowclocks/count_256_add_4_1/S0
-slowclocks/count_256_add_4_1/CI
-POPtimers/MW2/sub_193_add_2_12/S1
-POPtimers/MW2/sub_193_add_2_12/S0
-POPtimers/MW2/sub_193_add_2_14/S1
-POPtimers/MW2/sub_193_add_2_14/S0
-POPtimers/MW2/sub_193_add_2_16/S1
-POPtimers/MW2/sub_193_add_2_16/S0
-POPtimers/MW2/sub_193_add_2_cout/S1
-POPtimers/MW2/sub_193_add_2_cout/CO
-POPtimers/MW2/sub_193_add_2_2/S1
-POPtimers/MW2/sub_193_add_2_2/S0
-POPtimers/MW2/sub_193_add_2_2/CI
-POPtimers/MW2/sub_193_add_2_4/S1
-POPtimers/MW2/sub_193_add_2_4/S0
-POPtimers/MW2/sub_193_add_2_6/S1
-POPtimers/MW2/sub_193_add_2_6/S0
-POPtimers/MW2/sub_193_add_2_8/S1
-POPtimers/MW2/sub_193_add_2_8/S0
-POPtimers/MW2/sub_193_add_2_10/S1
-POPtimers/MW2/sub_193_add_2_10/S0
-POPtimers/MW3/sub_195_add_2_cout/S1
-POPtimers/MW3/sub_195_add_2_cout/CO
-POPtimers/MW3/sub_195_add_2_16/S1
-POPtimers/MW3/sub_195_add_2_16/S0
-POPtimers/MW3/sub_195_add_2_14/S1
-POPtimers/MW3/sub_195_add_2_14/S0
-POPtimers/MW3/sub_195_add_2_2/S1
-POPtimers/MW3/sub_195_add_2_2/S0
-POPtimers/MW3/sub_195_add_2_2/CI
-POPtimers/MW3/sub_195_add_2_4/S1
-POPtimers/MW3/sub_195_add_2_4/S0
-POPtimers/MW3/sub_195_add_2_6/S1
-POPtimers/MW3/sub_195_add_2_6/S0
-POPtimers/MW3/sub_195_add_2_8/S1
-POPtimers/MW3/sub_195_add_2_8/S0
-POPtimers/MW3/sub_195_add_2_12/S1
-POPtimers/MW3/sub_195_add_2_12/S0
-POPtimers/MW3/sub_195_add_2_10/S1
-POPtimers/MW3/sub_195_add_2_10/S0
-POPtimers/MW4/sub_197_add_2_2/S1
-POPtimers/MW4/sub_197_add_2_2/S0
-POPtimers/MW4/sub_197_add_2_2/CI
-POPtimers/MW4/sub_197_add_2_4/S1
-POPtimers/MW4/sub_197_add_2_4/S0
-POPtimers/MW4/sub_197_add_2_6/S1
-POPtimers/MW4/sub_197_add_2_6/S0
-POPtimers/MW4/sub_197_add_2_8/S1
-POPtimers/MW4/sub_197_add_2_8/S0
-POPtimers/MW4/sub_197_add_2_10/S1
-POPtimers/MW4/sub_197_add_2_10/S0
-POPtimers/MW4/sub_197_add_2_12/S1
-POPtimers/MW4/sub_197_add_2_12/S0
-POPtimers/MW4/sub_197_add_2_14/S1
-POPtimers/MW4/sub_197_add_2_14/S0
-POPtimers/MW4/sub_197_add_2_16/S1
-POPtimers/MW4/sub_197_add_2_16/S0
-POPtimers/MW4/sub_197_add_2_cout/S1
-POPtimers/MW4/sub_197_add_2_cout/CO
-POPtimers/freepcounter/add_254_313_add_1_15/CO
-POPtimers/freepcounter/add_347_1/S0
-POPtimers/freepcounter/add_347_1/CI
-POPtimers/freepcounter/add_254_313_add_1_1/S1
-POPtimers/freepcounter/add_254_313_add_1_1/S0
-POPtimers/freepcounter/add_254_313_add_1_1/CI
-POPtimers/freepcounter/add_347_13/CO
-POPtimers/loopcounter/sub_207_add_2_cout/S1
-POPtimers/loopcounter/sub_207_add_2_cout/CO
-POPtimers/loopcounter/sub_207_add_2_16/S1
-POPtimers/loopcounter/sub_207_add_2_16/S0
-POPtimers/loopcounter/sub_207_add_2_14/S1
-POPtimers/loopcounter/sub_207_add_2_14/S0
-POPtimers/loopcounter/sub_207_add_2_12/S1
-POPtimers/loopcounter/sub_207_add_2_12/S0
-POPtimers/loopcounter/sub_207_add_2_10/S1
-POPtimers/loopcounter/sub_207_add_2_10/S0
-POPtimers/loopcounter/sub_207_add_2_8/S1
-POPtimers/loopcounter/sub_207_add_2_8/S0
-POPtimers/loopcounter/sub_207_add_2_6/S1
-POPtimers/loopcounter/sub_207_add_2_6/S0
-POPtimers/loopcounter/sub_207_add_2_4/S1
-POPtimers/loopcounter/sub_207_add_2_4/S0
-POPtimers/loopcounter/sub_207_add_2_2/S1
-POPtimers/loopcounter/sub_207_add_2_2/S0
-POPtimers/loopcounter/sub_207_add_2_2/CI
-POPtimers/piecounter/add_250_311_add_1_1/S1
-POPtimers/piecounter/add_250_311_add_1_1/S0
-POPtimers/piecounter/add_250_311_add_1_1/CI
-POPtimers/piecounter/add_250_311_add_1_17/S1
-POPtimers/piecounter/add_250_311_add_1_17/CO
-POPtimers/piecounter/add_348_15/S1
-POPtimers/piecounter/add_348_15/CO
-POPtimers/piecounter/add_348_1/S0
-POPtimers/piecounter/add_348_1/CI
-POPtimers/probe1/sub_199_add_2_12/S1
-POPtimers/probe1/sub_199_add_2_12/S0
-POPtimers/probe1/sub_199_add_2_cout/S1
-POPtimers/probe1/sub_199_add_2_cout/CO
-POPtimers/probe1/sub_199_add_2_2/S1
-POPtimers/probe1/sub_199_add_2_2/S0
-POPtimers/probe1/sub_199_add_2_2/CI
-POPtimers/probe1/sub_199_add_2_16/S1
-POPtimers/probe1/sub_199_add_2_16/S0
-POPtimers/probe1/sub_199_add_2_14/S1
-POPtimers/probe1/sub_199_add_2_14/S0
-POPtimers/probe1/sub_199_add_2_4/S1
-POPtimers/probe1/sub_199_add_2_4/S0
-POPtimers/probe1/sub_199_add_2_6/S1
-POPtimers/probe1/sub_199_add_2_6/S0
-POPtimers/probe1/sub_199_add_2_8/S1
-POPtimers/probe1/sub_199_add_2_8/S0
-POPtimers/probe1/sub_199_add_2_10/S1
-POPtimers/probe1/sub_199_add_2_10/S0
-POPtimers/probe2/sub_201_add_2_cout/S1
-POPtimers/probe2/sub_201_add_2_cout/CO
-POPtimers/probe2/sub_201_add_2_16/S1
-POPtimers/probe2/sub_201_add_2_16/S0
-POPtimers/probe2/sub_201_add_2_14/S1
-POPtimers/probe2/sub_201_add_2_14/S0
-POPtimers/probe2/sub_201_add_2_12/S1
-POPtimers/probe2/sub_201_add_2_12/S0
-POPtimers/probe2/sub_201_add_2_10/S1
-POPtimers/probe2/sub_201_add_2_10/S0
-POPtimers/probe2/sub_201_add_2_8/S1
-POPtimers/probe2/sub_201_add_2_8/S0
-POPtimers/probe2/sub_201_add_2_6/S1
-POPtimers/probe2/sub_201_add_2_6/S0
-POPtimers/probe2/sub_201_add_2_4/S1
-POPtimers/probe2/sub_201_add_2_4/S0
-POPtimers/probe2/sub_201_add_2_2/S1
-POPtimers/probe2/sub_201_add_2_2/S0
-POPtimers/probe2/sub_201_add_2_2/CI
-POPtimers/sample2/sub_205_add_2_6/S1
-POPtimers/sample2/sub_205_add_2_6/S0
-POPtimers/sample2/sub_205_add_2_8/S1
-POPtimers/sample2/sub_205_add_2_8/S0
-POPtimers/sample2/sub_205_add_2_10/S1
-POPtimers/sample2/sub_205_add_2_10/S0
-POPtimers/sample2/sub_205_add_2_12/S1
-POPtimers/sample2/sub_205_add_2_12/S0
-POPtimers/sample2/sub_205_add_2_14/S1
-POPtimers/sample2/sub_205_add_2_14/S0
-POPtimers/sample2/sub_205_add_2_16/S1
-POPtimers/sample2/sub_205_add_2_16/S0
-POPtimers/sample2/sub_205_add_2_cout/S1
-POPtimers/sample2/sub_205_add_2_cout/CO
-POPtimers/sample2/sub_205_add_2_2/S1
-POPtimers/sample2/sub_205_add_2_2/S0
-POPtimers/sample2/sub_205_add_2_2/CI
-POPtimers/sample2/sub_205_add_2_4/S1
-POPtimers/sample2/sub_205_add_2_4/S0
-POPtimers/systemcounter/count_258_add_4_17/S1
-POPtimers/systemcounter/count_258_add_4_17/CO
-POPtimers/systemcounter/count_258_add_4_1/S0
-POPtimers/systemcounter/count_258_add_4_1/CI
-POPtimers/add_831_14/CO
-POPtimers/add_831_2/S0
-POPtimers/add_831_2/CI
-POPtimers/add_830_14/CO
-POPtimers/add_830_2/S0
-POPtimers/add_830_2/CI
-POPtimers/add_829_14/CO
-POPtimers/add_829_2/S0
-POPtimers/add_829_2/CI
-POPtimers/add_336_add_1_15/S1
-POPtimers/add_336_add_1_15/CO
-POPtimers/add_336_add_1_1/S0
-POPtimers/add_336_add_1_1/CI
-POPtimers/add_325_add_1_15/S1
-POPtimers/add_325_add_1_15/CO
-POPtimers/add_325_add_1_1/S0
-POPtimers/add_325_add_1_1/CI
-POPtimers/add_828_14/CO
-POPtimers/add_828_2/S0
-POPtimers/add_828_2/CI
-POPtimers/add_349_1/S0
-POPtimers/add_349_1/CI
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_15/S1
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_15/CO
-POPtimers/Startof1stMWpulse_15__I_0_15/S1
-POPtimers/Startof1stMWpulse_15__I_0_15/CO
-POPtimers/add_339_add_1_15/S1
-POPtimers/add_339_add_1_15/CO
-POPtimers/add_336_add_2_1/S0
-POPtimers/add_336_add_2_1/CI
-POPtimers/add_827_2/S0
-POPtimers/add_827_2/CI
-POPtimers/add_339_add_1_1/S0
-POPtimers/add_339_add_1_1/CI
-POPtimers/add_336_add_2_15/S1
-POPtimers/add_336_add_2_15/CO
-POPtimers/add_335_827_add_1_1/S0
-POPtimers/add_335_827_add_1_1/CI
-POPtimers/add_335_827_add_1_15/S1
-POPtimers/add_335_827_add_1_15/CO
+slowclocks/count_259_add_4_1/S0
+slowclocks/count_259_add_4_1/CI
+slowclocks/count_259_add_4_23/CO
+POPtimers/MW2/sub_191_add_2_2/S1
+POPtimers/MW2/sub_191_add_2_2/S0
+POPtimers/MW2/sub_191_add_2_2/CI
+POPtimers/MW2/sub_191_add_2_4/S1
+POPtimers/MW2/sub_191_add_2_4/S0
+POPtimers/MW2/sub_191_add_2_6/S1
+POPtimers/MW2/sub_191_add_2_6/S0
+POPtimers/MW2/sub_191_add_2_8/S1
+POPtimers/MW2/sub_191_add_2_8/S0
+POPtimers/MW2/sub_191_add_2_10/S1
+POPtimers/MW2/sub_191_add_2_10/S0
+POPtimers/MW2/sub_191_add_2_12/S1
+POPtimers/MW2/sub_191_add_2_12/S0
+POPtimers/MW2/sub_191_add_2_14/S1
+POPtimers/MW2/sub_191_add_2_14/S0
+POPtimers/MW2/sub_191_add_2_16/S1
+POPtimers/MW2/sub_191_add_2_16/S0
+POPtimers/MW2/sub_191_add_2_cout/S1
+POPtimers/MW2/sub_191_add_2_cout/CO
+POPtimers/MW3/sub_193_add_2_2/S1
+POPtimers/MW3/sub_193_add_2_2/S0
+POPtimers/MW3/sub_193_add_2_2/CI
+POPtimers/MW3/sub_193_add_2_4/S1
+POPtimers/MW3/sub_193_add_2_4/S0
+POPtimers/MW3/sub_193_add_2_6/S1
+POPtimers/MW3/sub_193_add_2_6/S0
+POPtimers/MW3/sub_193_add_2_8/S1
+POPtimers/MW3/sub_193_add_2_8/S0
+POPtimers/MW3/sub_193_add_2_10/S1
+POPtimers/MW3/sub_193_add_2_10/S0
+POPtimers/MW3/sub_193_add_2_12/S1
+POPtimers/MW3/sub_193_add_2_12/S0
+POPtimers/MW3/sub_193_add_2_14/S1
+POPtimers/MW3/sub_193_add_2_14/S0
+POPtimers/MW3/sub_193_add_2_16/S1
+POPtimers/MW3/sub_193_add_2_16/S0
+POPtimers/MW3/sub_193_add_2_cout/S1
+POPtimers/MW3/sub_193_add_2_cout/CO
+POPtimers/MW4/sub_195_add_2_2/S1
+POPtimers/MW4/sub_195_add_2_2/S0
+POPtimers/MW4/sub_195_add_2_2/CI
+POPtimers/MW4/sub_195_add_2_4/S1
+POPtimers/MW4/sub_195_add_2_4/S0
+POPtimers/MW4/sub_195_add_2_6/S1
+POPtimers/MW4/sub_195_add_2_6/S0
+POPtimers/MW4/sub_195_add_2_8/S1
+POPtimers/MW4/sub_195_add_2_8/S0
+POPtimers/MW4/sub_195_add_2_10/S1
+POPtimers/MW4/sub_195_add_2_10/S0
+POPtimers/MW4/sub_195_add_2_12/S1
+POPtimers/MW4/sub_195_add_2_12/S0
+POPtimers/MW4/sub_195_add_2_14/S1
+POPtimers/MW4/sub_195_add_2_14/S0
+POPtimers/MW4/sub_195_add_2_16/S1
+POPtimers/MW4/sub_195_add_2_16/S0
+POPtimers/MW4/sub_195_add_2_cout/S1
+POPtimers/MW4/sub_195_add_2_cout/CO
+POPtimers/freepcounter/add_254_306_add_1_1/S1
+POPtimers/freepcounter/add_254_306_add_1_1/S0
+POPtimers/freepcounter/add_254_306_add_1_1/CI
+POPtimers/freepcounter/add_321_1/S0
+POPtimers/freepcounter/add_321_1/CI
+POPtimers/freepcounter/add_254_306_add_1_15/CO
+POPtimers/freepcounter/add_321_13/CO
+POPtimers/loopcounter/sub_205_add_2_2/S1
+POPtimers/loopcounter/sub_205_add_2_2/S0
+POPtimers/loopcounter/sub_205_add_2_2/CI
+POPtimers/loopcounter/sub_205_add_2_4/S1
+POPtimers/loopcounter/sub_205_add_2_4/S0
+POPtimers/loopcounter/sub_205_add_2_6/S1
+POPtimers/loopcounter/sub_205_add_2_6/S0
+POPtimers/loopcounter/sub_205_add_2_8/S1
+POPtimers/loopcounter/sub_205_add_2_8/S0
+POPtimers/loopcounter/sub_205_add_2_10/S1
+POPtimers/loopcounter/sub_205_add_2_10/S0
+POPtimers/loopcounter/sub_205_add_2_12/S1
+POPtimers/loopcounter/sub_205_add_2_12/S0
+POPtimers/loopcounter/sub_205_add_2_14/S1
+POPtimers/loopcounter/sub_205_add_2_14/S0
+POPtimers/loopcounter/sub_205_add_2_16/S1
+POPtimers/loopcounter/sub_205_add_2_16/S0
+POPtimers/loopcounter/sub_205_add_2_cout/S1
+POPtimers/loopcounter/sub_205_add_2_cout/CO
+POPtimers/piecounter/add_320_15/S1
+POPtimers/piecounter/add_320_15/CO
+POPtimers/piecounter/add_320_1/S0
+POPtimers/piecounter/add_320_1/CI
+POPtimers/piecounter/add_250_302_add_1_17/S1
+POPtimers/piecounter/add_250_302_add_1_17/CO
+POPtimers/piecounter/add_250_302_add_1_1/S1
+POPtimers/piecounter/add_250_302_add_1_1/S0
+POPtimers/piecounter/add_250_302_add_1_1/CI
+POPtimers/probe1/sub_197_add_2_6/S1
+POPtimers/probe1/sub_197_add_2_6/S0
+POPtimers/probe1/sub_197_add_2_8/S1
+POPtimers/probe1/sub_197_add_2_8/S0
+POPtimers/probe1/sub_197_add_2_10/S1
+POPtimers/probe1/sub_197_add_2_10/S0
+POPtimers/probe1/sub_197_add_2_12/S1
+POPtimers/probe1/sub_197_add_2_12/S0
+POPtimers/probe1/sub_197_add_2_14/S1
+POPtimers/probe1/sub_197_add_2_14/S0
+POPtimers/probe1/sub_197_add_2_16/S1
+POPtimers/probe1/sub_197_add_2_16/S0
+POPtimers/probe1/sub_197_add_2_cout/S1
+POPtimers/probe1/sub_197_add_2_cout/CO
+POPtimers/probe1/sub_197_add_2_2/S1
+POPtimers/probe1/sub_197_add_2_2/S0
+POPtimers/probe1/sub_197_add_2_2/CI
+POPtimers/probe1/sub_197_add_2_4/S1
+POPtimers/probe1/sub_197_add_2_4/S0
+POPtimers/probe2/sub_199_add_2_2/S1
+POPtimers/probe2/sub_199_add_2_2/S0
+POPtimers/probe2/sub_199_add_2_2/CI
+POPtimers/probe2/sub_199_add_2_4/S1
+POPtimers/probe2/sub_199_add_2_4/S0
+POPtimers/probe2/sub_199_add_2_6/S1
+POPtimers/probe2/sub_199_add_2_6/S0
+POPtimers/probe2/sub_199_add_2_8/S1
+POPtimers/probe2/sub_199_add_2_8/S0
+POPtimers/probe2/sub_199_add_2_10/S1
+POPtimers/probe2/sub_199_add_2_10/S0
+POPtimers/probe2/sub_199_add_2_12/S1
+POPtimers/probe2/sub_199_add_2_12/S0
+POPtimers/probe2/sub_199_add_2_14/S1
+POPtimers/probe2/sub_199_add_2_14/S0
+POPtimers/probe2/sub_199_add_2_16/S1
+POPtimers/probe2/sub_199_add_2_16/S0
+POPtimers/probe2/sub_199_add_2_cout/S1
+POPtimers/probe2/sub_199_add_2_cout/CO
+POPtimers/sample1/sub_201_add_2_2/S1
+POPtimers/sample1/sub_201_add_2_2/S0
+POPtimers/sample1/sub_201_add_2_2/CI
+POPtimers/sample1/sub_201_add_2_4/S1
+POPtimers/sample1/sub_201_add_2_4/S0
+POPtimers/sample1/sub_201_add_2_6/S1
+POPtimers/sample1/sub_201_add_2_6/S0
+POPtimers/sample1/sub_201_add_2_8/S1
+POPtimers/sample1/sub_201_add_2_8/S0
+POPtimers/sample1/sub_201_add_2_10/S1
+POPtimers/sample1/sub_201_add_2_10/S0
+POPtimers/sample1/sub_201_add_2_12/S1
+POPtimers/sample1/sub_201_add_2_12/S0
+POPtimers/sample1/sub_201_add_2_14/S1
+POPtimers/sample1/sub_201_add_2_14/S0
+POPtimers/sample1/sub_201_add_2_16/S1
+POPtimers/sample1/sub_201_add_2_16/S0
+POPtimers/sample1/sub_201_add_2_cout/S1
+POPtimers/sample1/sub_201_add_2_cout/CO
+POPtimers/sample2/sub_203_add_2_2/S1
+POPtimers/sample2/sub_203_add_2_2/S0
+POPtimers/sample2/sub_203_add_2_2/CI
+POPtimers/sample2/sub_203_add_2_4/S1
+POPtimers/sample2/sub_203_add_2_4/S0
+POPtimers/sample2/sub_203_add_2_6/S1
+POPtimers/sample2/sub_203_add_2_6/S0
+POPtimers/sample2/sub_203_add_2_8/S1
+POPtimers/sample2/sub_203_add_2_8/S0
+POPtimers/sample2/sub_203_add_2_10/S1
+POPtimers/sample2/sub_203_add_2_10/S0
+POPtimers/sample2/sub_203_add_2_12/S1
+POPtimers/sample2/sub_203_add_2_12/S0
+POPtimers/sample2/sub_203_add_2_14/S1
+POPtimers/sample2/sub_203_add_2_14/S0
+POPtimers/sample2/sub_203_add_2_16/S1
+POPtimers/sample2/sub_203_add_2_16/S0
+POPtimers/sample2/sub_203_add_2_cout/S1
+POPtimers/sample2/sub_203_add_2_cout/CO
+POPtimers/systemcounter/count_261_add_4_17/S1
+POPtimers/systemcounter/count_261_add_4_17/CO
+POPtimers/systemcounter/count_261_add_4_1/S0
+POPtimers/systemcounter/count_261_add_4_1/CI
+POPtimers/Endof1stMWpulse_15__I_0_rep_1_304_add_1_14/CO
+POPtimers/Endof1stMWpulse_15__I_0_rep_1_304_add_1_2/S0
+POPtimers/Endof1stMWpulse_15__I_0_rep_1_304_add_1_2/CI
+POPtimers/add_256_1/S0
+POPtimers/add_256_1/CI
+POPtimers/add_256_15/CO
+POPtimers/add_317_2/S0
+POPtimers/add_317_2/CI
+POPtimers/Endof1stMWpulse_15__I_0_14/CO
+POPtimers/Endof1stMWpulse_15__I_0_2/S0
+POPtimers/Endof1stMWpulse_15__I_0_2/CI
+POPtimers/Startofprobepulse_15__I_0_15/S1
+POPtimers/Startofprobepulse_15__I_0_15/CO
 POPtimers/Endofprobepulse_15__I_0_1/S0
 POPtimers/Endofprobepulse_15__I_0_1/CI
-POPtimers/add_827_14/CO
-POPtimers/add_339_add_2_1/S0
-POPtimers/add_339_add_2_1/CI
-POPtimers/add_349_13/CO
-POPtimers/Startof1stMWpulse_15__I_0_1/S0
-POPtimers/Startof1stMWpulse_15__I_0_1/CI
+POPtimers/add_317_16/CO
 POPtimers/Endofprobepulse_15__I_0_11/S1
 POPtimers/Endofprobepulse_15__I_0_11/CO
-POPtimers/add_339_add_2_15/S1
-POPtimers/add_339_add_2_15/CO
-POPtimers/add_328_13/CO
-POPtimers/add_328_1/S0
-POPtimers/add_328_1/CI
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_1/S0
-POPtimers/Startof1stMWpulse_15__I_0_rep_10_add_1_add_1_1/CI
+POPtimers/Startofprobepulse_15__I_0_28_13/S1
+POPtimers/Startofprobepulse_15__I_0_28_13/CO
+POPtimers/add_257_1/S0
+POPtimers/add_257_1/CI
+POPtimers/add_257_15/CO
+POPtimers/add_258_15/CO
+POPtimers/add_258_1/S0
+POPtimers/add_258_1/CI
+POPtimers/Startofprobepulse_15__I_0_28_1/S0
+POPtimers/Startofprobepulse_15__I_0_28_1/CI
+POPtimers/Startofprobepulse_15__I_0_1/S0
+POPtimers/Startofprobepulse_15__I_0_1/CI
 [ END CLIPPED ]
-[ START OSC ]
-debug_0_c 9.85
-[ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Tue Jan 17 11:04:51 2023
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Mon Jul 03 16:06:36 2023
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
-LOCATE COMP "MW_output" SITE "11" ;
-LOCATE COMP "pin5" SITE "20" ;
-LOCATE COMP "probe_output" SITE "10" ;
-LOCATE COMP "pump_output" SITE "9" ;
-LOCATE COMP "debug_2" SITE "8" ;
-LOCATE COMP "debug_1" SITE "5" ;
-LOCATE COMP "pin3_sn" SITE "16" ;
-LOCATE COMP "debug_0" SITE "4" ;
-LOCATE COMP "LED_output" SITE "13" ;
-LOCATE COMP "pin9_jtgnb" SITE "26" ;
-LOCATE COMP "sample_output" SITE "12" ;
 LOCATE COMP "mode_button" SITE "14" ;
+LOCATE COMP "sample_output" SITE "12" ;
+LOCATE COMP "MW_output" SITE "11" ;
+LOCATE COMP "probe_output" SITE "10" ;
+LOCATE COMP "pin5" SITE "20" ;
+LOCATE COMP "pump_output" SITE "9" ;
+LOCATE COMP "pin3_sn" SITE "16" ;
+LOCATE COMP "LED_output" SITE "13" ;
+LOCATE COMP "debug_18" SITE "8" ;
+LOCATE COMP "debug_17" SITE "5" ;
+LOCATE COMP "debug_16" SITE "4" ;
+LOCATE COMP "pin9_jtgnb" SITE "26" ;
 LOCATE COMP "load_default_button" SITE "17" ;
+LOCATE COMP "tenmegclock" SITE "21" ;
 LOCATE COMP "topleft_button" SITE "23" ;
 LOCATE COMP "topright_button" SITE "25" ;
 LOCATE COMP "bottomleft_button" SITE "27" ;
 LOCATE COMP "bottomright_button" SITE "28" ;
-FREQUENCY NET "clk_2M5" 2.500000 MHz ;
-FREQUENCY NET "debug_0_c" 9.850000 MHz ;
+FREQUENCY NET "debug_16_c" 2.500000 MHz ;
+FREQUENCY NET "tenmegclock_c" 10.000000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

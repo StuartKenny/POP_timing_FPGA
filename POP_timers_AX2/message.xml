@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="PARTrace">
-        <Message>
-            <ID>70061015</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>CLKOP</Dynamic>
-            <Dynamic>clocks/PLL/PLLInst_0</Dynamic>
-        </Message>
-    </Task>
     <Task name="Map">
-        <Message>
-            <ID>1100644</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf(28): Semantic error in &quot;IOBUF PORT &quot;tenmegclock&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
-            <Dynamic>tenmegclock</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf</Navigation>
-            <Navigation>28</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>tenmegclock</Dynamic>
-        </Message>
         <Message>
             <ID>51001030</ID>
             <Severity>Warning</Severity>
             <Dynamic>POPtimers/counterreset</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>tenmegclock</Dynamic>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -58,14 +31,6 @@
             <Dynamic>clocks</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v</Navigation>
             <Navigation>13</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
-            <Dynamic>OSCH(NOM_FREQ=&quot;9.85&quot;)</Dynamic>
-            <Navigation>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1793</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -156,17 +121,7 @@
             <Navigation>31</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>tenmegclock</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>tenmegclock</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
+            <ID>35935014</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): </Dynamic>
             <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
@@ -174,48 +129,44 @@
             <Navigation>35</Navigation>
         </Message>
         <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): </Dynamic>
+            <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
+            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>tenmegclock</Dynamic>
-            <Navigation>tenmegclock</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>tenmegclock</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
         <Message>
-            <ID>70061015</ID>
+            <ID>61091050</ID>
             <Severity>Warning</Severity>
-            <Dynamic>CLKOP</Dynamic>
+            <Dynamic>tenmegclock</Dynamic>
             <Dynamic>clocks/PLL/PLLInst_0</Dynamic>
+            <Dynamic>21</Dynamic>
+            <Dynamic>PR5C</Dynamic>
+        </Message>
+        <Message>
+            <ID>62061005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKI</Dynamic>
+            <Dynamic>tenmegclock_c</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=sampled_modebutton loads=2 clock_loads=2
-   Signal=debug_0_c loads=2 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=sampled_modebutton loads=2 clock_loads=2
-   Signal=debug_0_c loads=2 clock_loads=1</Dynamic>
+   Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

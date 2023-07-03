@@ -4,7 +4,7 @@ module TinyFPGA_A2 (
 	input mode_button, //pin 2, state select button - push to ground
 	inout pin3_sn,
 	input load_default_button, //pin 4, load defaults button - push to ground
-	inout pin5,
+	inout pin5, //pin 5, currently soldered to ground
 	input tenmegclock, //pin 6, 10MHz clock input
 	input topleft_button, //pin 7, load defaults button - push to ground
 	input topright_button, //pin 8, load defaults button - push to ground
@@ -18,9 +18,9 @@ module TinyFPGA_A2 (
 	//inout pin16,
 	//inout pin17,
 	//inout pin18_cs,
-	output debug_0, //pin16
-	output debug_1, //pin17
-	output debug_2, //pin18
+	output debug_16, //pin16, 2M5 clock
+	output debug_17, //pin17, STM32 ADC sample on rising edge 
+	output debug_18, //pin18, probe output
 	output reg pump_output, //pin 19
 	output reg probe_output, //pin 20
 	output reg MW_output, //pin 21
@@ -42,9 +42,9 @@ module TinyFPGA_A2 (
 	assign pin3_sn = 1'bz;
 	assign pin5 = 1'bz;
 	assign pin9_jtgnb = 1'bz;
-	assign debug_0 = clk_debug;
-	assign debug_1 = pump;
-	assign debug_2 = MW;	
+	assign debug_16 = clk_2M5;
+	assign debug_17 = sample_output;
+	assign debug_18 = probe_output;	
 
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
 	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 

@@ -1,0 +1,4 @@
+#Start recording tcl command: 5/4/2023 14:35:39
+#Project Location: C:/Users/sek529/Github/POP_timing_FPGA; Project name: POP_timer
+prj_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.ldf"
+#Stop recording: 5/4/2023 14:39:46

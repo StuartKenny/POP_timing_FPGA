@@ -3,13 +3,13 @@ Device = LCMXO2-1200HC;
 Package = QFN32;
 Performance = 4;
 LUTS_avail = 1280;
-LUTS_used = 516;
+LUTS_used = 427;
 FF_avail = 1302;
 FF_used = 102;
-INPUT_LVCMOS33 = 6;
+INPUT_LVCMOS33 = 7;
 OUTPUT_LVCMOS33 = 11;
 IO_avail = 22;
-IO_used = 17;
+IO_used = 18;
 EBR_avail = 7;
 EBR_used = 0;
 ; Begin PLL Section
