@@ -39,7 +39,6 @@
 "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v"
 "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v"
 "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v"
--top TinyFPGA_A2
 
 
 -p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2" "C:/Users/sek529/Github/POP_timing_FPGA"

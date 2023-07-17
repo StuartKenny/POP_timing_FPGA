@@ -17,9 +17,9 @@ LOCATE COMP "topright_button" SITE "25" ;//pin8
 LOCATE COMP "pin9_jtgnb" SITE "26" ;//pin9 - grounded on Veroboard
 LOCATE COMP "bottomleft_button" SITE "27" ;//pin10
 LOCATE COMP "bottomright_button" SITE "28" ;//pin11
-LOCATE COMP "debug_16" SITE "4" ;//pin16
-LOCATE COMP "debug_17" SITE "5" ;//pin17
-LOCATE COMP "debug_18" SITE "8" ;//pin18
+LOCATE COMP "MW_invalid" SITE "4" ;//pin16
+LOCATE COMP "ADC_sample" SITE "5" ;//pin17
+LOCATE COMP "laser_tuning" SITE "8" ;//pin18
 LOCATE COMP "pump_output" SITE "9" ;//pin19
 LOCATE COMP "probe_output" SITE "10" ;//pin20
 LOCATE COMP "MW_output" SITE "11" ;//pin21
@@ -32,14 +32,14 @@ IOBUF PORT "topleft_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
 IOBUF PORT "topright_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
 IOBUF PORT "bottomleft_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
 IOBUF PORT "bottomright_button" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+IOBUF PORT "MW_invalid" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;
+IOBUF PORT "laser_tuning" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;
 //outputs
 IOBUF PORT "LED_output" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "pin3_sn" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "pin5" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "pin9_jtgnb" IO_TYPE=LVCMOS33 ;
-IOBUF PORT "debug_16" IO_TYPE=LVCMOS33 ;
-IOBUF PORT "debug_17" IO_TYPE=LVCMOS33 ;
-IOBUF PORT "debug_18" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "ADC_sample" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "pump_output" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "probe_output" IO_TYPE=LVCMOS33 ;
 IOBUF PORT "MW_output" IO_TYPE=LVCMOS33 ;

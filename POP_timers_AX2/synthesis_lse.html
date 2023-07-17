@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Jul 03 15:50:23 2023
+Mon Jul 17 10:58:37 2023
 
 
 Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml 
@@ -44,7 +44,7 @@ Using performance grade 4.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Balanced
-Top-level module name = TinyFPGA_A2.
+The -top option is not used.
 Target frequency = 10.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3 (default)
@@ -87,6 +87,7 @@ NGD file = POP_timer_POP_timers_AX2.ngd
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING - synthesis: Setting TinyFPGA_A2 as the top-level module. To specify the top-level module explicitly, use the -top option.
 Technology check ok...
 
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
@@ -125,9 +126,11 @@ Top-level module name = TinyFPGA_A2.
 ######## Converting I/O port pin3_sn to output.
 ######## Converting I/O port pin5 to output.
 ######## Converting I/O port pin9_jtgnb to output.
+WARNING - synthesis: I/O Port laser_tuning 's net has no driver and is unused.
 
 
 
+WARNING - synthesis: I/O Port laser_tuning 's net has no driver and is unused.
 WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): Register \POPtimers/piecounter/count_i0 is stuck at One. VDB-5014
 WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): Register \POPtimers/freepcounter/count_i0 is stuck at Zero. VDB-5013
 Applying 10.000000 MHz constraint to all clocks
@@ -138,22 +141,25 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'laser_tuning' has no load.
+WARNING - synthesis: input pad net 'laser_tuning' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file POP_timer_POP_timers_AX2.ngd.
 
 ################### Begin Area Report (TinyFPGA_A2)######################
-Number of register bits => 102 of 1346 (7 % )
+Number of register bits => 103 of 1346 (7 % )
 CCU2D => 192
 EHXPLLJ => 1
-FD1S3AX => 49
+FD1S3AX => 50
 FD1S3DX => 16
 FD1S3IX => 23
 FD1S3JX => 14
 GSR => 1
-IB => 7
+IB => 8
 INV => 1
-LUT4 => 42
-OB => 8
+LUT4 => 40
+OB => 6
 OBZ => 3
 PFUMX => 3
 ################### End Area Report ##################
@@ -165,7 +171,7 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 6
-  Net : clocks/PLL/debug_16_c, loads : 50
+  Net : clocks/PLL/clk_2M5, loads : 50
   Net : POPtimers/piecounter/clean_trigger/trigger, loads : 15
   Net : POPtimers/freepcounter/clean_trigger/trigger, loads : 14
   Net : slowclocks/debounce_pulse, loads : 7
@@ -181,11 +187,11 @@ Top 10 highest fanout non-clock nets:
   Net : freeprecess_plus, loads : 16
   Net : POPtimers/counterreset, loads : 16
   Net : pieovertwo_minus, loads : 15
-  Net : clocks/PLL/clk_2M5_N_53, loads : 14
+  Net : clocks/PLL/clk_2M5_N_56, loads : 14
   Net : freeprecess_minus, loads : 13
-  Net : statemachine/SMstate_2, loads : 12
-  Net : statemachine/SMstate_1, loads : 12
+  Net : statemachine/SMstate_1, loads : 11
   Net : statemachine/SMstate_0, loads : 11
+  Net : statemachine/SMstate_2, loads : 10
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -195,18 +201,18 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk4 [get_nets                          |             |             |
-\POPtimers/piecounter/trigger]          |   10.000 MHz|  148.412 MHz|    10  
+clk4 [get_nets sampled_modebutton]      |   10.000 MHz|  245.761 MHz|     2  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk3 [get_nets sampled_modebutton]      |   10.000 MHz|  237.192 MHz|     2  
+clk3 [get_nets                          |             |             |
+\POPtimers/piecounter/trigger]          |   10.000 MHz|  148.412 MHz|    10  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
 clk2 [get_nets                          |             |             |
 \POPtimers/freepcounter/trigger]        |   10.000 MHz|  150.943 MHz|     9  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk1 [get_nets debug_16_c]              |   10.000 MHz|   42.568 MHz|     9  
+clk1 [get_nets clk_2M5]                 |   10.000 MHz|   50.100 MHz|    14  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
 clk0 [get_nets debounce_pulse]          |            -|            -|     0  
@@ -217,10 +223,10 @@ clk0 [get_nets debounce_pulse]          |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 58.547  MB
+Peak Memory Usage: 59.734  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.781  secs
+Elapsed CPU time for LSE flow : 1.016  secs
 --------------------------------------------------------------
 
 

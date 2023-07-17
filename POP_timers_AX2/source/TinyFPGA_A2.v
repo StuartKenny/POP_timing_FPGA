@@ -18,9 +18,9 @@ module TinyFPGA_A2 (
 	//inout pin16,
 	//inout pin17,
 	//inout pin18_cs,
-	output debug_16, //pin16, 2M5 clock
-	output debug_17, //pin17, STM32 ADC sample on rising edge 
-	output debug_18, //pin18, probe output
+	input MW_invalid, //pin16, STM32 request to suppress activity on ADC sample
+	output reg ADC_sample, //pin17, STM32 ADC sample on rising edge 
+	input laser_tuning, //pin18, STM32 request to perform laser frequency setup
 	output reg pump_output, //pin 19
 	output reg probe_output, //pin 20
 	output reg MW_output, //pin 21
@@ -42,9 +42,12 @@ module TinyFPGA_A2 (
 	assign pin3_sn = 1'bz;
 	assign pin5 = 1'bz;
 	assign pin9_jtgnb = 1'bz;
-	assign debug_16 = clk_2M5;
-	assign debug_17 = sample_output;
-	assign debug_18 = probe_output;	
+	
+	//The following combinatorial logic is synchronised to a positive clock edge
+	always@(posedge clk_2M5) 
+	begin
+		ADC_sample <= sample&!MW_invalid; //suppress ADC trigger pulse when MW_invalid is high
+	end
 
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
 	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 

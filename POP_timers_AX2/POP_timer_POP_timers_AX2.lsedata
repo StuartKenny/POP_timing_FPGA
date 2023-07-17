@@ -2,10 +2,10 @@
 
 <clocks>
     <clockitem name = "POPtimers/piecounter/trigger"  type = "net" />
-    <clockitem name = "tenmegclock"  type = "port" />
     <clockitem name = "debounce_pulse"  type = "net" />
     <clockitem name = "sampled_modebutton"  type = "net" />
-    <clockitem name = "debug_16"  type = "net" />
+    <clockitem name = "clk_2M5"  type = "net" />
+    <clockitem name = "tenmegclock"  type = "port" />
     <clockitem name = "POPtimers/freepcounter/trigger"  type = "net" />
 </clocks>
 
@@ -39,9 +39,9 @@
         <pitem  name = "pin9_jtgnb"  direction = "inout"  />
         <pitem  name = "bottomleft_button"  direction = "in"  />
         <pitem  name = "bottomright_button"  direction = "in"  />
-        <pitem  name = "debug_16"  direction = "out"  />
-        <pitem  name = "debug_17"  direction = "out"  />
-        <pitem  name = "debug_18"  direction = "out"  />
+        <pitem  name = "MW_invalid"  direction = "in"  />
+        <pitem  name = "ADC_sample"  direction = "out"  />
+        <pitem  name = "laser_tuning"  direction = "in"  />
         <pitem  name = "pump_output"  direction = "out"  />
         <pitem  name = "probe_output"  direction = "out"  />
         <pitem  name = "MW_output"  direction = "out"  />
@@ -49,7 +49,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 162
+        Instances in netlist: 165
     -->
 
     <instance  name = "POPtimers/Endof2ndMWpulse_15__I_0"  library = "work"  arch = ""  type = "comb">
@@ -578,6 +578,49 @@
         </nets>
     </instance>
 
+    <instance  name = "MW_invalid_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "MW_invalid"  />
+        <nitem  name = "MW_invalid_N_19"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sample_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sample"  />
+        <nitem  name = "MW_invalid_N_19"  />
+        <nitem  name = "ADC_sample_N_17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sampled_modebutton_72"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mode_button_N_44"  />
+        <nitem  name = "debounce_pulse"  />
+        <nitem  name = "n2"  />
+        <nitem  name = "sampled_modebutton"  />
+        </nets>
+    </instance>
+
     <instance  name = "mode_button_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
@@ -586,7 +629,7 @@
 
         <nets>
         <nitem  name = "mode_button"  />
-        <nitem  name = "mode_button_N_41"  />
+        <nitem  name = "mode_button_N_44"  />
         </nets>
     </instance>
 
@@ -598,7 +641,7 @@
 
         <nets>
         <nitem  name = "load_default_button"  />
-        <nitem  name = "load_default_button_N_43"  />
+        <nitem  name = "load_default_button_N_46"  />
         </nets>
     </instance>
 
@@ -610,7 +653,7 @@
 
         <nets>
         <nitem  name = "topleft_button"  />
-        <nitem  name = "topleft_button_N_45"  />
+        <nitem  name = "topleft_button_N_48"  />
         </nets>
     </instance>
 
@@ -622,7 +665,7 @@
 
         <nets>
         <nitem  name = "topright_button"  />
-        <nitem  name = "topright_button_N_47"  />
+        <nitem  name = "topright_button_N_50"  />
         </nets>
     </instance>
 
@@ -634,7 +677,7 @@
 
         <nets>
         <nitem  name = "bottomleft_button"  />
-        <nitem  name = "bottomleft_button_N_49"  />
+        <nitem  name = "bottomleft_button_N_52"  />
         </nets>
     </instance>
 
@@ -646,11 +689,11 @@
 
         <nets>
         <nitem  name = "bottomright_button"  />
-        <nitem  name = "bottomright_button_N_51"  />
+        <nitem  name = "bottomright_button_N_54"  />
         </nets>
     </instance>
 
-    <instance  name = "load_defaults_69"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "load_defaults_73"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -660,14 +703,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "load_default_button_N_43"  />
+        <nitem  name = "load_default_button_N_46"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
         <nitem  name = "load_defaults"  />
         </nets>
     </instance>
 
-    <instance  name = "pieovertwo_plus_70"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "pieovertwo_plus_74"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -677,14 +720,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "topleft_button_N_45"  />
+        <nitem  name = "topleft_button_N_48"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
         <nitem  name = "pieovertwo_plus"  />
         </nets>
     </instance>
 
-    <instance  name = "freeprecess_plus_71"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "freeprecess_plus_75"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -694,14 +737,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "topright_button_N_47"  />
+        <nitem  name = "topright_button_N_50"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
         <nitem  name = "freeprecess_plus"  />
         </nets>
     </instance>
 
-    <instance  name = "pieovertwo_minus_72"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "pieovertwo_minus_76"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -711,14 +754,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "bottomleft_button_N_49"  />
+        <nitem  name = "bottomleft_button_N_52"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
         <nitem  name = "pieovertwo_minus"  />
         </nets>
     </instance>
 
-    <instance  name = "freeprecess_minus_73"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "freeprecess_minus_77"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -728,14 +771,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "bottomright_button_N_51"  />
+        <nitem  name = "bottomright_button_N_54"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
         <nitem  name = "freeprecess_minus"  />
         </nets>
     </instance>
 
-    <instance  name = "LED_output_74"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "LED_output_78"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -746,7 +789,7 @@
 
         <nets>
         <nitem  name = "LED_output_N_1"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output"  />
         </nets>
@@ -830,7 +873,7 @@
         </nets>
     </instance>
 
-    <instance  name = "SMstate_2__I_0_85"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "SMstate_2__I_0_89"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -909,7 +952,7 @@
         </nets>
     </instance>
 
-    <instance  name = "SMstate_2__I_0_84"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "SMstate_2__I_0_88"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -988,7 +1031,7 @@
         </nets>
     </instance>
 
-    <instance  name = "SMstate_2__I_0_83"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "SMstate_2__I_0_87"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -1067,7 +1110,7 @@
         </nets>
     </instance>
 
-    <instance  name = "SMstate_2__I_0_82"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "SMstate_2__I_0_86"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -1160,7 +1203,7 @@
         </nets>
     </instance>
 
-    <instance  name = "SMstate_2__I_0_81"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "SMstate_2__I_0_85"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -1239,7 +1282,7 @@
         </nets>
     </instance>
 
-    <instance  name = "slow_pulse_I_0_80"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "slow_pulse_I_0_84"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1253,7 +1296,7 @@
         </nets>
     </instance>
 
-    <instance  name = "slow_pulse_I_0_79"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "slow_pulse_I_0_83"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1309,7 +1352,7 @@
         <nitem  name = "pump"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_10"  />
-        <nitem  name = "pump_output_N_33"  />
+        <nitem  name = "pump_output_N_25"  />
         </nets>
     </instance>
 
@@ -1325,7 +1368,7 @@
         <nitem  name = "probe"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_10"  />
-        <nitem  name = "debug_18_N_27"  />
+        <nitem  name = "probe_output_N_31"  />
         </nets>
     </instance>
 
@@ -1341,7 +1384,7 @@
         <nitem  name = "MW"  />
         <nitem  name = "slow_pulse"  />
         <nitem  name = "LED_output_N_10"  />
-        <nitem  name = "MW_output_N_39"  />
+        <nitem  name = "MW_output_N_37"  />
         </nets>
     </instance>
 
@@ -1361,7 +1404,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pump_output_I_16"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pump_output_I_10"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1370,14 +1413,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_33"  />
+        <nitem  name = "pump_output_N_25"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_12"  />
-        <nitem  name = "pump_output_N_32"  />
+        <nitem  name = "pump_output_N_24"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_18_I_12"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "probe_output_I_14"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1386,14 +1429,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_27"  />
+        <nitem  name = "probe_output_N_31"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_12"  />
-        <nitem  name = "debug_18_N_26"  />
+        <nitem  name = "probe_output_N_30"  />
         </nets>
     </instance>
 
-    <instance  name = "MW_output_I_20"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "MW_output_I_18"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1402,10 +1445,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_39"  />
+        <nitem  name = "MW_output_N_37"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_12"  />
-        <nitem  name = "MW_output_N_38"  />
+        <nitem  name = "MW_output_N_36"  />
         </nets>
     </instance>
 
@@ -1425,7 +1468,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pump_output_I_15"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pump_output_I_9"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1434,14 +1477,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_32"  />
+        <nitem  name = "pump_output_N_24"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_13"  />
-        <nitem  name = "pump_output_N_31"  />
+        <nitem  name = "pump_output_N_23"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_18_I_11"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "probe_output_I_13"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1450,14 +1493,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_26"  />
+        <nitem  name = "probe_output_N_30"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_13"  />
-        <nitem  name = "debug_18_N_25"  />
+        <nitem  name = "probe_output_N_29"  />
         </nets>
     </instance>
 
-    <instance  name = "MW_output_I_19"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "MW_output_I_17"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1466,10 +1509,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_38"  />
+        <nitem  name = "MW_output_N_36"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_13"  />
-        <nitem  name = "MW_output_N_37"  />
+        <nitem  name = "MW_output_N_35"  />
         </nets>
     </instance>
 
@@ -1481,7 +1524,7 @@
 
         <nets>
         <nitem  name = "LED_output_N_13"  />
-        <nitem  name = "LED_output_N_21"  />
+        <nitem  name = "LED_output_N_42"  />
         </nets>
     </instance>
 
@@ -1501,7 +1544,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pump_output_I_14"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pump_output_I_8"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1510,14 +1553,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_31"  />
+        <nitem  name = "pump_output_N_23"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_14"  />
-        <nitem  name = "pump_output_N_30"  />
+        <nitem  name = "pump_output_N_22"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_18_I_10"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "probe_output_I_12"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1526,14 +1569,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_25"  />
+        <nitem  name = "probe_output_N_29"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_14"  />
-        <nitem  name = "debug_18_N_24"  />
+        <nitem  name = "probe_output_N_28"  />
         </nets>
     </instance>
 
-    <instance  name = "MW_output_I_18"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "MW_output_I_16"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1542,14 +1585,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_37"  />
+        <nitem  name = "MW_output_N_35"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_14"  />
-        <nitem  name = "MW_output_N_36"  />
+        <nitem  name = "MW_output_N_34"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_17_I_8"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "sample_output_I_20"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1558,10 +1601,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "LED_output_N_21"  />
+        <nitem  name = "LED_output_N_42"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_14"  />
-        <nitem  name = "debug_17_N_19"  />
+        <nitem  name = "sample_output_N_40"  />
         </nets>
     </instance>
 
@@ -1581,7 +1624,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pump_output_I_13"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pump_output_I_7"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1590,14 +1633,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_30"  />
+        <nitem  name = "pump_output_N_22"  />
         <nitem  name = "pump"  />
         <nitem  name = "LED_output_N_15"  />
-        <nitem  name = "pump_output_N_29"  />
+        <nitem  name = "pump_output_N_21"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_18_I_9"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "probe_output_I_11"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1606,14 +1649,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_24"  />
+        <nitem  name = "probe_output_N_28"  />
         <nitem  name = "probe"  />
         <nitem  name = "LED_output_N_15"  />
-        <nitem  name = "debug_18_N_23"  />
+        <nitem  name = "probe_output_N_27"  />
         </nets>
     </instance>
 
-    <instance  name = "MW_output_I_17"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "MW_output_I_15"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1622,14 +1665,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_36"  />
+        <nitem  name = "MW_output_N_34"  />
         <nitem  name = "MW"  />
         <nitem  name = "LED_output_N_15"  />
-        <nitem  name = "MW_output_N_35"  />
+        <nitem  name = "MW_output_N_33"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_17_I_7"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "sample_output_I_19"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1638,10 +1681,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_17_N_19"  />
+        <nitem  name = "sample_output_N_40"  />
         <nitem  name = "sample"  />
         <nitem  name = "LED_output_N_15"  />
-        <nitem  name = "debug_17_N_18"  />
+        <nitem  name = "sample_output_N_39"  />
         </nets>
     </instance>
 
@@ -1670,14 +1713,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_29"  />
+        <nitem  name = "pump_output_N_21"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_16"  />
-        <nitem  name = "pump_output_N_28"  />
+        <nitem  name = "pump_output_N_20"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_18_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "probe_output_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1686,10 +1729,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_23"  />
+        <nitem  name = "probe_output_N_27"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_16"  />
-        <nitem  name = "debug_18_N_22"  />
+        <nitem  name = "probe_output_N_26"  />
         </nets>
     </instance>
 
@@ -1702,14 +1745,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_35"  />
+        <nitem  name = "MW_output_N_33"  />
         <nitem  name = "n2"  />
         <nitem  name = "LED_output_N_16"  />
-        <nitem  name = "MW_output_N_34"  />
+        <nitem  name = "MW_output_N_32"  />
         </nets>
     </instance>
 
-    <instance  name = "debug_17_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "sample_output_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1718,14 +1761,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_17_N_18"  />
+        <nitem  name = "sample_output_N_39"  />
         <nitem  name = "pwr"  />
         <nitem  name = "LED_output_N_16"  />
-        <nitem  name = "debug_17_N_17"  />
+        <nitem  name = "sample_output_N_38"  />
         </nets>
     </instance>
 
-    <instance  name = "pump_output_75"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "pump_output_79"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1735,14 +1778,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "pump_output_N_28"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "pump_output_N_20"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "pump_output"  />
         </nets>
     </instance>
 
-    <instance  name = "probe_output_76"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "probe_output_80"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1752,14 +1795,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_18_N_22"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "probe_output_N_26"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
-        <nitem  name = "debug_18"  />
+        <nitem  name = "probe_output"  />
         </nets>
     </instance>
 
-    <instance  name = "MW_output_77"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "MW_output_81"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1769,14 +1812,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "MW_output_N_34"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "MW_output_N_32"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
         <nitem  name = "MW_output"  />
         </nets>
     </instance>
 
-    <instance  name = "sample_output_78"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "sample_output_82"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1786,10 +1829,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_17_N_17"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "sample_output_N_38"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
-        <nitem  name = "debug_17"  />
+        <nitem  name = "sample_output"  />
         </nets>
     </instance>
 
@@ -1884,7 +1927,7 @@
         </nets>
     </instance>
 
-    <instance  name = "sampled_modebutton_68"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "ADC_sample_71"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1894,10 +1937,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "mode_button_N_41"  />
-        <nitem  name = "debounce_pulse"  />
+        <nitem  name = "ADC_sample_N_17"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "n2"  />
-        <nitem  name = "sampled_modebutton"  />
+        <nitem  name = "ADC_sample"  />
         </nets>
     </instance>
 
@@ -2195,8 +2238,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "debug_16"  />
-        <nitem  name = "POPtimers/clk_2M5_N_53"  />
+        <nitem  name = "clk_2M5"  />
+        <nitem  name = "POPtimers/clk_2M5_N_56"  />
         </nets>
     </instance>
 
@@ -2208,7 +2251,7 @@
 
         <nets>
         <nitem  name = "POPtimers/pumpstopped"  />
-        <nitem  name = "POPtimers/pumpstopped_N_55"  />
+        <nitem  name = "POPtimers/pumpstopped_N_58"  />
         </nets>
     </instance>
 
@@ -2222,7 +2265,7 @@
         <nets>
         <nitem  name = "pump"  />
         <nitem  name = "POPtimers/pumpstarted"  />
-        <nitem  name = "POPtimers/pumpstopped_N_55"  />
+        <nitem  name = "POPtimers/pumpstopped_N_58"  />
         </nets>
     </instance>
 
@@ -2234,7 +2277,7 @@
 
         <nets>
         <nitem  name = "POPtimers/pi1stopped"  />
-        <nitem  name = "POPtimers/pi1stopped_N_60"  />
+        <nitem  name = "POPtimers/pi1stopped_N_63"  />
         </nets>
     </instance>
 
@@ -2247,8 +2290,8 @@
 
         <nets>
         <nitem  name = "POPtimers/pi1started"  />
-        <nitem  name = "POPtimers/pi1stopped_N_60"  />
-        <nitem  name = "POPtimers/MW_N_58"  />
+        <nitem  name = "POPtimers/pi1stopped_N_63"  />
+        <nitem  name = "POPtimers/MW_N_61"  />
         </nets>
     </instance>
 
@@ -2260,7 +2303,7 @@
 
         <nets>
         <nitem  name = "POPtimers/pi2stopped"  />
-        <nitem  name = "POPtimers/pi2stopped_N_63"  />
+        <nitem  name = "POPtimers/pi2stopped_N_66"  />
         </nets>
     </instance>
 
@@ -2273,8 +2316,8 @@
 
         <nets>
         <nitem  name = "POPtimers/pi2started"  />
-        <nitem  name = "POPtimers/pi2stopped_N_63"  />
-        <nitem  name = "POPtimers/MW_N_61"  />
+        <nitem  name = "POPtimers/pi2stopped_N_66"  />
+        <nitem  name = "POPtimers/MW_N_64"  />
         </nets>
     </instance>
 
@@ -2287,8 +2330,8 @@
 
         <nets>
         <nitem  name = "MW"  />
-        <nitem  name = "POPtimers/MW_N_58"  />
         <nitem  name = "POPtimers/MW_N_61"  />
+        <nitem  name = "POPtimers/MW_N_64"  />
         </nets>
     </instance>
 
@@ -2300,7 +2343,7 @@
 
         <nets>
         <nitem  name = "POPtimers/probestopped"  />
-        <nitem  name = "POPtimers/probestopped_N_57"  />
+        <nitem  name = "POPtimers/probestopped_N_60"  />
         </nets>
     </instance>
 
@@ -2314,7 +2357,7 @@
         <nets>
         <nitem  name = "probe"  />
         <nitem  name = "POPtimers/probestarted"  />
-        <nitem  name = "POPtimers/probestopped_N_57"  />
+        <nitem  name = "POPtimers/probestopped_N_60"  />
         </nets>
     </instance>
 
@@ -2326,7 +2369,7 @@
 
         <nets>
         <nitem  name = "POPtimers/samplestopped"  />
-        <nitem  name = "POPtimers/samplestopped_N_65"  />
+        <nitem  name = "POPtimers/samplestopped_N_68"  />
         </nets>
     </instance>
 
@@ -2340,7 +2383,7 @@
         <nets>
         <nitem  name = "sample"  />
         <nitem  name = "POPtimers/samplestarted"  />
-        <nitem  name = "POPtimers/samplestopped_N_65"  />
+        <nitem  name = "POPtimers/samplestopped_N_68"  />
         </nets>
     </instance>
 
@@ -2447,7 +2490,7 @@
         <nitem  name = "POPtimers/gatedcount[2]"  />
         <nitem  name = "POPtimers/gatedcount[1]"  />
         <nitem  name = "POPtimers/gatedcount[0]"  />
-        <nitem  name = "POPtimers/clk_2M5_N_53"  />
+        <nitem  name = "POPtimers/clk_2M5_N_56"  />
         </nets>
     </instance>
 
@@ -2551,29 +2594,29 @@
         <nitem  name = "slowclocks/count[2]"  />
         <nitem  name = "slowclocks/count[1]"  />
         <nitem  name = "slowclocks/count[0]"  />
-        <nitem  name = "slowclocks/count_20__N_150[22]"  />
-        <nitem  name = "slowclocks/count_20__N_150[21]"  />
-        <nitem  name = "slowclocks/count_20__N_150[20]"  />
-        <nitem  name = "slowclocks/count_20__N_150[19]"  />
-        <nitem  name = "slowclocks/count_20__N_150[18]"  />
-        <nitem  name = "slowclocks/count_20__N_150[17]"  />
-        <nitem  name = "slowclocks/count_20__N_150[16]"  />
-        <nitem  name = "slowclocks/count_20__N_150[15]"  />
-        <nitem  name = "slowclocks/count_20__N_150[14]"  />
-        <nitem  name = "slowclocks/count_20__N_150[13]"  />
-        <nitem  name = "slowclocks/count_20__N_150[12]"  />
-        <nitem  name = "slowclocks/count_20__N_150[11]"  />
-        <nitem  name = "slowclocks/count_20__N_150[10]"  />
-        <nitem  name = "slowclocks/count_20__N_150[9]"  />
-        <nitem  name = "slowclocks/count_20__N_150[8]"  />
-        <nitem  name = "slowclocks/count_20__N_150[7]"  />
-        <nitem  name = "slowclocks/count_20__N_150[6]"  />
-        <nitem  name = "slowclocks/count_20__N_150[5]"  />
-        <nitem  name = "slowclocks/count_20__N_150[4]"  />
-        <nitem  name = "slowclocks/count_20__N_150[3]"  />
-        <nitem  name = "slowclocks/count_20__N_150[2]"  />
-        <nitem  name = "slowclocks/count_20__N_150[1]"  />
-        <nitem  name = "slowclocks/count_20__N_150[0]"  />
+        <nitem  name = "slowclocks/count_20__N_153[22]"  />
+        <nitem  name = "slowclocks/count_20__N_153[21]"  />
+        <nitem  name = "slowclocks/count_20__N_153[20]"  />
+        <nitem  name = "slowclocks/count_20__N_153[19]"  />
+        <nitem  name = "slowclocks/count_20__N_153[18]"  />
+        <nitem  name = "slowclocks/count_20__N_153[17]"  />
+        <nitem  name = "slowclocks/count_20__N_153[16]"  />
+        <nitem  name = "slowclocks/count_20__N_153[15]"  />
+        <nitem  name = "slowclocks/count_20__N_153[14]"  />
+        <nitem  name = "slowclocks/count_20__N_153[13]"  />
+        <nitem  name = "slowclocks/count_20__N_153[12]"  />
+        <nitem  name = "slowclocks/count_20__N_153[11]"  />
+        <nitem  name = "slowclocks/count_20__N_153[10]"  />
+        <nitem  name = "slowclocks/count_20__N_153[9]"  />
+        <nitem  name = "slowclocks/count_20__N_153[8]"  />
+        <nitem  name = "slowclocks/count_20__N_153[7]"  />
+        <nitem  name = "slowclocks/count_20__N_153[6]"  />
+        <nitem  name = "slowclocks/count_20__N_153[5]"  />
+        <nitem  name = "slowclocks/count_20__N_153[4]"  />
+        <nitem  name = "slowclocks/count_20__N_153[3]"  />
+        <nitem  name = "slowclocks/count_20__N_153[2]"  />
+        <nitem  name = "slowclocks/count_20__N_153[1]"  />
+        <nitem  name = "slowclocks/count_20__N_153[0]"  />
         </nets>
     </instance>
 
@@ -2676,7 +2719,7 @@
 
         <nets>
         <nitem  name = "slowclocks/gnd"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "fast_pulse"  />
         <nitem  name = "medium_pulse"  />
@@ -2700,29 +2743,29 @@
         <nitem  name = "slowclocks/count[2]"  />
         <nitem  name = "slowclocks/count[1]"  />
         <nitem  name = "slowclocks/count[0]"  />
-        <nitem  name = "slowclocks/count_20__N_150[22]"  />
-        <nitem  name = "slowclocks/count_20__N_150[21]"  />
-        <nitem  name = "slowclocks/count_20__N_150[20]"  />
-        <nitem  name = "slowclocks/count_20__N_150[19]"  />
-        <nitem  name = "slowclocks/count_20__N_150[18]"  />
-        <nitem  name = "slowclocks/count_20__N_150[17]"  />
-        <nitem  name = "slowclocks/count_20__N_150[16]"  />
-        <nitem  name = "slowclocks/count_20__N_150[15]"  />
-        <nitem  name = "slowclocks/count_20__N_150[14]"  />
-        <nitem  name = "slowclocks/count_20__N_150[13]"  />
-        <nitem  name = "slowclocks/count_20__N_150[12]"  />
-        <nitem  name = "slowclocks/count_20__N_150[11]"  />
-        <nitem  name = "slowclocks/count_20__N_150[10]"  />
-        <nitem  name = "slowclocks/count_20__N_150[9]"  />
-        <nitem  name = "slowclocks/count_20__N_150[8]"  />
-        <nitem  name = "slowclocks/count_20__N_150[7]"  />
-        <nitem  name = "slowclocks/count_20__N_150[6]"  />
-        <nitem  name = "slowclocks/count_20__N_150[5]"  />
-        <nitem  name = "slowclocks/count_20__N_150[4]"  />
-        <nitem  name = "slowclocks/count_20__N_150[3]"  />
-        <nitem  name = "slowclocks/count_20__N_150[2]"  />
-        <nitem  name = "slowclocks/count_20__N_150[1]"  />
-        <nitem  name = "slowclocks/count_20__N_150[0]"  />
+        <nitem  name = "slowclocks/count_20__N_153[22]"  />
+        <nitem  name = "slowclocks/count_20__N_153[21]"  />
+        <nitem  name = "slowclocks/count_20__N_153[20]"  />
+        <nitem  name = "slowclocks/count_20__N_153[19]"  />
+        <nitem  name = "slowclocks/count_20__N_153[18]"  />
+        <nitem  name = "slowclocks/count_20__N_153[17]"  />
+        <nitem  name = "slowclocks/count_20__N_153[16]"  />
+        <nitem  name = "slowclocks/count_20__N_153[15]"  />
+        <nitem  name = "slowclocks/count_20__N_153[14]"  />
+        <nitem  name = "slowclocks/count_20__N_153[13]"  />
+        <nitem  name = "slowclocks/count_20__N_153[12]"  />
+        <nitem  name = "slowclocks/count_20__N_153[11]"  />
+        <nitem  name = "slowclocks/count_20__N_153[10]"  />
+        <nitem  name = "slowclocks/count_20__N_153[9]"  />
+        <nitem  name = "slowclocks/count_20__N_153[8]"  />
+        <nitem  name = "slowclocks/count_20__N_153[7]"  />
+        <nitem  name = "slowclocks/count_20__N_153[6]"  />
+        <nitem  name = "slowclocks/count_20__N_153[5]"  />
+        <nitem  name = "slowclocks/count_20__N_153[4]"  />
+        <nitem  name = "slowclocks/count_20__N_153[3]"  />
+        <nitem  name = "slowclocks/count_20__N_153[2]"  />
+        <nitem  name = "slowclocks/count_20__N_153[1]"  />
+        <nitem  name = "slowclocks/count_20__N_153[0]"  />
         </nets>
     </instance>
 
@@ -2744,7 +2787,7 @@
         <nitem  name = "SMstate[2]"  />
         <nitem  name = "SMstate[1]"  />
         <nitem  name = "SMstate[0]"  />
-        <nitem  name = "statemachine/state_2__N_179"  />
+        <nitem  name = "statemachine/state_2__N_182"  />
         </nets>
     </instance>
 
@@ -2768,9 +2811,9 @@
         <nitem  name = "SMstate[2]"  />
         <nitem  name = "SMstate[1]"  />
         <nitem  name = "SMstate[0]"  />
-        <nitem  name = "statemachine/state_2__N_176[2]"  />
-        <nitem  name = "statemachine/state_2__N_176[1]"  />
-        <nitem  name = "statemachine/state_2__N_176[0]"  />
+        <nitem  name = "statemachine/state_2__N_179[2]"  />
+        <nitem  name = "statemachine/state_2__N_179[1]"  />
+        <nitem  name = "statemachine/state_2__N_179[0]"  />
         </nets>
     </instance>
 
@@ -2790,13 +2833,13 @@
 
         <nets>
         <nitem  name = "statemachine/gnd"  />
-        <nitem  name = "statemachine/state_2__N_179"  />
+        <nitem  name = "statemachine/state_2__N_182"  />
+        <nitem  name = "statemachine/state_2__N_179[2]"  />
+        <nitem  name = "statemachine/state_2__N_179[1]"  />
+        <nitem  name = "statemachine/state_2__N_179[0]"  />
         <nitem  name = "statemachine/state_2__N_176[2]"  />
         <nitem  name = "statemachine/state_2__N_176[1]"  />
         <nitem  name = "statemachine/state_2__N_176[0]"  />
-        <nitem  name = "statemachine/state_2__N_173[2]"  />
-        <nitem  name = "statemachine/state_2__N_173[1]"  />
-        <nitem  name = "statemachine/state_2__N_173[0]"  />
         </nets>
     </instance>
 
@@ -2823,9 +2866,9 @@
         <nitem  name = "SMstate[2]"  />
         <nitem  name = "SMstate[1]"  />
         <nitem  name = "SMstate[0]"  />
-        <nitem  name = "statemachine/state_2__N_173[2]"  />
-        <nitem  name = "statemachine/state_2__N_173[1]"  />
-        <nitem  name = "statemachine/state_2__N_173[0]"  />
+        <nitem  name = "statemachine/state_2__N_176[2]"  />
+        <nitem  name = "statemachine/state_2__N_176[1]"  />
+        <nitem  name = "statemachine/state_2__N_176[0]"  />
         </nets>
     </instance>
 
@@ -2901,22 +2944,22 @@
         <nitem  name = "POPtimers/count[2]"  />
         <nitem  name = "POPtimers/count[1]"  />
         <nitem  name = "POPtimers/count[0]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[0]"  />
         </nets>
     </instance>
 
@@ -2991,22 +3034,22 @@
         <nitem  name = "POPtimers/count[2]"  />
         <nitem  name = "POPtimers/count[1]"  />
         <nitem  name = "POPtimers/count[0]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[0]"  />
         </nets>
     </instance>
 
@@ -3065,54 +3108,54 @@
 
         <nets>
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_98[0]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_82[0]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_101[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_85[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[0]"  />
         </nets>
     </instance>
 
@@ -3187,7 +3230,7 @@
 
         <nets>
         <nitem  name = "POPtimers/systemcounter/gnd"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/counterreset"  />
         <nitem  name = "POPtimers/count[15]"  />
         <nitem  name = "POPtimers/count[14]"  />
@@ -3205,22 +3248,22 @@
         <nitem  name = "POPtimers/count[2]"  />
         <nitem  name = "POPtimers/count[1]"  />
         <nitem  name = "POPtimers/count[0]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[15]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[14]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[13]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[12]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[11]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[10]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[9]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[8]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[7]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[6]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[5]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[4]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[3]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[2]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[1]"  />
-        <nitem  name = "POPtimers/systemcounter/count_15__N_66[0]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[15]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[14]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[13]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[12]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[11]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[10]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[9]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[8]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[7]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[6]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[5]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[4]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[3]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[2]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[1]"  />
+        <nitem  name = "POPtimers/systemcounter/count_15__N_69[0]"  />
         </nets>
     </instance>
 
@@ -4173,7 +4216,7 @@
         <nets>
         <nitem  name = "pieovertwo_plus"  />
         <nitem  name = "pieovertwo_minus"  />
-        <nitem  name = "POPtimers/piecounter/trigger_N_148"  />
+        <nitem  name = "POPtimers/piecounter/trigger_N_151"  />
         </nets>
     </instance>
 
@@ -4186,8 +4229,8 @@
 
         <nets>
         <nitem  name = "load_defaults"  />
-        <nitem  name = "POPtimers/piecounter/trigger_N_148"  />
-        <nitem  name = "POPtimers/piecounter/trigger_N_147"  />
+        <nitem  name = "POPtimers/piecounter/trigger_N_151"  />
+        <nitem  name = "POPtimers/piecounter/trigger_N_150"  />
         </nets>
     </instance>
 
@@ -4566,22 +4609,22 @@
         <nitem  name = "POPtimers/piecounter/n54"  />
         <nitem  name = "POPtimers/piecounter/n55"  />
         <nitem  name = "POPtimers/piecounter/n56"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[15]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[14]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[13]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[12]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[11]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[10]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[9]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[8]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[7]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[6]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[5]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[4]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[3]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[2]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[1]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[0]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[15]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[14]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[13]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[12]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[11]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[10]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[9]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[8]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[7]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[6]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[5]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[4]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[3]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[2]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[1]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[0]"  />
         </nets>
     </instance>
 
@@ -4642,38 +4685,38 @@
         <nitem  name = "load_defaults"  />
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[15]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[14]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[13]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[12]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[11]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[10]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[9]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[8]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[7]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[6]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[5]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[4]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[3]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[2]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[1]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_131[0]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[15]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[14]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[13]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[12]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[11]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[10]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[9]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[8]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[7]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[6]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[5]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[4]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[3]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[2]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[1]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[0]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[15]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[14]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[13]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[12]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[11]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[10]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[9]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[8]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[7]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[6]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[5]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[4]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[3]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[2]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[1]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_134[0]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[15]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[14]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[13]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[12]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[11]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[10]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[9]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[8]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[7]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[6]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[5]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[4]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[3]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[2]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[1]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[0]"  />
         </nets>
     </instance>
 
@@ -4765,22 +4808,22 @@
         <nitem  name = "POPtimers/AdjustablePieOverTwo[1]"  />
         <nitem  name = "POPtimers/AdjustablePieOverTwo[0]"  />
         <nitem  name = "POPtimers/piecounter/trigger"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[15]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[14]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[13]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[12]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[11]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[10]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[9]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[8]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[7]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[6]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[5]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[4]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[3]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[2]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[1]"  />
-        <nitem  name = "POPtimers/piecounter/count_15__N_115[0]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[15]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[14]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[13]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[12]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[11]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[10]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[9]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[8]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[7]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[6]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[5]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[4]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[3]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[2]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[1]"  />
+        <nitem  name = "POPtimers/piecounter/count_15__N_118[0]"  />
         </nets>
     </instance>
 
@@ -4794,7 +4837,7 @@
         <nets>
         <nitem  name = "freeprecess_plus"  />
         <nitem  name = "freeprecess_minus"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_148"  />
+        <nitem  name = "POPtimers/freepcounter/trigger_N_151"  />
         </nets>
     </instance>
 
@@ -4807,8 +4850,8 @@
 
         <nets>
         <nitem  name = "load_defaults"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_148"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_147"  />
+        <nitem  name = "POPtimers/freepcounter/trigger_N_151"  />
+        <nitem  name = "POPtimers/freepcounter/trigger_N_150"  />
         </nets>
     </instance>
 
@@ -5187,22 +5230,22 @@
         <nitem  name = "POPtimers/freepcounter/n54"  />
         <nitem  name = "POPtimers/freepcounter/n55"  />
         <nitem  name = "POPtimers/freepcounter/n56"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[0]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[15]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[14]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[13]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[12]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[11]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[10]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[9]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[8]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[7]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[6]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[5]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[4]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[3]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[2]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[1]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[0]"  />
         </nets>
     </instance>
 
@@ -5263,38 +5306,38 @@
         <nitem  name = "load_defaults"  />
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_131[0]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[0]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[15]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[14]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[13]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[12]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[11]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[10]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[9]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[8]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[7]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[6]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[5]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[4]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[3]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[2]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[1]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_134[0]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[15]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[14]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[13]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[12]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[11]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[10]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[9]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[8]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[7]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[6]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[5]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[4]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[3]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[2]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[1]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[0]"  />
         </nets>
     </instance>
 
@@ -5386,22 +5429,22 @@
         <nitem  name = "POPtimers/AdjustableFreePrecession[1]"  />
         <nitem  name = "POPtimers/AdjustableFreePrecession[0]"  />
         <nitem  name = "POPtimers/freepcounter/trigger"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_115[0]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[15]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[14]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[13]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[12]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[11]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[10]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[9]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[8]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[7]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[6]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[5]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[4]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[3]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[2]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[1]"  />
+        <nitem  name = "POPtimers/freepcounter/count_15__N_118[0]"  />
         </nets>
     </instance>
 
@@ -5413,7 +5456,7 @@
 
         <nets>
         <nitem  name = "POPtimers/piecounter/clean_trigger/Q1"  />
-        <nitem  name = "POPtimers/piecounter/clean_trigger/Q1_N_149"  />
+        <nitem  name = "POPtimers/piecounter/clean_trigger/Q1_N_152"  />
         </nets>
     </instance>
 
@@ -5427,7 +5470,7 @@
         <nets>
         <nitem  name = "POPtimers/piecounter/trigger"  />
         <nitem  name = "POPtimers/piecounter/clean_trigger/Q0"  />
-        <nitem  name = "POPtimers/piecounter/clean_trigger/Q1_N_149"  />
+        <nitem  name = "POPtimers/piecounter/clean_trigger/Q1_N_152"  />
         </nets>
     </instance>
 
@@ -5449,7 +5492,7 @@
 
         <nets>
         <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_149"  />
+        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_152"  />
         </nets>
     </instance>
 
@@ -5463,7 +5506,7 @@
         <nets>
         <nitem  name = "POPtimers/freepcounter/trigger"  />
         <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_149"  />
+        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_152"  />
         </nets>
     </instance>
 
@@ -5479,7 +5522,7 @@
         <nets>
         <nitem  name = "POPtimers/piecounter/clean_trigger/stage1_ff/gnd"  />
         <nitem  name = "POPtimers/piecounter/clean_trigger/Q0"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/piecounter/clean_trigger/Q1"  />
         </nets>
     </instance>
@@ -5496,7 +5539,7 @@
         <nets>
         <nitem  name = "POPtimers/freepcounter/clean_trigger/stage1_ff/gnd"  />
         <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1"  />
         </nets>
     </instance>
@@ -5544,7 +5587,7 @@
 
         <nets>
         <nitem  name = "tenmegclock"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "clocks/PLL/LOCK"  />
         <nitem  name = "clocks/PLL/CLKFB_t"  />
         <nitem  name = "clocks/PLL/scuba_vlo"  />
@@ -5562,8 +5605,8 @@
 
         <nets>
         <nitem  name = "POPtimers/piecounter/clean_trigger/stage0_ff/gnd"  />
-        <nitem  name = "POPtimers/piecounter/trigger_N_147"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "POPtimers/piecounter/trigger_N_150"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/piecounter/clean_trigger/Q0"  />
         </nets>
     </instance>
@@ -5579,8 +5622,8 @@
 
         <nets>
         <nitem  name = "POPtimers/freepcounter/clean_trigger/stage0_ff/gnd"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_147"  />
-        <nitem  name = "debug_16"  />
+        <nitem  name = "POPtimers/freepcounter/trigger_N_150"  />
+        <nitem  name = "clk_2M5"  />
         <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
         </nets>
     </instance>
@@ -5609,21 +5652,22 @@
     <instance  name = "statemachine"  />
     <instance  name = "systemcounter"  />
     <!--
-        REG instances in netlist: 21
+        REG instances in netlist: 22
     -->
 
     <regs>
-        <reg  name = "load_defaults_69"  />
-        <reg  name = "pieovertwo_plus_70"  />
-        <reg  name = "freeprecess_plus_71"  />
-        <reg  name = "pieovertwo_minus_72"  />
-        <reg  name = "freeprecess_minus_73"  />
-        <reg  name = "LED_output_74"  />
-        <reg  name = "pump_output_75"  />
-        <reg  name = "probe_output_76"  />
-        <reg  name = "MW_output_77"  />
-        <reg  name = "sample_output_78"  />
-        <reg  name = "sampled_modebutton_68"  />
+        <reg  name = "sampled_modebutton_72"  />
+        <reg  name = "load_defaults_73"  />
+        <reg  name = "pieovertwo_plus_74"  />
+        <reg  name = "freeprecess_plus_75"  />
+        <reg  name = "pieovertwo_minus_76"  />
+        <reg  name = "freeprecess_minus_77"  />
+        <reg  name = "LED_output_78"  />
+        <reg  name = "pump_output_79"  />
+        <reg  name = "probe_output_80"  />
+        <reg  name = "MW_output_81"  />
+        <reg  name = "sample_output_82"  />
+        <reg  name = "ADC_sample_71"  />
         <reg  name = "POPtimers/gatedcount"  />
         <reg  name = "slowclocks/count"  />
         <reg  name = "statemachine/state"  />

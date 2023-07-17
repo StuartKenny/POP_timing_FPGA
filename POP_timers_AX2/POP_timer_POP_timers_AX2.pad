@@ -6,31 +6,30 @@ Performance Grade:      4
 PACKAGE:          QFN32
 Package Status:                     Final          Version 1.44
 
-Mon Jul 03 16:06:53 2023
+Mon Jul 17 10:58:57 2023
 
 Pinout by Port Name:
-+---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
-| Port Name           | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                         |
-+---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
-| LED_output          | 13/2     | LVCMOS33_OUT | PB11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| MW_output           | 11/2     | LVCMOS33_OUT | PB9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| bottomleft_button   | 27/0     | LVCMOS33_IN  | PT12D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| bottomright_button  | 28/0     | LVCMOS33_IN  | PT12C |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| debug_16            | 4/3      | LVCMOS33_OUT | PL9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| debug_17            | 5/3      | LVCMOS33_OUT | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| debug_18            | 8/2      | LVCMOS33_OUT | PB4C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| load_default_button | 17/2     | LVCMOS33_IN  | PB20D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| mode_button         | 14/2     | LVCMOS33_IN  | PB11B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| pin3_sn             | 16/2     | LVCMOS33_OUT | PB20C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| pin5                | 20/1     | LVCMOS33_OUT | PR5D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| pin9_jtgnb          | 26/0     | LVCMOS33_OUT | PT15C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| probe_output        | 10/2     | LVCMOS33_OUT | PB6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| pump_output         | 9/2      | LVCMOS33_OUT | PB6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| sample_output       | 12/2     | LVCMOS33_OUT | PB9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| tenmegclock         | 21/1     | LVCMOS33_IN  | PR5C  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| topleft_button      | 23/0     | LVCMOS33_IN  | PT17D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-| topright_button     | 25/0     | LVCMOS33_IN  | PT15D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL  |
-+---------------------+----------+--------------+-------+-----------+-----------+------------------------------------+
++---------------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
+| Port Name           | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                           |
++---------------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
+| ADC_sample          | 5/3      | LVCMOS33_OUT | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| LED_output          | 13/2     | LVCMOS33_OUT | PB11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| MW_invalid          | 4/3      | LVCMOS33_IN  | PL9A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| MW_output           | 11/2     | LVCMOS33_OUT | PB9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| bottomleft_button   | 27/0     | LVCMOS33_IN  | PT12D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
+| bottomright_button  | 28/0     | LVCMOS33_IN  | PT12C |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
+| load_default_button | 17/2     | LVCMOS33_IN  | PB20D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
+| mode_button         | 14/2     | LVCMOS33_IN  | PB11B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
+| pin3_sn             | 16/2     | LVCMOS33_OUT | PB20C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| pin5                | 20/1     | LVCMOS33_OUT | PR5D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| pin9_jtgnb          | 26/0     | LVCMOS33_OUT | PT15C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| probe_output        | 10/2     | LVCMOS33_OUT | PB6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| pump_output         | 9/2      | LVCMOS33_OUT | PB6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| sample_output       | 12/2     | LVCMOS33_OUT | PB9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| tenmegclock         | 21/1     | LVCMOS33_IN  | PR5C  |           |           | CLAMP:ON HYSTERESIS:SMALL            |
+| topleft_button      | 23/0     | LVCMOS33_IN  | PT17D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
+| topright_button     | 25/0     | LVCMOS33_IN  | PT15D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL    |
++---------------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
 
 Vccio by Bank:
 +------+-------+
@@ -53,9 +52,9 @@ Pinout by Pin Number:
 | Pin/Bank | Pin Info              | Preference | Buffer Type  | Site  | Dual Function | PG Enable | BC Enable |
 +----------+-----------------------+------------+--------------+-------+---------------+-----------+-----------+
 | 1/0      | Reserved: sysCONFIG   |            |              | PT10C | TDO           |           |           |
-| 4/3      | debug_16              | LOCATED    | LVCMOS33_OUT | PL9A  | PCLKT3_0      |           |           |
-| 5/3      | debug_17              | LOCATED    | LVCMOS33_OUT | PL9B  | PCLKC3_0      |           |           |
-| 8/2      | debug_18              | LOCATED    | LVCMOS33_OUT | PB4C  | CSSPIN        |           |           |
+| 4/3      | MW_invalid            | LOCATED    | LVCMOS33_IN  | PL9A  | PCLKT3_0      |           |           |
+| 5/3      | ADC_sample            | LOCATED    | LVCMOS33_OUT | PL9B  | PCLKC3_0      |           |           |
+| 8/2      |     unused, PULL:DOWN |            |              | PB4C  | CSSPIN        |           |           |
 | 9/2      | pump_output           | LOCATED    | LVCMOS33_OUT | PB6C  | MCLK/CCLK     |           |           |
 | 10/2     | probe_output          | LOCATED    | LVCMOS33_OUT | PB6D  | SO/SPISO      |           |           |
 | 11/2     | MW_output             | LOCATED    | LVCMOS33_OUT | PB9A  | PCLKT2_0      |           |           |
@@ -178,13 +177,12 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
+LOCATE  COMP  "ADC_sample"  SITE  "5";
 LOCATE  COMP  "LED_output"  SITE  "13";
+LOCATE  COMP  "MW_invalid"  SITE  "4";
 LOCATE  COMP  "MW_output"  SITE  "11";
 LOCATE  COMP  "bottomleft_button"  SITE  "27";
 LOCATE  COMP  "bottomright_button"  SITE  "28";
-LOCATE  COMP  "debug_16"  SITE  "4";
-LOCATE  COMP  "debug_17"  SITE  "5";
-LOCATE  COMP  "debug_18"  SITE  "8";
 LOCATE  COMP  "load_default_button"  SITE  "17";
 LOCATE  COMP  "mode_button"  SITE  "14";
 LOCATE  COMP  "pin3_sn"  SITE  "16";
@@ -209,5 +207,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Jul 03 16:06:53 2023
+Mon Jul 17 10:58:57 2023
 

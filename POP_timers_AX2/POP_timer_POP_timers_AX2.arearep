@@ -1,20 +1,20 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_A2.TECH
-Register bits:  102 of 1346 (7.578%)
-I/O cells:      18
+Register bits:  103 of 1346 (7.652%)
+I/O cells:      17
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D       192          100.0
                             EHXPLLJ         1          100.0
-                            FD1S3AX        49          100.0
+                            FD1S3AX        50          100.0
                             FD1S3DX        16          100.0
                             FD1S3IX        23          100.0
                             FD1S3JX        14          100.0
                                 GSR         1          100.0
-                                 IB         7          100.0
+                                 IB         8          100.0
                                 INV         1          100.0
-                               LUT4        42          100.0
-                                 OB         8          100.0
+                               LUT4        40          100.0
+                                 OB         6          100.0
                                 OBZ         3          100.0
                               PFUMX         3          100.0
 SUB MODULES
@@ -41,18 +41,18 @@ SUB MODULES
                 single_period_pulse         1
              single_period_pulse_U3         1
                    slow_clock_pulse         1
-                              TOTAL       383
+                              TOTAL       381
 ----------------------------------------------------------------------
 Report for cell POPtimers.v1
 Instance Path : POPtimers
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D       180           93.8
-                            FD1S3AX        18           36.7
+                            FD1S3AX        18           36.0
                             FD1S3DX        16          100.0
                             FD1S3IX        19           82.6
                             FD1S3JX        12           85.7
-                               LUT4        15           35.7
+                               LUT4        15           37.5
 SUB MODULES
                          comparator         1
                      comparator_U10         1
@@ -87,7 +87,8 @@ Instance Path : POPtimers.sample2
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            4.7
-                              TOTAL         9
+                               LUT4         2            5.0
+                              TOTAL        11
 ----------------------------------------------------------------------
 Report for cell comparator_U4.v1
 Instance Path : POPtimers.sample1
@@ -118,7 +119,7 @@ Instance Path : POPtimers.piecounter
                             FD1S3AX         1            2.0
                             FD1S3IX        10           43.5
                             FD1S3JX         6           42.9
-                               LUT4         2            4.8
+                               LUT4         2            5.0
 SUB MODULES
                         d_flip_flop         1
                      d_flip_flop_U0         1
@@ -131,7 +132,7 @@ Instance Path : POPtimers.piecounter.clean_trigger
                                cell     count   Res Usage(%)
                             FD1S3AX         1            2.0
                             FD1S3JX         1            7.1
-                               LUT4         1            2.4
+                               LUT4         1            2.5
 SUB MODULES
                         d_flip_flop         1
                      d_flip_flop_U0         1
@@ -166,7 +167,7 @@ Instance Path : POPtimers.freepcounter
                             FD1S3AX         1            2.0
                             FD1S3IX         9           39.1
                             FD1S3JX         6           42.9
-                               LUT4         2            4.8
+                               LUT4         2            5.0
 SUB MODULES
                      d_flip_flop_U1         1
                      d_flip_flop_U2         1
@@ -179,7 +180,7 @@ Instance Path : POPtimers.freepcounter.clean_trigger
                                cell     count   Res Usage(%)
                             FD1S3AX         1            2.0
                             FD1S3JX         1            7.1
-                               LUT4         1            2.4
+                               LUT4         1            2.5
 SUB MODULES
                      d_flip_flop_U1         1
                      d_flip_flop_U2         1
@@ -224,24 +225,25 @@ Report for cell comparator_U12.v1
 Instance Path : POPtimers.MW1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         3            7.1
+                               LUT4         3            7.5
                               TOTAL         3
-----------------------------------------------------------------------
-Report for cell slow_clock_pulse.v1
-Instance Path : slowclocks
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        12            6.3
-                            FD1S3AX        23           46.9
-                              TOTAL        35
 ----------------------------------------------------------------------
 Report for cell n_state_machine.v1
 Instance Path : statemachine
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1S3IX         3           13.0
-                               LUT4         2            4.8
-                              TOTAL         5
+                               LUT4        18           45.0
+                              PFUMX         3          100.0
+                              TOTAL        24
+----------------------------------------------------------------------
+Report for cell slow_clock_pulse.v1
+Instance Path : slowclocks
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        12            6.3
+                            FD1S3AX        23           46.0
+                              TOTAL        35
 ----------------------------------------------------------------------
 Report for cell clocks.v1
 Instance Path : clocks

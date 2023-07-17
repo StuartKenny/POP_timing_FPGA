@@ -2,9 +2,28 @@
 <BaliMessageLog>
     <Task name="Map">
         <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf(36): Semantic error in &quot;IOBUF PORT &quot;laser_tuning&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>laser_tuning</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>laser_tuning</Dynamic>
+        </Message>
+        <Message>
             <ID>51001030</ID>
             <Severity>Warning</Severity>
             <Dynamic>POPtimers/counterreset</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>laser_tuning</Dynamic>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -15,6 +34,11 @@
         <Message>
             <ID>35001781</ID>
             <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001200</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>TinyFPGA_A2</Dynamic>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -121,6 +145,16 @@
             <Navigation>31</Navigation>
         </Message>
         <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>laser_tuning</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>laser_tuning</Dynamic>
+        </Message>
+        <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): </Dynamic>
@@ -139,6 +173,24 @@
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>laser_tuning</Dynamic>
+            <Navigation>laser_tuning</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>laser_tuning</Dynamic>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
