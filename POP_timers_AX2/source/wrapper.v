@@ -29,7 +29,7 @@ module slow_clock_pulse
 
 //cycles through up-to-8 states, starting with state_0
  module n_state_machine
-	#(parameter STATES=7
+	#(parameter STATES=8
 	)(	clk,
 		state //3 bit vector
 		);

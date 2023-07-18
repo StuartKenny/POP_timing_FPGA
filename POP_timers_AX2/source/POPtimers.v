@@ -11,6 +11,7 @@ module POPtimers
 	LaserMWgap=10, //4µs
 	PostCycle=40000 //prevent reduction of 16-bit counter
 	)(clk_2M5, //2.5MHz clock
+	reset, //level-sensitive input, 1 to reset 
 	load_defaults, //input, 1 to reset
 	pieovertwo_plus, //sampled button input
 	freeprecess_plus, //sampled button input
@@ -22,7 +23,7 @@ module POPtimers
 	sample //output
 	);
 	
-	input load_defaults, clk_2M5, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
+	input clk_2M5, reset, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
 	output pump, probe, MW, sample;
 	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
 	reg [WIDTH-1:0] gatedcount;
@@ -61,7 +62,7 @@ module POPtimers
 	countupdownpreload piecounter (.clk_2M5(clk_2M5), .clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd10), .count(AdjustablePieOverTwo));
 	countupdownpreload freepcounter (.clk_2M5(clk_2M5), .clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd100), .count(AdjustableFreePrecession));
 		 	
-	assign counterreset = load_defaults|loop;
+	assign counterreset = load_defaults|loop|reset;
 	
 	//counter updates on a positive clock edge
 	//comparators are updated on the negative clock edge for stability 

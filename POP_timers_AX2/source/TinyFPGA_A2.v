@@ -37,22 +37,27 @@ module TinyFPGA_A2 (
 	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
 	wire [2:0] SMstate; //3-bit state vector
 	wire pump, probe, MW, sample; //outputs from POPtimers module
+	wire reset_timers; //will zero counter when high
 	
 	// tristate the unused pins
 	assign pin3_sn = 1'bz;
 	assign pin5 = 1'bz;
 	assign pin9_jtgnb = 1'bz;
 	
+	//Module instantiation
+	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
+	POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(reset_timers), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .medium_pulse(medium_pulse), .slow_pulse(slow_pulse));
+	n_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
+
+	//POP count to be restarted on falling edge of MW_invalid signal
+	assign reset_timers = !MW_invalid;
+
 	//The following combinatorial logic is synchronised to a positive clock edge
 	always@(posedge clk_2M5) 
 	begin
 		ADC_sample <= sample&!MW_invalid; //suppress ADC trigger pulse when MW_invalid is high
 	end
-
-	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
-	POPtimers POPtimers (.clk_2M5(clk_2M5), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
-	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .medium_pulse(medium_pulse), .slow_pulse(slow_pulse));
-	n_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
 
 	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
@@ -65,61 +70,69 @@ module TinyFPGA_A2 (
 		end
 	
 	//States
-	//0. Laser frequency setup. probe and sample outputs high. Slow LED flash
-	//1. POP cycle. signals controlled by POPtimers module. LED on
-	//2. Dark. sample output high. Fast LED flash
-	//3. Pump beam calibration. pump output high. LED off
-	//4. DR. probe, sample, and MW outputs high. LED four quick flashes then pause
-	//5. Probe with pulsing MW. probe and sample high. Pulsing MW. 3 fast & 1 slow LED pulses.
-	//6. POP with sample bypass. sample high. pump, probe and MW controller by POPtimers module. LED two quick flashes then pause
+	//0. Default state after power on. POP or laser frequency setup dependent on laser_tuning input. LED reflects laser_tuning input
+	//1. Laser frequency setup. probe and sample outputs high. Slow LED flash
+	//2. POP cycle. signals controlled by POPtimers module. LED on
+	//3. Dark. sample output high. Fast LED flash
+	//4. Pump beam calibration. pump output high. LED off
+	//5. DR. probe, sample, and MW outputs high. LED four quick flashes then pause
+	//6. Probe with pulsing MW. probe and sample high. Pulsing MW. 3 fast & 1 slow LED pulses.
+	//7. POP with sample bypass. sample high. pump, probe and MW controller by POPtimers module. LED two quick flashes then pause
 	
 	//Signals from POPtimers module are updated on the negative clock edge
 	//The following combinatorial logic is synchronised to a positive clock edge
 	always@(posedge clk_2M5) 
 	begin
-		if (SMstate == 0) begin //0. Laser frequency setup
+		if (SMstate == 0) begin //0. POP / Laser frequency setup dependent on laser_tuning input
+			LED_output <= laser_tuning;
+			pump_output <= pump&!laser_tuning;
+			probe_output <= probe|laser_tuning;
+			MW_output <= MW&!laser_tuning;
+			sample_output <= sample;
+			end
+		else if (SMstate == 1) begin //1. Laser frequency setup
 			LED_output <= slow_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b1;
 			MW_output <= 1'b0;
 			sample_output <= 1'b1;
 			end
-		else if (SMstate == 1) begin //1. POP cycle
+		else if (SMstate == 2) begin //2. POP cycle
 			LED_output <= 1'b1;
 			pump_output <= pump;
 			probe_output <= probe;
 			MW_output <= MW;
 			sample_output <= sample;
 			end
-		else if (SMstate == 2) begin //2. Dark
+		else if (SMstate == 3) begin //3. Dark
 			LED_output <= fast_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b0;
 			MW_output <= 1'b0;
 			sample_output <= 1'b1;
 			end
-		else if (SMstate == 3) begin //3. Pump beam calibration
+		else if (SMstate == 4) begin //4. Pump beam calibration
 			LED_output <= 1'b0;
 			pump_output <= 1'b1;
 			probe_output <= 1'b0;
 			MW_output <= 1'b0;
 			sample_output <= 1'b0;
 			end
-		else if (SMstate == 4) begin //SMstate == 4. Double resonance
+		else if (SMstate == 5) begin //SMstate == 5. Double resonance
 			LED_output <= slow_pulse&fast_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b1;
 			MW_output <= 1'b1;
 			sample_output <= 1'b1;
 			end
-		else if (SMstate == 5) begin //SMstate == 5. Probe with pulsing MW
+		else if (SMstate == 6) begin //SMstate == 6. Probe with pulsing MW
 			LED_output <= slow_pulse|fast_pulse;
 			pump_output <= 1'b0;
 			probe_output <= 1'b1;
 			MW_output <= slow_pulse;
 			sample_output <= 1'b1;
 			end
-		else begin //SMstate == 6. POP with sample bypass
+		else begin //SMstate == 7. POP with sample bypass
 			LED_output <= slow_pulse&medium_pulse&fast_pulse;
 			pump_output <= pump;
 			probe_output <= probe;

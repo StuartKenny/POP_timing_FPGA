@@ -7,12 +7,6 @@
     <Source worklib="work" path="POP_timers_AX2/source/DIV4PLL.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/clocks.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <Source worklib="work" path="POP_timers_AX2/source/top_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/comparator_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/PLL_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/POPtimers_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/wrapper_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/extensions_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
-    <Source worklib="work" path="POP_timers_AX2/source/count_testbench.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
     <SimLib value="pmi_work ovi_machxo2"/>
     <GlbInc value=""/>
     <Macro value=""/>

@@ -3,10 +3,10 @@
     <Options/>
     <Implementation title="POP_timers_AX2" dir="POP_timers_AX2" description="POP_timers_AX2" synthesis="lse" default_strategy="Strategy1">
         <Options/>
-        <Source name="POP_timers_AX2/source/TinyFPGA_A2.v" type="Verilog" type_short="Verilog">
+        <Source name="POP_timers_AX2/source/TinyFPGA_A2.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options top_module="TinyFPGA_A2"/>
         </Source>
-        <Source name="POP_timers_AX2/source/top_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+        <Source name="POP_timers_AX2/source/top_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/compare_n.v" type="Verilog" type_short="Verilog">
@@ -27,7 +27,7 @@
         <Source name="POP_timers_AX2/source/POPtimers.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="POP_timers_AX2/source/POPtimers_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+        <Source name="POP_timers_AX2/source/POPtimers_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/wrapper.v" type="Verilog" type_short="Verilog">
