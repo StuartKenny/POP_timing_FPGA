@@ -69,6 +69,80 @@ prj_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.ldf"
 
 
 
+<A name="pn230718132514"></A><B><U><big>pn230718132514</big></U></B>
+#Start recording tcl command: 7/4/2023 11:53:38
+#Project Location: C:/Users/sek529/Github/POP_timing_FPGA; Project name: POP_timer
+prj_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.ldf"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_project close
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+prj_src add "C:/Users/sek529/Github/POP_timing_FPGA/count_testbench/count_testbench.spf"
+prj_src add "C:/Users/sek529/Github/POP_timing_FPGA/POPtimers_testbench/POPtimers_testbench.spf"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/comparator_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_project close
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_project close
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+pgr_project close
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+pgr_project close
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project open "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_program run
+pgr_program run
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_program run
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_program run
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+pgr_program run
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/PLL_testbench.v"
+pgr_project save "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timers_AX2.xcf"
+pgr_project close
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v"
+prj_src enable "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v"
+prj_src exclude "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers_testbench.v"
+prj_run Export -impl POP_timers_AX2 -task Jedecgen
+prj_run PAR -impl POP_timers_AX2 -task PARTrace
+#Stop recording: 7/18/2023 13:25:14
+
+
+
 <BR>
 <BR>
 <BR>

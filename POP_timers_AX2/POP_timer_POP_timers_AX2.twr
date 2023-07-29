@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Mon Jul 17 11:16:32 2023
+Sat Jul 29 16:04:52 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -52,862 +52,1344 @@ Preference: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 371.031ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i8  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i7
 
-   Delay:              23.346ns  (47.4% logic, 52.6% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.346ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_87 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.031ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_87:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOF0_DE  ---     0.585      R8C8B.FCI to       R8C8B.F0 POPtimers/SLICE_26
-ROUTE         1     1.383       R8C8B.F0 to       R9C8B.A0 POPtimers/Endofopticalsample_10
-C0TOFCO_DE  ---     1.023       R9C8B.A0 to      R9C8B.FCO POPtimers/sample2/SLICE_79
-ROUTE         1     0.000      R9C8B.FCO to      R9C8C.FCI POPtimers/sample2/n1783
-FCITOFCO_D  ---     0.162      R9C8C.FCI to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C17A.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.346   (47.4% logic, 52.6% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_87:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C17A.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.031ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i6  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i5
 
-   Delay:              23.346ns  (47.4% logic, 52.6% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.346ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_88 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.031ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_88:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOF0_DE  ---     0.585      R8C8C.FCI to       R8C8C.F0 POPtimers/SLICE_18
-ROUTE         1     1.383       R8C8C.F0 to       R9C8C.A0 POPtimers/Endofopticalsample_12
-C0TOFCO_DE  ---     1.023       R9C8C.A0 to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C16D.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.346   (47.4% logic, 52.6% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_88:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C16D.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.031ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i10  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i9
 
-   Delay:              23.346ns  (47.4% logic, 52.6% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.346ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_86 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.031ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOFCO_D  ---     0.162      R8C8C.FCI to      R8C8C.FCO POPtimers/SLICE_18
-ROUTE         1     0.000      R8C8C.FCO to      R8C8D.FCI POPtimers/n1737
-FCITOF0_DE  ---     0.585      R8C8D.FCI to       R8C8D.F0 POPtimers/SLICE_17
-ROUTE         1     1.383       R8C8D.F0 to       R9C8D.A0 POPtimers/Endofopticalsample_14
-C0TOFCO_DE  ---     1.023       R9C8D.A0 to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C17B.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.346   (47.4% logic, 52.6% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C17B.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.103ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i3  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i6  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i5
 
-   Delay:              23.274ns  (47.0% logic, 53.0% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.274ns physical path delay POPtimers/freepcounter/SLICE_151 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_88 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.103ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_151 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_88:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R8C12A.CLK to      R8C12A.Q1 POPtimers/freepcounter/SLICE_151 (from POPtimers/freepcounter/trigger)
-ROUTE         3     1.966      R8C12A.Q1 to      R7C15A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R7C15A.A1 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOFCO_D  ---     0.162      R8C8C.FCI to      R8C8C.FCO POPtimers/SLICE_18
-ROUTE         1     0.000      R8C8C.FCO to      R8C8D.FCI POPtimers/n1737
-FCITOF0_DE  ---     0.585      R8C8D.FCI to       R8C8D.F0 POPtimers/SLICE_17
-ROUTE         1     1.383       R8C8D.F0 to       R9C8D.A0 POPtimers/Endofopticalsample_14
-C0TOFCO_DE  ---     1.023       R9C8D.A0 to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOFCO_D  ---     0.162     R5C20A.FCI to     R5C20A.FCO POPtimers/SLICE_79
+ROUTE         1     0.000     R5C20A.FCO to     R5C20B.FCI POPtimers/n8202
+FCITOF0_DE  ---     0.585     R5C20B.FCI to      R5C20B.F0 POPtimers/SLICE_78
+ROUTE         3     1.978      R5C20B.F0 to      R4C16A.B1 POPtimers/Startofprobepulse[10]
+C1TOFCO_DE  ---     0.889      R4C16A.B1 to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C16D.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.274   (47.0% logic, 53.0% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_151:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R8C12A.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_88:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C16D.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.103ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i3  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i2  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i1
 
-   Delay:              23.274ns  (47.0% logic, 53.0% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.274ns physical path delay POPtimers/freepcounter/SLICE_151 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_90 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.103ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_151 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_90:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R8C12A.CLK to      R8C12A.Q1 POPtimers/freepcounter/SLICE_151 (from POPtimers/freepcounter/trigger)
-ROUTE         3     1.966      R8C12A.Q1 to      R7C15A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R7C15A.A1 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOF0_DE  ---     0.585      R8C8B.FCI to       R8C8B.F0 POPtimers/SLICE_26
-ROUTE         1     1.383       R8C8B.F0 to       R9C8B.A0 POPtimers/Endofopticalsample_10
-C0TOFCO_DE  ---     1.023       R9C8B.A0 to      R9C8B.FCO POPtimers/sample2/SLICE_79
-ROUTE         1     0.000      R9C8B.FCO to      R9C8C.FCI POPtimers/sample2/n1783
-FCITOFCO_D  ---     0.162      R9C8C.FCI to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C16B.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.274   (47.0% logic, 53.0% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_151:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R8C12A.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_90:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C16B.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.103ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i3  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i10  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i9
 
-   Delay:              23.274ns  (47.0% logic, 53.0% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.274ns physical path delay POPtimers/freepcounter/SLICE_151 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_86 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.103ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_151 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R8C12A.CLK to      R8C12A.Q1 POPtimers/freepcounter/SLICE_151 (from POPtimers/freepcounter/trigger)
-ROUTE         3     1.966      R8C12A.Q1 to      R7C15A.A1 POPtimers/AdjustableFreePrecession_3
-C1TOFCO_DE  ---     0.889      R7C15A.A1 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOF0_DE  ---     0.585      R8C8C.FCI to       R8C8C.F0 POPtimers/SLICE_18
-ROUTE         1     1.383       R8C8C.F0 to       R9C8C.A0 POPtimers/Endofopticalsample_12
-C0TOFCO_DE  ---     1.023       R9C8C.A0 to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOFCO_D  ---     0.162     R5C20A.FCI to     R5C20A.FCO POPtimers/SLICE_79
+ROUTE         1     0.000     R5C20A.FCO to     R5C20B.FCI POPtimers/n8202
+FCITOF0_DE  ---     0.585     R5C20B.FCI to      R5C20B.F0 POPtimers/SLICE_78
+ROUTE         3     1.978      R5C20B.F0 to      R4C16A.B1 POPtimers/Startofprobepulse[10]
+C1TOFCO_DE  ---     0.889      R4C16A.B1 to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C17B.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.274   (47.0% logic, 53.0% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_151:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R8C12A.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C17B.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.107ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i2  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i1
 
-   Delay:              23.270ns  (47.2% logic, 52.8% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.270ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_90 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.107ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_90:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF0_DE  ---     0.585     R7C15B.FCI to      R7C15B.F0 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F0 to      R5C15C.B0 POPtimers/n1211
-C0TOFCO_DE  ---     1.023      R5C15C.B0 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOFCO_D  ---     0.162      R8C8C.FCI to      R8C8C.FCO POPtimers/SLICE_18
-ROUTE         1     0.000      R8C8C.FCO to      R8C8D.FCI POPtimers/n1737
-FCITOF1_DE  ---     0.643      R8C8D.FCI to       R8C8D.F1 POPtimers/SLICE_17
-ROUTE         1     1.383       R8C8D.F1 to       R9C8D.A1 POPtimers/Endofopticalsample_15
-C1TOFCO_DE  ---     0.889       R9C8D.A1 to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOFCO_D  ---     0.162     R5C20A.FCI to     R5C20A.FCO POPtimers/SLICE_79
+ROUTE         1     0.000     R5C20A.FCO to     R5C20B.FCI POPtimers/n8202
+FCITOF0_DE  ---     0.585     R5C20B.FCI to      R5C20B.F0 POPtimers/SLICE_78
+ROUTE         3     1.978      R5C20B.F0 to      R4C16A.B1 POPtimers/Startofprobepulse[10]
+C1TOFCO_DE  ---     0.889      R4C16A.B1 to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C16B.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.270   (47.2% logic, 52.8% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_90:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C16B.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.107ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i14  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i13
 
-   Delay:              23.270ns  (47.2% logic, 52.8% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.270ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_84 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.107ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF1_DE  ---     0.643     R7C15B.FCI to      R7C15B.F1 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F1 to      R5C15C.B1 POPtimers/n1212
-C1TOFCO_DE  ---     0.889      R5C15C.B1 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOFCO_D  ---     0.162      R8C8C.FCI to      R8C8C.FCO POPtimers/SLICE_18
-ROUTE         1     0.000      R8C8C.FCO to      R8C8D.FCI POPtimers/n1737
-FCITOF0_DE  ---     0.585      R8C8D.FCI to       R8C8D.F0 POPtimers/SLICE_17
-ROUTE         1     1.383       R8C8D.F0 to       R9C8D.A0 POPtimers/Endofopticalsample_14
-C0TOFCO_DE  ---     1.023       R9C8D.A0 to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C17D.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.270   (47.2% logic, 52.8% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C17D.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.107ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i4  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i3
 
-   Delay:              23.270ns  (47.2% logic, 52.8% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.270ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_89 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.107ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_89:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF1_DE  ---     0.643     R7C15B.FCI to      R7C15B.F1 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F1 to      R5C15C.B1 POPtimers/n1212
-C1TOFCO_DE  ---     0.889      R5C15C.B1 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOF0_DE  ---     0.585      R8C8B.FCI to       R8C8B.F0 POPtimers/SLICE_26
-ROUTE         1     1.383       R8C8B.F0 to       R9C8B.A0 POPtimers/Endofopticalsample_10
-C0TOFCO_DE  ---     1.023       R9C8B.A0 to      R9C8B.FCO POPtimers/sample2/SLICE_79
-ROUTE         1     0.000      R9C8B.FCO to      R9C8C.FCI POPtimers/sample2/n1783
-FCITOFCO_D  ---     0.162      R9C8C.FCI to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOF0_DE  ---     0.585     R5C20A.FCI to      R5C20A.F0 POPtimers/SLICE_79
+ROUTE         3     1.978      R5C20A.F0 to      R4C15D.B1 POPtimers/Startofprobepulse[8]
+C1TOFCO_DE  ---     0.889      R4C15D.B1 to     R4C15D.FCO POPtimers/SLICE_45
+ROUTE         1     0.000     R4C15D.FCO to     R4C16A.FCI POPtimers/n8226
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C16C.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.270   (47.2% logic, 52.8% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_89:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C16C.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 371.107ns
+Passed: The following path meets requirements by 367.628ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from POPtimers/freepcounter/trigger +)
-   Destination:    FF         Data in        sample_output_93  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/piecounter/count_i5  (from reveal_ist_66_N +)
+   Destination:    FF         Data in        POPtimers/systemcounter/count_958__i14  (to clk_2M5 +)
+                   FF                        POPtimers/systemcounter/count_958__i13
 
-   Delay:              23.270ns  (47.2% logic, 52.8% route), 17 logic levels.
+   Delay:              26.367ns  (38.7% logic, 61.3% route), 15 logic levels.
 
  Constraint Details:
 
-     23.270ns physical path delay POPtimers/freepcounter/SLICE_139 to SLICE_216 meets
+     26.367ns physical path delay POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_84 meets
     400.000ns delay constraint less
-      5.457ns skew and
-      0.166ns DIN_SET requirement (totaling 394.377ns) by 371.107ns
+      5.731ns skew and
+      0.274ns LSR_SET requirement (totaling 393.995ns) by 367.628ns
 
  Physical Path Details:
 
-      Data path POPtimers/freepcounter/SLICE_139 to SLICE_216:
+      Data path POPtimers/piecounter/SLICE_142 to POPtimers/systemcounter/SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452     R9C12B.CLK to      R9C12B.Q0 POPtimers/freepcounter/SLICE_139 (from POPtimers/freepcounter/trigger)
-ROUTE         5     1.904      R9C12B.Q0 to      R7C15A.B0 POPtimers/AdjustableFreePrecession_2
-C0TOFCO_DE  ---     1.023      R7C15A.B0 to     R7C15A.FCO POPtimers/SLICE_60
-ROUTE         1     0.000     R7C15A.FCO to     R7C15B.FCI POPtimers/n1862
-FCITOF1_DE  ---     0.643     R7C15B.FCI to      R7C15B.F1 POPtimers/SLICE_61
-ROUTE         1     1.088      R7C15B.F1 to      R5C15C.B1 POPtimers/n1212
-C1TOFCO_DE  ---     0.889      R5C15C.B1 to     R5C15C.FCO POPtimers/SLICE_11
-ROUTE         1     0.000     R5C15C.FCO to     R5C15D.FCI POPtimers/n1799
-FCITOF1_DE  ---     0.643     R5C15D.FCI to      R5C15D.F1 POPtimers/SLICE_10
-ROUTE         2     1.845      R5C15D.F1 to      R4C12D.B1 POPtimers/Endof2ndMWpulse_7
-C1TOFCO_DE  ---     0.889      R4C12D.B1 to     R4C12D.FCO POPtimers/SLICE_44
-ROUTE         1     0.000     R4C12D.FCO to     R4C13A.FCI POPtimers/n1726
-FCITOF0_DE  ---     0.585     R4C13A.FCI to      R4C13A.F0 POPtimers/SLICE_41
-ROUTE         3     2.790      R4C13A.F0 to       R7C9C.A1 POPtimers/Startofprobepulse_8
-C1TOFCO_DE  ---     0.889       R7C9C.A1 to      R7C9C.FCO POPtimers/SLICE_31
-ROUTE         1     0.000      R7C9C.FCO to      R7C9D.FCI POPtimers/n1711
-FCITOF0_DE  ---     0.585      R7C9D.FCI to       R7C9D.F0 POPtimers/SLICE_30
-ROUTE         2     1.854       R7C9D.F0 to       R8C8A.B1 POPtimers/Startopticalsample_9
-C1TOFCO_DE  ---     0.889       R8C8A.B1 to      R8C8A.FCO POPtimers/SLICE_28
-ROUTE         1     0.000      R8C8A.FCO to      R8C8B.FCI POPtimers/n1735
-FCITOFCO_D  ---     0.162      R8C8B.FCI to      R8C8B.FCO POPtimers/SLICE_26
-ROUTE         1     0.000      R8C8B.FCO to      R8C8C.FCI POPtimers/n1736
-FCITOF0_DE  ---     0.585      R8C8C.FCI to       R8C8C.F0 POPtimers/SLICE_18
-ROUTE         1     1.383       R8C8C.F0 to       R9C8C.A0 POPtimers/Endofopticalsample_12
-C0TOFCO_DE  ---     1.023       R9C8C.A0 to      R9C8C.FCO POPtimers/sample2/SLICE_78
-ROUTE         1     0.000      R9C8C.FCO to      R9C8D.FCI POPtimers/sample2/n1784
-FCITOFCO_D  ---     0.162      R9C8D.FCI to      R9C8D.FCO POPtimers/sample2/SLICE_77
-ROUTE         1     0.000      R9C8D.FCO to      R9C9A.FCI POPtimers/sample2/n1785
-FCITOF0_DE  ---     0.585      R9C9A.FCI to       R9C9A.F0 POPtimers/sample2/SLICE_76
-ROUTE         2     0.976       R9C9A.F0 to       R9C9C.A1 POPtimers/n499
-CTOF_DEL    ---     0.495       R9C9C.A1 to       R9C9C.F1 SLICE_216
-ROUTE         1     0.436       R9C9C.F1 to       R9C9C.C0 n1985
-CTOF_DEL    ---     0.495       R9C9C.C0 to       R9C9C.F0 SLICE_216
-ROUTE         1     0.000       R9C9C.F0 to      R9C9C.DI0 sample_output_N_48 (to clk_2M5)
+REG_DEL     ---     0.452      R9C2C.CLK to       R9C2C.Q0 POPtimers/piecounter/SLICE_142 (from reveal_ist_66_N)
+ROUTE         4     3.691       R9C2C.Q0 to     R10C17C.A1 reveal_ist_53_N
+C1TOFCO_DE  ---     0.889     R10C17C.A1 to    R10C17C.FCO POPtimers/SLICE_71
+ROUTE         1     0.000    R10C17C.FCO to    R10C17D.FCI POPtimers/n8362
+FCITOF0_DE  ---     0.585    R10C17D.FCI to     R10C17D.F0 POPtimers/SLICE_69
+ROUTE         3     1.826     R10C17D.F0 to      R9C19D.A1 POPtimers/Endof1stMWpulse[6]
+C1TOFCO_DE  ---     0.889      R9C19D.A1 to     R9C19D.FCO POPtimers/SLICE_37
+ROUTE         1     0.000     R9C19D.FCO to     R9C20A.FCI POPtimers/n8392
+FCITOF0_DE  ---     0.585     R9C20A.FCI to      R9C20A.F0 POPtimers/SLICE_36
+ROUTE         2     2.022      R9C20A.F0 to      R5C19D.A1 POPtimers/Endof2ndMWpulse[7]
+C1TOFCO_DE  ---     0.889      R5C19D.A1 to     R5C19D.FCO POPtimers/SLICE_82
+ROUTE         1     0.000     R5C19D.FCO to     R5C20A.FCI POPtimers/n8201
+FCITOFCO_D  ---     0.162     R5C20A.FCI to     R5C20A.FCO POPtimers/SLICE_79
+ROUTE         1     0.000     R5C20A.FCO to     R5C20B.FCI POPtimers/n8202
+FCITOF0_DE  ---     0.585     R5C20B.FCI to      R5C20B.F0 POPtimers/SLICE_78
+ROUTE         3     1.978      R5C20B.F0 to      R4C16A.B1 POPtimers/Startofprobepulse[10]
+C1TOFCO_DE  ---     0.889      R4C16A.B1 to     R4C16A.FCO POPtimers/SLICE_41
+ROUTE         1     0.000     R4C16A.FCO to     R4C16B.FCI POPtimers/n8227
+FCITOF1_DE  ---     0.643     R4C16B.FCI to      R4C16B.F1 POPtimers/SLICE_31
+ROUTE         2     1.542      R4C16B.F1 to      R3C15D.B1 POPtimers/Endofprobepulse[12]
+C1TOFCO_DE  ---     0.889      R3C15D.B1 to     R3C15D.FCO POPtimers/SLICE_19
+ROUTE         1     0.000     R3C15D.FCO to     R3C16A.FCI POPtimers/n8233
+FCITOF0_DE  ---     0.585     R3C16A.FCI to      R3C16A.F0 POPtimers/SLICE_18
+ROUTE         1     1.420      R3C16A.F0 to      R3C18D.B0 POPtimers/Resetandrepeat[13]
+C0TOFCO_DE  ---     1.023      R3C18D.B0 to     R3C18D.FCO POPtimers/SLICE_146
+ROUTE         1     0.000     R3C18D.FCO to     R3C19A.FCI POPtimers/loopcounter/n8267
+FCITOF1_DE  ---     0.643     R3C19A.FCI to      R3C19A.F1 POPtimers/SLICE_145
+ROUTE         1     1.278      R3C19A.F1 to      R3C14C.C1 POPtimers/loop
+CTOF_DEL    ---     0.495      R3C14C.C1 to      R3C14C.F1 POPtimers/SLICE_241
+ROUTE         9     2.407      R3C14C.F1 to     R2C17D.LSR POPtimers/counterreset (to clk_2M5)
                   --------
-                   23.270   (47.2% logic, 52.8% route), 17 logic levels.
+                   26.367   (38.7% logic, 61.3% route), 15 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_139:
+      Source Clock Path tenmegclock to POPtimers/piecounter/SLICE_142:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R4C9C.CLK clk_2M5
-REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 POPtimers/SLICE_131
-ROUTE         1     1.672       R4C9C.Q0 to      R7C14D.D1 POPtimers/freepcounter/clean_trigger/Q1
-CTOF_DEL    ---     0.495      R7C14D.D1 to      R7C14D.F1 SLICE_210
-ROUTE         8     2.838      R7C14D.F1 to     R9C12B.CLK POPtimers/freepcounter/trigger
+ROUTE        39     1.652     LPLL.CLKOP to     R4C17A.CLK clk_2M5
+REG_DEL     ---     0.452     R4C17A.CLK to      R4C17A.Q0 POPtimers/SLICE_127
+ROUTE         1     1.597      R4C17A.Q0 to      R7C14D.C0 POPtimers/piecounter/clean_trigger/Q1
+CTOF_DEL    ---     0.495      R7C14D.C0 to      R7C14D.F0 SLICE_441
+ROUTE        10     3.187      R7C14D.F0 to      R9C2C.CLK reveal_ist_66_N
                   --------
-                   13.491   (23.5% logic, 76.5% route), 4 logic levels.
+                   12.043   (26.3% logic, 73.7% route), 4 logic levels.
 
-      Destination Clock Path tenmegclock to SLICE_216:
+      Destination Clock Path tenmegclock to POPtimers/systemcounter/SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
-ROUTE         1     4.158       21.PADDI to      LPLL.CLKI tenmegclock_c
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
 CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
-ROUTE        39     1.652     LPLL.CLKOP to      R9C9C.CLK clk_2M5
+ROUTE        39     1.652     LPLL.CLKOP to     R2C17D.CLK clk_2M5
                   --------
-                    8.034   (27.7% logic, 72.3% route), 2 logic levels.
+                    6.312   (35.2% logic, 64.8% route), 2 logic levels.
 
-Report:   34.520MHz is the maximum frequency for this preference.
+Report:   30.891MHz is the maximum frequency for this preference.
 
 
 ================================================================================
-Preference: FREQUENCY NET "tenmegclock_c" 10.000000 MHz ;
-            0 items scored, 0 timing errors detected.
+Preference: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;
+            803 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 85.714ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i3  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i19  (to clk_debug_N +)
+
+   Delay:               4.285ns  (10.5% logic, 89.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      4.285ns physical path delay POPtimers/freepcounter/SLICE_160 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_551 meets
+    100.000ns delay constraint less
+      9.653ns skew and
+      0.348ns M_SET requirement (totaling 89.999ns) by 85.714ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_160 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_551:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20A.CLK to      R3C20A.Q1 POPtimers/freepcounter/SLICE_160 (from reveal_ist_69_N)
+ROUTE         4     3.833      R3C20A.Q1 to       R5C9A.M0 reveal_ist_25_N (to clk_debug_N)
+                  --------
+                    4.285   (10.5% logic, 89.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_160:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.563      R7C14C.F0 to     R3C20A.CLK reveal_ist_69_N
+                  --------
+                   13.049   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_551:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to      R5C9A.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.014ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i7  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i23  (to clk_debug_N +)
+
+   Delay:               4.000ns  (11.3% logic, 88.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      4.000ns physical path delay POPtimers/freepcounter/SLICE_158 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 86.014ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_158 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20C.CLK to      R3C20C.Q1 POPtimers/freepcounter/SLICE_158 (from reveal_ist_69_N)
+ROUTE         4     3.548      R3C20C.Q1 to      R5C10B.M1 reveal_ist_17_N (to clk_debug_N)
+                  --------
+                    4.000   (11.3% logic, 88.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C20C.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R5C10B.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.457ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i2  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i18  (to clk_debug_N +)
+
+   Delay:               3.557ns  (12.7% logic, 87.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.557ns physical path delay POPtimers/freepcounter/SLICE_167 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_547 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 86.457ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_167 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_547:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R4C20B.CLK to      R4C20B.Q0 POPtimers/freepcounter/SLICE_167 (from reveal_ist_69_N)
+ROUTE         4     3.105      R4C20B.Q0 to      R3C12C.M1 reveal_ist_27_N (to clk_debug_N)
+                  --------
+                    3.557   (12.7% logic, 87.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_167:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R4C20B.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_547:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R3C12C.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.585ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i5  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i21  (to clk_debug_N +)
+
+   Delay:               3.429ns  (13.2% logic, 86.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.429ns physical path delay POPtimers/freepcounter/SLICE_159 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 86.585ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_159 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20B.CLK to      R3C20B.Q1 POPtimers/freepcounter/SLICE_159 (from reveal_ist_69_N)
+ROUTE         4     2.977      R3C20B.Q1 to       R7C8D.M1 reveal_ist_21_N (to clk_debug_N)
+                  --------
+                    3.429   (13.2% logic, 86.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_159:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C20B.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to      R7C8D.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.586ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i9  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i25  (to clk_debug_N +)
+
+   Delay:               3.413ns  (13.2% logic, 86.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.413ns physical path delay POPtimers/freepcounter/SLICE_157 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553 meets
+    100.000ns delay constraint less
+      9.653ns skew and
+      0.348ns M_SET requirement (totaling 89.999ns) by 86.586ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_157 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20D.CLK to      R3C20D.Q1 POPtimers/freepcounter/SLICE_157 (from reveal_ist_69_N)
+ROUTE         4     2.961      R3C20D.Q1 to      R5C10D.M1 reveal_ist_13_N (to clk_debug_N)
+                  --------
+                    3.413   (13.2% logic, 86.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.563      R7C14C.F0 to     R3C20D.CLK reveal_ist_69_N
+                  --------
+                   13.049   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R5C10D.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.684ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i6  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i22  (to clk_debug_N +)
+
+   Delay:               3.330ns  (13.6% logic, 86.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.330ns physical path delay POPtimers/freepcounter/SLICE_158 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 86.684ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_158 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20C.CLK to      R3C20C.Q0 POPtimers/freepcounter/SLICE_158 (from reveal_ist_69_N)
+ROUTE         4     2.878      R3C20C.Q0 to      R5C10B.M0 reveal_ist_19_N (to clk_debug_N)
+                  --------
+                    3.330   (13.6% logic, 86.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C20C.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R5C10B.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.919ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i15  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i31  (to clk_debug_N +)
+
+   Delay:               3.095ns  (14.6% logic, 85.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.095ns physical path delay POPtimers/freepcounter/SLICE_154 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 86.919ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_154 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C21C.CLK to      R3C21C.Q1 POPtimers/freepcounter/SLICE_154 (from reveal_ist_69_N)
+ROUTE         4     2.643      R3C21C.Q1 to      R9C12C.M1 reveal_ist_1_N (to clk_debug_N)
+                  --------
+                    3.095   (14.6% logic, 85.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C21C.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R9C12C.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.985ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i8  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i24  (to clk_debug_N +)
+
+   Delay:               3.014ns  (15.0% logic, 85.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.014ns physical path delay POPtimers/freepcounter/SLICE_157 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553 meets
+    100.000ns delay constraint less
+      9.653ns skew and
+      0.348ns M_SET requirement (totaling 89.999ns) by 86.985ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_157 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20D.CLK to      R3C20D.Q0 POPtimers/freepcounter/SLICE_157 (from reveal_ist_69_N)
+ROUTE         4     2.562      R3C20D.Q0 to      R5C10D.M0 reveal_ist_15_N (to clk_debug_N)
+                  --------
+                    3.014   (15.0% logic, 85.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.563      R7C14C.F0 to     R3C20D.CLK reveal_ist_69_N
+                  --------
+                   13.049   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_553:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R5C10D.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 87.030ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i4  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i20  (to clk_debug_N +)
+
+   Delay:               2.984ns  (15.1% logic, 84.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      2.984ns physical path delay POPtimers/freepcounter/SLICE_159 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 87.030ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_159 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C20B.CLK to      R3C20B.Q0 POPtimers/freepcounter/SLICE_159 (from reveal_ist_69_N)
+ROUTE         4     2.532      R3C20B.Q0 to       R7C8D.M0 reveal_ist_23_N (to clk_debug_N)
+                  --------
+                    2.984   (15.1% logic, 84.9% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_159:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C20B.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to      R7C8D.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 87.109ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              POPtimers/freepcounter/count_i14  (from reveal_ist_69_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i30  (to clk_debug_N +)
+
+   Delay:               2.905ns  (15.6% logic, 84.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      2.905ns physical path delay POPtimers/freepcounter/SLICE_154 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5 meets
+    100.000ns delay constraint less
+      9.638ns skew and
+      0.348ns M_SET requirement (totaling 90.014ns) by 87.109ns
+
+ Physical Path Details:
+
+      Data path POPtimers/freepcounter/SLICE_154 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C21C.CLK to      R3C21C.Q0 POPtimers/freepcounter/SLICE_154 (from reveal_ist_69_N)
+ROUTE         4     2.453      R3C21C.Q0 to      R9C12C.M0 reveal_ist_3_N (to clk_debug_N)
+                  --------
+                    2.905   (15.6% logic, 84.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to POPtimers/freepcounter/SLICE_154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.436       21.PADDI to      LPLL.CLKI clk_debug_N
+CLKI2OP_DE  ---     1.092      LPLL.CLKI to     LPLL.CLKOP clocks/PLL/PLLInst_0
+ROUTE        39     1.652     LPLL.CLKOP to     R3C19C.CLK clk_2M5
+REG_DEL     ---     0.452     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231
+ROUTE         2     2.227      R3C19C.Q0 to      R7C14C.C0 POPtimers/freepcounter/clean_trigger/Q0
+CTOF_DEL    ---     0.495      R7C14C.C0 to      R7C14C.F0 SLICE_437
+ROUTE         9     3.548      R7C14C.F0 to     R3C21C.CLK reveal_ist_69_N
+                  --------
+                   13.034   (24.3% logic, 75.7% route), 4 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         21.PAD to       21.PADDI tenmegclock
+ROUTE       100     2.264       21.PADDI to     R9C12C.CLK clk_debug_N
+                  --------
+                    3.396   (33.3% logic, 66.7% route), 1 logic levels.
+
+Report:   69.999MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -915,10 +1397,10 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |    2.500 MHz|   34.520 MHz|  17  
+FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |    2.500 MHz|   30.891 MHz|  15  
                                         |             |             |
-FREQUENCY NET "tenmegclock_c" 10.000000 |             |             |
-MHz ;                                   |            -|            -|   0  
+FREQUENCY NET "clk_debug_N" 10.000000   |             |             |
+MHz ;                                   |   10.000 MHz|   69.999 MHz|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -929,41 +1411,58 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 7 clocks:
+Found 8 clocks:
 
-Clock Domain: tenmegclock_c   Source: tenmegclock.PAD   Loads: 1
+Clock Domain: sampled_modebutton   Source: SLICE_482.Q0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: sampled_modebutton   Source: SLICE_217.Q0   Loads: 2
+Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0   Loads: 9
    No transfer within this clock domain is found
 
-Clock Domain: debounce_pulse   Source: slowclocks/SLICE_187.Q0   Loads: 7
+Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0   Loads: 10
+   No transfer within this clock domain is found
+
+Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK   Loads: 153
+   No transfer within this clock domain is found
+
+Clock Domain: debounce_pulse   Source: slowclocks/SLICE_203.Q0   Loads: 7
    No transfer within this clock domain is found
 
 Clock Domain: clocks/PLL/CLKFB_t   Source: clocks/PLL/PLLInst_0.CLKINTFB   Loads: 1
    No transfer within this clock domain is found
 
+Clock Domain: clk_debug_N   Source: tenmegclock.PAD   Loads: 100
+   Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 14
+
+   Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 15
+
+   Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK
+
+   Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 4
+
 Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP   Loads: 39
    Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
 
    Data transfers from:
-   Clock Domain: sampled_modebutton   Source: SLICE_217.Q0
+   Clock Domain: sampled_modebutton   Source: SLICE_482.Q0
       Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 3
 
-   Clock Domain: debounce_pulse   Source: slowclocks/SLICE_187.Q0
-      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 5
-
-   Clock Domain: POPtimers/piecounter/trigger   Source: SLICE_211.F1
-      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 15
-
-   Clock Domain: POPtimers/freepcounter/trigger   Source: SLICE_210.F1
+   Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0
       Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 14
 
-Clock Domain: POPtimers/piecounter/trigger   Source: SLICE_211.F1   Loads: 9
-   No transfer within this clock domain is found
+   Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 15
 
-Clock Domain: POPtimers/freepcounter/trigger   Source: SLICE_210.F1   Loads: 8
-   No transfer within this clock domain is found
+   Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK
+
+   Clock Domain: debounce_pulse   Source: slowclocks/SLICE_203.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 5
 
 
 Timing summary (Setup):
@@ -972,11 +1471,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 326285 paths, 3 nets, and 819 connections (78.37% coverage)
+Constraints cover 1265631 paths, 3 nets, and 3826 connections (91.73% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Mon Jul 17 11:16:32 2023
+Sat Jul 29 16:04:52 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1015,92 +1514,45 @@ Preference: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 0.377ns
+Passed: The following path meets requirements by 0.309ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i17  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i17  (to clk_2M5 +)
+   Source:         FF         Q              POPtimers/freepcounter/clean_trigger/stage0_ff/Q_5  (from clk_2M5 +)
+   Destination:    FF         Data in        POPtimers/freepcounter/clean_trigger/stage1_ff/Q_5  (to clk_2M5 +)
 
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
-
- Constraint Details:
-
-      0.364ns physical path delay slowclocks/SLICE_182 to slowclocks/SLICE_182 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
-
- Physical Path Details:
-
-      Data path slowclocks/SLICE_182 to slowclocks/SLICE_182:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13B.CLK to      R7C13B.Q0 slowclocks/SLICE_182 (from clk_2M5)
-ROUTE         1     0.130      R7C13B.Q0 to      R7C13B.A0 slowclocks/n6
-CTOF_DEL    ---     0.101      R7C13B.A0 to      R7C13B.F0 slowclocks/SLICE_182
-ROUTE         1     0.000      R7C13B.F0 to     R7C13B.DI0 slowclocks/n103 (to clk_2M5)
-                  --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_182:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13B.CLK clk_2M5
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_182:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13B.CLK clk_2M5
-                  --------
-                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.377ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              slowclocks/count_288__i13  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i13  (to clk_2M5 +)
-
-   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+   Delay:               0.290ns  (45.9% logic, 54.1% route), 1 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_184 to slowclocks/SLICE_184 meets
-     -0.013ns DIN_HLD and
+      0.290ns physical path delay POPtimers/freepcounter/SLICE_231 to POPtimers/SLICE_151 meets
+     -0.019ns M_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+      0.000ns skew requirement (totaling -0.019ns) by 0.309ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_184 to slowclocks/SLICE_184:
+      Data path POPtimers/freepcounter/SLICE_231 to POPtimers/SLICE_151:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12D.CLK to      R7C12D.Q0 slowclocks/SLICE_184 (from clk_2M5)
-ROUTE         1     0.130      R7C12D.Q0 to      R7C12D.A0 slowclocks/n10
-CTOF_DEL    ---     0.101      R7C12D.A0 to      R7C12D.F0 slowclocks/SLICE_184
-ROUTE         1     0.000      R7C12D.F0 to     R7C12D.DI0 slowclocks/n107 (to clk_2M5)
+REG_DEL     ---     0.133     R3C19C.CLK to      R3C19C.Q0 POPtimers/freepcounter/SLICE_231 (from clk_2M5)
+ROUTE         2     0.157      R3C19C.Q0 to      R3C17C.M0 POPtimers/freepcounter/clean_trigger/Q0 (to clk_2M5)
                   --------
-                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+                    0.290   (45.9% logic, 54.1% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_184:
+      Source Clock Path clocks/PLL/PLLInst_0 to POPtimers/freepcounter/SLICE_231:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12D.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R3C19C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_184:
+      Destination Clock Path clocks/PLL/PLLInst_0 to POPtimers/SLICE_151:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12D.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R3C17C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1109,43 +1561,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i9  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i9  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i11  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i11  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_186 to slowclocks/SLICE_186 meets
+      0.364ns physical path delay slowclocks/SLICE_201 to slowclocks/SLICE_201 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_186 to slowclocks/SLICE_186:
+      Data path slowclocks/SLICE_201 to slowclocks/SLICE_201:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12B.CLK to      R7C12B.Q0 slowclocks/SLICE_186 (from clk_2M5)
-ROUTE         1     0.130      R7C12B.Q0 to      R7C12B.A0 slowclocks/n14
-CTOF_DEL    ---     0.101      R7C12B.A0 to      R7C12B.F0 slowclocks/SLICE_186
-ROUTE         1     0.000      R7C12B.F0 to     R7C12B.DI0 slowclocks/n111 (to clk_2M5)
+REG_DEL     ---     0.133     R2C14C.CLK to      R2C14C.Q0 slowclocks/SLICE_201 (from clk_2M5)
+ROUTE         1     0.130      R2C14C.Q0 to      R2C14C.A0 slowclocks/n12
+CTOF_DEL    ---     0.101      R2C14C.A0 to      R2C14C.F0 slowclocks/SLICE_201
+ROUTE         1     0.000      R2C14C.F0 to     R2C14C.DI0 slowclocks/n109 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_186:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_201:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_186:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_201:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1154,43 +1606,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i3  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i3  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i18  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i18  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_189 to slowclocks/SLICE_189 meets
+      0.364ns physical path delay slowclocks/SLICE_198 to slowclocks/SLICE_198 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_189 to slowclocks/SLICE_189:
+      Data path slowclocks/SLICE_198 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11C.CLK to      R7C11C.Q0 slowclocks/SLICE_189 (from clk_2M5)
-ROUTE         1     0.130      R7C11C.Q0 to      R7C11C.A0 slowclocks/n20
-CTOF_DEL    ---     0.101      R7C11C.A0 to      R7C11C.F0 slowclocks/SLICE_189
-ROUTE         1     0.000      R7C11C.F0 to     R7C11C.DI0 slowclocks/n117 (to clk_2M5)
+REG_DEL     ---     0.133     R2C15B.CLK to      R2C15B.Q1 slowclocks/SLICE_198 (from clk_2M5)
+ROUTE         1     0.130      R2C15B.Q1 to      R2C15B.A1 slowclocks/n5
+CTOF_DEL    ---     0.101      R2C15B.A1 to      R2C15B.F1 slowclocks/SLICE_198
+ROUTE         1     0.000      R2C15B.F1 to     R2C15B.DI1 slowclocks/n102 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_189:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_189:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1199,43 +1651,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i20  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i20  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i15  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i15  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_181 to slowclocks/SLICE_181 meets
+      0.364ns physical path delay slowclocks/SLICE_199 to slowclocks/SLICE_199 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_181 to slowclocks/SLICE_181:
+      Data path slowclocks/SLICE_199 to slowclocks/SLICE_199:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13C.CLK to      R7C13C.Q1 slowclocks/SLICE_181 (from clk_2M5)
-ROUTE         1     0.130      R7C13C.Q1 to      R7C13C.A1 slowclocks/n3
-CTOF_DEL    ---     0.101      R7C13C.A1 to      R7C13C.F1 slowclocks/SLICE_181
-ROUTE         1     0.000      R7C13C.F1 to     R7C13C.DI1 slowclocks/n100 (to clk_2M5)
+REG_DEL     ---     0.133     R2C15A.CLK to      R2C15A.Q0 slowclocks/SLICE_199 (from clk_2M5)
+ROUTE         1     0.130      R2C15A.Q0 to      R2C15A.A0 slowclocks/n8
+CTOF_DEL    ---     0.101      R2C15A.A0 to      R2C15A.F0 slowclocks/SLICE_199
+ROUTE         1     0.000      R2C15A.F0 to     R2C15A.DI0 slowclocks/n105 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_181:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_199:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15A.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_181:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_199:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15A.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1244,43 +1696,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i2  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i2  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i5  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i5  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_190 to slowclocks/SLICE_190 meets
+      0.364ns physical path delay slowclocks/SLICE_204 to slowclocks/SLICE_204 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_190 to slowclocks/SLICE_190:
+      Data path slowclocks/SLICE_204 to slowclocks/SLICE_204:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11B.CLK to      R7C11B.Q1 slowclocks/SLICE_190 (from clk_2M5)
-ROUTE         1     0.130      R7C11B.Q1 to      R7C11B.A1 slowclocks/n21
-CTOF_DEL    ---     0.101      R7C11B.A1 to      R7C11B.F1 slowclocks/SLICE_190
-ROUTE         1     0.000      R7C11B.F1 to     R7C11B.DI1 slowclocks/n118 (to clk_2M5)
+REG_DEL     ---     0.133     R2C13D.CLK to      R2C13D.Q0 slowclocks/SLICE_204 (from clk_2M5)
+ROUTE         1     0.130      R2C13D.Q0 to      R2C13D.A0 slowclocks/n18
+CTOF_DEL    ---     0.101      R2C13D.A0 to      R2C13D.F0 slowclocks/SLICE_204
+ROUTE         1     0.000      R2C13D.F0 to     R2C13D.DI0 slowclocks/n115 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_190:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_204:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C13D.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_190:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_204:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C13D.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1289,43 +1741,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i11  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i11  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i20  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i20  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_185 to slowclocks/SLICE_185 meets
+      0.364ns physical path delay slowclocks/SLICE_197 to slowclocks/SLICE_197 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_185 to slowclocks/SLICE_185:
+      Data path slowclocks/SLICE_197 to slowclocks/SLICE_197:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C12C.CLK to      R7C12C.Q0 slowclocks/SLICE_185 (from clk_2M5)
-ROUTE         1     0.130      R7C12C.Q0 to      R7C12C.A0 slowclocks/n12
-CTOF_DEL    ---     0.101      R7C12C.A0 to      R7C12C.F0 slowclocks/SLICE_185
-ROUTE         1     0.000      R7C12C.F0 to     R7C12C.DI0 slowclocks/n109 (to clk_2M5)
+REG_DEL     ---     0.133     R2C15C.CLK to      R2C15C.Q1 slowclocks/SLICE_197 (from clk_2M5)
+ROUTE         1     0.130      R2C15C.Q1 to      R2C15C.A1 slowclocks/n3
+CTOF_DEL    ---     0.101      R2C15C.A1 to      R2C15C.F1 slowclocks/SLICE_197
+ROUTE         1     0.000      R2C15C.F1 to     R2C15C.DI1 slowclocks/n100 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_185:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_197:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_185:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_197:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C12C.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1334,43 +1786,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i15  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i15  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i13  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i13  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_183 to slowclocks/SLICE_183 meets
+      0.364ns physical path delay slowclocks/SLICE_200 to slowclocks/SLICE_200 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_183 to slowclocks/SLICE_183:
+      Data path slowclocks/SLICE_200 to slowclocks/SLICE_200:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C13A.CLK to      R7C13A.Q0 slowclocks/SLICE_183 (from clk_2M5)
-ROUTE         1     0.130      R7C13A.Q0 to      R7C13A.A0 slowclocks/n8
-CTOF_DEL    ---     0.101      R7C13A.A0 to      R7C13A.F0 slowclocks/SLICE_183
-ROUTE         1     0.000      R7C13A.F0 to     R7C13A.DI0 slowclocks/n105 (to clk_2M5)
+REG_DEL     ---     0.133     R2C14D.CLK to      R2C14D.Q0 slowclocks/SLICE_200 (from clk_2M5)
+ROUTE         1     0.130      R2C14D.Q0 to      R2C14D.A0 slowclocks/n10
+CTOF_DEL    ---     0.101      R2C14D.A0 to      R2C14D.F0 slowclocks/SLICE_200
+ROUTE         1     0.000      R2C14D.F0 to     R2C14D.DI0 slowclocks/n107 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_183:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_200:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13A.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14D.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_183:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_200:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C13A.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14D.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1379,43 +1831,43 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i1  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i1  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i17  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i17  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_190 to slowclocks/SLICE_190 meets
+      0.364ns physical path delay slowclocks/SLICE_198 to slowclocks/SLICE_198 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_190 to slowclocks/SLICE_190:
+      Data path slowclocks/SLICE_198 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11B.CLK to      R7C11B.Q0 slowclocks/SLICE_190 (from clk_2M5)
-ROUTE         1     0.130      R7C11B.Q0 to      R7C11B.A0 slowclocks/n22
-CTOF_DEL    ---     0.101      R7C11B.A0 to      R7C11B.F0 slowclocks/SLICE_190
-ROUTE         1     0.000      R7C11B.F0 to     R7C11B.DI0 slowclocks/n119 (to clk_2M5)
+REG_DEL     ---     0.133     R2C15B.CLK to      R2C15B.Q0 slowclocks/SLICE_198 (from clk_2M5)
+ROUTE         1     0.130      R2C15B.Q0 to      R2C15B.A0 slowclocks/n6
+CTOF_DEL    ---     0.101      R2C15B.A0 to      R2C15B.F0 slowclocks/SLICE_198
+ROUTE         1     0.000      R2C15B.F0 to     R2C15B.DI0 slowclocks/n103 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_190:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_190:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_198:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11B.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C15B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1424,51 +1876,526 @@ Passed: The following path meets requirements by 0.377ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              slowclocks/count_288__i5  (from clk_2M5 +)
-   Destination:    FF         Data in        slowclocks/count_288__i5  (to clk_2M5 +)
+   Source:         FF         Q              slowclocks/count_956__i3  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i3  (to clk_2M5 +)
 
    Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.364ns physical path delay slowclocks/SLICE_188 to slowclocks/SLICE_188 meets
+      0.364ns physical path delay slowclocks/SLICE_205 to slowclocks/SLICE_205 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.377ns
 
  Physical Path Details:
 
-      Data path slowclocks/SLICE_188 to slowclocks/SLICE_188:
+      Data path slowclocks/SLICE_205 to slowclocks/SLICE_205:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R7C11D.CLK to      R7C11D.Q0 slowclocks/SLICE_188 (from clk_2M5)
-ROUTE         1     0.130      R7C11D.Q0 to      R7C11D.A0 slowclocks/n18
-CTOF_DEL    ---     0.101      R7C11D.A0 to      R7C11D.F0 slowclocks/SLICE_188
-ROUTE         1     0.000      R7C11D.F0 to     R7C11D.DI0 slowclocks/n115 (to clk_2M5)
+REG_DEL     ---     0.133     R2C13C.CLK to      R2C13C.Q0 slowclocks/SLICE_205 (from clk_2M5)
+ROUTE         1     0.130      R2C13C.Q0 to      R2C13C.A0 slowclocks/n20
+CTOF_DEL    ---     0.101      R2C13C.A0 to      R2C13C.F0 slowclocks/SLICE_205
+ROUTE         1     0.000      R2C13C.F0 to     R2C13C.DI0 slowclocks/n117 (to clk_2M5)
                   --------
                     0.364   (64.3% logic, 35.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_188:
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_205:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11D.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C13C.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_188:
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_205:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        39     0.595     LPLL.CLKOP to     R7C11D.CLK clk_2M5
+ROUTE        39     0.595     LPLL.CLKOP to     R2C13C.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              slowclocks/count_956__i9  (from clk_2M5 +)
+   Destination:    FF         Data in        slowclocks/count_956__i9  (to clk_2M5 +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay slowclocks/SLICE_202 to slowclocks/SLICE_202 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path slowclocks/SLICE_202 to slowclocks/SLICE_202:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C14B.CLK to      R2C14B.Q0 slowclocks/SLICE_202 (from clk_2M5)
+ROUTE         1     0.130      R2C14B.Q0 to      R2C14B.A0 slowclocks/n14
+CTOF_DEL    ---     0.101      R2C14B.A0 to      R2C14B.F0 slowclocks/SLICE_202
+ROUTE         1     0.000      R2C14B.F0 to     R2C14B.DI0 slowclocks/n111 (to clk_2M5)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_202:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14B.CLK clk_2M5
+                  --------
+                    0.595   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clocks/PLL/PLLInst_0 to slowclocks/SLICE_202:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        39     0.595     LPLL.CLKOP to     R2C14B.CLK clk_2M5
                   --------
                     0.595   (0.0% logic, 100.0% route), 0 logic levels.
 
 
 ================================================================================
-Preference: FREQUENCY NET "tenmegclock_c" 10.000000 MHz ;
-            0 items scored, 0 timing errors detected.
+Preference: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;
+            803 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.219ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d_i20  (from clk_debug_N +)
+   Destination:    PDPW8KC    Port           TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0(ASIC)  (to clk_debug_N +)
+
+   Delay:               0.324ns  (41.0% logic, 59.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.324ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0 meets
+      0.051ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.105ns) by 0.219ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C8D.CLK to       R7C8D.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546 (from clk_debug_N)
+ROUTE         1     0.191       R7C8D.Q0 to   EBR_R6C7.DI2 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_din_d[20] (to clk_debug_N)
+                  --------
+                    0.324   (41.0% logic, 59.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_546:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R7C8D.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.842       21.PADDI to  EBR_R6C7.CLKW clk_debug_N
+                  --------
+                    0.842   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.289ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         Sync_RAM   Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0/RAM0  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/FF_0  (to clk_debug_N +)
+
+   Delay:               0.276ns  (100.0% logic, 0.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.276ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.289ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKTOF_DEL  ---     0.276     R4C12A.WCK to      R4C12A.F0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 (from clk_debug_N)
+ROUTE         1     0.000      R4C12A.F0 to     R4C12A.DI0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/dataout0_ffin (to clk_debug_N)
+                  --------
+                    0.276   (100.0% logic, 0.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R4C12A.WCK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R4C12A.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.289ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         Sync_RAM   Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0/RAM0  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/FF_1  (to clk_debug_N +)
+
+   Delay:               0.276ns  (100.0% logic, 0.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.276ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.289ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKTOF_DEL  ---     0.276     R4C12A.WCK to      R4C12A.F1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0 (from clk_debug_N)
+ROUTE         1     0.000      R4C12A.F1 to     R4C12A.DI1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/dataout1_ffin (to clk_debug_N)
+                  --------
+                    0.276   (100.0% logic, 0.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R4C12A.WCK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed_dpramXO2binarynonereg224/mem_0_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R4C12A.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i0  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i1  (to clk_debug_N +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C9C.CLK to       R7C9C.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272 (from clk_debug_N)
+ROUTE         1     0.152       R7C9C.Q0 to       R7C9C.M1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk[0] (to clk_debug_N)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R7C9C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_272:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R7C9C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk_i0  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk_i1  (to clk_debug_N +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R10C6B.CLK to      R10C6B.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264 (from clk_debug_N)
+ROUTE         1     0.152      R10C6B.Q0 to      R10C6B.M1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk[0] (to clk_debug_N)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R10C6B.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_264:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R10C6B.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tu_0/input_a_d1[0]_59  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tu_0/input_a_d2[0]_60  (to clk_debug_N +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_437 to SLICE_441 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_437 to SLICE_441:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C14C.CLK to      R7C14C.Q0 SLICE_437 (from clk_debug_N)
+ROUTE         5     0.154      R7C14C.Q0 to      R7C14D.M1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tu_0/input_a_d1[0] (to clk_debug_N)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to SLICE_437:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R7C14C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to SLICE_441:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R7C14D.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk_i2  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk_i3  (to clk_debug_N +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R10C8C.CLK to      R10C8C.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605 (from clk_debug_N)
+ROUTE         2     0.154      R10C8C.Q0 to      R10C8C.M1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/capture_reclk[2] (to clk_debug_N)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R10C8C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_605:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to     R10C8C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.307ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i3  (to clk_debug_N +)
+
+   Delay:               0.288ns  (46.2% logic, 53.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.288ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.307ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C9C.CLK to       R8C9C.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629 (from clk_debug_N)
+ROUTE         5     0.155       R8C9C.Q0 to       R8C9C.M1 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk[2] (to clk_debug_N)
+                  --------
+                    0.288   (46.2% logic, 53.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R8C9C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_629:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R8C9C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.308ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/start_bit_411  (from clk_debug_N +)
+   Destination:    FF         Data in        TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/start_d_412  (to clk_debug_N +)
+
+   Delay:               0.289ns  (46.0% logic, 54.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_560 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_542 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.308ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_560 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_542:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R4C8C.CLK to       R4C8C.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_560 (from clk_debug_N)
+ROUTE        11     0.156       R4C8C.Q0 to       R4C8A.M0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/start (to clk_debug_N)
+                  --------
+                    0.289   (46.0% logic, 54.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_560:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R4C8C.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_542:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R4C8A.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.313ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/tm_wr_addr_cntr_962__i2  (from clk_debug_N +)
+   Destination:    PDPW8KC    Port           TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0(ASIC)  (to clk_debug_N +)
+
+   Delay:               0.419ns  (31.7% logic, 68.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.419ns physical path delay TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/SLICE_355 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.313ns
+
+ Physical Path Details:
+
+      Data path TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/SLICE_355 to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R4C6D.CLK to       R4C6D.Q0 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/SLICE_355 (from clk_debug_N)
+ROUTE         6     0.286       R4C6D.Q0 to  EBR_R6C7.ADW2 TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/tm_wr_addr_cntr[2] (to clk_debug_N)
+                  --------
+                    0.419   (31.7% logic, 68.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.788       21.PADDI to      R4C6D.CLK clk_debug_N
+                  --------
+                    0.788   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path tenmegclock to TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynonespeedasyncdisablereg3241632416/pmi_ram_dpXbnonesadr324163241611884d26_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       100     0.842       21.PADDI to  EBR_R6C7.CLKW clk_debug_N
+                  --------
+                    0.842   (0.0% logic, 100.0% route), 0 logic levels.
 
 Report Summary
 --------------
@@ -1476,10 +2403,10 @@ Report Summary
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |     0.000 ns|     0.377 ns|   2  
+FREQUENCY NET "clk_2M5" 2.500000 MHz ;  |     0.000 ns|     0.309 ns|   1  
                                         |             |             |
-FREQUENCY NET "tenmegclock_c" 10.000000 |             |             |
-MHz ;                                   |            -|            -|   0  
+FREQUENCY NET "clk_debug_N" 10.000000   |             |             |
+MHz ;                                   |     0.000 ns|     0.219 ns|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1490,41 +2417,58 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 7 clocks:
+Found 8 clocks:
 
-Clock Domain: tenmegclock_c   Source: tenmegclock.PAD   Loads: 1
+Clock Domain: sampled_modebutton   Source: SLICE_482.Q0   Loads: 2
    No transfer within this clock domain is found
 
-Clock Domain: sampled_modebutton   Source: SLICE_217.Q0   Loads: 2
+Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0   Loads: 9
    No transfer within this clock domain is found
 
-Clock Domain: debounce_pulse   Source: slowclocks/SLICE_187.Q0   Loads: 7
+Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0   Loads: 10
+   No transfer within this clock domain is found
+
+Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK   Loads: 153
+   No transfer within this clock domain is found
+
+Clock Domain: debounce_pulse   Source: slowclocks/SLICE_203.Q0   Loads: 7
    No transfer within this clock domain is found
 
 Clock Domain: clocks/PLL/CLKFB_t   Source: clocks/PLL/PLLInst_0.CLKINTFB   Loads: 1
    No transfer within this clock domain is found
 
+Clock Domain: clk_debug_N   Source: tenmegclock.PAD   Loads: 100
+   Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 14
+
+   Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 15
+
+   Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK
+
+   Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_debug_N" 10.000000 MHz ;   Transfers: 4
+
 Clock Domain: clk_2M5   Source: clocks/PLL/PLLInst_0.CLKOP   Loads: 39
    Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;
 
    Data transfers from:
-   Clock Domain: sampled_modebutton   Source: SLICE_217.Q0
+   Clock Domain: sampled_modebutton   Source: SLICE_482.Q0
       Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 3
 
-   Clock Domain: debounce_pulse   Source: slowclocks/SLICE_187.Q0
-      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 5
-
-   Clock Domain: POPtimers/piecounter/trigger   Source: SLICE_211.F1
-      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 15
-
-   Clock Domain: POPtimers/freepcounter/trigger   Source: SLICE_210.F1
+   Clock Domain: reveal_ist_69_N   Source: SLICE_437.F0
       Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 14
 
-Clock Domain: POPtimers/piecounter/trigger   Source: SLICE_211.F1   Loads: 9
-   No transfer within this clock domain is found
+   Clock Domain: reveal_ist_66_N   Source: SLICE_441.F0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 15
 
-Clock Domain: POPtimers/freepcounter/trigger   Source: SLICE_210.F1   Loads: 8
-   No transfer within this clock domain is found
+   Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK
+
+   Clock Domain: debounce_pulse   Source: slowclocks/SLICE_203.Q0
+      Covered under: FREQUENCY NET "clk_2M5" 2.500000 MHz ;   Transfers: 5
 
 
 Timing summary (Hold):
@@ -1533,7 +2477,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 326285 paths, 3 nets, and 819 connections (78.37% coverage)
+Constraints cover 1265631 paths, 3 nets, and 3826 connections (91.73% coverage)
 
 
 

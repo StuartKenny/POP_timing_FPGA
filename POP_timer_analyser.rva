@@ -26,46 +26,46 @@
   <LACoreCount>1</LACoreCount>
   <WinUI CoreIndex="0">
    <TraceSigTreeData>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count" NodeType="1" PortIndex="0">
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo" NodeType="1" PortIndex="0">
      <BusRadix Radix="2"/>
      <IsExpanded Expand="false"/>
     </TraceSignal>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:0" NodeType="2" PortIndex="0"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:1" NodeType="2" PortIndex="1"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:2" NodeType="2" PortIndex="2"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:3" NodeType="2" PortIndex="3"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:4" NodeType="2" PortIndex="4"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:5" NodeType="2" PortIndex="5"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:6" NodeType="2" PortIndex="6"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:7" NodeType="2" PortIndex="7"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:8" NodeType="2" PortIndex="8"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:9" NodeType="2" PortIndex="9"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:10" NodeType="2" PortIndex="10"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:11" NodeType="2" PortIndex="11"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:12" NodeType="2" PortIndex="12"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:13" NodeType="2" PortIndex="13"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:14" NodeType="2" PortIndex="14"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/piecounter/count:15" NodeType="2" PortIndex="15"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count" NodeType="1" PortIndex="16">
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:0" NodeType="2" PortIndex="0"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:1" NodeType="2" PortIndex="1"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:2" NodeType="2" PortIndex="2"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:3" NodeType="2" PortIndex="3"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:4" NodeType="2" PortIndex="4"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:5" NodeType="2" PortIndex="5"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:6" NodeType="2" PortIndex="6"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:7" NodeType="2" PortIndex="7"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:8" NodeType="2" PortIndex="8"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:9" NodeType="2" PortIndex="9"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:10" NodeType="2" PortIndex="10"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:11" NodeType="2" PortIndex="11"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:12" NodeType="2" PortIndex="12"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:13" NodeType="2" PortIndex="13"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:14" NodeType="2" PortIndex="14"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustablePieOverTwo:15" NodeType="2" PortIndex="15"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession" NodeType="1" PortIndex="16">
      <BusRadix Radix="2"/>
      <IsExpanded Expand="false"/>
     </TraceSignal>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:0" NodeType="2" PortIndex="16"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:1" NodeType="2" PortIndex="17"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:2" NodeType="2" PortIndex="18"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:3" NodeType="2" PortIndex="19"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:4" NodeType="2" PortIndex="20"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:5" NodeType="2" PortIndex="21"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:6" NodeType="2" PortIndex="22"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:7" NodeType="2" PortIndex="23"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:8" NodeType="2" PortIndex="24"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:9" NodeType="2" PortIndex="25"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:10" NodeType="2" PortIndex="26"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:11" NodeType="2" PortIndex="27"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:12" NodeType="2" PortIndex="28"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:13" NodeType="2" PortIndex="29"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:14" NodeType="2" PortIndex="30"/>
-    <TraceSignal IsHidden="false" Name="POPtimers/freepcounter/count:15" NodeType="2" PortIndex="31"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:0" NodeType="2" PortIndex="16"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:1" NodeType="2" PortIndex="17"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:2" NodeType="2" PortIndex="18"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:3" NodeType="2" PortIndex="19"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:4" NodeType="2" PortIndex="20"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:5" NodeType="2" PortIndex="21"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:6" NodeType="2" PortIndex="22"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:7" NodeType="2" PortIndex="23"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:8" NodeType="2" PortIndex="24"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:9" NodeType="2" PortIndex="25"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:10" NodeType="2" PortIndex="26"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:11" NodeType="2" PortIndex="27"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:12" NodeType="2" PortIndex="28"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:13" NodeType="2" PortIndex="29"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:14" NodeType="2" PortIndex="30"/>
+    <TraceSignal IsHidden="false" Name="POPtimers/AdjustableFreePrecession:15" NodeType="2" PortIndex="31"/>
    </TraceSigTreeData>
    <TriggerUI UserSelect="0" PreSelectType="1" PreSelect="1" UserSelectPos="0"/>
    <CoreRun Run="true"/>

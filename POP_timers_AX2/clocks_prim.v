@@ -1,32 +1,31 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.12.1.454
-// Netlist written on Thu Mar 03 13:56:44 2022
+// Netlist written on Tue Jul 18 13:19:15 2023
 //
 // Verilog Description of module clocks
 //
 
-module clocks (clk_10M_ref, clk_2M5, clk_debug, SEDSTDBY) /* synthesis syn_module_defined=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13[8:14])
-    input clk_10M_ref;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(20[8:19])
-    output clk_2M5;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
-    output clk_debug;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
-    output SEDSTDBY;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[29:37])
+module clocks (clk_10M_ref, clk_2M5, clk_debug, SEDSTDBY) /* synthesis syn_module_defined=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13[8:14])
+    input clk_10M_ref;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(20[8:19])
+    output clk_2M5;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
+    output clk_debug;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
+    output SEDSTDBY;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[29:37])
     
-    wire clk_2M5_c /* synthesis is_clock=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
-    wire clk_debug_c /* synthesis is_clock=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
+    wire clk_10M_ref_c /* synthesis is_clock=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(20[8:19])
+    wire clk_2M5_c /* synthesis is_clock=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
     
-    wire GND_net, SEDSTDBY_c, VCC_net;
+    wire GND_net, VCC_net;
     
+    IB clk_10M_ref_pad (.I(clk_10M_ref), .O(clk_10M_ref_c));   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(20[8:19])
     VHI i44 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
-    OSCH OSCinst0 (.STDBY(GND_net), .SEDSTDBY(SEDSTDBY_c), .OSC(clk_debug_c)) /* synthesis syn_instantiated=1 */ ;
-    defparam OSCinst0.NOM_FREQ = "9.85";
-    OB SEDSTDBY_pad (.I(SEDSTDBY_c), .O(SEDSTDBY));   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[29:37])
+    OB SEDSTDBY_pad (.I(GND_net), .O(SEDSTDBY));   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[29:37])
+    VLO i4 (.Z(GND_net));
     PUR PUR_INST (.PUR(VCC_net));
     defparam PUR_INST.RST_PULSE = 1;
     GSR GSR_INST (.GSR(VCC_net));
+    OB clk_debug_pad (.I(clk_10M_ref_c), .O(clk_debug));   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
+    DIV4PLL PLL (.clk_10M_ref_c(clk_10M_ref_c), .clk_2M5_c(clk_2M5_c), .GND_net(GND_net)) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(42[10:60])
+    OB clk_2M5_pad (.I(clk_2M5_c), .O(clk_2M5));   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
     TSALL TSALL_INST (.TSALL(GND_net));
-    OB clk_debug_pad (.I(clk_debug_c), .O(clk_debug));   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
-    DIV4PLL PLL (.clk_debug_c(clk_debug_c), .clk_2M5_c(clk_2M5_c), .GND_net(GND_net)) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(33[10:58])
-    OB clk_2M5_pad (.I(clk_2M5_c), .O(clk_2M5));   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
     
 endmodule
 //
@@ -35,25 +34,20 @@ endmodule
 //
 
 //
-// Verilog Description of module TSALL
-// module not written out since it is a black-box. 
-//
-
-//
 // Verilog Description of module DIV4PLL
 //
 
-module DIV4PLL (clk_debug_c, clk_2M5_c, GND_net) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;
-    input clk_debug_c;
+module DIV4PLL (clk_10M_ref_c, clk_2M5_c, GND_net) /* synthesis NGD_DRC_MASK=1, syn_module_defined=1 */ ;
+    input clk_10M_ref_c;
     output clk_2M5_c;
     input GND_net;
     
-    wire clk_debug_c /* synthesis is_clock=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[18:27])
-    wire clk_2M5_c /* synthesis is_clock=1 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
+    wire clk_10M_ref_c /* synthesis is_clock=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(20[8:19])
+    wire clk_2M5_c /* synthesis is_clock=1 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(21[9:16])
     
     wire CLKFB_t;
     
-    EHXPLLJ PLLInst_0 (.CLKI(clk_debug_c), .CLKFB(CLKFB_t), .PHASESEL0(GND_net), 
+    EHXPLLJ PLLInst_0 (.CLKI(clk_10M_ref_c), .CLKFB(CLKFB_t), .PHASESEL0(GND_net), 
             .PHASESEL1(GND_net), .PHASEDIR(GND_net), .PHASESTEP(GND_net), 
             .LOADREG(GND_net), .STDBY(GND_net), .PLLWAKESYNC(GND_net), 
             .RST(GND_net), .RESETC(GND_net), .RESETD(GND_net), .RESETM(GND_net), 
@@ -63,7 +57,7 @@ module DIV4PLL (clk_debug_c, clk_2M5_c, GND_net) /* synthesis NGD_DRC_MASK=1, sy
             .PLLDATI3(GND_net), .PLLDATI4(GND_net), .PLLDATI5(GND_net), 
             .PLLDATI6(GND_net), .PLLDATI7(GND_net), .PLLADDR0(GND_net), 
             .PLLADDR1(GND_net), .PLLADDR2(GND_net), .PLLADDR3(GND_net), 
-            .PLLADDR4(GND_net), .CLKOP(clk_2M5_c), .CLKINTFB(CLKFB_t)) /* synthesis FREQUENCY_PIN_CLKOP="2.500000", FREQUENCY_PIN_CLKI="10.000000", ICP_CURRENT="10", LPF_RESISTOR="76", syn_instantiated=1, LSE_LINE_FILE_ID=9, LSE_LCOL=10, LSE_RCOL=58, LSE_LLINE=33, LSE_RLINE=33 */ ;   // c:/users/shift/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(33[10:58])
+            .PLLADDR4(GND_net), .CLKOP(clk_2M5_c), .CLKINTFB(CLKFB_t)) /* synthesis FREQUENCY_PIN_CLKOP="2.500000", FREQUENCY_PIN_CLKI="10.000000", ICP_CURRENT="10", LPF_RESISTOR="76", syn_instantiated=1, LSE_LINE_FILE_ID=7, LSE_LCOL=10, LSE_RCOL=60, LSE_LLINE=42, LSE_RLINE=42 */ ;   // c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(42[10:60])
     defparam PLLInst_0.CLKI_DIV = 1;
     defparam PLLInst_0.CLKFB_DIV = 1;
     defparam PLLInst_0.CLKOP_DIV = 4;
@@ -112,3 +106,8 @@ module DIV4PLL (clk_debug_c, clk_2M5_c, GND_net) /* synthesis NGD_DRC_MASK=1, sy
     defparam PLLInst_0.INTFB_WAKE = "DISABLED";
     
 endmodule
+//
+// Verilog Description of module TSALL
+// module not written out since it is a black-box. 
+//
+

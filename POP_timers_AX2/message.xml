@@ -1,13 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Map">
-        <Message>
-            <ID>51001030</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>POPtimers/counterreset</Dynamic>
-        </Message>
-    </Task>
     <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>2120344</ID>
+            <Severity>Info</Severity>
+            <Dynamic>2</Dynamic>
+        </Message>
+        <Message>
+            <ID>2120346</ID>
+            <Severity>Info</Severity>
+            <Dynamic>3</Dynamic>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,8-1,19) (VERI-1018) compiling module 'TinyFPGA_A2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-142,10) (VERI-9000) elaborating module 'TinyFPGA_A2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v(13,1-45,11) (VERI-9000) elaborating module 'clocks_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-79,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(4,1-28,11) (VERI-9000) elaborating module 'slow_clock_pulse_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(31,2-46,10) (VERI-9000) elaborating module 'n_state_machine_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v</Navigation>
+            <Navigation>31</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v(8,1-94,10) (VERI-9000) elaborating module 'DIV4PLL_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v(2,1-26,11) (VERI-9000) elaborating module 'count_n_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_3'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_4'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_5'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_6'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_7'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_8'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_9'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_10'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module 'comparator_uniq_11'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module 'countupdownpreload_uniq_2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module 'single_period_pulse_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module 'single_period_pulse_uniq_2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_1'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_2'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_3'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>2049992</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module 'd_flip_flop_uniq_4'</Dynamic>
+            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
         <Message>
             <ID>35002000</ID>
             <Severity>Info</Severity>
@@ -17,160 +209,86 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35001200</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>TinyFPGA_A2</Dynamic>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v(1): </Dynamic>
-            <Dynamic>TinyFPGA_A2</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/tinyfpga_a2.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v(13): </Dynamic>
-            <Dynamic>clocks</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/clocks.v</Navigation>
-            <Navigation>13</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v(8): </Dynamic>
-            <Dynamic>DIV4PLL</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/div4pll.v</Navigation>
-            <Navigation>8</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): </Dynamic>
-            <Dynamic>VLO</Dynamic>
-            <Navigation>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1124</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): </Dynamic>
-            <Dynamic>EHXPLLJ_renamed_due_excessive_length_1</Dynamic>
-            <Navigation>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
-            <Navigation>1730</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v(1): </Dynamic>
-            <Dynamic>POPtimers</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/poptimers.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v(2): </Dynamic>
-            <Dynamic>count_n</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/count_n.v</Navigation>
-            <Navigation>2</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v(1): </Dynamic>
-            <Dynamic>comparator</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/compare_n.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(2): </Dynamic>
-            <Dynamic>countupdownpreload</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>2</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(40): </Dynamic>
-            <Dynamic>single_period_pulse</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>40</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(60): </Dynamic>
-            <Dynamic>d_flip_flop</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>60</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(4): </Dynamic>
-            <Dynamic>slow_clock_pulse</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v(31): </Dynamic>
-            <Dynamic>n_state_machine</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/wrapper.v</Navigation>
-            <Navigation>31</Navigation>
-        </Message>
-        <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1610): </Dynamic>
             <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>35</Navigation>
+            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1610</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v(35): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1650): </Dynamic>
             <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
-            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/source/extensions.v</Navigation>
-            <Navigation>35</Navigation>
+            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1650</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
         </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>TinyFPGA_A2_reveal_coretop_instance/jupdate[0]</Dynamic>
+            <Navigation>TinyFPGA_A2_reveal_coretop_instance/jupdate[0]</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/tdoa</Dynamic>
+            <Navigation>xo2chub/tdoa</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/cdn</Dynamic>
+            <Navigation>xo2chub/cdn</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/ip_enable[15]</Dynamic>
+            <Navigation>xo2chub/ip_enable[15]</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/genblk7.un1_jtagf_u</Dynamic>
+            <Navigation>xo2chub/genblk7.un1_jtagf_u</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>xo2chub/genblk7.un1_jtagf_u_1</Dynamic>
+            <Navigation>xo2chub/genblk7.un1_jtagf_u_1</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
+        </Message>
     </Task>
     <Task name="PAR">
-        <Message>
-            <ID>61091050</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>tenmegclock</Dynamic>
-            <Dynamic>clocks/PLL/PLLInst_0</Dynamic>
-            <Dynamic>21</Dynamic>
-            <Dynamic>PR5C</Dynamic>
-        </Message>
-        <Message>
-            <ID>62061005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>CLKI</Dynamic>
-            <Dynamic>tenmegclock_c</Dynamic>
-        </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
+   Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
+   Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=2 clock_loads=2</Dynamic>
         </Message>
     </Task>

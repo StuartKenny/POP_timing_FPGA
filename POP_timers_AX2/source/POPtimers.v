@@ -3,8 +3,8 @@ module POPtimers
 	Up=1'b1,
 	parameter [WIDTH-1:0] PumpPulse=2000, //800탎
 	PieOverTwo=795, //318탎
-	//FreePrecession=6900, //2.76ms
-	FreePrecession=10000, //4ms
+	FreePrecession=6900, //2.76ms
+	//FreePrecession=10000, //4ms
 	ProbePulse=2500, //1ms
 	SampleDelay=2000, //800탎
 	SampleLength=50, //20탎

@@ -37,7 +37,7 @@ module TinyFPGA_A2 (
 	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
 	wire [2:0] SMstate; //3-bit state vector
 	wire pump, probe, MW, sample; //outputs from POPtimers module
-	wire reset_timers; //will zero counter when high
+	//wire reset_timers; //will zero counter when high
 	
 	// tristate the unused pins
 	assign pin3_sn = 1'bz;
@@ -46,18 +46,14 @@ module TinyFPGA_A2 (
 	
 	//Module instantiation
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
-	POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(reset_timers), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(reset_timers), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(MW_invalid), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .medium_pulse(medium_pulse), .slow_pulse(slow_pulse));
 	n_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
 
 	//POP count to be restarted on falling edge of MW_invalid signal
-	assign reset_timers = !MW_invalid;
-
-	//The following combinatorial logic is synchronised to a positive clock edge
-	always@(posedge clk_2M5) 
-	begin
-		ADC_sample <= sample&!MW_invalid; //suppress ADC trigger pulse when MW_invalid is high
-	end
+	//assign reset_timers = MW_invalid; //hold POP counter at zero when MW_invalid signal is high
+	//assign reset_timers = 1'b0; //counter will not be held at zero when MW_invalid is high
 
 	always@(posedge debounce_pulse) //polls buttons once every 100us, inverting the logic
 		begin
@@ -68,7 +64,13 @@ module TinyFPGA_A2 (
 			pieovertwo_minus <= !bottomleft_button; //BL button assigned to pieovertwo_minus, inverted logic
 			freeprecess_minus <= !bottomright_button; //BR button assigned to freeprecess_minus, inverted logic
 		end
-	
+		
+	//Signals from POPtimers module are updated on the negative clock edge
+	//The following combinatorial logic is synchronised to a positive clock edge
+	always@(posedge clk_2M5) 
+	begin
+		ADC_sample <= sample&!MW_invalid; //suppress ADC trigger pulse when MW_invalid is high
+		
 	//States
 	//0. Default state after power on. POP or laser frequency setup dependent on laser_tuning input. LED reflects laser_tuning input
 	//1. Laser frequency setup. probe and sample outputs high. Slow LED flash
@@ -78,11 +80,7 @@ module TinyFPGA_A2 (
 	//5. DR. probe, sample, and MW outputs high. LED four quick flashes then pause
 	//6. Probe with pulsing MW. probe and sample high. Pulsing MW. 3 fast & 1 slow LED pulses.
 	//7. POP with sample bypass. sample high. pump, probe and MW controller by POPtimers module. LED two quick flashes then pause
-	
-	//Signals from POPtimers module are updated on the negative clock edge
-	//The following combinatorial logic is synchronised to a positive clock edge
-	always@(posedge clk_2M5) 
-	begin
+		
 		if (SMstate == 0) begin //0. POP / Laser frequency setup dependent on laser_tuning input
 			LED_output <= laser_tuning;
 			pump_output <= pump&!laser_tuning;
