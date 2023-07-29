@@ -1,7 +1,7 @@
 <Project ModBy="Inserter" SigType="0" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-07-29">
     <IP Version="1_6_042617"/>
     <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="POP_timer"/>
-    <Core InsertDataset="0" Insert="1" Reveal_sig="502989050" Name="Counters" ID="0">
+    <Core InsertDataset="0" Insert="1" Reveal_sig="503005837" Name="Counters" ID="0">
         <Setting>
             <Clock SampleClk="clocks/clk_debug" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
             <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="16"/>
@@ -12,41 +12,41 @@
         </Setting>
         <Dataset Name="Base">
             <Trace>
-                <Bus Name="POPtimers/AdjustablePieOverTwo">
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:0"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:1"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:2"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:3"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:4"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:5"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:6"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:7"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:8"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:9"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:10"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:11"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:12"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:13"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:14"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustablePieOverTwo:15"/>
+                <Bus Name="POPtimers/freepcounter/count">
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:0"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:1"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:2"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:3"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:4"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:5"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:6"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:7"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:8"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:9"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:10"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:11"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:12"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:13"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:14"/>
+                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:15"/>
                 </Bus>
-                <Bus Name="POPtimers/AdjustableFreePrecession">
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:0"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:1"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:2"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:3"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:4"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:5"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:6"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:7"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:8"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:9"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:10"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:11"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:12"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:13"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:14"/>
-                    <Sig Type="SIG" Name="POPtimers/AdjustableFreePrecession:15"/>
+                <Bus Name="POPtimers/piecounter/count">
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:0"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:1"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:2"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:3"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:4"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:5"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:6"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:7"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:8"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:9"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:10"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:11"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:12"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:13"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:14"/>
+                    <Sig Type="SIG" Name="POPtimers/piecounter/count:15"/>
                 </Bus>
             </Trace>
             <Trigger>

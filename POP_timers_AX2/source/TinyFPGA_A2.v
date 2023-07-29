@@ -84,6 +84,7 @@ module TinyFPGA_A2 (
 		if (SMstate == 0) begin //0. POP / Laser frequency setup dependent on laser_tuning input
 			LED_output <= laser_tuning;
 			pump_output <= pump&!laser_tuning;
+			//pump_output <= pump&!laser_tuning&!MW_invalid;
 			probe_output <= probe|laser_tuning;
 			MW_output <= MW&!laser_tuning;
 			sample_output <= sample;

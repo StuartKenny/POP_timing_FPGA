@@ -1,7 +1,8 @@
 module POPtimers 
 	#(parameter WIDTH=16,
 	Up=1'b1,
-	parameter [WIDTH-1:0] PumpPulse=2000, //800탎
+	parameter [WIDTH-1:0] ResetPumpgap=10, //4탎 before asserting pump
+	PumpPulse=2000, //800탎
 	PieOverTwo=795, //318탎
 	FreePrecession=6900, //2.76ms
 	//FreePrecession=10000, //4ms
@@ -26,28 +27,29 @@ module POPtimers
 	input clk_2M5, reset, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
 	output pump, probe, MW, sample;
 	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
-	reg [WIDTH-1:0] gatedcount;
+	reg [WIDTH-1:0] gatedcount; 
 	wire counterreset; //for reseting the main counter once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
 
-	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'b0;
-	wire [WIDTH-1:0] Endofpumppulse = PumpPulse;
-	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap;
-	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo;
-	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession;
-	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo;
-	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap;
-	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay;
-	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength;
-	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse;
-	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; 
+	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'd10;
+	wire [WIDTH-1:0] Startofpumppulse = ResetPumpgap; 
+	wire [WIDTH-1:0] Endofpumppulse = Startofpumppulse+PumpPulse; 
+	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap; 
+	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
 	
 	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
 	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;
 	//wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+PieOverTwo;
 
 	count_n systemcounter (.clk(clk_2M5), .direction(Up), .reset(counterreset), .count(count)); 
-	comparator pump1 (.a(gatedcount), .b(16'b0), .a_gteq_b(pumpstarted), .a_lt_b());
+	comparator pump1 (.a(gatedcount), .b(Startofpumppulse), .a_gteq_b(pumpstarted), .a_lt_b());
 	comparator pump2 (.a(gatedcount), .b(Endofpumppulse), .a_gteq_b(pumpstopped), .a_lt_b());
 	comparator MW1 (.a(gatedcount), .b(Startof1stMWpulse), .a_gteq_b(pi1started), .a_lt_b());
 	comparator MW2 (.a(gatedcount), .b(Endof1stMWpulse), .a_gteq_b(pi1stopped), .a_lt_b());
@@ -65,11 +67,12 @@ module POPtimers
 	assign counterreset = load_defaults|loop|reset;
 	
 	//counter updates on a positive clock edge
-	//comparators are updated on the negative clock edge for stability 
+	//comparators are asynchronous but outputs are gated on the negative clock edge
+	//'loop' counter reset is therefore also gated on the falling clock edge
 	always@(negedge clk_2M5) begin
 		gatedcount <= count; 
 	end
-		
+			
 	//logical outputs to be synchronised to positive clock edge at top-level	
 	assign pump = pumpstarted & !pumpstopped;
 	assign MW = (pi1started & !pi1stopped)|(pi2started & !pi2stopped);
