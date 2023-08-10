@@ -1,85 +1,17 @@
 # Reading pref.tcl
 # do {C:/Users/sek529/Github/POP_timing_FPGA/toplevel_testbench/toplevel_testbench.mdo}
 # Loading project toplevel_testbench
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:13 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v 
-# -- Compiling module slow_clock_pulse
-# -- Compiling module n_state_machine
-# 
-# Top level modules:
-# 	slow_clock_pulse
-# 	n_state_machine
-# End time: 11:49:13 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:13 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v 
-# -- Compiling module countupdownpreload
-# -- Compiling module single_period_pulse
-# -- Compiling module d_flip_flop
-# 
-# Top level modules:
-# 	countupdownpreload
-# End time: 11:49:13 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:14 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v 
-# -- Compiling module comparator
-# 
-# Top level modules:
-# 	comparator
-# End time: 11:49:14 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:14 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v 
-# -- Compiling module count_n
-# 
-# Top level modules:
-# 	count_n
-# End time: 11:49:14 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:14 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v 
-# -- Compiling module POPtimers
-# ** Warning: (vlog-2083) C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(33): Carriage return (0x0D) is not followed by a newline (0x0A).
-# 
-# Top level modules:
-# 	POPtimers
-# End time: 11:49:14 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:14 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v 
-# -- Compiling module DIV4PLL
-# 
-# Top level modules:
-# 	DIV4PLL
-# End time: 11:49:14 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:14 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v 
-# -- Compiling module clocks
-# 
-# Top level modules:
-# 	clocks
-# End time: 11:49:15 on Jul 17,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
-# Start time: 11:49:15 on Jul 17,2023
-# vlog -reportprogress 300 "+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source" -work work C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v 
-# -- Compiling module top_testbench
-# 
-# Top level modules:
-# 	top_testbench
-# End time: 11:49:15 on Jul 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# Compile of wrapper.v was successful.
+# Compile of extensions.v was successful.
+# Compile of compare_n.v was successful.
+# Compile of count_n.v was successful.
+# Compile of POPtimers.v was successful.
+# Compile of Div4PLL.v was successful.
+# Compile of clocks.v was successful.
+# Compile of top_testbench.v was successful.
+# 8 compiles, 0 failed with no errors.
 # vsim -L work -L pmi_work -L ovi_machxo2 top_testbench 
-# Start time: 11:49:15 on Jul 17,2023
+# Start time: 11:19:39 on Aug 10,2023
 # //  ModelSim - Lattice FPGA Edition 2020.3 Oct 14 2020
 # //
 # //  Copyright 1991-2020 Mentor Graphics Corporation
@@ -107,8 +39,10 @@
 # Loading work.slow_clock_pulse
 # Loading work.n_state_machine
 # .main_pane.wave.interior.cs.body.pw.wf
-run -all
-# ** Note: $finish    : C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v(175)
-#    Time: 17602030 ns  Iteration: 0  Instance: /top_testbench
-# 1
-# Break in Module top_testbench at C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v line 175
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: sek529  Hostname: ELECPC356  ProcessID: 7948
+#           Attempting to use alternate WLF file "./wlft0css7a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0css7a
+# End time: 11:48:35 on Aug 10,2023, Elapsed time: 0:28:56
+# Errors: 0, Warnings: 4

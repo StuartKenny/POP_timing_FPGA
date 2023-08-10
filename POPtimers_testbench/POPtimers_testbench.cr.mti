@@ -1,1 +1,61 @@
+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module count_n
 
+Top level modules:
+	count_n
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module clocks
+
+Top level modules:
+	clocks
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module DIV4PLL
+
+Top level modules:
+	DIV4PLL
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module POPtimers
+
+Top level modules:
+	POPtimers
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module TinyFPGA_A2
+
+Top level modules:
+	TinyFPGA_A2
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module comparator
+
+Top level modules:
+	comparator
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module countupdownpreload
+-- Compiling module single_period_pulse
+-- Compiling module d_flip_flop
+
+Top level modules:
+	countupdownpreload
+
+} {} {}} C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v {1 {vlog -work work -stats=none C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module slow_clock_pulse
+-- Compiling module n_state_machine
+
+Top level modules:
+	slow_clock_pulse
+	n_state_machine
+
+} {} {}}

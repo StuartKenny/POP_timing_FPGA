@@ -10,141 +10,136 @@ z2
 cModel Technology
 Z0 dC:/Users/sek529/Github/POP_timing_FPGA/toplevel_testbench
 vclocks
-Z1 !s110 1689590955
+Z1 !s110 1691662778
 !i10b 1
 !s100 CO6@cW8M^zi5NF3AzC8]S0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4aUo?RkK4Dcf5RFWo?BXk0
+IXW69=`4RoTG[K;gNCCA8?2
 R0
 w1688395806
 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v
-!i122 6
+!i122 14
 L0 13 33
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OT;L;2020.3;71
 r1
 !s85 0
 31
-Z5 !s108 1689590954.000000
+Z5 !s108 1691662778.000000
 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v|
 !s101 -O0
 !i113 1
 Z6 o-work work -O0
-Z7 !s92 +incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source -work work -O0
-Z8 tCvgOpt 0
+Z7 tCvgOpt 0
 vcomparator
-Z9 !s110 1689590954
+Z8 !s110 1691662777
 !i10b 1
 !s100 O6l<434<j5RzBBYLDKXTE0
 R2
-IjmU50BBTnzG>zEJ9n>8c11
+I;KRGXBTB;PVni1:CXK`U@1
 R0
-Z10 w1665748953
+Z9 w1665748953
 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v
-!i122 2
+!i122 10
 L0 1 21
 R3
 R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1691662777.000000
 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcount_n
-R9
+R8
 !i10b 1
 !s100 ha18IT1POJWJWE]]bVSB>1
 R2
-I2L_6AU<aDJC9O?didRZi^3
+Ih1:N;_^Ro7HVG0PSPK[Z=1
 R0
 w1689589808
 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v
-!i122 3
+!i122 11
 L0 2 25
 R3
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vcountupdownpreload
-Z11 !s110 1689590953
+R8
 !i10b 1
 !s100 KH[RL828=8`a0?HCdNac72
 R2
-Igc7Gm@d9:8VA_BmD:`2a53
+I`eUB^dPUCfWnRkizMG0GR3
 R0
-R10
-Z12 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
-Z13 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
-!i122 1
+R9
+Z11 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+Z12 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v
+!i122 9
 L0 2 36
 R3
 R4
 r1
 !s85 0
 31
-Z14 !s108 1689590953.000000
-Z15 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
-Z16 !s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
+R10
+Z13 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vd_flip_flop
-R11
+R8
 !i10b 1
 !s100 ?QI8X4mZL<C[6NLGFGT>30
 R2
-ID:0GHf90]6iB`zz2BNPSS0
+IL?>cQX9=6b4g=SRSM9lN:0
 R0
-R10
+R9
+R11
 R12
-R13
-!i122 1
+!i122 9
 L0 60 13
 R3
 R4
 r1
 !s85 0
 31
+R10
+R13
 R14
-R15
-R16
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vDIV4PLL
-R9
+R1
 !i10b 1
 !s100 @LfGV^emeSGd[`7AD@7j33
 R2
-IY`ic2CLRNL9GJEoG[`:6S3
+Io;d<M4dCiTfT90NYci5CC0
 R0
-R10
-8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v
-FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v
-!i122 5
+R9
+8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v
+FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v
+!i122 13
 L0 8 87
 R3
 R4
@@ -152,51 +147,49 @@ r1
 !s85 0
 31
 R5
-!s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v|
+!s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/Div4PLL.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 n@d@i@v4@p@l@l
 vn_state_machine
-R11
+R8
 !i10b 1
 !s100 UWVIY8E3T_>?DN^WieLNA0
 R2
-Ie;o>8LTgm]U_dTWj@W];H0
+IC9VF4hdL<9lEl<i^z4BoI1
 R0
-Z17 w1689588961
-Z18 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
-Z19 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
-!i122 0
+Z15 w1689588961
+Z16 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+Z17 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v
+!i122 8
 L0 31 16
 R3
 R4
 r1
 !s85 0
 31
-R14
-Z20 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
-Z21 !s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
+R10
+Z18 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vPOPtimers
-R9
+R1
 !i10b 1
-!s100 F[2NH3=IVM8AMi9Y5PRUS2
+!s100 7bB[ZdT[877mH0XM;I77U1
 R2
-IW]PL>DR]f;1MRg:mdb0;N3
+Im@_@=[Rz[zz01n=j6YX3z0
 R0
-w1689590408
+w1691661401
 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v
-!i122 4
-L0 1 79
+!i122 12
+L0 1 86
 R3
 R4
 r1
@@ -204,85 +197,81 @@ r1
 31
 R5
 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 n@p@o@ptimers
 vsingle_period_pulse
-R11
+R8
 !i10b 1
 !s100 gjn`@J>?igWfXN9:]R^^f3
 R2
-I>lPNnE2?UCWV55g[T5UTH3
+I0G[Xgh?<1bkX;MOQ<Cl5_0
 R0
-R10
+R9
+R11
 R12
-R13
-!i122 1
+!i122 9
 L0 40 18
 R3
 R4
 r1
 !s85 0
 31
+R10
+R13
 R14
-R15
-R16
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vslow_clock_pulse
-R11
+R8
 !i10b 1
 !s100 ShT5ZjR8AzbdNl<b>[ma21
 R2
-I;^ZGQJVKbh8dm?`Z`MLV[2
+IJ0lNkI<fhbgcWD:Mf@Q]`1
 R0
+R15
+R16
 R17
-R18
-R19
-!i122 0
+!i122 8
 L0 4 25
 R3
 R4
 r1
 !s85 0
 31
-R14
-R20
-R21
+R10
+R18
+R19
 !s101 -O0
 !i113 1
 R6
 R7
-R8
 vtop_testbench
 R1
 !i10b 1
 !s100 Vl3O>bH2CV^5IhAM=Ce:g1
 R2
-ID9jI;dCOMFg:]ZQdlKnTd1
+IW=NEzZ]cM9U<FBIil@e903
 R0
 w1689590925
 8C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v
 FC:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v
-!i122 7
+!i122 15
 L0 5 182
 R3
 R4
 r1
 !s85 0
 31
-!s108 1689590955.000000
+R5
 !s107 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
-!s90 -reportprogress|300|+incdir+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source|-work|work|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/top_testbench.v|
 !s101 -O0
 !i113 1
 R6
 R7
-R8

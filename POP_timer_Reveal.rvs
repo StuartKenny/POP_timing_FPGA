@@ -1,54 +1,54 @@
-<Project ModBy="Inserter" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-07-29">
-    <Core Name="Counters">
-        <Setting>
-            <Capture SamplesPerTrig="16" NumTrigsCap="1"/>
-            <Event EventCnt="0" CntEnableRun="0"/>
-            <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
-        </Setting>
-        <Dataset Name="Base">
-            <Trace>
-                <Bus Name="POPtimers/freepcounter/count" Radix="0">
-                    <Sig Name="POPtimers/freepcounter/count:0"/>
-                    <Sig Name="POPtimers/freepcounter/count:1"/>
-                    <Sig Name="POPtimers/freepcounter/count:2"/>
-                    <Sig Name="POPtimers/freepcounter/count:3"/>
-                    <Sig Name="POPtimers/freepcounter/count:4"/>
-                    <Sig Name="POPtimers/freepcounter/count:5"/>
-                    <Sig Name="POPtimers/freepcounter/count:6"/>
-                    <Sig Name="POPtimers/freepcounter/count:7"/>
-                    <Sig Name="POPtimers/freepcounter/count:8"/>
-                    <Sig Name="POPtimers/freepcounter/count:9"/>
-                    <Sig Name="POPtimers/freepcounter/count:10"/>
-                    <Sig Name="POPtimers/freepcounter/count:11"/>
-                    <Sig Name="POPtimers/freepcounter/count:12"/>
-                    <Sig Name="POPtimers/freepcounter/count:13"/>
-                    <Sig Name="POPtimers/freepcounter/count:14"/>
-                    <Sig Name="POPtimers/freepcounter/count:15"/>
-                </Bus>
-                <Bus Name="POPtimers/piecounter/count" Radix="0">
-                    <Sig Name="POPtimers/piecounter/count:0"/>
-                    <Sig Name="POPtimers/piecounter/count:1"/>
-                    <Sig Name="POPtimers/piecounter/count:2"/>
-                    <Sig Name="POPtimers/piecounter/count:3"/>
-                    <Sig Name="POPtimers/piecounter/count:4"/>
-                    <Sig Name="POPtimers/piecounter/count:5"/>
-                    <Sig Name="POPtimers/piecounter/count:6"/>
-                    <Sig Name="POPtimers/piecounter/count:7"/>
-                    <Sig Name="POPtimers/piecounter/count:8"/>
-                    <Sig Name="POPtimers/piecounter/count:9"/>
-                    <Sig Name="POPtimers/piecounter/count:10"/>
-                    <Sig Name="POPtimers/piecounter/count:11"/>
-                    <Sig Name="POPtimers/piecounter/count:12"/>
-                    <Sig Name="POPtimers/piecounter/count:13"/>
-                    <Sig Name="POPtimers/piecounter/count:14"/>
-                    <Sig Name="POPtimers/piecounter/count:15"/>
-                </Bus>
-            </Trace>
-            <Trigger>
-                <TU Operator="7" Name="Free_p_change" ID="1" Value="0" Radix="0"/>
-                <TU Operator="7" Name="Pie_change" ID="2" Value="0" Radix="0"/>
-                <TE Enable="1" Expression="Free_p_change | Pie_change" Name="Counter_change" ID="1"/>
-            </Trigger>
-        </Dataset>
-    </Core>
+<Project ModBy="Analyzer" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2023-08-10">
+ <Core Name="Counters">
+  <Setting>
+   <Capture SamplesPerTrig="16" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Bus Name="POPtimers/freepcounter/count" Radix="0">
+     <Sig Name="POPtimers/freepcounter/count:0"/>
+     <Sig Name="POPtimers/freepcounter/count:1"/>
+     <Sig Name="POPtimers/freepcounter/count:2"/>
+     <Sig Name="POPtimers/freepcounter/count:3"/>
+     <Sig Name="POPtimers/freepcounter/count:4"/>
+     <Sig Name="POPtimers/freepcounter/count:5"/>
+     <Sig Name="POPtimers/freepcounter/count:6"/>
+     <Sig Name="POPtimers/freepcounter/count:7"/>
+     <Sig Name="POPtimers/freepcounter/count:8"/>
+     <Sig Name="POPtimers/freepcounter/count:9"/>
+     <Sig Name="POPtimers/freepcounter/count:10"/>
+     <Sig Name="POPtimers/freepcounter/count:11"/>
+     <Sig Name="POPtimers/freepcounter/count:12"/>
+     <Sig Name="POPtimers/freepcounter/count:13"/>
+     <Sig Name="POPtimers/freepcounter/count:14"/>
+     <Sig Name="POPtimers/freepcounter/count:15"/>
+    </Bus>
+    <Bus Name="POPtimers/piecounter/count" Radix="0">
+     <Sig Name="POPtimers/piecounter/count:0"/>
+     <Sig Name="POPtimers/piecounter/count:1"/>
+     <Sig Name="POPtimers/piecounter/count:2"/>
+     <Sig Name="POPtimers/piecounter/count:3"/>
+     <Sig Name="POPtimers/piecounter/count:4"/>
+     <Sig Name="POPtimers/piecounter/count:5"/>
+     <Sig Name="POPtimers/piecounter/count:6"/>
+     <Sig Name="POPtimers/piecounter/count:7"/>
+     <Sig Name="POPtimers/piecounter/count:8"/>
+     <Sig Name="POPtimers/piecounter/count:9"/>
+     <Sig Name="POPtimers/piecounter/count:10"/>
+     <Sig Name="POPtimers/piecounter/count:11"/>
+     <Sig Name="POPtimers/piecounter/count:12"/>
+     <Sig Name="POPtimers/piecounter/count:13"/>
+     <Sig Name="POPtimers/piecounter/count:14"/>
+     <Sig Name="POPtimers/piecounter/count:15"/>
+    </Bus>
+   </Trace>
+   <Trigger>
+    <TU Operator="6" Name="Free_p_change" ID="1" Value="0" Radix="0"/>
+    <TU Operator="6" Name="Pie_change" ID="2" Value="0" Radix="0"/>
+    <TE Enable="1" Expression="Free_p_change | Pie_change" Name="Counter_change" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
 </Project>

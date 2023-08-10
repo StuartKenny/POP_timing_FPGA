@@ -1,7 +1,7 @@
-<Project ModBy="Inserter" SigType="0" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-07-29">
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-08-10">
     <IP Version="1_6_042617"/>
     <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="POP_timer"/>
-    <Core InsertDataset="0" Insert="1" Reveal_sig="503005837" Name="Counters" ID="0">
+    <Core InsertDataset="0" Insert="1" Reveal_sig="504675604" Name="Counters" ID="0">
         <Setting>
             <Clock SampleClk="clocks/clk_debug" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
             <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="16"/>

@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="POP_timer" device="LCMXO2-1200HC-4SG32C" default_implementation="POP_timers_AX2">
     <Options/>
     <Implementation title="POP_timers_AX2" dir="POP_timers_AX2" description="POP_timers_AX2" synthesis="lse" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="TinyFPGA_A2"/>
         <Source name="POP_timers_AX2/source/TinyFPGA_A2.v" type="Verilog" type_short="Verilog">
             <Options top_module="TinyFPGA_A2"/>
         </Source>
@@ -10,13 +10,13 @@
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/compare_n.v" type="Verilog" type_short="Verilog">
-            <Options top_module="comparator"/>
+            <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/comparator_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/count_n.v" type="Verilog" type_short="Verilog">
-            <Options top_module="count_n"/>
+            <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/count_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
             <Options/>
@@ -37,7 +37,7 @@
             <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/extensions.v" type="Verilog" type_short="Verilog">
-            <Options top_module="countupdownpreload"/>
+            <Options/>
         </Source>
         <Source name="POP_timers_AX2/source/extensions_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
             <Options/>

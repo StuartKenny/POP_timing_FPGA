@@ -12,62 +12,6 @@
             <Dynamic>3</Dynamic>
         </Message>
         <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(38,106-38,107) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>38</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(39,110-39,111) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>39</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(40,106-40,107) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>40</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(41,96-41,97) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>41</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(42,100-42,101) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>42</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(43,102-43,103) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>43</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(44,96-44,97) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>44</Navigation>
-        </Message>
-        <Message>
-            <ID>2049991</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(45,92-45,93) (VERI-2050) extra semicolon is not allowed here in this dialect. Use SystemVerilog mode</Dynamic>
-            <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
-            <Navigation>45</Navigation>
-        </Message>
-        <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
             <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,8-1,19) (VERI-1018) compiling module 'TinyFPGA_A2'</Dynamic>
@@ -91,7 +35,7 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-82,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-86,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
             <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -267,18 +211,26 @@
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1652): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1628): </Dynamic>
             <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1652</Navigation>
+            <Navigation>1628</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1692): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1668): </Dynamic>
             <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1692</Navigation>
+            <Navigation>1668</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1668): </Dynamic>
+            <Dynamic>\POPtimers/freepcounter/count_i1</Dynamic>
+            <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
+            <Navigation>1668</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

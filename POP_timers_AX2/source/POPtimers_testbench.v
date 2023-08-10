@@ -55,6 +55,9 @@ module POPtimers_testbench
 		#(0.3*CLOCK_CYCLE) load_defaults = 1'b1;
 		#(10*CLOCK_CYCLE) load_defaults = 1'b0;
 		#(20000*CLOCK_CYCLE);
+		#(10*CLOCK_CYCLE) reset = 1'b1;
+		#(10000*CLOCK_CYCLE) reset = 1'b0;	
+		#(20000*CLOCK_CYCLE);
 		#(CLOCK_CYCLE) pieovertwo_minus = 1'b1;
 		#(CLOCK_CYCLE) pieovertwo_minus = 1'b0;
 		#(CLOCK_CYCLE) pieovertwo_minus = 1'b1;

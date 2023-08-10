@@ -3,11 +3,14 @@ module POPtimers
 	Up=1'b1,
 	parameter [WIDTH-1:0] ResetPumpgap=10, //4탎 before asserting pump
 	PumpPulse=2000, //800탎
-	PieOverTwo=795, //318탎
-	FreePrecession=6900, //2.76ms
-	//FreePrecession=10000, //4ms
+	PieOverTwo=795, //318탎 - my last value
+	//PieOverTwo=1000, //Micalizio 400탎
+	FreePrecession=2350, //Aug POP value 0.94ms
+	//FreePrecession=8250, //Micalizio 3.3ms
+	//FreePrecession=6900, //2.76ms - my last value
 	ProbePulse=2500, //1ms
-	SampleDelay=2000, //800탎
+	//SampleDelay=2000, //800탎
+	SampleDelay=500, //200탎
 	SampleLength=50, //20탎
 	LaserMWgap=10, //4탎
 	PostCycle=40000 //prevent reduction of 16-bit counter
@@ -28,21 +31,22 @@ module POPtimers
 	output pump, probe, MW, sample;
 	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
 	reg [WIDTH-1:0] gatedcount; 
-	wire counterreset; //for reseting the main counter once it has reached the 'Resetandrepeat' value
+	wire counterreset; //for reseting the main counter e.g. once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
 
-	//POP events with counter values for comparator	//wire [WIDTH-1:0] Startofpumppulse = 16'd10;
+	//POP events with counter values for comparator
+	//wire [WIDTH-1:0] Startofpumppulse = 16'd10;
 	wire [WIDTH-1:0] Startofpumppulse = ResetPumpgap; 
 	wire [WIDTH-1:0] Endofpumppulse = Startofpumppulse+PumpPulse; 
 	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap; 
-	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ ; // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ // prevents synthesis from optimising away
 	
 	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
 	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;

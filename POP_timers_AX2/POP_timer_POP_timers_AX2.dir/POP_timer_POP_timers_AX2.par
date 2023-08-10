@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jul 29 20:10:37 2023
+Thu Aug 10 11:52:42 2023
 
 C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f POP_timer_POP_timers_AX2.p2t
 POP_timer_POP_timers_AX2_map.ncd POP_timer_POP_timers_AX2.dir
@@ -17,11 +17,11 @@ Preference file: POP_timer_POP_timers_AX2.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            88.327       0            0.239        0            36           Completed
+5_1   *      0            86.861       0            0.199        0            37           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 36 secs 
+Total (real) run time for 1-seed: 37 secs 
 
 par done!
 

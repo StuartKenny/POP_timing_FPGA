@@ -1,13 +1,13 @@
 <top name = "TinyFPGA_A2"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
+    <clockitem name = "debounce_pulse"  type = "net" />
+    <clockitem name = "sampled_modebutton"  type = "net" />
     <clockitem name = "tenmegclock"  type = "port" />
     <clockitem name = "clk_2M5"  type = "net" />
-    <clockitem name = "sampled_modebutton"  type = "net" />
-    <clockitem name = "debounce_pulse"  type = "net" />
-    <clockitem name = "POPtimers/piecounter/trigger_N_156"  type = "net" />
     <clockitem name = "POPtimers/freepcounter/trigger_N_192"  type = "net" />
     <clockitem name = "TinyFPGA_A2_reveal_coretop_instance/jtck[0]"  type = "net" />
+    <clockitem name = "POPtimers/piecounter/trigger_N_156"  type = "net" />
 </clocks>
 
 <!--
@@ -2159,17 +2159,17 @@
         <pitem  name = "b[13]"  direction = "in"  />
         <pitem  name = "b[12]"  direction = "in"  />
         <pitem  name = "b[11]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "o[15]"  direction = "out"  />
         <pitem  name = "o[14]"  direction = "out"  />
         <pitem  name = "o[13]"  direction = "out"  />
@@ -17632,19 +17632,19 @@
         <pitem  name = "d1[15]"  direction = "in"  />
         <pitem  name = "d1[14]"  direction = "in"  />
         <pitem  name = "d1[13]"  direction = "in"  />
-        <pitem  name = "d1[9]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[12]"  direction = "in"  />
-        <pitem  name = "d1[11]"  direction = "in"  />
-        <pitem  name = "d1[10]"  direction = "in"  />
         <pitem  name = "d1[8]"  direction = "in"  />
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[15]"  direction = "in"  />
         <pitem  name = "d0[14]"  direction = "in"  />
@@ -17721,22 +17721,22 @@
 
     <instance  name = "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/mux_121"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d1[15]"  direction = "in"  />
         <pitem  name = "d1[13]"  direction = "in"  />
         <pitem  name = "d1[12]"  direction = "in"  />
         <pitem  name = "d1[11]"  direction = "in"  />
         <pitem  name = "d1[10]"  direction = "in"  />
         <pitem  name = "d1[8]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[14]"  direction = "in"  />
-        <pitem  name = "d1[9]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[15]"  direction = "in"  />
         <pitem  name = "d0[14]"  direction = "in"  />
@@ -30086,7 +30086,7 @@
         <view  name = "rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)"  />
         <view  name = "rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)"  />
         <view  name = "rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")"  />
-        <view  name = "rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=503005837,LSCC_FAMILY="XO2")"  />
+        <view  name = "rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2")"  />
         <view  name = "rvl_tu(NUM_TU_BITS=1)"  />
         <view  name = "single_period_pulse_uniq_1"  />
         <view  name = "single_period_pulse_uniq_2"  />
