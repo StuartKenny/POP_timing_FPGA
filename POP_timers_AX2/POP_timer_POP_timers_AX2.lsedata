@@ -2,9 +2,9 @@
 
 <clocks>
     <clockitem name = "debounce_pulse"  type = "net" />
+    <clockitem name = "clk_2M5"  type = "net" />
     <clockitem name = "sampled_modebutton"  type = "net" />
     <clockitem name = "tenmegclock"  type = "port" />
-    <clockitem name = "clk_2M5"  type = "net" />
     <clockitem name = "POPtimers/freepcounter/trigger_N_192"  type = "net" />
     <clockitem name = "TinyFPGA_A2_reveal_coretop_instance/jtck[0]"  type = "net" />
     <clockitem name = "POPtimers/piecounter/trigger_N_156"  type = "net" />
@@ -50,7 +50,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 1061
+        Instances in netlist: 1044
     -->
 
     <instance  name = "POPtimers/Endof2ndMWpulse_15__keep_I_0"  library = "work"  arch = ""  type = "comb">
@@ -2151,7 +2151,7 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/Startofprobepulse_15__keep_I_0_30"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/Startofprobepulse_15__keep_I_0_29"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[15]"  direction = "in"  />
@@ -2448,97 +2448,6 @@
         <nitem  name = "POPtimers/Startofprobepulse[2]_keep"  />
         <nitem  name = "POPtimers/Startofprobepulse[1]_keep"  />
         <nitem  name = "POPtimers/Startofprobepulse[0]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Endofprobepulse_15__keep_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[15]"  direction = "in"  />
-        <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
-        <pitem  name = "b[10]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "o[15]"  direction = "out"  />
-        <pitem  name = "o[14]"  direction = "out"  />
-        <pitem  name = "o[13]"  direction = "out"  />
-        <pitem  name = "o[12]"  direction = "out"  />
-        <pitem  name = "o[11]"  direction = "out"  />
-        <pitem  name = "o[10]"  direction = "out"  />
-        <pitem  name = "o[9]"  direction = "out"  />
-        <pitem  name = "o[8]"  direction = "out"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        <pitem  name = "a[15]"  direction = "in"  />
-        <pitem  name = "a[14]"  direction = "in"  />
-        <pitem  name = "a[13]"  direction = "in"  />
-        <pitem  name = "a[12]"  direction = "in"  />
-        <pitem  name = "a[11]"  direction = "in"  />
-        <pitem  name = "a[10]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/Resetandrepeat[15]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[14]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[13]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[12]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[11]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[10]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[9]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[8]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[7]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[6]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[5]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[4]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[3]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[2]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[1]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[0]"  />
-        <nitem  name = "POPtimers/Endofprobepulse[15]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[14]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[13]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[12]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[11]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[10]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[9]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[8]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[7]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[6]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[5]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[4]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[3]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[2]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[1]_keep"  />
-        <nitem  name = "POPtimers/Endofprobepulse[0]_keep"  />
         </nets>
     </instance>
 
@@ -4067,198 +3976,6 @@
         <nets>
         <nitem  name = "POPtimers/Endofprobepulse[0]"  />
         <nitem  name = "POPtimers/Endofprobepulse[0]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_15__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[15]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[15]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_14__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[14]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[14]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_13__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[13]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[13]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_12__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[12]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[12]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_11__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[11]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[11]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_10__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[10]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[10]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_9__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[9]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[9]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_8__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[8]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[8]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[7]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[7]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_6__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[6]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[6]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_5__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[5]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[5]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_4__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[4]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[4]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_3__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[3]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[3]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_2__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[2]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[2]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_1__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[1]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[1]_keep"  />
-        </nets>
-    </instance>
-
-    <instance  name = "POPtimers/Resetandrepeat_0__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "POPtimers/Resetandrepeat[0]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[0]_keep"  />
         </nets>
     </instance>
 
@@ -6227,22 +5944,8 @@
         <nitem  name = "POPtimers/gatedcount[2]"  />
         <nitem  name = "POPtimers/gatedcount[1]"  />
         <nitem  name = "POPtimers/gatedcount[0]"  />
-        <nitem  name = "POPtimers/Resetandrepeat[15]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[14]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[13]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[12]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[11]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[10]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[9]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[8]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[7]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[6]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[5]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[4]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[3]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[2]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[1]_keep"  />
-        <nitem  name = "POPtimers/Resetandrepeat[0]_keep"  />
+        <nitem  name = "POPtimers/pwr"  />
+        <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/loopcounter/a_lt_b"  />
         </nets>
     </instance>

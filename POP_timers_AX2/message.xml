@@ -35,7 +35,7 @@
         <Message>
             <ID>2049992</ID>
             <Severity>Info</Severity>
-            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-86,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
+            <Dynamic>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-88,10) (VERI-9000) elaborating module 'POPtimers_uniq_1'</Dynamic>
             <Navigation>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -211,26 +211,26 @@
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1628): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1635): </Dynamic>
             <Dynamic>\POPtimers/piecounter/count_i0</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1628</Navigation>
+            <Navigation>1635</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1668): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): </Dynamic>
             <Dynamic>\POPtimers/freepcounter/count_i0</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1668</Navigation>
+            <Navigation>1675</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1668): </Dynamic>
+            <Dynamic>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): </Dynamic>
             <Dynamic>\POPtimers/freepcounter/count_i1</Dynamic>
             <Navigation>c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v</Navigation>
-            <Navigation>1668</Navigation>
+            <Navigation>1675</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

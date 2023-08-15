@@ -13,7 +13,8 @@ module POPtimers
 	SampleDelay=500, //200µs
 	SampleLength=50, //20µs
 	LaserMWgap=10, //4µs
-	PostCycle=40000 //prevent reduction of 16-bit counter
+	PostCycle=40000, //prevent reduction of 16-bit counter
+	FixedCycleCount=40000 //16ms, and will not be optimised away
 	)(clk_2M5, //2.5MHz clock
 	reset, //level-sensitive input, 1 to reset 
 	load_defaults, //input, 1 to reset
@@ -46,7 +47,8 @@ module POPtimers
 	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ // prevents synthesis from optimising away
+	//wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Resetandrepeat = FixedCycleCount;
 	
 	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
 	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;

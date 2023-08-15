@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="POP_timer" device="LCMXO2-1200HC-4SG32C" default_implementation="POP_timers_AX2">
+    <Options/>
+    <Implementation title="POP_timers_AX2" dir="POP_timers_AX2" description="POP_timers_AX2" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="TinyFPGA_A2"/>
+        <Source name="POP_timers_AX2/source/TinyFPGA_A2.v" type="Verilog" type_short="Verilog">
+            <Options top_module="TinyFPGA_A2"/>
+        </Source>
+        <Source name="POP_timers_AX2/source/top_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/compare_n.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/comparator_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/count_n.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/count_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/PLL_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/POPtimers.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/POPtimers_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/wrapper.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/wrapper_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/extensions.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/extensions_testbench.v" type="Verilog" type_short="Verilog" excluded="TRUE" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/DIV4PLL.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/DebugPLL.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/source/clocks.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="count_testbench/count_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="extensions_testbench/extensions_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="POP_timer.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="POP_timer_analyser.rva" type="Reveal Analyzer Project File" type_short="RVA">
+            <Options/>
+        </Source>
+        <Source name="POP_timer_Reveal.rvl" type="Reveal" type_short="Reveal">
+            <Options/>
+        </Source>
+        <Source name="POP_timers_AX2/POP_timers_AX2.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="POPtimers_testbench/POPtimers_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="toplevel_testbench/toplevel_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="wrapper_testbench/wrapper_testbench.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="POP_timer1.sty"/>
+</BaliProject>
