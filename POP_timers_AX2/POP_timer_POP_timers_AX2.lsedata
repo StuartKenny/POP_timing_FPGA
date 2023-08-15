@@ -1,13 +1,13 @@
 <top name = "TinyFPGA_A2"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "debounce_pulse"  type = "net" />
-    <clockitem name = "clk_2M5"  type = "net" />
-    <clockitem name = "sampled_modebutton"  type = "net" />
     <clockitem name = "tenmegclock"  type = "port" />
-    <clockitem name = "POPtimers/freepcounter/trigger_N_192"  type = "net" />
+    <clockitem name = "clk_2M5"  type = "net" />
+    <clockitem name = "debounce_pulse"  type = "net" />
+    <clockitem name = "sampled_modebutton"  type = "net" />
     <clockitem name = "TinyFPGA_A2_reveal_coretop_instance/jtck[0]"  type = "net" />
     <clockitem name = "POPtimers/piecounter/trigger_N_156"  type = "net" />
+    <clockitem name = "POPtimers/samplecounter/trigger_N_192"  type = "net" />
 </clocks>
 
 <!--
@@ -199,22 +199,22 @@
 
         <nets>
         <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "POPtimers/Endof2ndMWpulse[15]"  />
         <nitem  name = "POPtimers/Endof2ndMWpulse[14]"  />
         <nitem  name = "POPtimers/Endof2ndMWpulse[13]"  />
@@ -257,18 +257,18 @@
         <pitem  name = "b[14]"  direction = "in"  />
         <pitem  name = "b[13]"  direction = "in"  />
         <pitem  name = "b[12]"  direction = "in"  />
-        <pitem  name = "b[11]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "o[15]"  direction = "out"  />
         <pitem  name = "o[14]"  direction = "out"  />
         <pitem  name = "o[13]"  direction = "out"  />
@@ -305,22 +305,7 @@
 
         <nets>
         <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "reveal_ist_33"  />
-        <nitem  name = "reveal_ist_35"  />
-        <nitem  name = "reveal_ist_37"  />
-        <nitem  name = "reveal_ist_39"  />
-        <nitem  name = "reveal_ist_41"  />
-        <nitem  name = "reveal_ist_43"  />
-        <nitem  name = "reveal_ist_45"  />
-        <nitem  name = "reveal_ist_47"  />
-        <nitem  name = "reveal_ist_49"  />
-        <nitem  name = "reveal_ist_51"  />
-        <nitem  name = "reveal_ist_53"  />
-        <nitem  name = "reveal_ist_55"  />
-        <nitem  name = "reveal_ist_57"  />
-        <nitem  name = "reveal_ist_59"  />
-        <nitem  name = "reveal_ist_61"  />
-        <nitem  name = "reveal_ist_63"  />
+        <nitem  name = "POPtimers/pwr"  />
         <nitem  name = "POPtimers/Startof2ndMWpulse[15]"  />
         <nitem  name = "POPtimers/Startof2ndMWpulse[14]"  />
         <nitem  name = "POPtimers/Startof2ndMWpulse[13]"  />
@@ -516,22 +501,22 @@
 
         <nets>
         <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "POPtimers/Startof1stMWpulse[15]"  />
         <nitem  name = "POPtimers/Startof1stMWpulse[14]"  />
         <nitem  name = "POPtimers/Startof1stMWpulse[13]"  />
@@ -786,7 +771,7 @@
         </nets>
     </instance>
 
-    <instance  name = "freeprecess_plus_85"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "sampletime_plus_85"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -799,7 +784,7 @@
         <nitem  name = "topright_button_N_61"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
-        <nitem  name = "freeprecess_plus"  />
+        <nitem  name = "sampletime_plus"  />
         </nets>
     </instance>
 
@@ -820,7 +805,7 @@
         </nets>
     </instance>
 
-    <instance  name = "freeprecess_minus_87"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "sampletime_minus_87"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -833,7 +818,7 @@
         <nitem  name = "bottomright_button_N_65"  />
         <nitem  name = "debounce_pulse"  />
         <nitem  name = "n2"  />
-        <nitem  name = "freeprecess_minus"  />
+        <nitem  name = "sampletime_minus"  />
         </nets>
     </instance>
 
@@ -2161,15 +2146,15 @@
         <pitem  name = "b[11]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "o[15]"  direction = "out"  />
         <pitem  name = "o[14]"  direction = "out"  />
         <pitem  name = "o[13]"  direction = "out"  />
@@ -2206,7 +2191,22 @@
 
         <nets>
         <nitem  name = "POPtimers/gnd"  />
-        <nitem  name = "POPtimers/pwr"  />
+        <nitem  name = "reveal_ist_1"  />
+        <nitem  name = "reveal_ist_3"  />
+        <nitem  name = "reveal_ist_5"  />
+        <nitem  name = "reveal_ist_7"  />
+        <nitem  name = "reveal_ist_9"  />
+        <nitem  name = "reveal_ist_11"  />
+        <nitem  name = "reveal_ist_13"  />
+        <nitem  name = "reveal_ist_15"  />
+        <nitem  name = "reveal_ist_17"  />
+        <nitem  name = "reveal_ist_19"  />
+        <nitem  name = "reveal_ist_21"  />
+        <nitem  name = "reveal_ist_23"  />
+        <nitem  name = "reveal_ist_25"  />
+        <nitem  name = "reveal_ist_27"  />
+        <nitem  name = "reveal_ist_29"  />
+        <nitem  name = "reveal_ist_31"  />
         <nitem  name = "POPtimers/Startopticalsample[15]"  />
         <nitem  name = "POPtimers/Startopticalsample[14]"  />
         <nitem  name = "POPtimers/Startopticalsample[13]"  />
@@ -6047,22 +6047,22 @@
         <nitem  name = "POPtimers/piecounter/gnd"  />
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "POPtimers/piecounter/n7"  />
         <nitem  name = "POPtimers/piecounter/n8"  />
         <nitem  name = "POPtimers/piecounter/n9"  />
@@ -6137,22 +6137,22 @@
         <nets>
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "POPtimers/piecounter/n24"  />
         <nitem  name = "POPtimers/piecounter/n25"  />
         <nitem  name = "POPtimers/piecounter/n26"  />
@@ -6227,22 +6227,22 @@
 
         <nets>
         <nitem  name = "pieovertwo_minus"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "POPtimers/piecounter/n24"  />
         <nitem  name = "POPtimers/piecounter/n25"  />
         <nitem  name = "POPtimers/piecounter/n26"  />
@@ -6559,22 +6559,22 @@
 
         <nets>
         <nitem  name = "POPtimers/piecounter/gnd"  />
-        <nitem  name = "reveal_ist_1"  />
-        <nitem  name = "reveal_ist_3"  />
-        <nitem  name = "reveal_ist_5"  />
-        <nitem  name = "reveal_ist_7"  />
-        <nitem  name = "reveal_ist_9"  />
-        <nitem  name = "reveal_ist_11"  />
-        <nitem  name = "reveal_ist_13"  />
-        <nitem  name = "reveal_ist_15"  />
-        <nitem  name = "reveal_ist_17"  />
-        <nitem  name = "reveal_ist_19"  />
-        <nitem  name = "reveal_ist_21"  />
-        <nitem  name = "reveal_ist_23"  />
-        <nitem  name = "reveal_ist_25"  />
-        <nitem  name = "reveal_ist_27"  />
-        <nitem  name = "reveal_ist_29"  />
-        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "reveal_ist_33"  />
+        <nitem  name = "reveal_ist_35"  />
+        <nitem  name = "reveal_ist_37"  />
+        <nitem  name = "reveal_ist_39"  />
+        <nitem  name = "reveal_ist_41"  />
+        <nitem  name = "reveal_ist_43"  />
+        <nitem  name = "reveal_ist_45"  />
+        <nitem  name = "reveal_ist_47"  />
+        <nitem  name = "reveal_ist_49"  />
+        <nitem  name = "reveal_ist_51"  />
+        <nitem  name = "reveal_ist_53"  />
+        <nitem  name = "reveal_ist_55"  />
+        <nitem  name = "reveal_ist_57"  />
+        <nitem  name = "reveal_ist_59"  />
+        <nitem  name = "reveal_ist_61"  />
+        <nitem  name = "reveal_ist_63"  />
         <nitem  name = "reveal_ist_66"  />
         <nitem  name = "POPtimers/piecounter/count_15__N_124[15]"  />
         <nitem  name = "POPtimers/piecounter/count_15__N_124[14]"  />
@@ -6595,7 +6595,7 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/clk_up_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/clk_up_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -6603,13 +6603,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "freeprecess_plus"  />
-        <nitem  name = "freeprecess_minus"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_194"  />
+        <nitem  name = "sampletime_plus"  />
+        <nitem  name = "sampletime_minus"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_194"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/trigger_I_27"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/trigger_I_27"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -6618,12 +6618,12 @@
 
         <nets>
         <nitem  name = "load_defaults"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_194"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_193"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_194"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_193"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/add_5"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/add_5"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[15]"  direction = "in"  />
@@ -6677,45 +6677,45 @@
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/gnd"  />
+        <nitem  name = "POPtimers/samplecounter/gnd"  />
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "reveal_ist_33"  />
-        <nitem  name = "reveal_ist_35"  />
-        <nitem  name = "reveal_ist_37"  />
-        <nitem  name = "reveal_ist_39"  />
-        <nitem  name = "reveal_ist_41"  />
-        <nitem  name = "reveal_ist_43"  />
-        <nitem  name = "reveal_ist_45"  />
-        <nitem  name = "reveal_ist_47"  />
-        <nitem  name = "reveal_ist_49"  />
-        <nitem  name = "reveal_ist_51"  />
-        <nitem  name = "reveal_ist_53"  />
-        <nitem  name = "reveal_ist_55"  />
-        <nitem  name = "reveal_ist_57"  />
-        <nitem  name = "reveal_ist_59"  />
-        <nitem  name = "reveal_ist_61"  />
-        <nitem  name = "reveal_ist_63"  />
-        <nitem  name = "POPtimers/freepcounter/n7"  />
-        <nitem  name = "POPtimers/freepcounter/n8"  />
-        <nitem  name = "POPtimers/freepcounter/n9"  />
-        <nitem  name = "POPtimers/freepcounter/n10"  />
-        <nitem  name = "POPtimers/freepcounter/n11"  />
-        <nitem  name = "POPtimers/freepcounter/n12"  />
-        <nitem  name = "POPtimers/freepcounter/n13"  />
-        <nitem  name = "POPtimers/freepcounter/n14"  />
-        <nitem  name = "POPtimers/freepcounter/n15"  />
-        <nitem  name = "POPtimers/freepcounter/n16"  />
-        <nitem  name = "POPtimers/freepcounter/n17"  />
-        <nitem  name = "POPtimers/freepcounter/n18"  />
-        <nitem  name = "POPtimers/freepcounter/n19"  />
-        <nitem  name = "POPtimers/freepcounter/n20"  />
-        <nitem  name = "POPtimers/freepcounter/n21"  />
-        <nitem  name = "POPtimers/freepcounter/n22"  />
+        <nitem  name = "reveal_ist_1"  />
+        <nitem  name = "reveal_ist_3"  />
+        <nitem  name = "reveal_ist_5"  />
+        <nitem  name = "reveal_ist_7"  />
+        <nitem  name = "reveal_ist_9"  />
+        <nitem  name = "reveal_ist_11"  />
+        <nitem  name = "reveal_ist_13"  />
+        <nitem  name = "reveal_ist_15"  />
+        <nitem  name = "reveal_ist_17"  />
+        <nitem  name = "reveal_ist_19"  />
+        <nitem  name = "reveal_ist_21"  />
+        <nitem  name = "reveal_ist_23"  />
+        <nitem  name = "reveal_ist_25"  />
+        <nitem  name = "reveal_ist_27"  />
+        <nitem  name = "reveal_ist_29"  />
+        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "POPtimers/samplecounter/n7"  />
+        <nitem  name = "POPtimers/samplecounter/n8"  />
+        <nitem  name = "POPtimers/samplecounter/n9"  />
+        <nitem  name = "POPtimers/samplecounter/n10"  />
+        <nitem  name = "POPtimers/samplecounter/n11"  />
+        <nitem  name = "POPtimers/samplecounter/n12"  />
+        <nitem  name = "POPtimers/samplecounter/n13"  />
+        <nitem  name = "POPtimers/samplecounter/n14"  />
+        <nitem  name = "POPtimers/samplecounter/n15"  />
+        <nitem  name = "POPtimers/samplecounter/n16"  />
+        <nitem  name = "POPtimers/samplecounter/n17"  />
+        <nitem  name = "POPtimers/samplecounter/n18"  />
+        <nitem  name = "POPtimers/samplecounter/n19"  />
+        <nitem  name = "POPtimers/samplecounter/n20"  />
+        <nitem  name = "POPtimers/samplecounter/n21"  />
+        <nitem  name = "POPtimers/samplecounter/n22"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/sub_6"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/sub_6"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[15]"  direction = "in"  />
         <pitem  name = "b[14]"  direction = "in"  />
@@ -6770,42 +6770,42 @@
         <nets>
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "reveal_ist_33"  />
-        <nitem  name = "reveal_ist_35"  />
-        <nitem  name = "reveal_ist_37"  />
-        <nitem  name = "reveal_ist_39"  />
-        <nitem  name = "reveal_ist_41"  />
-        <nitem  name = "reveal_ist_43"  />
-        <nitem  name = "reveal_ist_45"  />
-        <nitem  name = "reveal_ist_47"  />
-        <nitem  name = "reveal_ist_49"  />
-        <nitem  name = "reveal_ist_51"  />
-        <nitem  name = "reveal_ist_53"  />
-        <nitem  name = "reveal_ist_55"  />
-        <nitem  name = "reveal_ist_57"  />
-        <nitem  name = "reveal_ist_59"  />
-        <nitem  name = "reveal_ist_61"  />
-        <nitem  name = "reveal_ist_63"  />
-        <nitem  name = "POPtimers/freepcounter/n24"  />
-        <nitem  name = "POPtimers/freepcounter/n25"  />
-        <nitem  name = "POPtimers/freepcounter/n26"  />
-        <nitem  name = "POPtimers/freepcounter/n27"  />
-        <nitem  name = "POPtimers/freepcounter/n28"  />
-        <nitem  name = "POPtimers/freepcounter/n29"  />
-        <nitem  name = "POPtimers/freepcounter/n30"  />
-        <nitem  name = "POPtimers/freepcounter/n31"  />
-        <nitem  name = "POPtimers/freepcounter/n32"  />
-        <nitem  name = "POPtimers/freepcounter/n33"  />
-        <nitem  name = "POPtimers/freepcounter/n34"  />
-        <nitem  name = "POPtimers/freepcounter/n35"  />
-        <nitem  name = "POPtimers/freepcounter/n36"  />
-        <nitem  name = "POPtimers/freepcounter/n37"  />
-        <nitem  name = "POPtimers/freepcounter/n38"  />
-        <nitem  name = "POPtimers/freepcounter/n39"  />
+        <nitem  name = "reveal_ist_1"  />
+        <nitem  name = "reveal_ist_3"  />
+        <nitem  name = "reveal_ist_5"  />
+        <nitem  name = "reveal_ist_7"  />
+        <nitem  name = "reveal_ist_9"  />
+        <nitem  name = "reveal_ist_11"  />
+        <nitem  name = "reveal_ist_13"  />
+        <nitem  name = "reveal_ist_15"  />
+        <nitem  name = "reveal_ist_17"  />
+        <nitem  name = "reveal_ist_19"  />
+        <nitem  name = "reveal_ist_21"  />
+        <nitem  name = "reveal_ist_23"  />
+        <nitem  name = "reveal_ist_25"  />
+        <nitem  name = "reveal_ist_27"  />
+        <nitem  name = "reveal_ist_29"  />
+        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "POPtimers/samplecounter/n24"  />
+        <nitem  name = "POPtimers/samplecounter/n25"  />
+        <nitem  name = "POPtimers/samplecounter/n26"  />
+        <nitem  name = "POPtimers/samplecounter/n27"  />
+        <nitem  name = "POPtimers/samplecounter/n28"  />
+        <nitem  name = "POPtimers/samplecounter/n29"  />
+        <nitem  name = "POPtimers/samplecounter/n30"  />
+        <nitem  name = "POPtimers/samplecounter/n31"  />
+        <nitem  name = "POPtimers/samplecounter/n32"  />
+        <nitem  name = "POPtimers/samplecounter/n33"  />
+        <nitem  name = "POPtimers/samplecounter/n34"  />
+        <nitem  name = "POPtimers/samplecounter/n35"  />
+        <nitem  name = "POPtimers/samplecounter/n36"  />
+        <nitem  name = "POPtimers/samplecounter/n37"  />
+        <nitem  name = "POPtimers/samplecounter/n38"  />
+        <nitem  name = "POPtimers/samplecounter/n39"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/mux_7"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/mux_7"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[15]"  direction = "in"  />
@@ -6859,59 +6859,59 @@
         </pins>
 
         <nets>
-        <nitem  name = "freeprecess_minus"  />
-        <nitem  name = "reveal_ist_33"  />
-        <nitem  name = "reveal_ist_35"  />
-        <nitem  name = "reveal_ist_37"  />
-        <nitem  name = "reveal_ist_39"  />
-        <nitem  name = "reveal_ist_41"  />
-        <nitem  name = "reveal_ist_43"  />
-        <nitem  name = "reveal_ist_45"  />
-        <nitem  name = "reveal_ist_47"  />
-        <nitem  name = "reveal_ist_49"  />
-        <nitem  name = "reveal_ist_51"  />
-        <nitem  name = "reveal_ist_53"  />
-        <nitem  name = "reveal_ist_55"  />
-        <nitem  name = "reveal_ist_57"  />
-        <nitem  name = "reveal_ist_59"  />
-        <nitem  name = "reveal_ist_61"  />
-        <nitem  name = "reveal_ist_63"  />
-        <nitem  name = "POPtimers/freepcounter/n24"  />
-        <nitem  name = "POPtimers/freepcounter/n25"  />
-        <nitem  name = "POPtimers/freepcounter/n26"  />
-        <nitem  name = "POPtimers/freepcounter/n27"  />
-        <nitem  name = "POPtimers/freepcounter/n28"  />
-        <nitem  name = "POPtimers/freepcounter/n29"  />
-        <nitem  name = "POPtimers/freepcounter/n30"  />
-        <nitem  name = "POPtimers/freepcounter/n31"  />
-        <nitem  name = "POPtimers/freepcounter/n32"  />
-        <nitem  name = "POPtimers/freepcounter/n33"  />
-        <nitem  name = "POPtimers/freepcounter/n34"  />
-        <nitem  name = "POPtimers/freepcounter/n35"  />
-        <nitem  name = "POPtimers/freepcounter/n36"  />
-        <nitem  name = "POPtimers/freepcounter/n37"  />
-        <nitem  name = "POPtimers/freepcounter/n38"  />
-        <nitem  name = "POPtimers/freepcounter/n39"  />
-        <nitem  name = "POPtimers/freepcounter/n41"  />
-        <nitem  name = "POPtimers/freepcounter/n42"  />
-        <nitem  name = "POPtimers/freepcounter/n43"  />
-        <nitem  name = "POPtimers/freepcounter/n44"  />
-        <nitem  name = "POPtimers/freepcounter/n45"  />
-        <nitem  name = "POPtimers/freepcounter/n46"  />
-        <nitem  name = "POPtimers/freepcounter/n47"  />
-        <nitem  name = "POPtimers/freepcounter/n48"  />
-        <nitem  name = "POPtimers/freepcounter/n49"  />
-        <nitem  name = "POPtimers/freepcounter/n50"  />
-        <nitem  name = "POPtimers/freepcounter/n51"  />
-        <nitem  name = "POPtimers/freepcounter/n52"  />
-        <nitem  name = "POPtimers/freepcounter/n53"  />
-        <nitem  name = "POPtimers/freepcounter/n54"  />
-        <nitem  name = "POPtimers/freepcounter/n55"  />
-        <nitem  name = "POPtimers/freepcounter/n56"  />
+        <nitem  name = "sampletime_minus"  />
+        <nitem  name = "reveal_ist_1"  />
+        <nitem  name = "reveal_ist_3"  />
+        <nitem  name = "reveal_ist_5"  />
+        <nitem  name = "reveal_ist_7"  />
+        <nitem  name = "reveal_ist_9"  />
+        <nitem  name = "reveal_ist_11"  />
+        <nitem  name = "reveal_ist_13"  />
+        <nitem  name = "reveal_ist_15"  />
+        <nitem  name = "reveal_ist_17"  />
+        <nitem  name = "reveal_ist_19"  />
+        <nitem  name = "reveal_ist_21"  />
+        <nitem  name = "reveal_ist_23"  />
+        <nitem  name = "reveal_ist_25"  />
+        <nitem  name = "reveal_ist_27"  />
+        <nitem  name = "reveal_ist_29"  />
+        <nitem  name = "reveal_ist_31"  />
+        <nitem  name = "POPtimers/samplecounter/n24"  />
+        <nitem  name = "POPtimers/samplecounter/n25"  />
+        <nitem  name = "POPtimers/samplecounter/n26"  />
+        <nitem  name = "POPtimers/samplecounter/n27"  />
+        <nitem  name = "POPtimers/samplecounter/n28"  />
+        <nitem  name = "POPtimers/samplecounter/n29"  />
+        <nitem  name = "POPtimers/samplecounter/n30"  />
+        <nitem  name = "POPtimers/samplecounter/n31"  />
+        <nitem  name = "POPtimers/samplecounter/n32"  />
+        <nitem  name = "POPtimers/samplecounter/n33"  />
+        <nitem  name = "POPtimers/samplecounter/n34"  />
+        <nitem  name = "POPtimers/samplecounter/n35"  />
+        <nitem  name = "POPtimers/samplecounter/n36"  />
+        <nitem  name = "POPtimers/samplecounter/n37"  />
+        <nitem  name = "POPtimers/samplecounter/n38"  />
+        <nitem  name = "POPtimers/samplecounter/n39"  />
+        <nitem  name = "POPtimers/samplecounter/n41"  />
+        <nitem  name = "POPtimers/samplecounter/n42"  />
+        <nitem  name = "POPtimers/samplecounter/n43"  />
+        <nitem  name = "POPtimers/samplecounter/n44"  />
+        <nitem  name = "POPtimers/samplecounter/n45"  />
+        <nitem  name = "POPtimers/samplecounter/n46"  />
+        <nitem  name = "POPtimers/samplecounter/n47"  />
+        <nitem  name = "POPtimers/samplecounter/n48"  />
+        <nitem  name = "POPtimers/samplecounter/n49"  />
+        <nitem  name = "POPtimers/samplecounter/n50"  />
+        <nitem  name = "POPtimers/samplecounter/n51"  />
+        <nitem  name = "POPtimers/samplecounter/n52"  />
+        <nitem  name = "POPtimers/samplecounter/n53"  />
+        <nitem  name = "POPtimers/samplecounter/n54"  />
+        <nitem  name = "POPtimers/samplecounter/n55"  />
+        <nitem  name = "POPtimers/samplecounter/n56"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/mux_8"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/mux_8"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d1[15]"  direction = "in"  />
@@ -6965,59 +6965,59 @@
         </pins>
 
         <nets>
-        <nitem  name = "freeprecess_plus"  />
-        <nitem  name = "POPtimers/freepcounter/n7"  />
-        <nitem  name = "POPtimers/freepcounter/n8"  />
-        <nitem  name = "POPtimers/freepcounter/n9"  />
-        <nitem  name = "POPtimers/freepcounter/n10"  />
-        <nitem  name = "POPtimers/freepcounter/n11"  />
-        <nitem  name = "POPtimers/freepcounter/n12"  />
-        <nitem  name = "POPtimers/freepcounter/n13"  />
-        <nitem  name = "POPtimers/freepcounter/n14"  />
-        <nitem  name = "POPtimers/freepcounter/n15"  />
-        <nitem  name = "POPtimers/freepcounter/n16"  />
-        <nitem  name = "POPtimers/freepcounter/n17"  />
-        <nitem  name = "POPtimers/freepcounter/n18"  />
-        <nitem  name = "POPtimers/freepcounter/n19"  />
-        <nitem  name = "POPtimers/freepcounter/n20"  />
-        <nitem  name = "POPtimers/freepcounter/n21"  />
-        <nitem  name = "POPtimers/freepcounter/n22"  />
-        <nitem  name = "POPtimers/freepcounter/n41"  />
-        <nitem  name = "POPtimers/freepcounter/n42"  />
-        <nitem  name = "POPtimers/freepcounter/n43"  />
-        <nitem  name = "POPtimers/freepcounter/n44"  />
-        <nitem  name = "POPtimers/freepcounter/n45"  />
-        <nitem  name = "POPtimers/freepcounter/n46"  />
-        <nitem  name = "POPtimers/freepcounter/n47"  />
-        <nitem  name = "POPtimers/freepcounter/n48"  />
-        <nitem  name = "POPtimers/freepcounter/n49"  />
-        <nitem  name = "POPtimers/freepcounter/n50"  />
-        <nitem  name = "POPtimers/freepcounter/n51"  />
-        <nitem  name = "POPtimers/freepcounter/n52"  />
-        <nitem  name = "POPtimers/freepcounter/n53"  />
-        <nitem  name = "POPtimers/freepcounter/n54"  />
-        <nitem  name = "POPtimers/freepcounter/n55"  />
-        <nitem  name = "POPtimers/freepcounter/n56"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[0]"  />
+        <nitem  name = "sampletime_plus"  />
+        <nitem  name = "POPtimers/samplecounter/n7"  />
+        <nitem  name = "POPtimers/samplecounter/n8"  />
+        <nitem  name = "POPtimers/samplecounter/n9"  />
+        <nitem  name = "POPtimers/samplecounter/n10"  />
+        <nitem  name = "POPtimers/samplecounter/n11"  />
+        <nitem  name = "POPtimers/samplecounter/n12"  />
+        <nitem  name = "POPtimers/samplecounter/n13"  />
+        <nitem  name = "POPtimers/samplecounter/n14"  />
+        <nitem  name = "POPtimers/samplecounter/n15"  />
+        <nitem  name = "POPtimers/samplecounter/n16"  />
+        <nitem  name = "POPtimers/samplecounter/n17"  />
+        <nitem  name = "POPtimers/samplecounter/n18"  />
+        <nitem  name = "POPtimers/samplecounter/n19"  />
+        <nitem  name = "POPtimers/samplecounter/n20"  />
+        <nitem  name = "POPtimers/samplecounter/n21"  />
+        <nitem  name = "POPtimers/samplecounter/n22"  />
+        <nitem  name = "POPtimers/samplecounter/n41"  />
+        <nitem  name = "POPtimers/samplecounter/n42"  />
+        <nitem  name = "POPtimers/samplecounter/n43"  />
+        <nitem  name = "POPtimers/samplecounter/n44"  />
+        <nitem  name = "POPtimers/samplecounter/n45"  />
+        <nitem  name = "POPtimers/samplecounter/n46"  />
+        <nitem  name = "POPtimers/samplecounter/n47"  />
+        <nitem  name = "POPtimers/samplecounter/n48"  />
+        <nitem  name = "POPtimers/samplecounter/n49"  />
+        <nitem  name = "POPtimers/samplecounter/n50"  />
+        <nitem  name = "POPtimers/samplecounter/n51"  />
+        <nitem  name = "POPtimers/samplecounter/n52"  />
+        <nitem  name = "POPtimers/samplecounter/n53"  />
+        <nitem  name = "POPtimers/samplecounter/n54"  />
+        <nitem  name = "POPtimers/samplecounter/n55"  />
+        <nitem  name = "POPtimers/samplecounter/n56"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[15]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[14]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[13]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[12]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[11]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[10]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[9]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[8]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[7]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[6]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[5]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[4]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[3]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[2]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[1]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/count_15__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/count_15__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d1[15]"  direction = "in"  />
@@ -7074,42 +7074,42 @@
         <nitem  name = "load_defaults"  />
         <nitem  name = "POPtimers/gnd"  />
         <nitem  name = "POPtimers/pwr"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_176[0]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[0]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[15]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[14]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[13]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[12]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[11]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[10]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[9]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[8]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[7]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[6]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[5]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[4]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[3]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[2]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[1]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_176[0]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[15]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[14]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[13]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[12]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[11]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[10]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[9]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[8]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[7]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[6]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[5]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[4]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[3]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[2]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[1]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/trigger_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/trigger_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "o"  direction = "out"  />
         <pitem  name = "i"  direction = "in"  />
@@ -7117,11 +7117,11 @@
 
         <nets>
         <nitem  name = "reveal_ist_69"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_192"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_192"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/count"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "POPtimers/samplecounter/count"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "set[15]"  direction = "in"  />
         <pitem  name = "set[14]"  direction = "in"  />
@@ -7191,40 +7191,40 @@
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/gnd"  />
-        <nitem  name = "reveal_ist_33"  />
-        <nitem  name = "reveal_ist_35"  />
-        <nitem  name = "reveal_ist_37"  />
-        <nitem  name = "reveal_ist_39"  />
-        <nitem  name = "reveal_ist_41"  />
-        <nitem  name = "reveal_ist_43"  />
-        <nitem  name = "reveal_ist_45"  />
-        <nitem  name = "reveal_ist_47"  />
-        <nitem  name = "reveal_ist_49"  />
-        <nitem  name = "reveal_ist_51"  />
-        <nitem  name = "reveal_ist_53"  />
-        <nitem  name = "reveal_ist_55"  />
-        <nitem  name = "reveal_ist_57"  />
-        <nitem  name = "reveal_ist_59"  />
-        <nitem  name = "reveal_ist_61"  />
-        <nitem  name = "reveal_ist_63"  />
+        <nitem  name = "POPtimers/samplecounter/gnd"  />
+        <nitem  name = "reveal_ist_1"  />
+        <nitem  name = "reveal_ist_3"  />
+        <nitem  name = "reveal_ist_5"  />
+        <nitem  name = "reveal_ist_7"  />
+        <nitem  name = "reveal_ist_9"  />
+        <nitem  name = "reveal_ist_11"  />
+        <nitem  name = "reveal_ist_13"  />
+        <nitem  name = "reveal_ist_15"  />
+        <nitem  name = "reveal_ist_17"  />
+        <nitem  name = "reveal_ist_19"  />
+        <nitem  name = "reveal_ist_21"  />
+        <nitem  name = "reveal_ist_23"  />
+        <nitem  name = "reveal_ist_25"  />
+        <nitem  name = "reveal_ist_27"  />
+        <nitem  name = "reveal_ist_29"  />
+        <nitem  name = "reveal_ist_31"  />
         <nitem  name = "reveal_ist_69"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[15]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[14]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[13]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[12]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[11]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[10]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[9]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[8]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[7]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[6]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[5]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[4]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[3]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[2]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[1]"  />
-        <nitem  name = "POPtimers/freepcounter/count_15__N_160[0]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[15]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[14]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[13]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[12]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[11]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[10]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[9]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[8]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[7]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[6]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[5]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[4]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[3]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[2]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[1]"  />
+        <nitem  name = "POPtimers/samplecounter/count_15__N_160[0]"  />
         </nets>
     </instance>
 
@@ -7254,19 +7254,19 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/clean_trigger/Q1_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/clean_trigger/Q1_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_195"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q1"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q1_N_195"  />
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/clean_trigger/Q0_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "POPtimers/samplecounter/clean_trigger/Q0_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "o"  direction = "out"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -7274,9 +7274,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/trigger_N_192"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1_N_195"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_192"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q0"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q1_N_195"  />
         </nets>
     </instance>
 
@@ -7297,7 +7297,7 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/clean_trigger/stage1_ff/Q_5"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "POPtimers/samplecounter/clean_trigger/stage1_ff/Q_5"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -7307,10 +7307,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/stage1_ff/gnd"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/stage1_ff/gnd"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q0"  />
         <nitem  name = "clk_2M5"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q1"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q1"  />
         </nets>
     </instance>
 
@@ -7345,7 +7345,7 @@
         </nets>
     </instance>
 
-    <instance  name = "POPtimers/freepcounter/clean_trigger/stage0_ff/Q_5"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "POPtimers/samplecounter/clean_trigger/stage0_ff/Q_5"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -7355,10 +7355,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/stage0_ff/gnd"  />
-        <nitem  name = "POPtimers/freepcounter/trigger_N_193"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/stage0_ff/gnd"  />
+        <nitem  name = "POPtimers/samplecounter/trigger_N_193"  />
         <nitem  name = "clk_2M5"  />
-        <nitem  name = "POPtimers/freepcounter/clean_trigger/Q0"  />
+        <nitem  name = "POPtimers/samplecounter/clean_trigger/Q0"  />
         </nets>
     </instance>
 
@@ -17339,15 +17339,15 @@
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d1[12]"  direction = "in"  />
         <pitem  name = "d1[11]"  direction = "in"  />
         <pitem  name = "d1[10]"  direction = "in"  />
         <pitem  name = "d1[9]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[15]"  direction = "in"  />
         <pitem  name = "d0[14]"  direction = "in"  />
@@ -17424,22 +17424,22 @@
 
     <instance  name = "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/mux_121"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
         <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d1[15]"  direction = "in"  />
-        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
         <pitem  name = "d1[12]"  direction = "in"  />
         <pitem  name = "d1[11]"  direction = "in"  />
-        <pitem  name = "d1[10]"  direction = "in"  />
-        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[15]"  direction = "in"  />
         <pitem  name = "d0[14]"  direction = "in"  />
@@ -29599,7 +29599,6 @@
     <instance  name = "clocks"  />
     <instance  name = "counters_inst_0"  />
     <instance  name = "decode_u"  />
-    <instance  name = "freepcounter"  />
     <instance  name = "genblk1.te_tt_dist_ram"  />
     <instance  name = "genblk4.tr_mem"  />
     <instance  name = "jtag_int_u"  />
@@ -29612,6 +29611,7 @@
     <instance  name = "pump2"  />
     <instance  name = "sample1"  />
     <instance  name = "sample2"  />
+    <instance  name = "samplecounter"  />
     <instance  name = "slowclocks"  />
     <instance  name = "stage0_ff"  />
     <instance  name = "stage1_ff"  />
@@ -29630,9 +29630,9 @@
     <regs>
         <reg  name = "load_defaults_83"  />
         <reg  name = "pieovertwo_plus_84"  />
-        <reg  name = "freeprecess_plus_85"  />
+        <reg  name = "sampletime_plus_85"  />
         <reg  name = "pieovertwo_minus_86"  />
-        <reg  name = "freeprecess_minus_87"  />
+        <reg  name = "sampletime_minus_87"  />
         <reg  name = "ADC_sample_88"  />
         <reg  name = "LED_output_89"  />
         <reg  name = "pump_output_90"  />
@@ -29645,11 +29645,11 @@
         <reg  name = "statemachine/state"  />
         <reg  name = "POPtimers/systemcounter/count"  />
         <reg  name = "POPtimers/piecounter/count"  />
-        <reg  name = "POPtimers/freepcounter/count"  />
+        <reg  name = "POPtimers/samplecounter/count"  />
         <reg  name = "POPtimers/piecounter/clean_trigger/stage1_ff/Q_5"  />
-        <reg  name = "POPtimers/freepcounter/clean_trigger/stage1_ff/Q_5"  />
+        <reg  name = "POPtimers/samplecounter/clean_trigger/stage1_ff/Q_5"  />
         <reg  name = "POPtimers/piecounter/clean_trigger/stage0_ff/Q_5"  />
-        <reg  name = "POPtimers/freepcounter/clean_trigger/stage0_ff/Q_5"  />
+        <reg  name = "POPtimers/samplecounter/clean_trigger/stage0_ff/Q_5"  />
         <reg  name = "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/capture_reclk"  />
         <reg  name = "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg"  />
         <reg  name = "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/parity_checker_299"  />
@@ -29789,7 +29789,7 @@
         <view  name = "rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)"  />
         <view  name = "rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)"  />
         <view  name = "rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")"  />
-        <view  name = "rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2")"  />
+        <view  name = "rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=505337911,LSCC_FAMILY="XO2")"  />
         <view  name = "rvl_tu(NUM_TU_BITS=1)"  />
         <view  name = "single_period_pulse_uniq_1"  />
         <view  name = "single_period_pulse_uniq_2"  />

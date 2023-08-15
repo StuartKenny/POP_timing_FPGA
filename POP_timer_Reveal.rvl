@@ -1,7 +1,7 @@
-<Project ModBy="Inserter" SigType="0" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-08-10">
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" Date="2023-08-15">
     <IP Version="1_6_042617"/>
     <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="POP_timer"/>
-    <Core InsertDataset="0" Insert="1" Reveal_sig="504675604" Name="Counters" ID="0">
+    <Core InsertDataset="0" Insert="1" Reveal_sig="505337911" Name="Counters" ID="0">
         <Setting>
             <Clock SampleClk="clocks/clk_debug" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
             <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="16"/>
@@ -12,24 +12,6 @@
         </Setting>
         <Dataset Name="Base">
             <Trace>
-                <Bus Name="POPtimers/freepcounter/count">
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:0"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:1"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:2"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:3"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:4"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:5"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:6"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:7"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:8"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:9"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:10"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:11"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:12"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:13"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:14"/>
-                    <Sig Type="SIG" Name="POPtimers/freepcounter/count:15"/>
-                </Bus>
                 <Bus Name="POPtimers/piecounter/count">
                     <Sig Type="SIG" Name="POPtimers/piecounter/count:0"/>
                     <Sig Type="SIG" Name="POPtimers/piecounter/count:1"/>
@@ -48,9 +30,27 @@
                     <Sig Type="SIG" Name="POPtimers/piecounter/count:14"/>
                     <Sig Type="SIG" Name="POPtimers/piecounter/count:15"/>
                 </Bus>
+                <Bus Name="POPtimers/samplecounter/count">
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:0"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:1"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:2"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:3"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:4"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:5"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:6"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:7"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:8"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:9"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:10"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:11"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:12"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:13"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:14"/>
+                    <Sig Type="SIG" Name="POPtimers/samplecounter/count:15"/>
+                </Bus>
             </Trace>
             <Trigger>
-                <TU Serialbits="0" Type="0" ID="1" Sig="POPtimers/freepcounter/trigger,"/>
+                <TU Serialbits="0" Type="0" ID="1" Sig="POPtimers/samplecounter/trigger,"/>
                 <TU Serialbits="0" Type="0" ID="2" Sig="POPtimers/piecounter/trigger,"/>
                 <TE MaxSequence="2" MaxEvnCnt="1" ID="1" Resource="0"/>
             </Trigger>

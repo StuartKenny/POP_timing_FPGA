@@ -34,7 +34,8 @@ module TinyFPGA_A2 (
 	wire medium_pulse; //2.5MHz clock divided by 2^20 - 1.7s period
 	wire fast_pulse; //2.5MHz clock divided by 2^18 - 420ms period
 	wire debounce_pulse; //2.5MHz clock divided by 2^8 - 100us period
-	reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
+	//reg sampled_modebutton, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus; //buttons as samped once per 100us
+	reg sampled_modebutton, load_defaults, pieovertwo_plus, sampletime_plus, pieovertwo_minus, sampletime_minus; //buttons as samped once per 100us
 	wire [2:0] SMstate; //3-bit state vector
 	wire pump, probe, MW, sample; //outputs from POPtimers module
 	//wire reset_timers; //will zero counter when high
@@ -46,8 +47,8 @@ module TinyFPGA_A2 (
 	
 	//Module instantiation
 	clocks clocks (.clk_10M_ref(tenmegclock), .clk_2M5(clk_2M5), .clk_debug(clk_debug), .SEDSTDBY());
-	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(reset_timers), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
-	POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(MW_invalid), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	//POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(MW_invalid), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .freeprecess_plus(freeprecess_plus), .pieovertwo_minus(pieovertwo_minus), .freeprecess_minus(freeprecess_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
+	POPtimers POPtimers (.clk_2M5(clk_2M5), .reset(MW_invalid), .load_defaults(load_defaults), .pieovertwo_plus(pieovertwo_plus), .sampletime_plus(sampletime_plus), .pieovertwo_minus(pieovertwo_minus), .sampletime_minus(sampletime_minus), .pump(pump), .probe(probe), .MW(MW), .sample(sample)); 
 	slow_clock_pulse slowclocks (.clk(clk_2M5), .debounce_pulse(debounce_pulse), .fast_pulse(fast_pulse), .medium_pulse(medium_pulse), .slow_pulse(slow_pulse));
 	n_state_machine statemachine (.clk(sampled_modebutton), .state(SMstate));
 
@@ -60,9 +61,11 @@ module TinyFPGA_A2 (
 			sampled_modebutton <= !mode_button; //mode button, inverting the logic
 			load_defaults <= !load_default_button; //load default button, inverting the logic
 			pieovertwo_plus <= !topleft_button; //TL button assigned to pieovertwo_plus, inverted logic
-			freeprecess_plus <= !topright_button; //TR button assigned to freeprecess_plus, inverted logic
+			//freeprecess_plus <= !topright_button; //TR button assigned to freeprecess_plus, inverted logic
+			sampletime_plus <= !topright_button; //TR button assigned to sampletime_plus, inverted logic
 			pieovertwo_minus <= !bottomleft_button; //BL button assigned to pieovertwo_minus, inverted logic
-			freeprecess_minus <= !bottomright_button; //BR button assigned to freeprecess_minus, inverted logic
+			//freeprecess_minus <= !bottomright_button; //BR button assigned to freeprecess_minus, inverted logic
+			sampletime_minus <= !bottomright_button; //BR button assigned to sampletime_minus, inverted logic
 		end
 		
 	//Signals from POPtimers module are updated on the negative clock edge

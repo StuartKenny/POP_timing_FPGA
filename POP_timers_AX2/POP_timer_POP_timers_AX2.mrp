@@ -15,22 +15,22 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-1200HCQFN32
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/15/23  13:04:33
+Mapped on:  08/15/23  13:33:11
 
 Design Summary
 --------------
 
-   Number of registers:    516 out of  1346 (38%)
-      PFU registers:          516 out of  1280 (40%)
+   Number of registers:    518 out of  1346 (38%)
+      PFU registers:          518 out of  1280 (40%)
       PIO registers:            0 out of    66 (0%)
-   Number of SLICEs:       495 out of   640 (77%)
-      SLICEs as Logic/ROM:    492 out of   640 (77%)
+   Number of SLICEs:       498 out of   640 (78%)
+      SLICEs as Logic/ROM:    495 out of   640 (77%)
       SLICEs as RAM:            3 out of   480 (1%)
-      SLICEs as Carry:        208 out of   640 (33%)
-   Number of LUT4s:        968 out of  1280 (76%)
+      SLICEs as Carry:        210 out of   640 (33%)
+   Number of LUT4s:        972 out of  1280 (76%)
       Number used as logic LUTs:        546
       Number used as distributed RAM:     6
-      Number used as ripple logic:      416
+      Number used as ripple logic:      420
       Number used as shift registers:     0
    Number of PIO sites used: 18 + 4(JTAG) out of 22 (100%)
    Number of block RAMs:  2 out of 7 (29%)
@@ -59,121 +59,119 @@ Design Summary
      ripple logic.
    Number of clocks:  7
      Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver:
-     slowclocks/count_959__i7 )
+     slowclocks/count_958__i7 )
 
                                     Page 1
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Design Summary (cont)
 ---------------------
-     Net clk_2M5: 40 loads, 31 rising, 9 falling (Driver: clocks/PLL/PLLInst_0 )
+     Net clk_2M5: 39 loads, 31 rising, 8 falling (Driver: clocks/PLL/PLLInst_0 )
      
      Net sampled_modebutton: 2 loads, 2 rising, 0 falling (Driver:
      sampled_modebutton_82 )
+     Net jtaghub16_jtck: 150 loads, 0 rising, 150 falling (Driver:
+     xo2chub/genblk7.jtagf_u )
+     Net clk_debug_N: 98 loads, 98 rising, 0 falling (Driver: PIO tenmegclock )
      Net reveal_ist_66_N: 9 loads, 9 rising, 0 falling (Driver:
      POPtimers/piecounter/clean_trigger/Q0_I_0_2_lut )
-     Net reveal_ist_69_N: 8 loads, 8 rising, 0 falling (Driver:
-     POPtimers/freepcounter/clean_trigger/Q0_I_0_2_lut )
-     Net jtaghub16_jtck: 151 loads, 0 rising, 151 falling (Driver:
-     xo2chub/genblk7.jtagf_u )
-     Net clk_debug_N: 99 loads, 99 rising, 0 falling (Driver: PIO tenmegclock )
+     Net reveal_ist_69_N: 9 loads, 9 rising, 0 falling (Driver:
+     POPtimers/samplecounter/clean_trigger/Q0_I_0_2_lut )
    Number of Clock Enables:  55
      Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_265_enable_49: 9 loads, 9
      LSLICEs
      Net jtaghub16_jupdate: 8 loads, 8 LSLICEs
      Net jtaghub16_ip_enable0: 13 loads, 13 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/op_code_2__N
-     _679: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_19: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_23: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/op_code_2__N_679: 2
      loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_kee
+     p_enable_19: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_kee
+     p_enable_78: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/op_code_2__N_679_ad
+     j_1324: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_15: 1 loads, 1 LSLICEs
+     e_17: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
      e_18: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/cnt_contig_reg_wen:
      1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_
-     265_enable_34: 8 loads, 8 LSLICEs
+     265_enable_26: 8 loads, 8 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_
-     N_keep_enable_76: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/jtck_N_265_e
-     nable_127: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/next_then_re
-     g_wen: 1 loads, 1 LSLICEs
+     N_keep_enable_74: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_
-     265_enable_16: 1 loads, 1 LSLICEs
+     265_enable_127: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/next_then_reg_wen:
+     1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_
+     265_enable_31: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_kee
-     p_enable_72: 8 loads, 8 LSLICEs
-     Net
-     TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/num_then_wen: 1
+     p_enable_70: 8 loads, 8 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/num_then_wen: 1
      loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_
-     N_keep_enable_79: 1 loads, 1 LSLICEs
+     N_keep_enable_80: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_
-     N_keep_enable_75: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/sample_en_d: 4
-     loads, 4 LSLICEs
+     N_keep_enable_77: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_74: 2 loads, 2 LSLICEs
+     e_40: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_77: 1 loads, 1 LSLICEs
+     e_72: 2 loads, 2 LSLICEs
+     Net clk[0]_N_keep_enable_75: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/reg0_read_N_988: 1
+     loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
 
                                     Page 2
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Design Summary (cont)
 ---------------------
-     loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_47: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_41: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_24: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_21: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_25: 1 loads, 1 LSLICEs
+     e_79: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/sample_en_d: 4
+     loads, 4 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
+     enable_22: 2 loads, 2 LSLICEs
      Net
      TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111:
-     16 loads, 16 LSLICEs
+     17 loads, 17 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
+     enable_23: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
-     e_38: 7 loads, 7 LSLICEs
+     e_37: 8 loads, 8 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_dout_int
      _31__N_1089: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_44: 2 loads, 2 LSLICEs
+     enable_43: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_7: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_8: 1 loads, 1 LSLICEs
+     enable_55: 4 loads, 4 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
+     e_46: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
      enable_9: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_56: 4 loads, 4 LSLICEs
+     enable_52: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_53: 2 loads, 2 LSLICEs
+     enable_11: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_13: 1 loads, 1 LSLICEs
+     enable_15: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_22: 2 loads, 2 LSLICEs
+     enable_16: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_80: 1 loads, 1 LSLICEs
+     enable_21: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_
-     enable_78: 1 loads, 1 LSLICEs
+     enable_76: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enabl
+     e_81: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
      65_enable_133: 18 loads, 18 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
@@ -181,58 +179,58 @@ Design Summary (cont)
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
      65_enable_3: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_5: 1 loads, 1 LSLICEs
+     65_enable_4: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_7: 2 loads, 2 LSLICEs
+     65_enable_6: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
+     65_enable_167: 25 loads, 25 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
      65_enable_126: 9 loads, 9 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_12: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_19: 1 loads, 1 LSLICEs
+     65_enable_27: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
      65_enable_132: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
+     65_enable_168: 1 loads, 1 LSLICEs
 
                                     Page 3
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Design Summary (cont)
 ---------------------
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_168: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
-     65_enable_167: 24 loads, 24 LSLICEs
+     65_enable_34: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_2
      65_enable_169: 1 loads, 1 LSLICEs
      Net xo2chub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
      Net xo2chub/er1_shift_reg8: 10 loads, 10 LSLICEs
    Number of LSRs:  7
      Net pieovertwo_minus: 1 loads, 1 LSLICEs
-     Net freeprecess_minus: 1 loads, 1 LSLICEs
-     Net load_defaults: 17 loads, 17 LSLICEs
-     Net POPtimers/counterreset: 9 loads, 9 LSLICEs
-     Net jtaghub16_jrstn: 147 loads, 147 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412: 88 loads, 86
+     Net sampletime_minus: 1 loads, 1 LSLICEs
+     Net jtaghub16_jrstn: 146 loads, 146 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9536: 87 loads, 85
      LSLICEs
+     Net load_defaults: 18 loads, 18 LSLICEs
+     Net POPtimers/counterreset: 9 loads, 9 LSLICEs
      Net statemachine/state_2__N_225: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
      Net jtaghub16_jrstn: 150 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412: 89 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9403: 60 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9413:
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9536: 87 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9538: 51 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9543:
      49 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n11: 42 loads
-     Net addr[0]: 39 loads
-     Net jtaghub16_jshift: 37 loads
-     Net jtaghub16_ip_enable0: 33 loads
-     Net addr[1]: 29 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jshift_d1: 29 loads
-     
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/addr[0]: 41 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n11: 41
+     loads
+     Net addr[1]: 38 loads
+     Net jtaghub16_ip_enable0: 34 loads
+     Net jtaghub16_jshift: 34 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/addr[2]: 32 loads
 
 
 
@@ -258,18 +256,18 @@ IO (PIO) Attributes
 | ADC_sample          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | pin9_jtgnb          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| probe_output        | OUTPUT    | LVCMOS33  |            |
 
                                     Page 4
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 IO (PIO) Attributes (cont)
 --------------------------
-+---------------------+-----------+-----------+------------+
-| probe_output        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | pin5                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -318,6 +316,8 @@ Signal xo2chub/cdn.CN was merged into signal jtaghub16_jtck
 Signal clk_2M5_N_67 was merged into signal clk_2M5
 Signal TinyFPGA_A2_reveal_coretop_instance/jtck_N_265 was merged into signal
      jtaghub16_jtck
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9573 was merged into
+     signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/addr[0]
 Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jrstn_N_263 was
      merged into signal jtaghub16_jrstn
 Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distr
@@ -330,7 +330,7 @@ Signal TinyFPGA_A2_reveal_coretop_instance/ip_enable[0] was merged into signal
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
@@ -396,7 +396,7 @@ Signal xo2chub/jtdo2_int_prm_9_0_0_S1 undriven or does not drive anything -
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
@@ -439,59 +439,33 @@ Signal xo2chub/cdn undriven or does not drive anything - clipped.
 Signal xo2chub/bit_count_cry_0_S0[0] undriven or does not drive anything -
      clipped.
 Signal xo2chub/N_1 undriven or does not drive anything - clipped.
-Signal slowclocks/count_959_add_4_1/S0 undriven or does not drive anything -
+Signal slowclocks/count_958_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal slowclocks/count_959_add_4_1/CI undriven or does not drive anything -
+Signal slowclocks/count_958_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal slowclocks/count_959_add_4_23/CO undriven or does not drive anything -
+Signal slowclocks/count_958_add_4_23/CO undriven or does not drive anything -
      clipped.
-Signal add_6620_2/S1 undriven or does not drive anything - clipped.
-Signal add_6620_2/S0 undriven or does not drive anything - clipped.
-Signal add_6620_2/CI undriven or does not drive anything - clipped.
-Signal add_6620_4/S1 undriven or does not drive anything - clipped.
-Signal add_6620_4/S0 undriven or does not drive anything - clipped.
-Signal add_6620_6/S1 undriven or does not drive anything - clipped.
-Signal add_6620_6/S0 undriven or does not drive anything - clipped.
-Signal add_6620_8/S1 undriven or does not drive anything - clipped.
-Signal add_6620_8/S0 undriven or does not drive anything - clipped.
-Signal add_6620_10/S0 undriven or does not drive anything - clipped.
-Signal add_6620_10/CO undriven or does not drive anything - clipped.
+Signal add_6755_2/S1 undriven or does not drive anything - clipped.
+Signal add_6755_2/S0 undriven or does not drive anything - clipped.
+Signal add_6755_2/CI undriven or does not drive anything - clipped.
+Signal add_6755_4/S1 undriven or does not drive anything - clipped.
+Signal add_6755_4/S0 undriven or does not drive anything - clipped.
+Signal add_6755_6/S1 undriven or does not drive anything - clipped.
+Signal add_6755_6/S0 undriven or does not drive anything - clipped.
+Signal add_6755_8/S1 undriven or does not drive anything - clipped.
+Signal add_6755_8/S0 undriven or does not drive anything - clipped.
+Signal POPtimers/MW2/sub_680_add_2_1/S1 undriven or does not drive anything -
+     clipped.
 
                                     Page 7
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
-     2_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
-     2_add_4_1/CI undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
-     2_add_4_7/S1 undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
-     2_add_4_7/CO undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
-     _967_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
-     _967_add_4_1/CI undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
-     _967_add_4_17/S1 undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
-     _967_add_4_17/CO undriven or does not drive anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distr
-     ibuted_dpramXO2binarynonereg224/mem_0_0/DO2 undriven or does not drive
-     anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distr
-     ibuted_dpramXO2binarynonereg224/mem_0_0/DO3 undriven or does not drive
-     anything - clipped.
-Signal TinyFPGA_A2_reveal_coretop_instance/jupdate[0] undriven or does not drive
-     anything - clipped.
-Signal POPtimers/MW2/sub_680_add_2_1/S1 undriven or does not drive anything -
-     clipped.
 Signal POPtimers/MW2/sub_680_add_2_1/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW2/sub_680_add_2_1/CI undriven or does not drive anything -
@@ -522,16 +496,6 @@ Signal POPtimers/MW2/sub_680_add_2_13/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW2/sub_680_add_2_15/S1 undriven or does not drive anything -
      clipped.
-
-                                    Page 8
-
-
-
-
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
-
-Removed logic (cont)
---------------------
 Signal POPtimers/MW2/sub_680_add_2_15/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW2/sub_680_add_2_17/S0 undriven or does not drive anything -
@@ -558,6 +522,16 @@ Signal POPtimers/MW3/sub_682_add_2_7/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW3/sub_682_add_2_9/S1 undriven or does not drive anything -
      clipped.
+
+                                    Page 8
+
+
+
+
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
+
+Removed logic (cont)
+--------------------
 Signal POPtimers/MW3/sub_682_add_2_9/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW3/sub_682_add_2_11/S1 undriven or does not drive anything -
@@ -588,16 +562,6 @@ Signal POPtimers/MW4/sub_684_add_2_3/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW4/sub_684_add_2_5/S1 undriven or does not drive anything -
      clipped.
-
-                                    Page 9
-
-
-
-
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
-
-Removed logic (cont)
---------------------
 Signal POPtimers/MW4/sub_684_add_2_5/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW4/sub_684_add_2_7/S1 undriven or does not drive anything -
@@ -624,48 +588,34 @@ Signal POPtimers/MW4/sub_684_add_2_17/S0 undriven or does not drive anything -
      clipped.
 Signal POPtimers/MW4/sub_684_add_2_17/CO undriven or does not drive anything -
      clipped.
-Signal POPtimers/freepcounter/add_1559_1/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/freepcounter/add_1559_1/CI undriven or does not drive anything
-     - clipped.
-Signal POPtimers/freepcounter/add_1559_13/CO undriven or does not drive anything
-     - clipped.
-Signal POPtimers/freepcounter/add_948_1450_add_1_1/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/freepcounter/add_948_1450_add_1_1/S0 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/freepcounter/add_948_1450_add_1_1/CI undriven or does not drive
-     anything - clipped.
-Signal POPtimers/freepcounter/add_948_1450_add_1_15/CO undriven or does not
-     drive anything - clipped.
-Signal POPtimers/piecounter/add_944_1448_add_1_17/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/piecounter/add_944_1448_add_1_17/CO undriven or does not drive
-     anything - clipped.
-Signal POPtimers/piecounter/add_1558_1/S0 undriven or does not drive anything -
-     clipped.
-Signal POPtimers/piecounter/add_1558_1/CI undriven or does not drive anything -
-     clipped.
-Signal POPtimers/piecounter/add_1558_15/S1 undriven or does not drive anything -
-     clipped.
-Signal POPtimers/piecounter/add_1558_15/CO undriven or does not drive anything -
-     clipped.
-Signal POPtimers/piecounter/add_944_1448_add_1_1/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/piecounter/add_944_1448_add_1_1/S0 undriven or does not drive
-     anything - clipped.
 
-                                   Page 10
+                                    Page 9
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
-Signal POPtimers/piecounter/add_944_1448_add_1_1/CI undriven or does not drive
+Signal POPtimers/piecounter/add_1557_15/S1 undriven or does not drive anything -
+     clipped.
+Signal POPtimers/piecounter/add_1557_15/CO undriven or does not drive anything -
+     clipped.
+Signal POPtimers/piecounter/add_941_1447_add_1_1/S1 undriven or does not drive
      anything - clipped.
+Signal POPtimers/piecounter/add_941_1447_add_1_1/S0 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/piecounter/add_941_1447_add_1_1/CI undriven or does not drive
+     anything - clipped.
+Signal POPtimers/piecounter/add_941_1447_add_1_17/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/piecounter/add_941_1447_add_1_17/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/piecounter/add_1557_1/S0 undriven or does not drive anything -
+     clipped.
+Signal POPtimers/piecounter/add_1557_1/CI undriven or does not drive anything -
+     clipped.
 Signal POPtimers/probe1/sub_686_add_2_1/S1 undriven or does not drive anything -
      clipped.
 Signal POPtimers/probe1/sub_686_add_2_1/S0 undriven or does not drive anything -
@@ -704,29 +654,13 @@ Signal POPtimers/probe1/sub_686_add_2_17/S0 undriven or does not drive anything
      - clipped.
 Signal POPtimers/probe1/sub_686_add_2_17/CO undriven or does not drive anything
      - clipped.
-Signal POPtimers/probe2/sub_688_add_2_11/S1 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_11/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_13/S1 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_13/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_15/S1 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_15/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_17/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/probe2/sub_688_add_2_17/CO undriven or does not drive anything
-     - clipped.
 
-                                   Page 11
+                                   Page 10
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
@@ -752,6 +686,26 @@ Signal POPtimers/probe2/sub_688_add_2_9/S1 undriven or does not drive anything -
      clipped.
 Signal POPtimers/probe2/sub_688_add_2_9/S0 undriven or does not drive anything -
      clipped.
+Signal POPtimers/probe2/sub_688_add_2_11/S1 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_11/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_13/S1 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_13/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_15/S1 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_15/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_17/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/probe2/sub_688_add_2_17/CO undriven or does not drive anything
+     - clipped.
+Signal POPtimers/sample1/sub_690_add_2_17/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/sample1/sub_690_add_2_17/CO undriven or does not drive anything
+     - clipped.
 Signal POPtimers/sample1/sub_690_add_2_1/S1 undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample1/sub_690_add_2_1/S0 undriven or does not drive anything
@@ -766,6 +720,16 @@ Signal POPtimers/sample1/sub_690_add_2_5/S1 undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample1/sub_690_add_2_5/S0 undriven or does not drive anything
      - clipped.
+
+                                   Page 11
+
+
+
+
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
+
+Removed logic (cont)
+--------------------
 Signal POPtimers/sample1/sub_690_add_2_7/S1 undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample1/sub_690_add_2_7/S0 undriven or does not drive anything
@@ -785,20 +749,6 @@ Signal POPtimers/sample1/sub_690_add_2_13/S0 undriven or does not drive anything
 Signal POPtimers/sample1/sub_690_add_2_15/S1 undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample1/sub_690_add_2_15/S0 undriven or does not drive anything
-     - clipped.
-
-                                   Page 12
-
-
-
-
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
-
-Removed logic (cont)
---------------------
-Signal POPtimers/sample1/sub_690_add_2_17/S0 undriven or does not drive anything
-     - clipped.
-Signal POPtimers/sample1/sub_690_add_2_17/CO undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample2/sub_692_add_2_1/S1 undriven or does not drive anything
      - clipped.
@@ -836,71 +786,123 @@ Signal POPtimers/sample2/sub_692_add_2_15/S0 undriven or does not drive anything
      - clipped.
 Signal POPtimers/sample2/sub_692_add_2_17/S0 undriven or does not drive anything
      - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
+
+Removed logic (cont)
+--------------------
 Signal POPtimers/sample2/sub_692_add_2_17/CO undriven or does not drive anything
      - clipped.
-Signal POPtimers/systemcounter/count_961_add_4_1/S0 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/systemcounter/count_961_add_4_1/CI undriven or does not drive
-     anything - clipped.
-Signal POPtimers/systemcounter/count_961_add_4_17/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/systemcounter/count_961_add_4_17/CO undriven or does not drive
-     anything - clipped.
-Signal POPtimers/add_1567_1/S0 undriven or does not drive anything - clipped.
-Signal POPtimers/add_1567_1/CI undriven or does not drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_29_15/S1 undriven or does not
+Signal POPtimers/samplecounter/add_945_1449_add_1_1/S1 undriven or does not
      drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_29_15/CO undriven or does not
+Signal POPtimers/samplecounter/add_945_1449_add_1_1/S0 undriven or does not
      drive anything - clipped.
+Signal POPtimers/samplecounter/add_945_1449_add_1_1/CI undriven or does not
+     drive anything - clipped.
+Signal POPtimers/samplecounter/add_945_1449_add_1_17/S1 undriven or does not
+     drive anything - clipped.
+Signal POPtimers/samplecounter/add_945_1449_add_1_17/CO undriven or does not
+     drive anything - clipped.
+Signal POPtimers/samplecounter/add_1558_1/S0 undriven or does not drive anything
+     - clipped.
+Signal POPtimers/samplecounter/add_1558_1/CI undriven or does not drive anything
+     - clipped.
+Signal POPtimers/samplecounter/add_1558_15/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/samplecounter/add_1558_15/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/systemcounter/count_960_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/systemcounter/count_960_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/systemcounter/count_960_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/systemcounter/count_960_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startofprobepulse_15__keep_I_0_1/S0 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startofprobepulse_15__keep_I_0_1/CI undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startofprobepulse_15__keep_I_0_15/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startofprobepulse_15__keep_I_0_15/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_17/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_17/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startof1stMWpulse_15__I_0_1/S0 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startof1stMWpulse_15__I_0_1/CI undriven or does not drive
+     anything - clipped.
+Signal POPtimers/add_948_1/S0 undriven or does not drive anything - clipped.
+Signal POPtimers/add_948_1/CI undriven or does not drive anything - clipped.
+Signal POPtimers/Startof1stMWpulse_15__I_0_15/S1 undriven or does not drive
+     anything - clipped.
+Signal POPtimers/Startof1stMWpulse_15__I_0_15/CO undriven or does not drive
+     anything - clipped.
+Signal POPtimers/add_946_1/S0 undriven or does not drive anything - clipped.
+Signal POPtimers/add_946_1/CI undriven or does not drive anything - clipped.
+Signal POPtimers/add_946_15/CO undriven or does not drive anything - clipped.
+Signal POPtimers/add_947_15/CO undriven or does not drive anything - clipped.
+Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_1/S0 undriven or does not drive
+     anything - clipped.
 
                                    Page 13
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
-Signal POPtimers/add_1567_15/CO undriven or does not drive anything - clipped.
-Signal POPtimers/add_950_15/CO undriven or does not drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_1/S0 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_1/CI undriven or does not drive
-     anything - clipped.
-Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_17/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_17/CO undriven or does not drive
-     anything - clipped.
-Signal POPtimers/add_950_1/S0 undriven or does not drive anything - clipped.
-Signal POPtimers/add_950_1/CI undriven or does not drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_15/S1 undriven or does not drive
-     anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_15/CO undriven or does not drive
-     anything - clipped.
-Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_1/S0 undriven or does not drive
-     anything - clipped.
 Signal POPtimers/Startof2ndMWpulse_15__keep_I_0_1/CI undriven or does not drive
      anything - clipped.
-Signal POPtimers/Startof1stMWpulse_15__I_0_1/S0 undriven or does not drive
+Signal POPtimers/add_947_1/S0 undriven or does not drive anything - clipped.
+Signal POPtimers/add_947_1/CI undriven or does not drive anything - clipped.
+Signal POPtimers/add_1566_2/S0 undriven or does not drive anything - clipped.
+Signal POPtimers/add_1566_2/CI undriven or does not drive anything - clipped.
+Signal POPtimers/add_1566_16/S1 undriven or does not drive anything - clipped.
+Signal POPtimers/add_1566_16/CO undriven or does not drive anything - clipped.
+Signal POPtimers/add_948_15/CO undriven or does not drive anything - clipped.
+Signal add_6755_10/S0 undriven or does not drive anything - clipped.
+Signal add_6755_10/CO undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
+     1_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
+     1_add_4_1/CI undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
+     1_add_4_7/S1 undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/bit_cnt_96
+     1_add_4_7/CO undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
+     _966_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
+     _966_add_4_1/CI undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
+     _966_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt
+     _966_add_4_17/CO undriven or does not drive anything - clipped.
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distr
+     ibuted_dpramXO2binarynonereg224/mem_0_0/DO2 undriven or does not drive
      anything - clipped.
-Signal POPtimers/Startof1stMWpulse_15__I_0_1/CI undriven or does not drive
+Signal TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distr
+     ibuted_dpramXO2binarynonereg224/mem_0_0/DO3 undriven or does not drive
      anything - clipped.
-Signal POPtimers/Startof1stMWpulse_15__I_0_15/S1 undriven or does not drive
+Signal TinyFPGA_A2_reveal_coretop_instance/jupdate[0] undriven or does not drive
      anything - clipped.
-Signal POPtimers/Startof1stMWpulse_15__I_0_15/CO undriven or does not drive
-     anything - clipped.
-Signal POPtimers/add_949_1/S0 undriven or does not drive anything - clipped.
-Signal POPtimers/add_949_1/CI undriven or does not drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_29_1/S0 undriven or does not
-     drive anything - clipped.
-Signal POPtimers/Startofprobepulse_15__keep_I_0_29_1/CI undriven or does not
-     drive anything - clipped.
-Signal POPtimers/add_949_15/CO undriven or does not drive anything - clipped.
 Block xo2chub/genblk7.jtagf_u_RNIO314 was optimized away.
 Block xo2chub/ip_enable_0_.CN was optimized away.
-Block clocks/PLL/i7854 was optimized away.
-Block TinyFPGA_A2_reveal_coretop_instance/i7853 was optimized away.
+Block clocks/PLL/i7995 was optimized away.
+Block TinyFPGA_A2_reveal_coretop_instance/i7996 was optimized away.
+Block TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/addr_0__I_
+     0_1_lut_rep_151 was optimized away.
 Block TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jrstn_I_0_
      1_lut was optimized away.
 Block TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distri
@@ -916,18 +918,18 @@ Block TinyFPGA_A2_reveal_coretop_instance/jtagconn16_inst_0_lut_buf_4 was
 Block TinyFPGA_A2_reveal_coretop_instance/jtagconn16_inst_0_lut_buf_3 was
      optimized away.
 Block TinyFPGA_A2_reveal_coretop_instance/jtagconn16_inst_0_lut_buf_2 was
-     optimized away.
-Block TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]_keep_buf_lut_buf_1 was
 
                                    Page 14
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 Removed logic (cont)
 --------------------
+     optimized away.
+Block TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]_keep_buf_lut_buf_1 was
      optimized away.
 Block xo2chub/GND_0 was optimized away.
 Block TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2bina
@@ -938,6 +940,11 @@ Block TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2bina
 Memory Usage
 ------------
 
+/TinyFPGA_A2_reveal_coretop_instance/counters_inst_0:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 66
+    PFU Registers: 104
 /TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/pmi_ram_dpXO2binarynon
      espeedasyncdisablereg3241632416:
     EBRs: 2
@@ -952,11 +959,6 @@ Memory Usage
          Width= 18,  Depth_R= 16,  Depth_W= 16,  REGMODE= OUTREG,  RESETMODE=
          ASYNC,  ASYNC_RESET_RELEASE= ASYNC,  GSR= DISABLED,  MEM_LPC_FILE=
          pmi_ram_dpXbnonesadr324163241611884d26__PMIP__16__32__32B
-/TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0:
-    EBRs: 0
-    RAM SLICEs: 1
-    Logic SLICEs: 24
-    PFU Registers: 33
 /TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/pmi_distributed
      _dpramXO2binarynonereg224:
     EBRs: 0
@@ -982,18 +984,18 @@ PLL 1:                                     Pin/Node Value
   M Divider Reset Signal:                           NONE
   C Divider Reset Signal:                           NONE
   D Divider Reset Signal:                           NONE
-  Standby Signal:                                   NONE
-  PLL LOCK signal:                                  NONE
 
                                    Page 15
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 PLL/DLL Summary (cont)
 ----------------------
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
   PLL Data bus CLK Signal:                          NONE
   PLL Data bus Strobe Signal:                       NONE
   PLL Data bus Reset Signal:                        NONE
@@ -1048,18 +1050,18 @@ PLL/DLL Summary (cont)
   CLKOP Desired Phase Shift(degree):                0
   CLKOP Trim Option Rising/Falling:                 FALLING
   CLKOP Trim Option Delay:                          0
-  CLKOS Desired Phase Shift(degree):                0
-  CLKOS Trim Option Rising/Falling:                 FALLING
 
                                    Page 16
 
 
 
 
-Design:  TinyFPGA_A2                                   Date:  08/15/23  13:04:33
+Design:  TinyFPGA_A2                                   Date:  08/15/23  13:33:11
 
 PLL/DLL Summary (cont)
 ----------------------
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
   CLKOS Trim Option Delay:                          0
   CLKOS2 Desired Phase Shift(degree):               0
   CLKOS3 Desired Phase Shift(degree):               0
@@ -1085,10 +1087,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 48 MB
+   Peak Memory Usage: 49 MB
         
-
-
 
 
 

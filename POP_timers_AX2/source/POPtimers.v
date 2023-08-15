@@ -19,18 +19,25 @@ module POPtimers
 	reset, //level-sensitive input, 1 to reset 
 	load_defaults, //input, 1 to reset
 	pieovertwo_plus, //sampled button input
-	freeprecess_plus, //sampled button input
+	//freeprecess_plus, //sampled button input
+	sampletime_plus, //sampled button input
 	pieovertwo_minus, //sampled button input
-	freeprecess_minus, //sampled button input
+	//freeprecess_minus, //sampled button input
+	sampletime_minus, //sampled button input
 	pump, //output
 	probe, //output 
 	MW, //output
 	sample //output
 	);
 	
-	input clk_2M5, reset, load_defaults, pieovertwo_plus, freeprecess_plus, pieovertwo_minus, freeprecess_minus;
+	input clk_2M5, reset, load_defaults;
+	input pieovertwo_plus, pieovertwo_minus;
+	//input freeprecess_plus, freeprecess_minus;
+	input sampletime_plus, sampletime_minus;
 	output pump, probe, MW, sample;
-	wire [WIDTH-1:0] count, AdjustablePieOverTwo, AdjustableFreePrecession;
+	wire [WIDTH-1:0] count, AdjustablePieOverTwo;
+	//wire [WIDTH-1:0] AdjustableFreePrecession;
+	wire [WIDTH-1:0] AdjustableSampleDelay;
 	reg [WIDTH-1:0] gatedcount; 
 	wire counterreset; //for reseting the main counter e.g. once it has reached the 'Resetandrepeat' value
 	wire pumpstarted, pumpstopped, pi1started, pi1stopped, pi2started, pi2stopped, probestarted, probestopped, samplestarted, samplestopped, loop;
@@ -41,18 +48,23 @@ module POPtimers
 	wire [WIDTH-1:0] Endofpumppulse = Startofpumppulse+PumpPulse; 
 	wire [WIDTH-1:0] Startof1stMWpulse = Endofpumppulse+LaserMWgap; 
 	wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+AdjustablePieOverTwo; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Startofprobepulse = Endof2ndMWpulse+LaserMWgap; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
-	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+AdjustableSampleDelay; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Endofopticalsample = Startopticalsample+SampleLength; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Endofprobepulse = Startofprobepulse+ProbePulse; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 	//wire [WIDTH-1:0] Resetandrepeat = Endofprobepulse+PostCycle; /* synthesis syn_keep = 1 */ // prevents synthesis from optimising away
 	wire [WIDTH-1:0] Resetandrepeat = FixedCycleCount;
 	
+	//Removed with the introduction of adjustable counters
 	//wire [WIDTH-1:0] Endof1stMWpulse = Startof1stMWpulse+PieOverTwo;
 	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+FreePrecession;
 	//wire [WIDTH-1:0] Endof2ndMWpulse = Startof2ndMWpulse+PieOverTwo;
+	
+	//Removed when 2nd adjustable counter was assigned for sample delay
+	//wire [WIDTH-1:0] Startof2ndMWpulse = Endof1stMWpulse+AdjustableFreePrecession; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
+	//wire [WIDTH-1:0] Startopticalsample = Startofprobepulse+SampleDelay; /* synthesis syn_keep = 1 */  // prevents synthesis from optimising away
 
 	count_n systemcounter (.clk(clk_2M5), .direction(Up), .reset(counterreset), .count(count)); 
 	comparator pump1 (.a(gatedcount), .b(Startofpumppulse), .a_gteq_b(pumpstarted), .a_lt_b());
@@ -68,7 +80,8 @@ module POPtimers
 	comparator loopcounter (.a(gatedcount), .b(Resetandrepeat), .a_gteq_b(loop), .a_lt_b()); 	
 	//comparator loopcounter (.a(gatedcount), .b(16'd20000), .a_gteq_b(loop), .a_lt_b()); 	
 	countupdownpreload piecounter (.clk_2M5(clk_2M5), .clk_up(pieovertwo_plus), .clk_dn(pieovertwo_minus), .reset(load_defaults), .preload(PieOverTwo), .increment(16'd10), .count(AdjustablePieOverTwo));
-	countupdownpreload freepcounter (.clk_2M5(clk_2M5), .clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd100), .count(AdjustableFreePrecession));
+	//countupdownpreload freepcounter (.clk_2M5(clk_2M5), .clk_up(freeprecess_plus), .clk_dn(freeprecess_minus), .reset(load_defaults), .preload(FreePrecession), .increment(16'd100), .count(AdjustableFreePrecession));
+	countupdownpreload samplecounter (.clk_2M5(clk_2M5), .clk_up(sampletime_plus), .clk_dn(sampletime_minus), .reset(load_defaults), .preload(SampleDelay), .increment(16'd10), .count(AdjustableSampleDelay));
 		 	
 	assign counterreset = load_defaults|loop|reset;
 	

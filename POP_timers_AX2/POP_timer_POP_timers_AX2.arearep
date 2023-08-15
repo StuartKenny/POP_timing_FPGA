@@ -1,27 +1,27 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_A2.TECH
-Register bits:  463 of 1346 (34.398%)
+Register bits:  465 of 1346 (34.547%)
 I/O cells:      18
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       191          100.0
+                              CCU2D       193          100.0
                             EHXPLLJ         1          100.0
                             FD1P3AX        18          100.0
                             FD1P3BX        34          100.0
-                            FD1P3DX       239          100.0
+                            FD1P3DX       240          100.0
                             FD1S3AX        53          100.0
                             FD1S3BX         1          100.0
                             FD1S3DX        68          100.0
                             FD1S3IX        38          100.0
-                            FD1S3JX        12          100.0
+                            FD1S3JX        13          100.0
                                 GSR         1          100.0
                                  IB         9          100.0
                                 INV         2          100.0
                             L6MUX21         2          100.0
-                               LUT4       538          100.0
+                               LUT4       541          100.0
                                  OB         6          100.0
                                 OBZ         3          100.0
-                              PFUMX        36          100.0
+                              PFUMX        38          100.0
 pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
 pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
 SUB MODULES
@@ -30,7 +30,6 @@ SUB MODULES
                       clocks_uniq_1         1
                  comparator_uniq_10         1
                  comparator_uniq_11         1
-                  comparator_uniq_2         1
                   comparator_uniq_4         1
                   comparator_uniq_5         1
                   comparator_uniq_6         1
@@ -52,28 +51,178 @@ SUB MODULES
 rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)         1
  rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
 rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
-rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2")         1
+rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=505337911,LSCC_FAMILY="XO2")         1
               rvl_tu(NUM_TU_BITS=1)         1
            rvl_tu(NUM_TU_BITS=1)_U0         1
          single_period_pulse_uniq_1         1
          single_period_pulse_uniq_2         1
             slow_clock_pulse_uniq_1         1
-                              TOTAL      1287
+                              TOTAL      1295
+----------------------------------------------------------------------
+Report for cell reveal_coretop.v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        13            6.7
+                            FD1P3AX        18          100.0
+                            FD1P3BX        34          100.0
+                            FD1P3DX       240          100.0
+                            FD1S3BX         1          100.0
+                            FD1S3DX        68          100.0
+                                INV         1           50.0
+                            L6MUX21         1           50.0
+                               LUT4       477           88.2
+                              PFUMX        31           81.6
+pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
+pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
+SUB MODULES
+                           counters         1
+                      counters_trig         1
+      rvl_decode(NUM_TU=2,NUM_TE=1)         1
+rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
+rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=505337911,LSCC_FAMILY="XO2")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+           rvl_tu(NUM_TU_BITS=1)_U0         1
+                              TOTAL       895
+----------------------------------------------------------------------
+Report for cell counters.v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        13            6.7
+                            FD1P3AX        18          100.0
+                            FD1P3BX        34          100.0
+                            FD1P3DX       240          100.0
+                            FD1S3BX         1          100.0
+                            FD1S3DX        68          100.0
+                            L6MUX21         1           50.0
+                               LUT4       468           86.5
+                              PFUMX        31           81.6
+pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
+pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
+SUB MODULES
+                      counters_trig         1
+      rvl_decode(NUM_TU=2,NUM_TE=1)         1
+rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
+rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=505337911,LSCC_FAMILY="XO2")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+           rvl_tu(NUM_TU_BITS=1)_U0         1
+                              TOTAL       884
+----------------------------------------------------------------------
+Report for cell counters_trig.v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            4.7
+                            FD1P3AX        16           88.9
+                            FD1P3BX         2            5.9
+                            FD1P3DX        44           18.3
+                            FD1S3BX         1          100.0
+                            FD1S3DX        17           25.0
+                               LUT4       104           19.2
+                              PFUMX         6           15.8
+pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
+SUB MODULES
+      rvl_decode(NUM_TU=2,NUM_TE=1)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+           rvl_tu(NUM_TU_BITS=1)_U0         1
+                              TOTAL       205
+----------------------------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1).v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tu_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         5            2.1
+                            FD1S3DX         3            4.4
+                               LUT4         6            1.1
+                              PFUMX         1            2.6
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1)_U0.v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tu_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         5            2.1
+                            FD1S3DX         3            4.4
+                               LUT4         6            1.1
+                              PFUMX         1            2.6
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2").v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.te_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            4.7
+                            FD1P3AX        16           88.9
+                            FD1P3BX         1            2.9
+                            FD1P3DX        28           11.7
+                            FD1S3BX         1          100.0
+                            FD1S3DX         6            8.8
+                               LUT4        71           13.1
+                              PFUMX         1            2.6
+pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
+                              TOTAL       134
+----------------------------------------------------------------------
+Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3).v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tcnt_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3BX         1            2.9
+                            FD1P3DX         6            2.5
+                            FD1S3DX         5            7.4
+                               LUT4        15            2.8
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell rvl_decode(NUM_TU=2,NUM_TE=1).v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.decode_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         3            0.6
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=505337911,LSCC_FAMILY="XO2").v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.tm_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX        90           37.5
+                            FD1S3DX        41           60.3
+                            L6MUX21         1           50.0
+                               LUT4       104           19.2
+                              PFUMX         8           21.1
+pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
+                              TOTAL       245
+----------------------------------------------------------------------
+Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2).v1
+Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.jtag_int_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            2.1
+                            FD1P3AX         2           11.1
+                            FD1P3BX        32           94.1
+                            FD1P3DX       106           44.2
+                            FD1S3DX        10           14.7
+                               LUT4       260           48.1
+                              PFUMX        17           44.7
+                              TOTAL       431
 ----------------------------------------------------------------------
 Report for cell POPtimers_uniq_1.v1
 Instance Path : POPtimers
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       161           84.3
+                              CCU2D       163           84.5
                             FD1S3AX        18           34.0
                             FD1S3IX        35           92.1
-                            FD1S3JX        12          100.0
-                               LUT4        26            4.8
-                              PFUMX         4           11.1
+                            FD1S3JX        13          100.0
+                               LUT4        21            3.9
 SUB MODULES
                  comparator_uniq_10         1
                  comparator_uniq_11         1
-                  comparator_uniq_2         1
                   comparator_uniq_4         1
                   comparator_uniq_5         1
                   comparator_uniq_6         1
@@ -89,7 +238,7 @@ SUB MODULES
                  d_flip_flop_uniq_4         1
          single_period_pulse_uniq_1         1
          single_period_pulse_uniq_2         1
-                              TOTAL       274
+                              TOTAL       267
 ----------------------------------------------------------------------
 Report for cell count_n_uniq_1.v1
 Instance Path : POPtimers.systemcounter
@@ -98,6 +247,47 @@ Instance Path : POPtimers.systemcounter
                               CCU2D         9            4.7
                             FD1S3IX        16           42.1
                               TOTAL        25
+----------------------------------------------------------------------
+Report for cell countupdownpreload_uniq_2.v1
+Instance Path : POPtimers.samplecounter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            8.8
+                            FD1S3AX         1            1.9
+                            FD1S3IX         9           23.7
+                            FD1S3JX         7           53.8
+                               LUT4         2            0.4
+SUB MODULES
+                 d_flip_flop_uniq_3         1
+                 d_flip_flop_uniq_4         1
+         single_period_pulse_uniq_2         1
+                              TOTAL        39
+----------------------------------------------------------------------
+Report for cell single_period_pulse_uniq_2.v1
+Instance Path : POPtimers.samplecounter.clean_trigger
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         1            1.9
+                            FD1S3JX         1            7.7
+                               LUT4         1            0.2
+SUB MODULES
+                 d_flip_flop_uniq_3         1
+                 d_flip_flop_uniq_4         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell d_flip_flop_uniq_4.v1
+Instance Path : POPtimers.samplecounter.clean_trigger.stage1_ff
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         1            1.9
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell d_flip_flop_uniq_3.v1
+Instance Path : POPtimers.samplecounter.clean_trigger.stage0_ff
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3JX         1            7.7
+                              TOTAL         1
 ----------------------------------------------------------------------
 Report for cell comparator_uniq_10.v1
 Instance Path : POPtimers.sample2
@@ -114,19 +304,13 @@ Instance Path : POPtimers.sample1
                               CCU2D         9            4.7
                               TOTAL         9
 ----------------------------------------------------------------------
-Report for cell comparator_uniq_2.v1
-Instance Path : POPtimers.pump2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         4            0.7
-                              TOTAL         4
-----------------------------------------------------------------------
 Report for cell comparator_uniq_8.v1
 Instance Path : POPtimers.probe2
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            4.7
-                              TOTAL         9
+                               LUT4         1            0.2
+                              TOTAL        10
 ----------------------------------------------------------------------
 Report for cell comparator_uniq_7.v1
 Instance Path : POPtimers.probe1
@@ -139,10 +323,10 @@ Report for cell countupdownpreload_uniq_1.v1
 Instance Path : POPtimers.piecounter
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        17            8.9
+                              CCU2D        17            8.8
                             FD1S3AX         1            1.9
                             FD1S3IX        10           26.3
-                            FD1S3JX         6           50.0
+                            FD1S3JX         6           46.2
                                LUT4         2            0.4
 SUB MODULES
                  d_flip_flop_uniq_1         1
@@ -155,7 +339,7 @@ Instance Path : POPtimers.piecounter.clean_trigger
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1S3AX         1            1.9
-                            FD1S3JX         1            8.3
+                            FD1S3JX         1            7.7
                                LUT4         1            0.2
 SUB MODULES
                  d_flip_flop_uniq_1         1
@@ -173,56 +357,15 @@ Report for cell d_flip_flop_uniq_1.v1
 Instance Path : POPtimers.piecounter.clean_trigger.stage0_ff
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1S3JX         1            8.3
+                            FD1S3JX         1            7.7
                               TOTAL         1
 ----------------------------------------------------------------------
 Report for cell comparator_uniq_11.v1
 Instance Path : POPtimers.loopcounter
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         6            1.1
-                              TOTAL         6
-----------------------------------------------------------------------
-Report for cell countupdownpreload_uniq_2.v1
-Instance Path : POPtimers.freepcounter
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        15            7.9
-                            FD1S3AX         1            1.9
-                            FD1S3IX         9           23.7
-                            FD1S3JX         6           50.0
-                               LUT4         2            0.4
-SUB MODULES
-                 d_flip_flop_uniq_3         1
-                 d_flip_flop_uniq_4         1
-         single_period_pulse_uniq_2         1
-                              TOTAL        36
-----------------------------------------------------------------------
-Report for cell single_period_pulse_uniq_2.v1
-Instance Path : POPtimers.freepcounter.clean_trigger
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1S3AX         1            1.9
-                            FD1S3JX         1            8.3
-                               LUT4         1            0.2
-SUB MODULES
-                 d_flip_flop_uniq_3         1
-                 d_flip_flop_uniq_4         1
-                              TOTAL         5
-----------------------------------------------------------------------
-Report for cell d_flip_flop_uniq_4.v1
-Instance Path : POPtimers.freepcounter.clean_trigger.stage1_ff
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1S3AX         1            1.9
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell d_flip_flop_uniq_3.v1
-Instance Path : POPtimers.freepcounter.clean_trigger.stage0_ff
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1S3JX         1            8.3
-                              TOTAL         1
+                               LUT4         8            1.5
+                              TOTAL         8
 ----------------------------------------------------------------------
 Report for cell comparator_uniq_6.v1
 Instance Path : POPtimers.MW4
@@ -243,162 +386,7 @@ Instance Path : POPtimers.MW2
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            4.7
-                               LUT4         6            1.1
-                              PFUMX         4           11.1
-                              TOTAL        19
-----------------------------------------------------------------------
-Report for cell reveal_coretop.v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        13            6.8
-                            FD1P3AX        18          100.0
-                            FD1P3BX        34          100.0
-                            FD1P3DX       239          100.0
-                            FD1S3BX         1          100.0
-                            FD1S3DX        68          100.0
-                                INV         1           50.0
-                            L6MUX21         1           50.0
-                               LUT4       485           90.1
-                              PFUMX        27           75.0
-pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
-pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
-SUB MODULES
-                           counters         1
-                      counters_trig         1
-      rvl_decode(NUM_TU=2,NUM_TE=1)         1
-rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)         1
- rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
-rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
-rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2")         1
-              rvl_tu(NUM_TU_BITS=1)         1
-           rvl_tu(NUM_TU_BITS=1)_U0         1
-                              TOTAL       898
-----------------------------------------------------------------------
-Report for cell counters.v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        13            6.8
-                            FD1P3AX        18          100.0
-                            FD1P3BX        34          100.0
-                            FD1P3DX       239          100.0
-                            FD1S3BX         1          100.0
-                            FD1S3DX        68          100.0
-                            L6MUX21         1           50.0
-                               LUT4       476           88.5
-                              PFUMX        27           75.0
-pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
-pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
-SUB MODULES
-                      counters_trig         1
-      rvl_decode(NUM_TU=2,NUM_TE=1)         1
-rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2)         1
- rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
-rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
-rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2")         1
-              rvl_tu(NUM_TU_BITS=1)         1
-           rvl_tu(NUM_TU_BITS=1)_U0         1
-                              TOTAL       887
-----------------------------------------------------------------------
-Report for cell counters_trig.v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D         9            4.7
-                            FD1P3AX        16           88.9
-                            FD1P3BX         2            5.9
-                            FD1P3DX        44           18.4
-                            FD1S3BX         1          100.0
-                            FD1S3DX        17           25.0
-                               LUT4       126           23.4
-                              PFUMX         6           16.7
-pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
-SUB MODULES
-      rvl_decode(NUM_TU=2,NUM_TE=1)         1
- rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
-rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2")         1
-              rvl_tu(NUM_TU_BITS=1)         1
-           rvl_tu(NUM_TU_BITS=1)_U0         1
-                              TOTAL       227
-----------------------------------------------------------------------
-Report for cell rvl_tu(NUM_TU_BITS=1).v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tu_1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         5            2.1
-                            FD1S3DX         3            4.4
-                               LUT4         6            1.1
-                              PFUMX         1            2.8
-                              TOTAL        15
-----------------------------------------------------------------------
-Report for cell rvl_tu(NUM_TU_BITS=1)_U0.v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tu_0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         5            2.1
-                            FD1S3DX         3            4.4
-                               LUT4         8            1.5
-                              PFUMX         2            5.6
-                              TOTAL        18
-----------------------------------------------------------------------
-Report for cell rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XO2").v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.te_0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D         9            4.7
-                            FD1P3AX        16           88.9
-                            FD1P3BX         1            2.9
-                            FD1P3DX        28           11.7
-                            FD1S3BX         1          100.0
-                            FD1S3DX         6            8.8
-                               LUT4        69           12.8
-                              PFUMX         1            2.8
-pmi_distributed_dpramXbnoner2248b8a5a7         1          100.0
-                              TOTAL       132
-----------------------------------------------------------------------
-Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3).v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.tcnt_0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3BX         1            2.9
-                            FD1P3DX         6            2.5
-                            FD1S3DX         5            7.4
-                               LUT4        22            4.1
-                              PFUMX         1            2.8
-                              TOTAL        35
-----------------------------------------------------------------------
-Report for cell rvl_decode(NUM_TU=2,NUM_TE=1).v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.trig_u.decode_u
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4        19            3.5
-                              TOTAL        19
-----------------------------------------------------------------------
-Report for cell rvl_tm(NUM_TRACE_SIGNALS=32,NUM_TRACE_SAMPLES=16,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=504675604,LSCC_FAMILY="XO2").v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.tm_u
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX        89           37.2
-                            FD1S3DX        41           60.3
-                               LUT4        91           16.9
-                              PFUMX         3            8.3
-pmi_ram_dpXbnonesadr324163241611884d26         1          100.0
-                              TOTAL       225
-----------------------------------------------------------------------
-Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=32,NUM_TRIGGER_SIGNALS=2).v1
-Instance Path : TinyFPGA_A2_reveal_coretop_instance.counters_inst_0.jtag_int_u
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D         4            2.1
-                            FD1P3AX         2           11.1
-                            FD1P3BX        32           94.1
-                            FD1P3DX       106           44.4
-                            FD1S3DX        10           14.7
-                            L6MUX21         1           50.0
-                               LUT4       259           48.1
-                              PFUMX        18           50.0
-                              TOTAL       432
+                              TOTAL         9
 ----------------------------------------------------------------------
 Report for cell clocks_uniq_1.v1
 Instance Path : clocks
@@ -418,18 +406,18 @@ Instance Path : clocks.PLL
                                 INV         1           50.0
                               TOTAL         2
 ----------------------------------------------------------------------
-Report for cell slow_clock_pulse_uniq_1.v1
-Instance Path : slowclocks
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        12            6.3
-                            FD1S3AX        23           43.4
-                              TOTAL        35
-----------------------------------------------------------------------
 Report for cell n_state_machine_uniq_1.v1
 Instance Path : statemachine
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1S3IX         3            7.9
-                               LUT4         5            0.9
-                              TOTAL         8
+                               LUT4         4            0.7
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell slow_clock_pulse_uniq_1.v1
+Instance Path : slowclocks
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        12            6.2
+                            FD1S3AX        23           43.4
+                              TOTAL        35
