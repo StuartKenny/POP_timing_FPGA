@@ -1,13 +1,13 @@
 <top name = "TinyFPGA_A2"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "debounce_pulse"  type = "net" />
-    <clockitem name = "clk_2M5"  type = "net" />
-    <clockitem name = "sampled_modebutton"  type = "net" />
     <clockitem name = "tenmegclock"  type = "port" />
-    <clockitem name = "POPtimers/freepcounter/trigger_N_192"  type = "net" />
+    <clockitem name = "debounce_pulse"  type = "net" />
+    <clockitem name = "sampled_modebutton"  type = "net" />
+    <clockitem name = "clk_2M5"  type = "net" />
     <clockitem name = "TinyFPGA_A2_reveal_coretop_instance/jtck[0]"  type = "net" />
     <clockitem name = "POPtimers/piecounter/trigger_N_156"  type = "net" />
+    <clockitem name = "POPtimers/freepcounter/trigger_N_192"  type = "net" />
 </clocks>
 
 <!--

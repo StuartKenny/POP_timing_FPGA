@@ -12,7 +12,7 @@ Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 13:04:34 2023
+Fri Jan 19 13:17:13 2024
 
 C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f POP_timer_POP_timers_AX2.p2t
 POP_timer_POP_timers_AX2_map.ncd POP_timer_POP_timers_AX2.dir
@@ -26,17 +26,17 @@ Preference file: POP_timer_POP_timers_AX2.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            88.123       0            0.219        0            29           Completed
+5_1   *      0            87.587       0            0.235        0            30           Completed
 * : Design saved.
 
-Total (real) run time for 1-seed: 29 secs 
+Total (real) run time for 1-seed: 30 secs 
 
 par done!
 
 Note: user must run &apos;Trace&apos; for timing closure signoff.
 
 Lattice Place and Route Report for Design &quot;POP_timer_POP_timers_AX2_map.ncd&quot;
-Tue Aug 15 13:04:34 2023
+Fri Jan 19 13:17:13 2024
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -74,42 +74,42 @@ Ignore Preference Error(s):  True
 
 
 INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
-Number of Signals: 1516
-Number of Connections: 4066
+Number of Signals: 1513
+Number of Connections: 4047
 
 Pin Constraint Summary:
    18 out of 18 pins locked (100% locked).
 
 The following 3 signals are selected to use the primary clock routing resources:
-    clk_2M5 (driver: clocks/PLL/PLLInst_0, clk load #: 40)
-    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 151)
-    clk_debug_N (driver: tenmegclock, clk load #: 99)
+    clk_2M5 (driver: clocks/PLL/PLLInst_0, clk load #: 39)
+    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 152)
+    clk_debug_N (driver: tenmegclock, clk load #: 97)
 
 
 The following 8 signals are selected to use the secondary clock routing resources:
-    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 147, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_594, clk load #: 0, sr load #: 90, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_567, clk load #: 0, sr load #: 0, ce load #: 24)
-    reveal_ist_66_N (driver: SLICE_421, clk load #: 9, sr load #: 0, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_574, clk load #: 0, sr load #: 0, ce load #: 18)
-    load_defaults (driver: SLICE_456, clk load #: 0, sr load #: 17, ce load #: 0)
-    reveal_ist_69_N (driver: SLICE_417, clk load #: 8, sr load #: 0, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_592, clk load #: 0, sr load #: 0, ce load #: 16)
+    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 148, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_592, clk load #: 0, sr load #: 88, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_585, clk load #: 0, sr load #: 0, ce load #: 24)
+    reveal_ist_66_N (driver: SLICE_415, clk load #: 9, sr load #: 0, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_133 (driver: SLICE_590, clk load #: 0, sr load #: 0, ce load #: 18)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_545, clk load #: 0, sr load #: 0, ce load #: 17)
+    load_defaults (driver: SLICE_448, clk load #: 0, sr load #: 17, ce load #: 0)
+    reveal_ist_69_N (driver: SLICE_411, clk load #: 8, sr load #: 0, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-..........
-Finished Placer Phase 0.  REAL time: 12 secs 
+.........
+Finished Placer Phase 0.  REAL time: 14 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 223410.
-Finished Placer Phase 1.  REAL time: 18 secs 
+.....................
+Placer score = 215404.
+Finished Placer Phase 1.  REAL time: 19 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  219573
-Finished Placer Phase 2.  REAL time: 18 secs 
+Placer score =  214711
+Finished Placer Phase 2.  REAL time: 19 secs 
 
 
 
@@ -122,17 +122,17 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY &quot;clk_2M5&quot; from CLKOP on comp &quot;clocks/PLL/PLLInst_0&quot; on PLL site &quot;LPLL&quot;, clk load = 40
-  PRIMARY &quot;jtaghub16_jtck&quot; from JTCK on comp &quot;xo2chub/genblk7.jtagf_u&quot; on site &quot;JTAG&quot;, clk load = 151
-  PRIMARY &quot;clk_debug_N&quot; from comp &quot;tenmegclock&quot; on CLK_PIN site &quot;21 (PR5C)&quot;, clk load = 99
-  SECONDARY &quot;jtaghub16_jrstn&quot; from JRSTN on comp &quot;xo2chub/genblk7.jtagf_u&quot; on site &quot;JTAG&quot;, clk load = 0, ce load = 0, sr load = 147
-  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412&quot; from F0 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_594&quot; on site &quot;R7C12C&quot;, clk load = 0, ce load = 0, sr load = 90
-  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167&quot; from F0 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_567&quot; on site &quot;R7C12A&quot;, clk load = 0, ce load = 24, sr load = 0
-  SECONDARY &quot;reveal_ist_66_N&quot; from F0 on comp &quot;SLICE_421&quot; on site &quot;R7C14B&quot;, clk load = 9, ce load = 0, sr load = 0
-  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133&quot; from F0 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_574&quot; on site &quot;R7C12D&quot;, clk load = 0, ce load = 18, sr load = 0
-  SECONDARY &quot;load_defaults&quot; from Q0 on comp &quot;SLICE_456&quot; on site &quot;R7C14D&quot;, clk load = 0, ce load = 0, sr load = 17
-  SECONDARY &quot;reveal_ist_69_N&quot; from F0 on comp &quot;SLICE_417&quot; on site &quot;R7C14C&quot;, clk load = 8, ce load = 0, sr load = 0
-  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111&quot; from F1 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_592&quot; on site &quot;R7C12B&quot;, clk load = 0, ce load = 16, sr load = 0
+  PRIMARY &quot;clk_2M5&quot; from CLKOP on comp &quot;clocks/PLL/PLLInst_0&quot; on PLL site &quot;LPLL&quot;, clk load = 39
+  PRIMARY &quot;jtaghub16_jtck&quot; from JTCK on comp &quot;xo2chub/genblk7.jtagf_u&quot; on site &quot;JTAG&quot;, clk load = 152
+  PRIMARY &quot;clk_debug_N&quot; from comp &quot;tenmegclock&quot; on CLK_PIN site &quot;21 (PR5C)&quot;, clk load = 97
+  SECONDARY &quot;jtaghub16_jrstn&quot; from JRSTN on comp &quot;xo2chub/genblk7.jtagf_u&quot; on site &quot;JTAG&quot;, clk load = 0, ce load = 0, sr load = 148
+  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481&quot; from F0 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_592&quot; on site &quot;R7C12D&quot;, clk load = 0, ce load = 0, sr load = 88
+  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167&quot; from F1 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_585&quot; on site &quot;R7C14B&quot;, clk load = 0, ce load = 24, sr load = 0
+  SECONDARY &quot;reveal_ist_66_N&quot; from F0 on comp &quot;SLICE_415&quot; on site &quot;R7C12B&quot;, clk load = 9, ce load = 0, sr load = 0
+  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_133&quot; from F0 on comp &quot;SLICE_590&quot; on site &quot;R7C14A&quot;, clk load = 0, ce load = 18, sr load = 0
+  SECONDARY &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111&quot; from F1 on comp &quot;TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_545&quot; on site &quot;R7C14D&quot;, clk load = 0, ce load = 17, sr load = 0
+  SECONDARY &quot;load_defaults&quot; from Q0 on comp &quot;SLICE_448&quot; on site &quot;R7C12C&quot;, clk load = 0, ce load = 0, sr load = 17
+  SECONDARY &quot;reveal_ist_69_N&quot; from F0 on comp &quot;SLICE_411&quot; on site &quot;R7C12A&quot;, clk load = 8, ce load = 0, sr load = 0
 
   PRIMARY  : 3 out of 8 (37%)
   SECONDARY: 8 out of 8 (100%)
@@ -159,20 +159,20 @@ I/O Bank Usage Summary:
 | 3        | 2 / 2 (100%) | 3.3V       | -         |
 +----------+--------------+------------+-----------+
 
-Total placer CPU time: 17 secs 
+Total placer CPU time: 15 secs 
 
 Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
 
-0 connections routed; 4066 unrouted.
+0 connections routed; 4047 unrouted.
 Starting router resource preassignment
 
 WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
    Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=2 clock_loads=2
 
-Completed router resource preassignment. Real time: 24 secs 
+Completed router resource preassignment. Real time: 25 secs 
 
-Start NBR router at 13:04:58 08/15/23
+Start NBR router at 13:17:39 01/19/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -187,44 +187,44 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 13:04:58 08/15/23
+Start NBR special constraint process at 13:17:39 01/19/24
 
-Start NBR section for initial routing at 13:04:59 08/15/23
+Start NBR section for initial routing at 13:17:39 01/19/24
 Level 4, iteration 1
 118(0.14%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 25 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.984ns/0.000ns; real time: 27 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:04:59 08/15/23
+Start NBR section for normal routing at 13:17:40 01/19/24
 Level 4, iteration 1
-44(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 25 secs 
+42(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 2
-18(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 26 secs 
+14(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 3
-9(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 26 secs 
+7(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 4
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 26 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 5
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 26 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 28 secs 
 Level 4, iteration 6
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 26 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 28 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 13:05:00 08/15/23
+Start NBR section for setup/hold timing optimization with effort level 3 at 13:17:41 01/19/24
 
-Start NBR section for re-routing at 13:05:01 08/15/23
+Start NBR section for re-routing at 13:17:41 01/19/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 88.123ns/0.000ns; real time: 27 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 87.587ns/0.000ns; real time: 28 secs 
 
-Start NBR section for post-routing at 13:05:01 08/15/23
+Start NBR section for post-routing at 13:17:41 01/19/24
 
 End NBR router with 0 unrouted connection
 
@@ -232,7 +232,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack&lt;setup&gt; : 88.123ns
+  Estimated worst slack&lt;setup&gt; : 87.587ns
   Timing score&lt;setup&gt; : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
@@ -243,10 +243,10 @@ WARNING - par: The following clock signals will be routed by using generic routi
    Signal=debounce_pulse loads=7 clock_loads=6
    Signal=sampled_modebutton loads=2 clock_loads=2
 
-Total CPU time 27 secs 
-Total REAL time: 28 secs 
+Total CPU time 25 secs 
+Total REAL time: 30 secs 
 Completely routed.
-End of route.  4066 routed (100.00%); 0 unrouted.
+End of route.  4047 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -260,14 +260,14 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 88.123
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 87.587
 PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 0.000
-PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.219
+PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.235
 PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 27 secs 
-Total REAL time to completion: 29 secs 
+Total CPU  time to completion: 25 secs 
+Total REAL time to completion: 30 secs 
 
 par done!
 

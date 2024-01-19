@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue Aug 15 13:04:32 2023
+Fri Jan 19 13:17:04 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,334 +18,94 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 100.000000 -name clk6 [get_nets \POPtimers/piecounter/trigger_N_156]
-            769 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 93.198ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
-   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
-
-   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
-
- Constraint Details:
-
-      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
-
- Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
-Route         5   e 1.462                                  reveal_ist_29_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_944_1448_add_1_3
-Route         1   e 0.020                                  \POPtimers/piecounter/n8182
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_5
-Route         1   e 0.020                                  \POPtimers/piecounter/n8183
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_7
-Route         1   e 0.020                                  \POPtimers/piecounter/n8184
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_9
-Route         1   e 0.020                                  \POPtimers/piecounter/n8185
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_11
-Route         1   e 0.020                                  \POPtimers/piecounter/n8186
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_944_1448_add_1_13
-Route         1   e 0.020                                  \POPtimers/piecounter/n2831
-A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/piecounter/add_1558_11
-Route         1   e 0.020                                  \POPtimers/piecounter/n8134
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_13
-Route         1   e 0.020                                  \POPtimers/piecounter/n8135
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1558_15
-Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
-                  --------
-                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
-
-
-Passed:  The following path meets requirements by 93.198ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
-   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
-
-   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
-
- Constraint Details:
-
-      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
-
- Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
-Route         5   e 1.462                                  reveal_ist_29_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_944_1448_add_1_3
-Route         1   e 0.020                                  \POPtimers/piecounter/n8182
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_944_1448_add_1_5
-Route         1   e 0.020                                  \POPtimers/piecounter/n2839
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_1558_3
-Route         1   e 0.020                                  \POPtimers/piecounter/n8130
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_5
-Route         1   e 0.020                                  \POPtimers/piecounter/n8131
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_7
-Route         1   e 0.020                                  \POPtimers/piecounter/n8132
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_9
-Route         1   e 0.020                                  \POPtimers/piecounter/n8133
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_11
-Route         1   e 0.020                                  \POPtimers/piecounter/n8134
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_13
-Route         1   e 0.020                                  \POPtimers/piecounter/n8135
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1558_15
-Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
-                  --------
-                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
-
-
-Passed:  The following path meets requirements by 93.198ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
-   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
-
-   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
-
- Constraint Details:
-
-      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
-
- Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
-Route         5   e 1.462                                  reveal_ist_29_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_944_1448_add_1_3
-Route         1   e 0.020                                  \POPtimers/piecounter/n8182
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_5
-Route         1   e 0.020                                  \POPtimers/piecounter/n8183
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_944_1448_add_1_7
-Route         1   e 0.020                                  \POPtimers/piecounter/n8184
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_944_1448_add_1_9
-Route         1   e 0.020                                  \POPtimers/piecounter/n2835
-A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/piecounter/add_1558_7
-Route         1   e 0.020                                  \POPtimers/piecounter/n8132
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_9
-Route         1   e 0.020                                  \POPtimers/piecounter/n8133
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_11
-Route         1   e 0.020                                  \POPtimers/piecounter/n8134
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1558_13
-Route         1   e 0.020                                  \POPtimers/piecounter/n8135
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1558_15
-Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
-                  --------
-                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
-
-Report: 6.802 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
-Constraint: create_clock -period 100.000000 -name clk5 [get_nets sampled_modebutton]
+Constraint: create_clock -period 100.000000 -name clk6 [get_nets sampled_modebutton]
             15 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 95.931ns
+Passed:  The following path meets requirements by 95.780ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \statemachine/state_960__i0  (from sampled_modebutton +)
-   Destination:    FD1S3IX    CD             \statemachine/state_960__i0  (to sampled_modebutton +)
+   Source:         FD1S3IX    CK             \statemachine/state_966__i1  (from sampled_modebutton +)
+   Destination:    FD1S3IX    CD             \statemachine/state_966__i2  (to sampled_modebutton +)
 
-   Delay:                   3.909ns  (24.0% logic, 76.0% route), 2 logic levels.
+   Delay:                   4.060ns  (23.1% logic, 76.9% route), 2 logic levels.
 
  Constraint Details:
 
-      3.909ns data_path \statemachine/state_960__i0 to \statemachine/state_960__i0 meets
+      4.060ns data_path \statemachine/state_966__i1 to \statemachine/state_966__i2 meets
     100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 95.931ns
+      0.160ns L_S requirement (totaling 99.840ns) by 95.780ns
 
- Path Details: \statemachine/state_960__i0 to \statemachine/state_960__i0
+ Path Details: \statemachine/state_966__i1 to \statemachine/state_966__i2
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \statemachine/state_960__i0 (from sampled_modebutton)
-Route        12   e 1.714                                  SMstate[0]
-LUT4        ---     0.493              B to Z              \statemachine/i2_2_lut_3_lut
+L_CO        ---     0.444             CK to Q              \statemachine/state_966__i1 (from sampled_modebutton)
+Route        14   e 1.865                                  SMstate[1]
+LUT4        ---     0.493              A to Z              \statemachine/i2_2_lut_3_lut
 Route         3   e 1.258                                  \statemachine/state_2__N_225
                   --------
-                    3.909  (24.0% logic, 76.0% route), 2 logic levels.
+                    4.060  (23.1% logic, 76.9% route), 2 logic levels.
 
 
-Passed:  The following path meets requirements by 95.931ns
+Passed:  The following path meets requirements by 95.780ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \statemachine/state_960__i0  (from sampled_modebutton +)
-   Destination:    FD1S3IX    CD             \statemachine/state_960__i2  (to sampled_modebutton +)
+   Source:         FD1S3IX    CK             \statemachine/state_966__i1  (from sampled_modebutton +)
+   Destination:    FD1S3IX    CD             \statemachine/state_966__i1  (to sampled_modebutton +)
 
-   Delay:                   3.909ns  (24.0% logic, 76.0% route), 2 logic levels.
+   Delay:                   4.060ns  (23.1% logic, 76.9% route), 2 logic levels.
 
  Constraint Details:
 
-      3.909ns data_path \statemachine/state_960__i0 to \statemachine/state_960__i2 meets
+      4.060ns data_path \statemachine/state_966__i1 to \statemachine/state_966__i1 meets
     100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 95.931ns
+      0.160ns L_S requirement (totaling 99.840ns) by 95.780ns
 
- Path Details: \statemachine/state_960__i0 to \statemachine/state_960__i2
+ Path Details: \statemachine/state_966__i1 to \statemachine/state_966__i1
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \statemachine/state_960__i0 (from sampled_modebutton)
-Route        12   e 1.714                                  SMstate[0]
-LUT4        ---     0.493              B to Z              \statemachine/i2_2_lut_3_lut
+L_CO        ---     0.444             CK to Q              \statemachine/state_966__i1 (from sampled_modebutton)
+Route        14   e 1.865                                  SMstate[1]
+LUT4        ---     0.493              A to Z              \statemachine/i2_2_lut_3_lut
 Route         3   e 1.258                                  \statemachine/state_2__N_225
                   --------
-                    3.909  (24.0% logic, 76.0% route), 2 logic levels.
+                    4.060  (23.1% logic, 76.9% route), 2 logic levels.
 
 
-Passed:  The following path meets requirements by 95.931ns
+Passed:  The following path meets requirements by 95.780ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \statemachine/state_960__i0  (from sampled_modebutton +)
-   Destination:    FD1S3IX    CD             \statemachine/state_960__i1  (to sampled_modebutton +)
+   Source:         FD1S3IX    CK             \statemachine/state_966__i1  (from sampled_modebutton +)
+   Destination:    FD1S3IX    CD             \statemachine/state_966__i0  (to sampled_modebutton +)
 
-   Delay:                   3.909ns  (24.0% logic, 76.0% route), 2 logic levels.
+   Delay:                   4.060ns  (23.1% logic, 76.9% route), 2 logic levels.
 
  Constraint Details:
 
-      3.909ns data_path \statemachine/state_960__i0 to \statemachine/state_960__i1 meets
+      4.060ns data_path \statemachine/state_966__i1 to \statemachine/state_966__i0 meets
     100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 95.931ns
+      0.160ns L_S requirement (totaling 99.840ns) by 95.780ns
 
- Path Details: \statemachine/state_960__i0 to \statemachine/state_960__i1
+ Path Details: \statemachine/state_966__i1 to \statemachine/state_966__i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \statemachine/state_960__i0 (from sampled_modebutton)
-Route        12   e 1.714                                  SMstate[0]
-LUT4        ---     0.493              B to Z              \statemachine/i2_2_lut_3_lut
+L_CO        ---     0.444             CK to Q              \statemachine/state_966__i1 (from sampled_modebutton)
+Route        14   e 1.865                                  SMstate[1]
+LUT4        ---     0.493              A to Z              \statemachine/i2_2_lut_3_lut
 Route         3   e 1.258                                  \statemachine/state_2__N_225
                   --------
-                    3.909  (24.0% logic, 76.0% route), 2 logic levels.
+                    4.060  (23.1% logic, 76.9% route), 2 logic levels.
 
-Report: 4.069 ns is the maximum delay for this constraint.
+Report: 4.220 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
-Constraint: create_clock -period 100.000000 -name clk4 [get_nets clk_debug_N]
-            500 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 91.334ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0  (from clk_debug_N +)
-   Destination:    FD1S3DX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1  (to clk_debug_N +)
-
-   Delay:                   8.506ns  (28.4% logic, 71.6% route), 5 logic levels.
-
- Constraint Details:
-
-      8.506ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 91.334ns
-
- Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 (from clk_debug_N)
-Route         2   e 1.198                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/reg0[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i11_3_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_det
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i3_4_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trigger_reg_N_980
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i417_2_lut
-Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n608
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i6664_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n19
-                  --------
-                    8.506  (28.4% logic, 71.6% route), 5 logic levels.
-
-
-Passed:  The following path meets requirements by 91.334ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0  (from clk_debug_N +)
-   Destination:    FD1S3DX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i2  (to clk_debug_N +)
-
-   Delay:                   8.506ns  (28.4% logic, 71.6% route), 5 logic levels.
-
- Constraint Details:
-
-      8.506ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i2 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 91.334ns
-
- Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg0_i0 (from clk_debug_N)
-Route         2   e 1.198                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/reg0[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i11_3_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_det
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i3_4_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trigger_reg_N_980
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i417_2_lut
-Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n608
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i6672_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n18_adj_1311
-                  --------
-                    8.506  (28.4% logic, 71.6% route), 5 logic levels.
-
-
-Passed:  The following path meets requirements by 91.334ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3BX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg2[0]_56  (from clk_debug_N +)
-   Destination:    FD1S3DX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1  (to clk_debug_N +)
-
-   Delay:                   8.506ns  (28.4% logic, 71.6% route), 5 logic levels.
-
- Constraint Details:
-
-      8.506ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg2[0]_56 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 91.334ns
-
- Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg2[0]_56 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_cnt_968__i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg2[0]_56 (from clk_debug_N)
-Route         2   e 1.198                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/reg2[0]
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i11_3_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trig_det
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i3_4_lut
-Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/trigger_reg_N_980
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i417_2_lut
-Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n608
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i6664_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n19
-                  --------
-                    8.506  (28.4% logic, 71.6% route), 5 logic levels.
-
-Report: 8.666 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
-Constraint: create_clock -period 100.000000 -name clk3 [get_nets \POPtimers/freepcounter/trigger_N_192]
+Constraint: create_clock -period 100.000000 -name clk5 [get_nets \POPtimers/freepcounter/trigger_N_192]
             644 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -370,101 +130,101 @@ Passed:  The following path meets requirements by 93.522ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/count_i3 (from \POPtimers/freepcounter/trigger_N_192)
 Route         3   e 1.315                                  reveal_ist_57_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_948_1450_add_1_3
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8140
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_948_1450_add_1_5
-Route         1   e 0.020                                  \POPtimers/freepcounter/n2860
-A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/freepcounter/add_1559_3
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8123
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_5
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8124
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_7
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8125
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_9
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8126
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_11
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8127
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1559_13
-Route         1   e 0.941                                  \POPtimers/freepcounter/count_15__N_176[15]
-                  --------
-                    6.318  (62.1% logic, 37.9% route), 9 logic levels.
-
-
-Passed:  The following path meets requirements by 93.522ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3JX    CK             \POPtimers/freepcounter/count_i3  (from \POPtimers/freepcounter/trigger_N_192 +)
-   Destination:    FD1S3IX    D              \POPtimers/freepcounter/count_i15  (to \POPtimers/freepcounter/trigger_N_192 +)
-
-   Delay:                   6.318ns  (62.1% logic, 37.9% route), 9 logic levels.
-
- Constraint Details:
-
-      6.318ns data_path \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 93.522ns
-
- Path Details: \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/count_i3 (from \POPtimers/freepcounter/trigger_N_192)
-Route         3   e 1.315                                  reveal_ist_57_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_948_1450_add_1_3
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8140
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_948_1450_add_1_5
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8141
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_948_1450_add_1_7
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8142
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_948_1450_add_1_9
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8143
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_948_1450_add_1_11
-Route         1   e 0.020                                  \POPtimers/freepcounter/n2854
-A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/freepcounter/add_1559_9
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8126
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_11
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8127
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1559_13
-Route         1   e 0.941                                  \POPtimers/freepcounter/count_15__N_176[15]
-                  --------
-                    6.318  (62.1% logic, 37.9% route), 9 logic levels.
-
-
-Passed:  The following path meets requirements by 93.522ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3JX    CK             \POPtimers/freepcounter/count_i3  (from \POPtimers/freepcounter/trigger_N_192 +)
-   Destination:    FD1S3IX    D              \POPtimers/freepcounter/count_i15  (to \POPtimers/freepcounter/trigger_N_192 +)
-
-   Delay:                   6.318ns  (62.1% logic, 37.9% route), 9 logic levels.
-
- Constraint Details:
-
-      6.318ns data_path \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 93.522ns
-
- Path Details: \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/count_i3 (from \POPtimers/freepcounter/trigger_N_192)
-Route         3   e 1.315                                  reveal_ist_57_N
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_948_1450_add_1_3
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8140
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_948_1450_add_1_5
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8141
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_948_1450_add_1_7
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_954_1456_add_1_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8224
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8225
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8226
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8227
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8228
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_954_1456_add_1_13
 Route         1   e 0.020                                  \POPtimers/freepcounter/n2858
-A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_1559_5
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8124
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_7
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8125
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_9
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8126
-FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1559_11
-Route         1   e 0.020                                  \POPtimers/freepcounter/n8127
-FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1559_13
+A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/freepcounter/add_1565_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8211
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1565_13
+Route         1   e 0.941                                  \POPtimers/freepcounter/count_15__N_176[15]
+                  --------
+                    6.318  (62.1% logic, 37.9% route), 9 logic levels.
+
+
+Passed:  The following path meets requirements by 93.522ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3JX    CK             \POPtimers/freepcounter/count_i3  (from \POPtimers/freepcounter/trigger_N_192 +)
+   Destination:    FD1S3IX    D              \POPtimers/freepcounter/count_i15  (to \POPtimers/freepcounter/trigger_N_192 +)
+
+   Delay:                   6.318ns  (62.1% logic, 37.9% route), 9 logic levels.
+
+ Constraint Details:
+
+      6.318ns data_path \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 93.522ns
+
+ Path Details: \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/count_i3 (from \POPtimers/freepcounter/trigger_N_192)
+Route         3   e 1.315                                  reveal_ist_57_N
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_954_1456_add_1_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8224
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8225
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_954_1456_add_1_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2864
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_1565_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8208
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1565_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8209
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1565_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8210
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1565_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8211
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1565_13
+Route         1   e 0.941                                  \POPtimers/freepcounter/count_15__N_176[15]
+                  --------
+                    6.318  (62.1% logic, 37.9% route), 9 logic levels.
+
+
+Passed:  The following path meets requirements by 93.522ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3JX    CK             \POPtimers/freepcounter/count_i3  (from \POPtimers/freepcounter/trigger_N_192 +)
+   Destination:    FD1S3IX    D              \POPtimers/freepcounter/count_i15  (to \POPtimers/freepcounter/trigger_N_192 +)
+
+   Delay:                   6.318ns  (62.1% logic, 37.9% route), 9 logic levels.
+
+ Constraint Details:
+
+      6.318ns data_path \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 93.522ns
+
+ Path Details: \POPtimers/freepcounter/count_i3 to \POPtimers/freepcounter/count_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/freepcounter/count_i3 (from \POPtimers/freepcounter/trigger_N_192)
+Route         3   e 1.315                                  reveal_ist_57_N
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/freepcounter/add_954_1456_add_1_3
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8224
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_5
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8225
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_954_1456_add_1_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8226
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_954_1456_add_1_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n2862
+A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/freepcounter/add_1565_7
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8209
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1565_9
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8210
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/freepcounter/add_1565_11
+Route         1   e 0.020                                  \POPtimers/freepcounter/n8211
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/freepcounter/add_1565_13
 Route         1   e 0.941                                  \POPtimers/freepcounter/count_15__N_176[15]
                   --------
                     6.318  (62.1% logic, 37.9% route), 9 logic levels.
@@ -474,125 +234,407 @@ Report: 6.478 ns is the maximum delay for this constraint.
 
 
 ================================================================================
-Constraint: create_clock -period 100.000000 -name clk2 [get_nets clk_2M5]
-            992 items scored, 0 timing errors detected.
+Constraint: create_clock -period 100.000000 -name clk4 [get_nets \POPtimers/piecounter/trigger_N_156]
+            769 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 38.677ns
+Passed:  The following path meets requirements by 93.198ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i3  (from clk_2M5 +)
-   Destination:    FD1S3AX    D              pump_output_90  (to clk_2M5 +)
+   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
+   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
 
-   Delay:                  11.163ns  (32.6% logic, 67.4% route), 8 logic levels.
+   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
 
  Constraint Details:
 
-     11.163ns data_path \POPtimers/gatedcount_i3 to pump_output_90 meets
-     50.000ns delay constraint less
-      0.160ns L_S requirement (totaling 49.840ns) by 38.677ns
+      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
 
- Path Details: \POPtimers/gatedcount_i3 to pump_output_90
+ Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i3 (from clk_2M5)
-Route        10   e 1.662                                  gatedcount[3]
-LUT4        ---     0.493              B to Z              \POPtimers/pump2/i1_3_lut_rep_156
-Route         1   e 0.941                                  \POPtimers/pump2/n9451
-LUT4        ---     0.493              C to Z              \POPtimers/pump2/i4811_3_lut
-Route         1   e 0.941                                  \POPtimers/pump2/n6114
-LUT4        ---     0.493              A to Z              \POPtimers/pump2/i4_4_lut
-Route         1   e 0.941                                  n10
-LUT4        ---     0.493              C to Z              i1_4_lut
-Route         1   e 0.941                                  n8852
-LUT4        ---     0.493              B to Z              \POPtimers/i1_4_lut
-Route         2   e 1.141                                  \POPtimers/n8792
-LUT4        ---     0.493              A to Z              \POPtimers/MW2/SMstate[0]_bdd_4_lut
-Route         1   e 0.020                                  \POPtimers/MW2/n9272
-MUXL5       ---     0.233           BLUT to Z              \POPtimers/MW2/i7716
-Route         1   e 0.941                                  pump_output_N_22
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
+Route         5   e 1.462                                  reveal_ist_29_N
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_950_1454_add_1_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n8266
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_950_1454_add_1_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n2844
+A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/piecounter/add_1564_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n8214
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n8215
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n8216
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n8217
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n8218
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n8219
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1564_15
+Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
                   --------
-                   11.163  (32.6% logic, 67.4% route), 8 logic levels.
+                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
 
 
-Passed:  The following path meets requirements by 38.677ns
+Passed:  The following path meets requirements by 93.198ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i3  (from clk_2M5 +)
-   Destination:    FD1S3AX    D              pump_output_90  (to clk_2M5 +)
+   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
+   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
 
-   Delay:                  11.163ns  (32.6% logic, 67.4% route), 8 logic levels.
+   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
 
  Constraint Details:
 
-     11.163ns data_path \POPtimers/gatedcount_i3 to pump_output_90 meets
-     50.000ns delay constraint less
-      0.160ns L_S requirement (totaling 49.840ns) by 38.677ns
+      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
 
- Path Details: \POPtimers/gatedcount_i3 to pump_output_90
+ Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i3 (from clk_2M5)
-Route        10   e 1.662                                  gatedcount[3]
-LUT4        ---     0.493              B to Z              \POPtimers/pump2/i1_3_lut_rep_156
-Route         1   e 0.941                                  \POPtimers/pump2/n9451
-LUT4        ---     0.493              C to Z              \POPtimers/pump2/i4811_3_lut
-Route         1   e 0.941                                  \POPtimers/pump2/n6114
-LUT4        ---     0.493              A to Z              \POPtimers/pump2/i4_4_lut
-Route         1   e 0.941                                  n10
-LUT4        ---     0.493              C to Z              i1_4_lut
-Route         1   e 0.941                                  n8852
-LUT4        ---     0.493              B to Z              \POPtimers/i1_4_lut
-Route         2   e 1.141                                  \POPtimers/n8792
-LUT4        ---     0.493              A to Z              \POPtimers/MW2/SMstate[0]_bdd_3_lut
-Route         1   e 0.020                                  \POPtimers/MW2/n9271
-MUXL5       ---     0.233           ALUT to Z              \POPtimers/MW2/i7716
-Route         1   e 0.941                                  pump_output_N_22
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
+Route         5   e 1.462                                  reveal_ist_29_N
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_950_1454_add_1_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n8266
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n8267
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n8268
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n8269
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n8270
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_950_1454_add_1_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n2837
+A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/piecounter/add_1564_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n8218
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n8219
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1564_15
+Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
                   --------
-                   11.163  (32.6% logic, 67.4% route), 8 logic levels.
+                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
 
 
-Passed:  The following path meets requirements by 38.677ns
+Passed:  The following path meets requirements by 93.198ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i2  (from clk_2M5 +)
-   Destination:    FD1S3AX    D              pump_output_90  (to clk_2M5 +)
+   Source:         FD1S3JX    CK             \POPtimers/piecounter/count_i1  (from \POPtimers/piecounter/trigger_N_156 +)
+   Destination:    FD1S3IX    D              \POPtimers/piecounter/count_i15  (to \POPtimers/piecounter/trigger_N_156 +)
 
-   Delay:                  11.163ns  (32.6% logic, 67.4% route), 8 logic levels.
+   Delay:                   6.642ns  (61.4% logic, 38.6% route), 10 logic levels.
 
  Constraint Details:
 
-     11.163ns data_path \POPtimers/gatedcount_i2 to pump_output_90 meets
-     50.000ns delay constraint less
-      0.160ns L_S requirement (totaling 49.840ns) by 38.677ns
+      6.642ns data_path \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 93.198ns
 
- Path Details: \POPtimers/gatedcount_i2 to pump_output_90
+ Path Details: \POPtimers/piecounter/count_i1 to \POPtimers/piecounter/count_i15
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i2 (from clk_2M5)
-Route        10   e 1.662                                  gatedcount[2]
-LUT4        ---     0.493              C to Z              \POPtimers/pump2/i1_3_lut_rep_156
-Route         1   e 0.941                                  \POPtimers/pump2/n9451
-LUT4        ---     0.493              C to Z              \POPtimers/pump2/i4811_3_lut
-Route         1   e 0.941                                  \POPtimers/pump2/n6114
-LUT4        ---     0.493              A to Z              \POPtimers/pump2/i4_4_lut
-Route         1   e 0.941                                  n10
-LUT4        ---     0.493              C to Z              i1_4_lut
-Route         1   e 0.941                                  n8852
-LUT4        ---     0.493              B to Z              \POPtimers/i1_4_lut
-Route         2   e 1.141                                  \POPtimers/n8792
-LUT4        ---     0.493              A to Z              \POPtimers/MW2/SMstate[0]_bdd_3_lut
-Route         1   e 0.020                                  \POPtimers/MW2/n9271
-MUXL5       ---     0.233           ALUT to Z              \POPtimers/MW2/i7716
-Route         1   e 0.941                                  pump_output_N_22
+L_CO        ---     0.444             CK to Q              \POPtimers/piecounter/count_i1 (from \POPtimers/piecounter/trigger_N_156)
+Route         5   e 1.462                                  reveal_ist_29_N
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/piecounter/add_950_1454_add_1_3
+Route         1   e 0.020                                  \POPtimers/piecounter/n8266
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_5
+Route         1   e 0.020                                  \POPtimers/piecounter/n8267
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_950_1454_add_1_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n8268
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_950_1454_add_1_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n2841
+A1_TO_FCO   ---     0.827           C[2] to COUT           \POPtimers/piecounter/add_1564_7
+Route         1   e 0.020                                  \POPtimers/piecounter/n8216
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_9
+Route         1   e 0.020                                  \POPtimers/piecounter/n8217
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_11
+Route         1   e 0.020                                  \POPtimers/piecounter/n8218
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/piecounter/add_1564_13
+Route         1   e 0.020                                  \POPtimers/piecounter/n8219
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/piecounter/add_1564_15
+Route         1   e 0.941                                  \POPtimers/piecounter/count_15__N_140[15]
                   --------
-                   11.163  (32.6% logic, 67.4% route), 8 logic levels.
+                    6.642  (61.4% logic, 38.6% route), 10 logic levels.
 
-Report: 11.323 ns is the maximum delay for this constraint.
+Report: 6.802 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 100.000000 -name clk3 [get_nets clk_debug_N]
+            530 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 88.414ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2  (from clk_debug_N +)
+   Destination:    FD1P3AX    SP             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i0  (to clk_debug_N +)
+
+   Delay:                  11.301ns  (25.7% logic, 74.3% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.301ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i0 meets
+    100.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 99.715ns) by 88.414ns
+
+ Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 (from clk_debug_N)
+Route         6   e 1.515                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk[2]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_158
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9517
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_132_4_lut
+Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9491
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_4_lut_adj_141
+Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n43_adj_1307
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_138
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n40_adj_1328
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i1_2_lut_3_lut_3_lut_4_lut_4_lut
+Route        16   e 1.815                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_70
+                  --------
+                   11.301  (25.7% logic, 74.3% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 88.414ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2  (from clk_debug_N +)
+   Destination:    FD1P3AX    SP             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i1  (to clk_debug_N +)
+
+   Delay:                  11.301ns  (25.7% logic, 74.3% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.301ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i1 meets
+    100.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 99.715ns) by 88.414ns
+
+ Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 (from clk_debug_N)
+Route         6   e 1.515                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk[2]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_158
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9517
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_132_4_lut
+Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9491
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_4_lut_adj_141
+Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n43_adj_1307
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_138
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n40_adj_1328
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i1_2_lut_3_lut_3_lut_4_lut_4_lut
+Route        16   e 1.815                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_70
+                  --------
+                   11.301  (25.7% logic, 74.3% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 88.414ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2  (from clk_debug_N +)
+   Destination:    FD1P3AX    SP             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i2  (to clk_debug_N +)
+
+   Delay:                  11.301ns  (25.7% logic, 74.3% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.301ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i2 meets
+    100.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 99.715ns) by 88.414ns
+
+ Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/te_precnt_val_i0_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk_i2 (from clk_debug_N)
+Route         6   e 1.515                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jupdate_reclk[2]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_158
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9517
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_2_lut_rep_132_4_lut
+Route         5   e 1.405                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9491
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i1_4_lut_adj_141
+Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n43_adj_1307
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_138
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n40_adj_1328
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/i1_2_lut_3_lut_3_lut_4_lut_4_lut
+Route        16   e 1.815                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_70
+                  --------
+                   11.301  (25.7% logic, 74.3% route), 6 logic levels.
+
+Report: 11.586 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 100.000000 -name clk2 [get_nets clk_2M5]
+            886 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 39.457ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i0  (from clk_2M5 +)
+   Destination:    FD1S3AX    D              MW_output_92  (to clk_2M5 +)
+
+   Delay:                  10.383ns  (45.1% logic, 54.9% route), 14 logic levels.
+
+ Constraint Details:
+
+     10.383ns data_path \POPtimers/gatedcount_i0 to MW_output_92 meets
+     50.000ns delay constraint less
+      0.160ns L_S requirement (totaling 49.840ns) by 39.457ns
+
+ Path Details: \POPtimers/gatedcount_i0 to MW_output_92
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i0 (from clk_2M5)
+Route         7   e 1.559                                  \POPtimers/gatedcount[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW3/sub_685_add_2_1
+Route         1   e 0.020                                  \POPtimers/MW3/n8239
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW3/n8240
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW3/n8241
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW3/n8242
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW3/n8243
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW3/n8244
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW3/n8245
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW3/sub_685_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW3/n8246
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW3/sub_685_add_2_17
+Route         1   e 0.941                                  \POPtimers/pi2started
+LUT4        ---     0.493              A to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_75
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         2   e 1.141                                  MW
+LUT4        ---     0.493              C to Z              i2_4_lut_4_lut
+Route         1   e 0.020                                  n8332
+MUXL5       ---     0.233           BLUT to Z              i34
+Route         1   e 0.941                                  MW_output_N_40
+                  --------
+                   10.383  (45.1% logic, 54.9% route), 14 logic levels.
+
+
+Passed:  The following path meets requirements by 39.457ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i0  (from clk_2M5 +)
+   Destination:    FD1S3AX    D              MW_output_92  (to clk_2M5 +)
+
+   Delay:                  10.383ns  (45.1% logic, 54.9% route), 14 logic levels.
+
+ Constraint Details:
+
+     10.383ns data_path \POPtimers/gatedcount_i0 to MW_output_92 meets
+     50.000ns delay constraint less
+      0.160ns L_S requirement (totaling 49.840ns) by 39.457ns
+
+ Path Details: \POPtimers/gatedcount_i0 to MW_output_92
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i0 (from clk_2M5)
+Route         7   e 1.559                                  \POPtimers/gatedcount[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW4/sub_687_add_2_1
+Route         1   e 0.020                                  \POPtimers/MW4/n8231
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW4/n8232
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW4/n8233
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW4/n8234
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW4/n8235
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW4/n8236
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW4/n8237
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW4/n8238
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW4/sub_687_add_2_17
+Route         1   e 0.941                                  \POPtimers/n1276
+LUT4        ---     0.493              B to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_75
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         2   e 1.141                                  MW
+LUT4        ---     0.493              C to Z              i2_4_lut_4_lut
+Route         1   e 0.020                                  n8332
+MUXL5       ---     0.233           BLUT to Z              i34
+Route         1   e 0.941                                  MW_output_N_40
+                  --------
+                   10.383  (45.1% logic, 54.9% route), 14 logic levels.
+
+
+Passed:  The following path meets requirements by 39.457ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \POPtimers/gatedcount_i0  (from clk_2M5 +)
+   Destination:    FD1S3AX    D              MW_output_92  (to clk_2M5 +)
+
+   Delay:                  10.383ns  (45.1% logic, 54.9% route), 14 logic levels.
+
+ Constraint Details:
+
+     10.383ns data_path \POPtimers/gatedcount_i0 to MW_output_92 meets
+     50.000ns delay constraint less
+      0.160ns L_S requirement (totaling 49.840ns) by 39.457ns
+
+ Path Details: \POPtimers/gatedcount_i0 to MW_output_92
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \POPtimers/gatedcount_i0 (from clk_2M5)
+Route         7   e 1.559                                  \POPtimers/gatedcount[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \POPtimers/MW4/sub_687_add_2_1
+Route         1   e 0.020                                  \POPtimers/MW4/n8231
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_3
+Route         1   e 0.020                                  \POPtimers/MW4/n8232
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_5
+Route         1   e 0.020                                  \POPtimers/MW4/n8233
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_7
+Route         1   e 0.020                                  \POPtimers/MW4/n8234
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_9
+Route         1   e 0.020                                  \POPtimers/MW4/n8235
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_11
+Route         1   e 0.020                                  \POPtimers/MW4/n8236
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_13
+Route         1   e 0.020                                  \POPtimers/MW4/n8237
+FCI_TO_FCO  ---     0.157            CIN to COUT           \POPtimers/MW4/sub_687_add_2_15
+Route         1   e 0.020                                  \POPtimers/MW4/n8238
+FCI_TO_F    ---     0.598            CIN to S[2]           \POPtimers/MW4/sub_687_add_2_17
+Route         1   e 0.941                                  \POPtimers/n1276
+LUT4        ---     0.493              B to Z              \POPtimers/pi2started_I_0_2_lut
+Route         1   e 0.941                                  \POPtimers/MW_N_75
+LUT4        ---     0.493              B to Z              \POPtimers/MW_I_0_4_lut
+Route         2   e 1.141                                  MW
+LUT4        ---     0.493              B to Z              i36_4_lut_4_lut
+Route         1   e 0.020                                  n17
+MUXL5       ---     0.233           ALUT to Z              i34
+Route         1   e 0.941                                  MW_output_N_40
+                  --------
+                   10.383  (45.1% logic, 54.9% route), 14 logic levels.
+
+Report: 10.543 ns is the maximum delay for this constraint.
 
 
 
@@ -604,148 +646,154 @@ Constraint: create_clock -period 100.000000 -name clk1 [get_nets debounce_pulse]
 
 ================================================================================
 Constraint: create_clock -period 100.000000 -name clk0 [get_nets \TinyFPGA_A2_reveal_coretop_instance/jtck[0]]
-            935 items scored, 0 timing errors detected.
+            965 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 82.181ns
+Passed:  The following path meets requirements by 81.058ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17  (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
    Destination:    FD1P3BX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0  (to \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
 
-   Delay:                  17.659ns  (31.1% logic, 68.9% route), 12 logic levels.
+   Delay:                  18.782ns  (31.1% logic, 68.9% route), 13 logic levels.
 
  Constraint Details:
 
-     17.659ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
+     18.782ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
     100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 82.181ns
+      0.160ns L_S requirement (totaling 99.840ns) by 81.058ns
 
  Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0])
-Route        39   e 2.108                                  addr[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/decode_u/i1_2_lut_rep_166
-Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9461
-LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i5_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n13
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7612_4_lut_rep_114_4_lut
-Route        12   e 1.657                                  n9409
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7636_2_lut_4_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8967
-MOFX0       ---     0.378             C0 to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i12
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n33_adj_1305
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i25_3_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n25
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7519_3_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8982
-MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7520
+Route        37   e 2.105                                  addr[0]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i2_2_lut_rep_131_3_lut
+Route        15   e 1.811                                  n9490
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n5601_bdd_4_lut_7742
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9259
+MUXL5       ---     0.233           BLUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7716
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260_bdd_3_lut_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261_bdd_3_lut_7874
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_adj_1308
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_bdd_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9388
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/wr_din[0]_bdd_3_lut_7875
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389_bdd_3_lut
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9390
+MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7784
 Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtdo_N_495
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4489_2_lut
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4554_2_lut
 Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_150
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8300
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4492_3_lut_4_lut_4_lut
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8396
+LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4564_3_lut_4_lut_4_lut
 Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_15__N_399[0]
                   --------
-                   17.659  (31.1% logic, 68.9% route), 12 logic levels.
+                   18.782  (31.1% logic, 68.9% route), 13 logic levels.
 
 
-Passed:  The following path meets requirements by 82.198ns
+Passed:  The following path meets requirements by 81.058ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17  (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
+   Destination:    FD1P3BX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0  (to \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
+
+   Delay:                  18.782ns  (31.1% logic, 68.9% route), 13 logic levels.
+
+ Constraint Details:
+
+     18.782ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
+    100.000ns delay constraint less
+      0.160ns L_S requirement (totaling 99.840ns) by 81.058ns
+
+ Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0])
+Route        37   e 2.105                                  addr[0]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i2_2_lut_rep_131_3_lut
+Route        15   e 1.811                                  n9490
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n5601_bdd_4_lut_7715
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9258
+MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7716
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260_bdd_3_lut_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261_bdd_3_lut_7874
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_adj_1308
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_bdd_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9388
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/wr_din[0]_bdd_3_lut_7875
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389_bdd_3_lut
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9390
+MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7784
+Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtdo_N_495
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4554_2_lut
+Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8396
+LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4564_3_lut_4_lut_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_15__N_399[0]
+                  --------
+                   18.782  (31.1% logic, 68.9% route), 13 logic levels.
+
+
+Passed:  The following path meets requirements by 81.061ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i18  (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
    Destination:    FD1P3BX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0  (to \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
 
-   Delay:                  17.642ns  (31.1% logic, 68.9% route), 12 logic levels.
+   Delay:                  18.779ns  (31.1% logic, 68.9% route), 13 logic levels.
 
  Constraint Details:
 
-     17.642ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i18 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
+     18.779ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i18 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
     100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 82.198ns
+      0.160ns L_S requirement (totaling 99.840ns) by 81.061ns
 
  Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i18 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i18 (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0])
-Route        29   e 2.091                                  addr[1]
-LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/decode_u/i1_2_lut_rep_166
-Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9461
-LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i5_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n13
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7612_4_lut_rep_114_4_lut
-Route        12   e 1.657                                  n9409
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7636_2_lut_4_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8967
-MOFX0       ---     0.378             C0 to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i12
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n33_adj_1305
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i25_3_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n25
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7519_3_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8982
-MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7520
+Route        35   e 2.102                                  addr[1]
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i2_2_lut_rep_131_3_lut
+Route        15   e 1.811                                  n9490
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n5601_bdd_4_lut_7742
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9259
+MUXL5       ---     0.233           BLUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7716
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260
+LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9260_bdd_3_lut_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9261_bdd_3_lut_7874
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_adj_1308
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_bdd_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9388
+LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/wr_din[0]_bdd_3_lut_7875
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9389_bdd_3_lut
+Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9390
+MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7784
 Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtdo_N_495
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4489_2_lut
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4554_2_lut
 Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_150
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8300
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4492_3_lut_4_lut_4_lut
+LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut
+Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8396
+LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4564_3_lut_4_lut_4_lut
 Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_15__N_399[0]
                   --------
-                   17.642  (31.1% logic, 68.9% route), 12 logic levels.
+                   18.779  (31.1% logic, 68.9% route), 13 logic levels.
 
-
-Passed:  The following path meets requirements by 82.326ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3DX    CK             \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17  (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
-   Destination:    FD1P3BX    D              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0  (to \TinyFPGA_A2_reveal_coretop_instance/jtck[0] +)
-
-   Delay:                  17.514ns  (30.5% logic, 69.5% route), 12 logic levels.
-
- Constraint Details:
-
-     17.514ns data_path \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0 meets
-    100.000ns delay constraint less
-      0.160ns L_S requirement (totaling 99.840ns) by 82.326ns
-
- Path Details: \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 to \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_i0_i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/shift_reg__i17 (from \TinyFPGA_A2_reveal_coretop_instance/jtck[0])
-Route        39   e 2.108                                  addr[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/decode_u/i1_2_lut_rep_166
-Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9461
-LUT4        ---     0.493              B to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i5_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n13
-LUT4        ---     0.493              D to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7612_4_lut_rep_114_4_lut
-Route        12   e 1.657                                  n9409
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i34_3_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n31_adj_1304
-MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i12
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n33_adj_1305
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i25_3_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n25
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7519_3_lut
-Route         1   e 0.020                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8982
-MUXL5       ---     0.233           ALUT to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i7520
-Route         3   e 1.258                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtdo_N_495
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4489_2_lut
-Route         2   e 1.141                                  \TinyFPGA_A2_reveal_coretop_instance/er2_tdo[0]
-LUT4        ---     0.493              A to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i3_4_lut_adj_150
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n8300
-LUT4        ---     0.493              C to Z              \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/i4492_3_lut_4_lut_4_lut
-Route         1   e 0.941                                  \TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/tm_crc_15__N_399[0]
-                  --------
-                   17.514  (30.5% logic, 69.5% route), 12 logic levels.
-
-Report: 17.819 ns is the maximum delay for this constraint.
+Report: 18.942 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -755,21 +803,21 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk6 [get_nets                          |             |             |
-\POPtimers/piecounter/trigger_N_156]    |   100.000 ns|     6.802 ns|    10  
+clk6 [get_nets sampled_modebutton]      |   100.000 ns|     4.220 ns|     2  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk5 [get_nets sampled_modebutton]      |   100.000 ns|     4.069 ns|     2  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk4 [get_nets clk_debug_N]             |   100.000 ns|     8.666 ns|     5  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk3 [get_nets                          |             |             |
+clk5 [get_nets                          |             |             |
 \POPtimers/freepcounter/trigger_N_192]  |   100.000 ns|     6.478 ns|     9  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk2 [get_nets clk_2M5]                 |   100.000 ns|    22.646 ns|     8  
+clk4 [get_nets                          |             |             |
+\POPtimers/piecounter/trigger_N_156]    |   100.000 ns|     6.802 ns|    10  
+                                        |             |             |
+create_clock -period 100.000000 -name   |             |             |
+clk3 [get_nets clk_debug_N]             |   100.000 ns|    11.586 ns|     6  
+                                        |             |             |
+create_clock -period 100.000000 -name   |             |             |
+clk2 [get_nets clk_2M5]                 |   100.000 ns|    21.086 ns|    14  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
 clk1 [get_nets debounce_pulse]          |            -|            -|     0  
@@ -777,7 +825,7 @@ clk1 [get_nets debounce_pulse]          |            -|            -|     0
 create_clock -period 100.000000 -name   |             |             |
 clk0 [get_nets                          |             |             |
 \TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
-k[0]]                                   |   100.000 ns|    17.819 ns|    12  
+k[0]]                                   |   100.000 ns|    18.942 ns|    13  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -791,8 +839,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  6802 paths, 1145 nets, and 2950 connections (69.4% coverage)
+Constraints cover  6691 paths, 1136 nets, and 2916 connections (68.9% coverage)
 
 
-Peak memory: 77717504 bytes, TRCE: 6168576 bytes, DLYMAN: 327680 bytes
+Peak memory: 78794752 bytes, TRCE: 6311936 bytes, DLYMAN: 327680 bytes
 CPU_TIME_REPORT: 0 secs 

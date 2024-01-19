@@ -5,9 +5,11 @@ module POPtimers
 	PumpPulse=2000, //800탎
 	PieOverTwo=795, //318탎 - my last value
 	//PieOverTwo=1000, //Micalizio 400탎
-	FreePrecession=2350, //Aug POP value 0.94ms
+	//FreePrecession=2350, //Aug POP value 0.94ms
 	//FreePrecession=8250, //Micalizio 3.3ms
 	//FreePrecession=6900, //2.76ms - my last value
+	//FreePrecession=10000, //4ms
+	FreePrecession=14750, //5.9ms - give a 100Hz central fringe
 	ProbePulse=2500, //1ms
 	//SampleDelay=2000, //800탎
 	SampleDelay=500, //200탎

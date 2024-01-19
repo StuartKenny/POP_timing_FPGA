@@ -1,4 +1,4 @@
-<Project ModBy="Analyzer" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2023-08-10">
+<Project ModBy="Analyzer" Name="C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvs" Date="2023-09-25">
  <Core Name="Counters">
   <Setting>
    <Capture SamplesPerTrig="16" NumTrigsCap="1"/>

@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 13:04:28 2023
+Fri Jan 19 13:16:57 2024
 
 
 Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml 
@@ -119,9 +119,9 @@ Top-level module name = TinyFPGA_A2.
 
 
 
-WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1635): Register \POPtimers/piecounter/count_i0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): Register \POPtimers/freepcounter/count_i0 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): Register \POPtimers/freepcounter/count_i1 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1639): Register \POPtimers/piecounter/count_i0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1679): Register \POPtimers/freepcounter/count_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1679): Register \POPtimers/freepcounter/count_i1 is stuck at One. VDB-5014
 ######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
 Applying 10.000000 MHz constraint to all clocks
 
@@ -159,16 +159,16 @@ FD1P3DX => 239
 FD1S3AX => 53
 FD1S3BX => 1
 FD1S3DX => 68
-FD1S3IX => 38
-FD1S3JX => 12
+FD1S3IX => 35
+FD1S3JX => 15
 GSR => 1
 IB => 9
 INV => 2
-L6MUX21 => 2
-LUT4 => 538
+L6MUX21 => 1
+LUT4 => 535
 OB => 6
 OBZ => 3
-PFUMX => 36
+PFUMX => 33
 pmi_distributed_dpramXbnoner2248b8a5a7 => 1
 pmi_ram_dpXbnonesadr324163241611884d26 => 1
 ################### End Area Report ##################
@@ -192,27 +192,27 @@ Clock Enable Nets
 Number of Clock Enables: 52
 Top 10 highest fanout Clock Enables:
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133, loads : 35
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/sample_en_d, loads : 17
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_26, loads : 16
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_126, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/sample_en_d, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_34, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_56, loads : 8
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_55, loads : 8
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_132, loads : 6
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_dout_int_31__N_1089, loads : 5
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_44, loads : 4
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_53, loads : 4
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_43, loads : 4
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_52, loads : 4
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_40, loads : 4
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : TinyFPGA_A2_reveal_coretop_instance/jtck_N_265, loads : 205
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jrstn_N_263, loads : 200
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n9412, loads : 140
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9403, loads : 59
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9413, loads : 49
-  Net : TinyFPGA_A2_reveal_coretop_instance/ip_enable[0], loads : 43
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n9481, loads : 139
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/n9482, loads : 58
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9486, loads : 49
+  Net : TinyFPGA_A2_reveal_coretop_instance/ip_enable[0], loads : 45
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n11, loads : 41
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/addr[0], loads : 36
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133, loads : 35
   Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167, loads : 35
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/addr[0], loads : 34
+  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_133, loads : 33
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -222,21 +222,21 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk6 [get_nets                          |             |             |
-\POPtimers/piecounter/trigger_N_156]    |   10.000 MHz|  147.016 MHz|    10  
+clk6 [get_nets sampled_modebutton]      |   10.000 MHz|  236.967 MHz|     2  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk5 [get_nets sampled_modebutton]      |   10.000 MHz|  245.761 MHz|     2  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk4 [get_nets clk_debug_N]             |   10.000 MHz|  115.393 MHz|     5  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk3 [get_nets                          |             |             |
+clk5 [get_nets                          |             |             |
 \POPtimers/freepcounter/trigger_N_192]  |   10.000 MHz|  154.369 MHz|     9  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
-clk2 [get_nets clk_2M5]                 |   10.000 MHz|   44.158 MHz|     8  
+clk4 [get_nets                          |             |             |
+\POPtimers/piecounter/trigger_N_156]    |   10.000 MHz|  147.016 MHz|    10  
+                                        |             |             |
+create_clock -period 100.000000 -name   |             |             |
+clk3 [get_nets clk_debug_N]             |   10.000 MHz|   86.311 MHz|     6  
+                                        |             |             |
+create_clock -period 100.000000 -name   |             |             |
+clk2 [get_nets clk_2M5]                 |   10.000 MHz|   47.425 MHz|    14  
                                         |             |             |
 create_clock -period 100.000000 -name   |             |             |
 clk1 [get_nets debounce_pulse]          |            -|            -|     0  
@@ -244,7 +244,7 @@ clk1 [get_nets debounce_pulse]          |            -|            -|     0
 create_clock -period 100.000000 -name   |             |             |
 clk0 [get_nets                          |             |             |
 \TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
-k[0]]                                   |   10.000 MHz|   56.120 MHz|    12  
+k[0]]                                   |   10.000 MHz|   52.793 MHz|    13  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -252,10 +252,10 @@ k[0]]                                   |   10.000 MHz|   56.120 MHz|    12
 All constraints were met.
 
 
-Peak Memory Usage: 74.348  MB
+Peak Memory Usage: 75.586  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.438  secs
+Elapsed CPU time for LSE flow : 2.391  secs
 --------------------------------------------------------------
 
 

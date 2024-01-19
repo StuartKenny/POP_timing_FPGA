@@ -11,7 +11,7 @@
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1): INFO: compiling module 'TinyFPGA_A2' (VERI-1018)
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(143): INFO: elaborating module 'TinyFPGA_A2' (VERI-9000)
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v(45): INFO: elaborating module 'clocks_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(88): INFO: elaborating module 'POPtimers_uniq_1' (VERI-9000)
+C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(90): INFO: elaborating module 'POPtimers_uniq_1' (VERI-9000)
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(28): INFO: elaborating module 'slow_clock_pulse_uniq_1' (VERI-9000)
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(46): INFO: elaborating module 'n_state_machine_uniq_1' (VERI-9000)
 C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v(94): INFO: elaborating module 'DIV4PLL_uniq_1' (VERI-9000)

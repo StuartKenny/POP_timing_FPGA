@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timer_POP_timers_AX2.jed</File>
-			<FileTime>08/10/23 11:53:26</FileTime>
-			<JedecChecksum>0x7DBB</JedecChecksum>
+			<FileTime>01/19/24 13:17:48</FileTime>
+			<JedecChecksum>0x9ED9</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

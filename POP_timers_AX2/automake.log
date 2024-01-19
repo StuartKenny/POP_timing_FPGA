@@ -1,357 +1,4 @@
 
-istflow -prj "C:/Users/sek529/Github/POP_timing_FPGA/POP_timer_Reveal.rvl" -design "POP_timer_POP_timers_AX2.rvp" 
--- all messages logged in file C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_error.log
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v' (VERI-1482)
--- Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v' (VERI-1482)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1): INFO: compiling module 'TinyFPGA_A2' (VERI-1018)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(143): INFO: elaborating module 'TinyFPGA_A2' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v(45): INFO: elaborating module 'clocks_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(88): INFO: elaborating module 'POPtimers_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(28): INFO: elaborating module 'slow_clock_pulse_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(46): INFO: elaborating module 'n_state_machine_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v(94): INFO: elaborating module 'DIV4PLL_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v(26): INFO: elaborating module 'count_n_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_2' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_3' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_4' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_5' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_6' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_7' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_8' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_9' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_10' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(21): INFO: elaborating module 'comparator_uniq_11' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(37): INFO: elaborating module 'countupdownpreload_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(37): INFO: elaborating module 'countupdownpreload_uniq_2' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(57): INFO: elaborating module 'single_period_pulse_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(57): INFO: elaborating module 'single_period_pulse_uniq_2' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(72): INFO: elaborating module 'd_flip_flop_uniq_1' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(72): INFO: elaborating module 'd_flip_flop_uniq_2' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(72): INFO: elaborating module 'd_flip_flop_uniq_3' (VERI-9000)
-C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(72): INFO: elaborating module 'd_flip_flop_uniq_4' (VERI-9000)
-Copyright (c) 2001-2013 Lattice Semiconductor Corporation. All rights reserved.
-Check Reveal Inserter settings...
-    <postMsg mid="2120344" type="Info"    dynamic="1" navigation="0" arg0="2"  />
-    <postMsg mid="2120346" type="Info"    dynamic="1" navigation="0" arg0="3"  />
-Design Rule Check PASSED.
-Finished checking Reveal Inserter settings.
-Generating core template(s)...
-Parameters loaded ok.
-No optional files required.
-IP template generation completed ok.
-
-Finished running Tcl command: "C:/lscc/diamond/3.12/tcltk/bin/tclsh" "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/POP_timer_Reveal_generate.tcl".
-all messages logged in file C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_error.log
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/POP_timer_Reveal/counters_bb.v'
-all messages logged in file C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_error.log
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_reveal_coretop.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v'
-(VERI-1482) Analyzing Verilog file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v'
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,8-1,19) (VERI-1018) compiling module &apos;TinyFPGA_A2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v(1,1-143,10) (VERI-9000) elaborating module &apos;TinyFPGA_A2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/TinyFPGA_A2.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v(13,1-45,11) (VERI-9000) elaborating module &apos;clocks_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/clocks.v" arg2="13"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v(1,1-88,10) (VERI-9000) elaborating module &apos;POPtimers_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/POPtimers.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(4,1-28,11) (VERI-9000) elaborating module &apos;slow_clock_pulse_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v" arg2="4"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v(31,2-46,10) (VERI-9000) elaborating module &apos;n_state_machine_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/wrapper.v" arg2="31"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v(8,1-94,10) (VERI-9000) elaborating module &apos;DIV4PLL_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/DIV4PLL.v" arg2="8"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v(2,1-26,11) (VERI-9000) elaborating module &apos;count_n_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/count_n.v" arg2="2"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_3&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_4&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_5&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_6&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_7&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_8&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_9&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_10&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v(1,1-21,10) (VERI-9000) elaborating module &apos;comparator_uniq_11&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/compare_n.v" arg2="1"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module &apos;countupdownpreload_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="2"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(2,1-37,10) (VERI-9000) elaborating module &apos;countupdownpreload_uniq_2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="2"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module &apos;single_period_pulse_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="40"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(40,1-57,10) (VERI-9000) elaborating module &apos;single_period_pulse_uniq_2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="40"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module &apos;d_flip_flop_uniq_1&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="60"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module &apos;d_flip_flop_uniq_2&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="60"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module &apos;d_flip_flop_uniq_3&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="60"  />
-    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v(60,1-72,10) (VERI-9000) elaborating module &apos;d_flip_flop_uniq_4&apos;" arg1="C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/source/extensions.v" arg2="60"  />
-(VERI-1491) Pretty printing all design elements in library 'work' to file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_rvl.v'
-Lpf file 'C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf' is updated.
-
-synthesis -f "POP_timer_POP_timers_AX2_lattice.synproj"
-synthesis:  version Diamond (64-bit) 3.12.1.454
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 13:04:28 2023
-
-
-Command Line:  synthesis -f POP_timer_POP_timers_AX2_lattice.synproj -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml 
-
-    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
-Synthesis options:
-The -a option is MachXO2.
-The -s option is 4.
-The -t option is QFN32.
-The -d option is LCMXO2-1200HC.
-Using package QFN32.
-Using performance grade 4.
-                                                          
-
-##########################################################
-
-### Lattice Family : MachXO2
-
-### Device  : LCMXO2-1200HC
-
-### Package : QFN32
-
-### Speed   : 4
-
-##########################################################
-
-                                                          
-
-    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
-Optimization goal = Balanced
-Top-level module name = TinyFPGA_A2.
-Target frequency = 10.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3 (default)
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
-
-Mux style = Auto
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
-
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = FALSE
-force_gsr = no
-ROM style = auto
-RAM style = auto
-The -comp option is FALSE.
-The -syn option is FALSE.
--p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2 (searchpath added)
--p C:/Users/sek529/Github/POP_timing_FPGA (searchpath added)
--p C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/POP_timer_Reveal (searchpath added)
-Key file = C:/lscc/diamond/3.12/module/reveal/document/reveal_test.dat
-File C:/lscc/diamond/3.12/module/reveal/src/ertl/ertl.v is encrypted
-
-File C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v is encrypted
-
-File C:/lscc/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v is encrypted
-
-Verilog design file = C:/lscc/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v
-Verilog design file = C:/lscc/diamond/3.12/module/reveal/src/ertl/ertl.v
-Verilog design file = C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v
-Verilog design file = C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v
-Verilog design file = C:/lscc/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v
-Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/counters_trig_gen.v
-Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/counters_gen.v
-Verilog design file = C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/reveal_workspace/tmpreveal/TinyFPGA_A2_rvl.v
-NGD file = POP_timer_POP_timers_AX2.ngd
--sdc option: SDC file input not used.
--lpf option: Output file option is ON.
-Hardtimer checking is enabled (default). The -dt option is not used.
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Technology check ok...
-
-Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
-Compile design.
-Compile Design Begin
-Analyzing Verilog file c:/lscc/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
-Analyzing Verilog file c:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v. VERI-1482
-Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/counters_trig_gen.v. VERI-1482
-Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/counters_gen.v. VERI-1482
-Analyzing Verilog file c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v. VERI-1482
-Analyzing Verilog file .__ydixd0.v. VERI-1482
-Top module name (Verilog): TinyFPGA_A2
-Last elaborated design is TinyFPGA_A2()
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading device for application map from file 'xo2c1200.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
-Package Status:                     Final          Version 1.44.
-Top-level module name = TinyFPGA_A2.
-######## Converting I/O port pin3_sn to output.
-######## Converting I/O port pin5 to output.
-######## Converting I/O port pin9_jtgnb to output.
-
-
-
-    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1635): " arg1="\POPtimers/piecounter/count_i0" arg2="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v" arg3="1635"  />
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): " arg1="\POPtimers/freepcounter/count_i0" arg2="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v" arg3="1675"  />
-    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v(1675): " arg1="\POPtimers/freepcounter/count_i1" arg2="c:/users/sek529/github/pop_timing_fpga/pop_timers_ax2/reveal_workspace/tmpreveal/tinyfpga_a2_rvl.v" arg3="1675"  />
-######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
-Applying 10.000000 MHz constraint to all clocks
-
-    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
-TinyFPGA_A2_prim.v file will not be written because encrypted design file is being used
-
-Results of NGD DRC are available in TinyFPGA_A2_drc.log.
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/data/neoprims.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/data/neomacro.ngl'...
-Loading NGO design 'lngotmp/pmi_distributed_dpramxbnoner2248b8a5a7.ngo'...
-Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr324163241611884d26.ngo'...
-Logic has been added to the IP to support JTAG capability.
-Loading NGO design 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2chub.ngl'...
-
-
-Running DRC...
-
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="TinyFPGA_A2_reveal_coretop_instance/jupdate[0]" arg2="TinyFPGA_A2_reveal_coretop_instance/jupdate[0]"  />
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="xo2chub/tdoa" arg2="xo2chub/tdoa"  />
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="xo2chub/cdn" arg2="xo2chub/cdn"  />
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="xo2chub/ip_enable[15]" arg2="xo2chub/ip_enable[15]"  />
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="xo2chub/genblk7.un1_jtagf_u" arg2="xo2chub/genblk7.un1_jtagf_u"  />
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="xo2chub/genblk7.un1_jtagf_u_1" arg2="xo2chub/genblk7.un1_jtagf_u_1"  />
-    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="6"  />
-
-Design Results:
-   1351 blocks expanded
-completed the first expansion
-All blocks are expanded and NGD expansion is successful.
-Writing NGD file POP_timer_POP_timers_AX2.ngd.
-
-################### Begin Area Report (TinyFPGA_A2)######################
-Number of register bits => 463 of 1346 (34 % )
-CCU2D => 191
-EHXPLLJ => 1
-FD1P3AX => 18
-FD1P3BX => 34
-FD1P3DX => 239
-FD1S3AX => 53
-FD1S3BX => 1
-FD1S3DX => 68
-FD1S3IX => 38
-FD1S3JX => 12
-GSR => 1
-IB => 9
-INV => 2
-L6MUX21 => 2
-LUT4 => 538
-OB => 6
-OBZ => 3
-PFUMX => 36
-pmi_distributed_dpramXbnoner2248b8a5a7 => 1
-pmi_ram_dpXbnonesadr324163241611884d26 => 1
-################### End Area Report ##################
-
-################### Begin BlackBox Report ######################
-TSALL => 1
-jtagconn16 => 1
-################### End BlackBox Report ##################
-
-################### Begin Clock Report ######################
-Clock Nets
-Number of Clocks: 7
-  Net : clk_debug_N, loads : 160
-  Net : clocks/PLL/clk_2M5, loads : 50
-  Net : POPtimers/piecounter/clean_trigger/trigger_N_156, loads : 16
-  Net : POPtimers/freepcounter/clean_trigger/trigger_N_192, loads : 15
-  Net : slowclocks/debounce_pulse, loads : 7
-  Net : sampled_modebutton, loads : 3
-  Net : TinyFPGA_A2_reveal_coretop_instance/jtck[0], loads : 1
-Clock Enable Nets
-Number of Clock Enables: 52
-Top 10 highest fanout Clock Enables:
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_126, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/sample_en_d, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_34, loads : 16
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_56, loads : 8
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_132, loads : 6
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_dout_int_31__N_1089, loads : 5
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_44, loads : 4
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_53, loads : 4
-Highest fanout non-clock nets
-Top 10 highest fanout non-clock nets:
-  Net : TinyFPGA_A2_reveal_coretop_instance/jtck_N_265, loads : 205
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jrstn_N_263, loads : 200
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/tcnt_0/n9412, loads : 140
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9403, loads : 59
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9413, loads : 49
-  Net : TinyFPGA_A2_reveal_coretop_instance/ip_enable[0], loads : 43
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n11, loads : 41
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/addr[0], loads : 36
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133, loads : 35
-  Net : TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167, loads : 35
-################### End Clock Report ##################
-
-Timing Report Summary
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk6 [get_nets                          |             |             |
-\POPtimers/piecounter/trigger_N_156]    |   10.000 MHz|  147.016 MHz|    10  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk5 [get_nets sampled_modebutton]      |   10.000 MHz|  245.761 MHz|     2  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk4 [get_nets clk_debug_N]             |   10.000 MHz|  115.393 MHz|     5  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk3 [get_nets                          |             |             |
-\POPtimers/freepcounter/trigger_N_192]  |   10.000 MHz|  154.369 MHz|     9  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk2 [get_nets clk_2M5]                 |   10.000 MHz|   44.158 MHz|     8  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk1 [get_nets debounce_pulse]          |            -|            -|     0  
-                                        |             |             |
-create_clock -period 100.000000 -name   |             |             |
-clk0 [get_nets                          |             |             |
-\TinyFPGA_A2_reveal_coretop_instance/jtc|             |             |
-k[0]]                                   |   10.000 MHz|   56.120 MHz|    12  
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-All constraints were met.
-
-
-Peak Memory Usage: 74.348  MB
-
---------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.438  secs
---------------------------------------------------------------
-
 map -a "MachXO2" -p LCMXO2-1200HC -t QFN32 -s 4 -oc Commercial   "POP_timer_POP_timers_AX2.ngd" -o "POP_timer_POP_timers_AX2_map.ncd" -pr "POP_timer_POP_timers_AX2.prf" -mp "POP_timer_POP_timers_AX2.mrp" -lpf "C:/Users/sek529/Github/POP_timing_FPGA/POP_timers_AX2/POP_timer_POP_timers_AX2.lpf" -lpf "C:/Users/sek529/Github/POP_timing_FPGA/POP_timer.lpf"  -c 0           
 map:  version Diamond (64-bit) 3.12.1.454
 
@@ -395,8 +42,8 @@ Design Summary:
       SLICEs as Logic/ROM:    492 out of   640 (77%)
       SLICEs as RAM:            3 out of   480 (1%)
       SLICEs as Carry:        208 out of   640 (33%)
-   Number of LUT4s:        968 out of  1280 (76%)
-      Number used as logic LUTs:        546
+   Number of LUT4s:        964 out of  1280 (75%)
+      Number used as logic LUTs:        542
       Number used as distributed RAM:     6
       Number used as ripple logic:      416
       Number used as shift registers:     0
@@ -424,89 +71,89 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  7
-     Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver: slowclocks/count_959__i7 )
-     Net clk_2M5: 40 loads, 31 rising, 9 falling (Driver: clocks/PLL/PLLInst_0 )
+     Net debounce_pulse: 6 loads, 6 rising, 0 falling (Driver: slowclocks/count_965__i7 )
+     Net clk_2M5: 39 loads, 31 rising, 8 falling (Driver: clocks/PLL/PLLInst_0 )
      Net sampled_modebutton: 2 loads, 2 rising, 0 falling (Driver: sampled_modebutton_82 )
+     Net jtaghub16_jtck: 152 loads, 0 rising, 152 falling (Driver: xo2chub/genblk7.jtagf_u )
+     Net clk_debug_N: 97 loads, 97 rising, 0 falling (Driver: PIO tenmegclock )
      Net reveal_ist_66_N: 9 loads, 9 rising, 0 falling (Driver: POPtimers/piecounter/clean_trigger/Q0_I_0_2_lut )
      Net reveal_ist_69_N: 8 loads, 8 rising, 0 falling (Driver: POPtimers/freepcounter/clean_trigger/Q0_I_0_2_lut )
-     Net jtaghub16_jtck: 151 loads, 0 rising, 151 falling (Driver: xo2chub/genblk7.jtagf_u )
-     Net clk_debug_N: 99 loads, 99 rising, 0 falling (Driver: PIO tenmegclock )
    Number of Clock Enables:  55
-     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_265_enable_49: 9 loads, 9 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_265_enable_27: 1 loads, 1 LSLICEs
      Net jtaghub16_jupdate: 8 loads, 8 LSLICEs
      Net jtaghub16_ip_enable0: 13 loads, 13 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/op_code_2__N_679: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_19: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_23: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/jtck_N_265_enable_49: 9 loads, 9 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/op_code_2__N_679: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_15: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_19: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_20: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/op_code_2__N_679_adj_1327: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_17: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_18: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/cnt_contig_reg_wen: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_34: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_N_keep_enable_76: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/jtck_N_265_enable_127: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/next_then_reg_wen: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_16: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_72: 8 loads, 8 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/num_then_wen: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_26: 8 loads, 8 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_N_keep_enable_74: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_127: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/next_then_reg_wen: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/jtck_N_265_enable_31: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/clk[0]_N_keep_enable_70: 8 loads, 8 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_N_keep_enable_77: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/num_then_wen: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_N_keep_enable_79: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/trig_u/te_0/clk[0]_N_keep_enable_75: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/sample_en_d: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_74: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_77: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_2: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_133: 18 loads, 18 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_72: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_75: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/reg0_read_N_988: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_47: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_41: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_78: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_80: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111: 17 loads, 17 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_24: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_21: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_25: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111: 16 loads, 16 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_38: 7 loads, 7 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_37: 7 loads, 7 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_40: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/trace_dout_int_31__N_1089: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_44: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_7: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_8: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/sample_en_d: 4 loads, 4 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_23: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_43: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/clk[0]_N_keep_enable_46: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_55: 4 loads, 4 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_52: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_9: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_56: 4 loads, 4 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_53: 2 loads, 2 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_10: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_12: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_13: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_22: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_80: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_78: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133: 18 loads, 18 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_2: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_22: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/tm_u/clk[0]_N_keep_enable_76: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_3: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_5: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_7: 2 loads, 2 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_126: 9 loads, 9 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_12: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_19: 1 loads, 1 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_132: 3 loads, 3 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_4: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_6: 2 loads, 2 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_168: 1 loads, 1 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_126: 9 loads, 9 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_132: 3 loads, 3 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167: 24 loads, 24 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_34: 1 loads, 1 LSLICEs
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_169: 1 loads, 1 LSLICEs
      Net xo2chub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
      Net xo2chub/er1_shift_reg8: 10 loads, 10 LSLICEs
    Number of LSRs:  7
      Net pieovertwo_minus: 1 loads, 1 LSLICEs
      Net freeprecess_minus: 1 loads, 1 LSLICEs
+     Net jtaghub16_jrstn: 148 loads, 148 LSLICEs
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481: 86 loads, 84 LSLICEs
      Net load_defaults: 17 loads, 17 LSLICEs
      Net POPtimers/counterreset: 9 loads, 9 LSLICEs
-     Net jtaghub16_jrstn: 147 loads, 147 LSLICEs
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412: 88 loads, 86 LSLICEs
      Net statemachine/state_2__N_225: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net jtaghub16_jrstn: 150 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412: 89 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9403: 60 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9413: 49 loads
+     Net jtaghub16_jrstn: 152 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481: 86 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9482: 60 loads
+     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/n9486: 49 loads
      Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n11: 42 loads
-     Net addr[0]: 39 loads
-     Net jtaghub16_jshift: 37 loads
-     Net jtaghub16_ip_enable0: 33 loads
-     Net addr[1]: 29 loads
-     Net TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jshift_d1: 29 loads
+     Net addr[0]: 37 loads
+     Net jtaghub16_jshift: 36 loads
+     Net addr[1]: 35 loads
+     Net jtaghub16_ip_enable0: 34 loads
+     Net addr[2]: 32 loads
  
 
    Number of warnings:  0
@@ -515,8 +162,8 @@ Design Summary:
 
 
 Total CPU Time: 0 secs  
-Total REAL Time: 0 secs  
-Peak Memory Usage: 48 MB
+Total REAL Time: 3 secs  
+Peak Memory Usage: 49 MB
 
 Dumping design to file POP_timer_POP_timers_AX2_map.ncd.
 
@@ -531,7 +178,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "POP_timer_POP_timers_AX2_map.ncd"
-Tue Aug 15 13:04:34 2023
+Fri Jan 19 13:17:13 2024
 
 PAR: Place And Route Diamond (64-bit) 3.12.1.454.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/sek529/Github/POP_timing_FPGA/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 POP_timer_POP_timers_AX2_map.ncd POP_timer_POP_timers_AX2.dir/5_1.ncd POP_timer_POP_timers_AX2.prf
@@ -566,42 +213,42 @@ Device utilization summary:
 
 
 INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
-Number of Signals: 1516
-Number of Connections: 4066
+Number of Signals: 1513
+Number of Connections: 4047
 
 Pin Constraint Summary:
    18 out of 18 pins locked (100% locked).
 
 The following 3 signals are selected to use the primary clock routing resources:
-    clk_2M5 (driver: clocks/PLL/PLLInst_0, clk load #: 40)
-    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 151)
-    clk_debug_N (driver: tenmegclock, clk load #: 99)
+    clk_2M5 (driver: clocks/PLL/PLLInst_0, clk load #: 39)
+    jtaghub16_jtck (driver: xo2chub/genblk7.jtagf_u, clk load #: 152)
+    clk_debug_N (driver: tenmegclock, clk load #: 97)
 
 
 The following 8 signals are selected to use the secondary clock routing resources:
-    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 147, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_594, clk load #: 0, sr load #: 90, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_567, clk load #: 0, sr load #: 0, ce load #: 24)
-    reveal_ist_66_N (driver: SLICE_421, clk load #: 9, sr load #: 0, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_574, clk load #: 0, sr load #: 0, ce load #: 18)
-    load_defaults (driver: SLICE_456, clk load #: 0, sr load #: 17, ce load #: 0)
-    reveal_ist_69_N (driver: SLICE_417, clk load #: 8, sr load #: 0, ce load #: 0)
-    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_592, clk load #: 0, sr load #: 0, ce load #: 16)
+    jtaghub16_jrstn (driver: xo2chub/genblk7.jtagf_u, clk load #: 0, sr load #: 148, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_592, clk load #: 0, sr load #: 88, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_585, clk load #: 0, sr load #: 0, ce load #: 24)
+    reveal_ist_66_N (driver: SLICE_415, clk load #: 9, sr load #: 0, ce load #: 0)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_133 (driver: SLICE_590, clk load #: 0, sr load #: 0, ce load #: 18)
+    TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111 (driver: TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_545, clk load #: 0, sr load #: 0, ce load #: 17)
+    load_defaults (driver: SLICE_448, clk load #: 0, sr load #: 17, ce load #: 0)
+    reveal_ist_69_N (driver: SLICE_411, clk load #: 8, sr load #: 0, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-..........
-Finished Placer Phase 0.  REAL time: 12 secs 
+.........
+Finished Placer Phase 0.  REAL time: 14 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 223410.
-Finished Placer Phase 1.  REAL time: 18 secs 
+.....................
+Placer score = 215404.
+Finished Placer Phase 1.  REAL time: 19 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  219573
-Finished Placer Phase 2.  REAL time: 18 secs 
+Placer score =  214711
+Finished Placer Phase 2.  REAL time: 19 secs 
 
 
 ------------------ Clock Report ------------------
@@ -613,17 +260,17 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "clk_2M5" from CLKOP on comp "clocks/PLL/PLLInst_0" on PLL site "LPLL", clk load = 40
-  PRIMARY "jtaghub16_jtck" from JTCK on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 151
-  PRIMARY "clk_debug_N" from comp "tenmegclock" on CLK_PIN site "21 (PR5C)", clk load = 99
-  SECONDARY "jtaghub16_jrstn" from JRSTN on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 0, ce load = 0, sr load = 147
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9412" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_594" on site "R7C12C", clk load = 0, ce load = 0, sr load = 90
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_567" on site "R7C12A", clk load = 0, ce load = 24, sr load = 0
-  SECONDARY "reveal_ist_66_N" from F0 on comp "SLICE_421" on site "R7C14B", clk load = 9, ce load = 0, sr load = 0
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_133" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_574" on site "R7C12D", clk load = 0, ce load = 18, sr load = 0
-  SECONDARY "load_defaults" from Q0 on comp "SLICE_456" on site "R7C14D", clk load = 0, ce load = 0, sr load = 17
-  SECONDARY "reveal_ist_69_N" from F0 on comp "SLICE_417" on site "R7C14C", clk load = 8, ce load = 0, sr load = 0
-  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_592" on site "R7C12B", clk load = 0, ce load = 16, sr load = 0
+  PRIMARY "clk_2M5" from CLKOP on comp "clocks/PLL/PLLInst_0" on PLL site "LPLL", clk load = 39
+  PRIMARY "jtaghub16_jtck" from JTCK on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 152
+  PRIMARY "clk_debug_N" from comp "tenmegclock" on CLK_PIN site "21 (PR5C)", clk load = 97
+  SECONDARY "jtaghub16_jrstn" from JRSTN on comp "xo2chub/genblk7.jtagf_u" on site "JTAG", clk load = 0, ce load = 0, sr load = 148
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/n9481" from F0 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_592" on site "R7C12D", clk load = 0, ce load = 0, sr load = 88
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/jtck_N_265_enable_167" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtag_int_u/SLICE_585" on site "R7C14B", clk load = 0, ce load = 24, sr load = 0
+  SECONDARY "reveal_ist_66_N" from F0 on comp "SLICE_415" on site "R7C12B", clk load = 9, ce load = 0, sr load = 0
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_133" from F0 on comp "SLICE_590" on site "R7C14A", clk load = 0, ce load = 18, sr load = 0
+  SECONDARY "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/jtck_N_265_enable_111" from F1 on comp "TinyFPGA_A2_reveal_coretop_instance/counters_inst_0/SLICE_545" on site "R7C14D", clk load = 0, ce load = 17, sr load = 0
+  SECONDARY "load_defaults" from Q0 on comp "SLICE_448" on site "R7C12C", clk load = 0, ce load = 0, sr load = 17
+  SECONDARY "reveal_ist_69_N" from F0 on comp "SLICE_411" on site "R7C12A", clk load = 8, ce load = 0, sr load = 0
 
   PRIMARY  : 3 out of 8 (37%)
   SECONDARY: 8 out of 8 (100%)
@@ -650,18 +297,18 @@ I/O Bank Usage Summary:
 | 3        | 2 / 2 (100%) | 3.3V       | -         |
 +----------+--------------+------------+-----------+
 
-Total placer CPU time: 17 secs 
+Total placer CPU time: 15 secs 
 
 Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
 
-0 connections routed; 4066 unrouted.
+0 connections routed; 4047 unrouted.
 Starting router resource preassignment
 
     <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=debounce_pulse loads=7 clock_loads=6&#xA;   Signal=sampled_modebutton loads=2 clock_loads=2"  />
 
-Completed router resource preassignment. Real time: 24 secs 
+Completed router resource preassignment. Real time: 25 secs 
 
-Start NBR router at 13:04:58 08/15/23
+Start NBR router at 13:17:39 01/19/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -676,44 +323,44 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 13:04:58 08/15/23
+Start NBR special constraint process at 13:17:39 01/19/24
 
-Start NBR section for initial routing at 13:04:59 08/15/23
+Start NBR section for initial routing at 13:17:39 01/19/24
 Level 4, iteration 1
 118(0.14%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 25 secs 
+Estimated worst slack/total negative slack<setup>: 87.984ns/0.000ns; real time: 27 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:04:59 08/15/23
+Start NBR section for normal routing at 13:17:40 01/19/24
 Level 4, iteration 1
-44(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 25 secs 
+42(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 2
-18(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 26 secs 
+14(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 3
-9(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 26 secs 
+7(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 4
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 26 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 27 secs 
 Level 4, iteration 5
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 26 secs 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 28 secs 
 Level 4, iteration 6
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 26 secs 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 28 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 13:05:00 08/15/23
+Start NBR section for setup/hold timing optimization with effort level 3 at 13:17:41 01/19/24
 
-Start NBR section for re-routing at 13:05:01 08/15/23
+Start NBR section for re-routing at 13:17:41 01/19/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 88.123ns/0.000ns; real time: 27 secs 
+Estimated worst slack/total negative slack<setup>: 87.587ns/0.000ns; real time: 28 secs 
 
-Start NBR section for post-routing at 13:05:01 08/15/23
+Start NBR section for post-routing at 13:17:41 01/19/24
 
 End NBR router with 0 unrouted connection
 
@@ -721,7 +368,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 88.123ns
+  Estimated worst slack<setup> : 87.587ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
@@ -730,10 +377,10 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
     <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=debounce_pulse loads=7 clock_loads=6&#xA;   Signal=sampled_modebutton loads=2 clock_loads=2"  />
 
-Total CPU time 27 secs 
-Total REAL time: 28 secs 
+Total CPU time 25 secs 
+Total REAL time: 30 secs 
 Completely routed.
-End of route.  4066 routed (100.00%); 0 unrouted.
+End of route.  4047 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -744,14 +391,14 @@ Dumping design to file POP_timer_POP_timers_AX2.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 88.123
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 87.587
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.219
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.235
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 27 secs 
-Total REAL time to completion: 29 secs 
+Total CPU  time to completion: 25 secs 
+Total REAL time to completion: 30 secs 
 
 par done!
 
@@ -788,7 +435,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Tue Aug 15 13:05:03 2023
+Fri Jan 19 13:17:44 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -827,11 +474,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 464642 paths, 3 nets, and 3723 connections (91.56% coverage)
+Constraints cover 402704 paths, 3 nets, and 3699 connections (91.40% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Tue Aug 15 13:05:03 2023
+Fri Jan 19 13:17:44 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -870,7 +517,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 464642 paths, 3 nets, and 3723 connections (91.56% coverage)
+Constraints cover 402704 paths, 3 nets, and 3699 connections (91.40% coverage)
 
 
 
@@ -886,7 +533,7 @@ Cumulative negative slack: 0 (0+0)
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 54 MB
+Peak Memory Usage: 55 MB
 
 
 tmcheck -par "POP_timer_POP_timers_AX2.par" 
